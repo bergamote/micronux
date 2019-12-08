@@ -16,7 +16,9 @@ units = {
 # get string value unit
 def get_unit(str):
     unit = ''
-    if str.endswith('%'):
+    if str.endswith('% f1'):
+        unit = 'bal'
+    elif str.endswith('%'):
         unit = 'pct'
     elif str.endswith(' s'):
         unit = 's'
@@ -33,6 +35,8 @@ def clean_val(val):
         clean = int(float(val[:-3]) * 1000)
     elif unit == 's':
         clean = int(float(val[:-2]) * 1000000)
+    elif unit == 'bal':
+        clean = int(val[:-4])
     # the rest
     else:
         clean = int(round(float(val)))

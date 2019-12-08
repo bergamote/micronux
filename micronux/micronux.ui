@@ -48,10 +48,10 @@ QSlider::groove:vertical {
 	width:4px;
 }
 QSlider::handle:vertical {
-    height: 12px;
+    height: 14px;
     background: #666;
-    margin: 0 -4px; /* expand outside the groove */
-	border-radius: 6px;
+    margin: 0 -5px; /* expand outside the groove */
+	border-radius: 7px;
 }
 
 QSlider::add-page:vertical {
@@ -264,8 +264,7 @@ width: 2px;
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: red
-</string>
+      <string notr="true">color: #333</string>
      </property>
      <property name="text">
       <string>1</string>
@@ -888,7 +887,7 @@ width: 2px;
       <string notr="true">background:lightgreen;color:green;</string>
      </property>
      <property name="text">
-      <string>***</string>
+      <string>---</string>
      </property>
      <property name="scaledContents">
       <bool>false</bool>
@@ -921,7 +920,7 @@ width: 2px;
       <string notr="true">background:lightgreen;color:green;</string>
      </property>
      <property name="text">
-      <string>cat</string>
+      <string>---</string>
      </property>
      <property name="scaledContents">
       <bool>false</bool>
@@ -1250,8 +1249,7 @@ width: 2px;
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: red
-</string>
+      <string notr="true">color: #333</string>
      </property>
      <property name="text">
       <string>2</string>
@@ -1865,8 +1863,7 @@ width: 2px;
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: red
-</string>
+      <string notr="true">color: #333</string>
      </property>
      <property name="text">
       <string>3</string>
@@ -2458,7 +2455,7 @@ width: 2px;
     <property name="geometry">
      <rect>
       <x>458</x>
-      <y>238</y>
+      <y>240</y>
       <width>44</width>
       <height>21</height>
      </rect>
@@ -3318,8 +3315,8 @@ border-radius: 5px;
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>98</width>
-       <height>28</height>
+       <width>341</width>
+       <height>146</height>
       </rect>
      </property>
      <attribute name="label">
@@ -4063,8 +4060,8 @@ border-radius: 5px;
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>98</width>
-       <height>28</height>
+       <width>341</width>
+       <height>146</height>
       </rect>
      </property>
      <attribute name="label">
@@ -4915,7 +4912,7 @@ width: 2px;
       <x>348</x>
       <y>80</y>
       <width>21</width>
-      <height>151</height>
+      <height>131</height>
      </rect>
     </property>
     <property name="maximum">
@@ -4940,7 +4937,7 @@ width: 2px;
       <x>373</x>
       <y>80</y>
       <width>21</width>
-      <height>151</height>
+      <height>131</height>
      </rect>
     </property>
     <property name="maximum">
@@ -4956,7 +4953,7 @@ width: 2px;
       <x>398</x>
       <y>80</y>
       <width>21</width>
-      <height>151</height>
+      <height>131</height>
      </rect>
     </property>
     <property name="maximum">
@@ -4972,7 +4969,7 @@ width: 2px;
       <x>434</x>
       <y>80</y>
       <width>21</width>
-      <height>151</height>
+      <height>131</height>
      </rect>
     </property>
     <property name="maximum">
@@ -4988,7 +4985,7 @@ width: 2px;
       <x>470</x>
       <y>80</y>
       <width>21</width>
-      <height>151</height>
+      <height>131</height>
      </rect>
     </property>
     <property name="maximum">
@@ -5106,6 +5103,776 @@ width: 2px;
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
+   <widget class="QDial" name="osc_1_balance">
+    <property name="geometry">
+     <rect>
+      <x>347</x>
+      <y>216</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Highlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>100</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Highlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>100</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Highlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>100</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;pitchbend range&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:darkgrey</string>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="pageStep">
+     <number>1</number>
+    </property>
+    <property name="notchTarget">
+     <double>40.000000000000000</double>
+    </property>
+    <property name="notchesVisible">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QDial" name="osc_2_balance">
+    <property name="geometry">
+     <rect>
+      <x>372</x>
+      <y>216</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Highlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>100</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Highlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>100</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Highlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>100</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;pitchbend range&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:darkgrey</string>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="pageStep">
+     <number>1</number>
+    </property>
+    <property name="notchTarget">
+     <double>40.000000000000000</double>
+    </property>
+    <property name="notchesVisible">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QDial" name="osc_3_balance">
+    <property name="geometry">
+     <rect>
+      <x>397</x>
+      <y>216</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Highlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>100</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Highlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>100</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Highlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>100</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;pitchbend range&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:darkgrey</string>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="pageStep">
+     <number>1</number>
+    </property>
+    <property name="notchTarget">
+     <double>40.000000000000000</double>
+    </property>
+    <property name="notchesVisible">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QDial" name="ringmod_balance">
+    <property name="geometry">
+     <rect>
+      <x>433</x>
+      <y>216</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Highlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>100</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Highlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>100</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Highlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>100</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;pitchbend range&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:darkgrey</string>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="pageStep">
+     <number>1</number>
+    </property>
+    <property name="notchTarget">
+     <double>40.000000000000000</double>
+    </property>
+    <property name="notchesVisible">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QDial" name="noise_balance">
+    <property name="geometry">
+     <rect>
+      <x>469</x>
+      <y>216</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Highlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>100</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Highlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>100</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>169</red>
+          <green>169</green>
+          <blue>169</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Highlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>100</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;pitchbend range&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:darkgrey</string>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="pageStep">
+     <number>1</number>
+    </property>
+    <property name="notchTarget">
+     <double>40.000000000000000</double>
+    </property>
+    <property name="notchesVisible">
+     <bool>false</bool>
+    </property>
+   </widget>
    <zorder>label_pre_mix_ringmod</zorder>
    <zorder>label_shape</zorder>
    <zorder>label_tune</zorder>
@@ -5134,6 +5901,11 @@ width: 2px;
    <zorder>label_pre_mix_osc1</zorder>
    <zorder>label_pre_mix_osc2</zorder>
    <zorder>label_pre_mix_osc3</zorder>
+   <zorder>osc_1_balance</zorder>
+   <zorder>osc_2_balance</zorder>
+   <zorder>osc_3_balance</zorder>
+   <zorder>ringmod_balance</zorder>
+   <zorder>noise_balance</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
