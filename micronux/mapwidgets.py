@@ -15,7 +15,6 @@ def mapping(settings, app, window):
         window.osc_2_waveform,
         window.osc_3_waveform
     ]
-
     for waveform in waveform_groups:
         for button in waveform.buttons():
             button_name = last_word(button.objectName())
@@ -28,7 +27,9 @@ def mapping(settings, app, window):
                     debug_line += ': '+button_name+' ('+value+')'
                     print(debug_line)
 
-    # all other widgets
+    # Go through all the widgets,
+    # if the name matches a setting name
+    # assign the value to the widget.
     for widgoo in app.allWidgets():
         name = widgoo.objectName()
         if name in settings:
@@ -52,6 +53,8 @@ def mapping(settings, app, window):
                 widgoo.setText(value)
 
             if debug:
-                print(widg_type+' -> '+name+': '+str(value)+' ('+settings[name]+')')
+                debug_line = widg_type+' -> '+name+': '
+                debug_line += str(value)+' ('+settings[name]+')'
+                print(debug_line)
 
     window.setWindowTitle(settings['name']+" | Micronux")
