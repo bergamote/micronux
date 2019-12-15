@@ -5,7 +5,6 @@
 # note: main needs sys module and
 # end with sys.exit(app.exec_())
 
-
 import sys
 from PySide2.QtUiTools import QUiLoader
 from PySide2.QtWidgets import QApplication

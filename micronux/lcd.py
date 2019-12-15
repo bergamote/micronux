@@ -8,7 +8,7 @@ debug = True
 # setings better names for display
 nicer_names = {
 'semi':'semitone',
-'fine':'cent'
+'fine':'cent',
 }
 
 prev_setting = ''

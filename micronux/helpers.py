@@ -12,6 +12,13 @@ units = {
 ' Hz': 'hz',
 ' KHz': 'khz'
 }
+percentages = [
+'level',
+'shape',
+'res',
+'keytrack',
+'envamt'
+]
 
 # get string value unit
 def get_unit(str):
@@ -24,6 +31,10 @@ def get_unit(str):
         unit = 's'
     elif str.endswith(' ms'):
         unit = 'ms'
+    elif str.endswith(' Hz'):
+        unit = 'hz'
+    elif str.endswith(' KHz'):
+        unit = 'khz'
     return unit
 
 # make number strings into integer
@@ -37,6 +48,10 @@ def clean_val(val):
         clean = int(float(val[:-2]) * 1000000)
     elif unit == 'bal':
         clean = int(val[:-4])
+    elif unit == 'hz':
+        clean = int(float(val[:-3]) * 1000)
+    elif unit == 'khz':
+        clean = int(float(val[:-4]) * 1000000)
     # the rest
     else:
         clean = int(round(float(val)))
@@ -68,8 +83,30 @@ def disp_val(val, setting):
                 disp = 'hold'
                 unit = ''
 
+    # frequency
+    if type == 'freq':
+        if setting.endswith('offset_freq'):
+            pad = 4
+            if val < 0:
+                pad = 5;
+            disp = str(val/100).ljust(pad, '0')
+            #  can range from -4.00 to 4.00
+        elif int(val) >= 20000:
+            unit = 'hz'
+            roundings = 2
+            if int(val) > 100000:
+                roundings = 1
+            disp = round(float(val/1000), roundings)
+            if int(val) >= 1000000:
+                unit = 'khz'
+                roundings = 2
+                if int(val) < 10000000:
+                    roundings = 3
+                disp = round(float(val/1000000), roundings)
+            disp = str(disp).ljust(5, '0')
+
     # percents
-    elif (type == 'level') or (type == 'shape'):
+    elif type in percentages:
         unit = '%'
 
     return (disp, unit)

@@ -3,11 +3,10 @@
 
 from micronux.helpers import clean_val, disp_val, last_word
 
-debug = True
-if debug:
-    print("Mapping settings:")
 
 def mapping(settings, app, window):
+
+    print("### Mapping settings:")
 
     # button groups (QRadioButton)
     waveform_groups = [
@@ -15,6 +14,7 @@ def mapping(settings, app, window):
         window.osc_2_waveform,
         window.osc_3_waveform
     ]
+
     for waveform in waveform_groups:
         for button in waveform.buttons():
             button_name = last_word(button.objectName())
@@ -22,10 +22,9 @@ def mapping(settings, app, window):
             if value.startswith(button_name):
                 button.toggle()
 
-                if debug:
-                    debug_line = 'QRadioButton -> '+waveform.objectName()
-                    debug_line += ': '+button_name+' ('+value+')'
-                    print(debug_line)
+                debug_line = 'QRadioButton -> '+waveform.objectName()
+                debug_line += ': '+button_name+' ('+value+')'
+                print(debug_line)
 
     # Go through all the widgets,
     # if the name matches a setting name
@@ -36,9 +35,9 @@ def mapping(settings, app, window):
             widg_type = type(widgoo).__name__
             value = settings[name]
             if widg_type == 'QCheckBox':
-                if value == 'on':
+                if (value == 'on') or (value == 'offset'):
                     widgoo.setChecked(True)
-                elif value == 'off':
+                elif (value == 'off') or (value == 'absolute'):
                     widgoo.setChecked(False)
             elif widg_type == 'QComboBox':
                 new_index = widgoo.findText(value)
@@ -52,9 +51,8 @@ def mapping(settings, app, window):
             elif widg_type == 'QLabel':
                 widgoo.setText(value)
 
-            if debug:
-                debug_line = widg_type+' -> '+name+': '
-                debug_line += str(value)+' ('+settings[name]+')'
-                print(debug_line)
+            debug_line = widg_type+' -> '+name+': '
+            debug_line += str(value)+' ('+settings[name]+')'
+            print(debug_line)
 
     window.setWindowTitle(settings['name']+" | Micronux")
