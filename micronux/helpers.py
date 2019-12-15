@@ -84,7 +84,7 @@ def disp_val(val, setting):
                 unit = ''
 
     # frequency
-    if type == 'freq':
+    elif type == 'freq':
         if setting.endswith('offset_freq'):
             pad = 4
             if val < 0:
@@ -104,6 +104,12 @@ def disp_val(val, setting):
                     roundings = 3
                 disp = round(float(val/1000000), roundings)
             disp = str(disp).ljust(5, '0')
+
+    elif type == 'pan':
+        if val < 0:
+            unit = 'L'
+        elif val > 0:
+            unit = 'R'
 
     # percents
     elif type in percentages:
