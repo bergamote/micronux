@@ -9,6 +9,7 @@ debug = True
 nicer_names = {
 'semi':'semitone',
 'fine':'cent',
+'balance':'f1 | f2  '
 }
 
 prev_setting = ''

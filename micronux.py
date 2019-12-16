@@ -29,7 +29,5 @@ def pass_to_lcd():
 for widget in app.allWidgets():
     widg_type = type(widget).__name__
     if (widg_type == 'QDial') or (widg_type == 'QSlider'):
-        widget.setFocusPolicy(gui.Qt.FocusPolicy.WheelFocus)
         widget.valueChanged.connect(pass_to_lcd)
-
 sys.exit(app.exec_())

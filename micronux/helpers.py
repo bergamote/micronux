@@ -59,9 +59,9 @@ def clean_val(val):
 
 # make weird units into displayable value
 def disp_val(val, setting):
-    disp = str(val)
     type = last_word(setting)
     unit = ''
+    disp = str(val)
 
     # time
     if type == 'time':
@@ -104,13 +104,17 @@ def disp_val(val, setting):
                     roundings = 3
                 disp = round(float(val/1000000), roundings)
             disp = str(disp).ljust(5, '0')
-
+    # left-right pan
     elif type == 'pan':
         if val < 0:
+            disp = str(abs(val))
             unit = 'L'
         elif val > 0:
             unit = 'R'
-
+    # f1 to f2 balance
+    elif type == 'balance':
+        unit = '%'
+        disp = str(val)+'|'+str(100-val)
     # percents
     elif type in percentages:
         unit = '%'
