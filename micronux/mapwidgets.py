@@ -48,7 +48,7 @@ def mapping(settings, app, window):
                 else:
                     value = 30000001
                 widgoo.setValue(value)
-            elif widg_type == 'QLabel':
+            elif (widg_type == 'QLabel') or (widg_type == 'QLineEdit'):
                 widgoo.setText(value)
 
             debug_line = widg_type+' -> '+name+': '
