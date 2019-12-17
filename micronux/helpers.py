@@ -111,10 +111,19 @@ def disp_val(val, setting):
             unit = 'L'
         elif val > 0:
             unit = 'R'
+
     # f1 to f2 balance
     elif type == 'balance':
+        if setting.endswith('extin_balance'):
+            val = int((val+100)/2)
         unit = '%'
-        disp = str(val)+'|'+str(100-val)
+        f1 = str(val)
+        f2 = str(100-val)
+        separator = '|'
+        if (val > 90) and (val < 100):
+            f2 = ' '+f2
+        disp = f1+separator+f2
+
     # percents
     elif type in percentages:
         unit = '%'

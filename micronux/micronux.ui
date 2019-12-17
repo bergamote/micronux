@@ -859,6 +859,12 @@ width: 2px;
      <property name="pageStep">
       <number>1</number>
      </property>
+     <property name="value">
+      <number>50</number>
+     </property>
+     <property name="invertedAppearance">
+      <bool>true</bool>
+     </property>
      <property name="notchTarget">
       <double>40.000000000000000</double>
      </property>
@@ -1142,6 +1148,12 @@ width: 2px;
      <property name="pageStep">
       <number>1</number>
      </property>
+     <property name="value">
+      <number>50</number>
+     </property>
+     <property name="invertedAppearance">
+      <bool>true</bool>
+     </property>
      <property name="notchTarget">
       <double>40.000000000000000</double>
      </property>
@@ -1317,6 +1329,15 @@ width: 2px;
      </property>
      <property name="pageStep">
       <number>1</number>
+     </property>
+     <property name="value">
+      <number>50</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="invertedAppearance">
+      <bool>true</bool>
      </property>
      <property name="notchTarget">
       <double>40.000000000000000</double>
@@ -1517,6 +1538,12 @@ width: 2px;
      </property>
      <property name="pageStep">
       <number>1</number>
+     </property>
+     <property name="value">
+      <number>50</number>
+     </property>
+     <property name="invertedAppearance">
+      <bool>true</bool>
      </property>
      <property name="notchTarget">
       <double>40.000000000000000</double>
@@ -1766,6 +1793,12 @@ width: 2px;
      </property>
      <property name="pageStep">
       <number>1</number>
+     </property>
+     <property name="value">
+      <number>50</number>
+     </property>
+     <property name="invertedAppearance">
+      <bool>true</bool>
      </property>
      <property name="notchTarget">
       <double>40.000000000000000</double>
@@ -8191,7 +8224,8 @@ border-radius: 5px;
      </property>
      <property name="styleSheet">
       <string notr="true">QComboBox:on {
-	color: #000;
+	color: #0b0;
+	background-color: white;
 }
 QComboBox {
 background:#444;
