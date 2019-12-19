@@ -3,6 +3,12 @@
 
 from micronux.helpers import clean_val, disp_val, last_word
 
+keywords = {
+'positive': '+',
+'negative': '-',
+'filter 1 mix': 'f1 mix',
+'filter 2 mix': 'f2 mix',
+}
 
 def mapping(settings, app, window):
 
@@ -40,7 +46,10 @@ def mapping(settings, app, window):
                 elif (value == 'off') or (value == 'absolute'):
                     widgoo.setChecked(False)
             elif widg_type == 'QComboBox':
-                new_index = widgoo.findText(value)
+                keyword = value
+                if value in keywords:
+                    keyword = keywords[value]
+                new_index = widgoo.findText(keyword)
                 widgoo.setCurrentIndex(new_index)
             elif (widg_type == 'QDial') or (widg_type == 'QSlider'):
                 if value != 'hold':

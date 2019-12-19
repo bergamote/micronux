@@ -17,7 +17,9 @@ percentages = [
 'shape',
 'res',
 'keytrack',
-'envamt'
+'envamt',
+'drift',
+'detune'
 ]
 
 # get string value unit
