@@ -22,6 +22,17 @@ percentages = [
 'detune'
 ]
 
+keywords = {
+'positive': '+',
+'negative': '-',
+'filter 1 mix': 'f1 mix',
+'filter 2 mix': 'f2 mix',
+'3 -> 2 -> 1': '3 > 2 > 1',
+'2+3 -> 1': '2+3 > 1',
+'2 -> 1': '2 > 1',
+'linear': 'lin'
+}
+
 # get string value unit
 def get_unit(str):
     unit = ''
@@ -43,7 +54,10 @@ def get_unit(str):
 def clean_val(val):
     unit = get_unit(val)
     if unit == 'pct':
-        clean = int(val[:-1])
+        if isinstance(float(val[:-1]), float):
+            clean = float(val[:-1]) * 10
+        else:
+            clean = int(val[:-1])
     elif unit == 'ms':
         clean = int(float(val[:-3]) * 1000)
     elif unit == 's':
@@ -113,6 +127,11 @@ def disp_val(val, setting):
             unit = 'L'
         elif val > 0:
             unit = 'R'
+
+    # fm amount
+    elif type == 'amount':
+        unit = '%'
+        disp = str(val/10)
 
     # f1 to f2 balance
     elif type == 'balance':

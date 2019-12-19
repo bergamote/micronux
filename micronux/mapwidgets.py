@@ -2,13 +2,7 @@
 # Map settings to widgets.
 
 from micronux.helpers import clean_val, disp_val, last_word
-
-keywords = {
-'positive': '+',
-'negative': '-',
-'filter 1 mix': 'f1 mix',
-'filter 2 mix': 'f2 mix',
-}
+from micronux.helpers import keywords
 
 def mapping(settings, app, window):
 

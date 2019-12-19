@@ -96,7 +96,7 @@ QComboBox QAbstractItemView {
 	color: #333;
 }
 
-QToolBox::tab {
+QToolBox::tab:selected {
     background: transparent;
 	border-top: 1px solid grey;
     border-radius:0px;
@@ -1893,9 +1893,9 @@ width: 2px;
     <property name="geometry">
      <rect>
       <x>21</x>
-      <y>11</y>
+      <y>0</y>
       <width>311</width>
-      <height>281</height>
+      <height>301</height>
      </rect>
     </property>
     <property name="title">
@@ -3223,7 +3223,7 @@ width: 2px;
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>6</y>
+       <y>10</y>
        <width>31</width>
        <height>31</height>
       </rect>
@@ -3250,10 +3250,10 @@ width: 2px;
     <widget class="Line" name="line">
      <property name="geometry">
       <rect>
-       <x>289</x>
+       <x>299</x>
        <y>15</y>
-       <width>31</width>
-       <height>271</height>
+       <width>21</width>
+       <height>281</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -3913,6 +3913,328 @@ width: 2px;
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
+    <widget class="QGroupBox" name="vox_group_pt2">
+     <property name="geometry">
+      <rect>
+       <x>-2</x>
+       <y>260</y>
+       <width>301</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <widget class="QComboBox" name="pitch_wheel_mode">
+      <property name="geometry">
+       <rect>
+        <x>263</x>
+        <y>11</y>
+        <width>38</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>DejaVu Sans Mono</family>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;pitch wheel mode&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #faa</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>8</width>
+        <height>16</height>
+       </size>
+      </property>
+      <property name="duplicatesEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="frame">
+       <bool>false</bool>
+      </property>
+      <item>
+       <property name="text">
+        <string>held</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>all</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_drift">
+      <property name="geometry">
+       <rect>
+        <x>218</x>
+        <y>10</y>
+        <width>31</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>DejaVu Sans</family>
+        <pointsize>8</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>drift</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_pitch_wheel_mode">
+      <property name="geometry">
+       <rect>
+        <x>263</x>
+        <y>-7</y>
+        <width>38</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>DejaVu Sans</family>
+        <pointsize>8</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>bend</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QDial" name="analog_drift">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>191</x>
+        <y>0</y>
+        <width>31</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;analog drift&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="minimum">
+       <number>0</number>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="pageStep">
+       <number>10</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+      <property name="notchTarget">
+       <double>100.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="osc_sync">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>13</y>
+        <width>16</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: lightgrey;
+border-style: solid;
+border-color: grey;
+width:8px;
+height: 8px;
+border-width: 1px;
+border-radius: 4px;
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>8</width>
+        <height>8</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <property name="autoRepeat">
+       <bool>false</bool>
+      </property>
+      <property name="tristate">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="osc_sync_type">
+      <property name="geometry">
+       <rect>
+        <x>61</x>
+        <y>11</y>
+        <width>38</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>DejaVu Sans Mono</family>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync type&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>8</width>
+        <height>16</height>
+       </size>
+      </property>
+      <property name="duplicatesEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="frame">
+       <bool>false</bool>
+      </property>
+      <item>
+       <property name="text">
+        <string>soft</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>hard</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="osc_sync_route">
+      <property name="geometry">
+       <rect>
+        <x>105</x>
+        <y>11</y>
+        <width>71</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>DejaVu Sans Mono</family>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>8</width>
+        <height>16</height>
+       </size>
+      </property>
+      <property name="duplicatesEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="frame">
+       <bool>false</bool>
+      </property>
+      <item>
+       <property name="text">
+        <string>osc2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>osc2+osc3</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_sync">
+      <property name="geometry">
+       <rect>
+        <x>3</x>
+        <y>10</y>
+        <width>31</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>DejaVu Sans</family>
+        <pointsize>10</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>sync</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <zorder>label_pitch_wheel_mode</zorder>
+     <zorder>pitch_wheel_mode</zorder>
+     <zorder>label_drift</zorder>
+     <zorder>analog_drift</zorder>
+     <zorder>osc_sync</zorder>
+     <zorder>osc_sync_type</zorder>
+     <zorder>osc_sync_route</zorder>
+     <zorder>label_sync</zorder>
+    </widget>
     <zorder>line</zorder>
     <zorder>label_wheel</zorder>
     <zorder>osc1</zorder>
@@ -3922,81 +4244,109 @@ width: 2px;
     <zorder>label_OSC</zorder>
     <zorder>osc2</zorder>
     <zorder>label_tune</zorder>
+    <zorder>vox_group_pt2</zorder>
    </widget>
    <widget class="QGroupBox" name="envelopes">
     <property name="geometry">
      <rect>
       <x>15</x>
-      <y>322</y>
-      <width>401</width>
-      <height>231</height>
+      <y>370</y>
+      <width>381</width>
+      <height>181</height>
      </rect>
     </property>
     <property name="title">
      <string/>
     </property>
-    <widget class="Line" name="line_2">
+    <widget class="Line" name="line_OSC_2">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>220</y>
-       <width>340</width>
-       <height>16</height>
+       <x>30</x>
+       <y>2</y>
+       <width>21</width>
+       <height>178</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:grey</string>
+      <string notr="true">color: red;
+width: 2px;
+</string>
      </property>
      <property name="frameShadow">
       <enum>QFrame::Plain</enum>
      </property>
      <property name="orientation">
-      <enum>Qt::Horizontal</enum>
+      <enum>Qt::Vertical</enum>
      </property>
     </widget>
-    <widget class="QToolBox" name="envelope_toolBox">
+    <widget class="QLabel" name="label_env">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>6</y>
-       <width>341</width>
-       <height>221</height>
+       <x>0</x>
+       <y>0</y>
+       <width>41</width>
+       <height>31</height>
       </rect>
      </property>
-     <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
      </property>
-     <property name="frameShadow">
-      <enum>QFrame::Plain</enum>
+     <property name="styleSheet">
+      <string notr="true">color: red</string>
      </property>
-     <property name="lineWidth">
-      <number>1</number>
+     <property name="text">
+      <string>env</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QTabWidget" name="tab_envelopes">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>0</y>
+       <width>341</width>
+       <height>181</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+       <strikeout>false</strikeout>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: #efefef</string>
+     </property>
+     <property name="tabPosition">
+      <enum>QTabWidget::North</enum>
+     </property>
+     <property name="tabShape">
+      <enum>QTabWidget::Rounded</enum>
      </property>
      <property name="currentIndex">
       <number>0</number>
      </property>
-     <property name="tabSpacing">
-      <number>0</number>
-     </property>
      <widget class="QWidget" name="amp">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>341</width>
-        <height>146</height>
-       </rect>
-      </property>
-      <attribute name="label">
+      <attribute name="title">
        <string>amp</string>
       </attribute>
       <widget class="QGroupBox" name="env_1">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>-32</y>
-         <width>361</width>
-         <height>171</height>
+         <x>-4</x>
+         <y>3</y>
+         <width>341</width>
+         <height>141</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -4012,7 +4362,7 @@ width: 2px;
         <property name="geometry">
          <rect>
           <x>290</x>
-          <y>70</y>
+          <y>42</y>
           <width>51</width>
           <height>20</height>
          </rect>
@@ -4042,7 +4392,7 @@ width: 2px;
         <property name="geometry">
          <rect>
           <x>35</x>
-          <y>26</y>
+          <y>-2</y>
           <width>61</width>
           <height>51</height>
          </rect>
@@ -4079,7 +4429,7 @@ width: 2px;
         <property name="geometry">
          <rect>
           <x>100</x>
-          <y>70</y>
+          <y>42</y>
           <width>51</width>
           <height>20</height>
          </rect>
@@ -4104,7 +4454,7 @@ width: 2px;
         <property name="geometry">
          <rect>
           <x>95</x>
-          <y>26</y>
+          <y>-2</y>
           <width>61</width>
           <height>51</height>
          </rect>
@@ -4138,7 +4488,7 @@ width: 2px;
         <property name="geometry">
          <rect>
           <x>223</x>
-          <y>70</y>
+          <y>42</y>
           <width>51</width>
           <height>20</height>
          </rect>
@@ -4165,7 +4515,7 @@ width: 2px;
         <property name="geometry">
          <rect>
           <x>40</x>
-          <y>70</y>
+          <y>42</y>
           <width>51</width>
           <height>20</height>
          </rect>
@@ -4192,7 +4542,7 @@ width: 2px;
         <property name="geometry">
          <rect>
           <x>163</x>
-          <y>70</y>
+          <y>42</y>
           <width>51</width>
           <height>20</height>
          </rect>
@@ -4219,7 +4569,7 @@ width: 2px;
         <property name="geometry">
          <rect>
           <x>284</x>
-          <y>26</y>
+          <y>-2</y>
           <width>61</width>
           <height>51</height>
          </rect>
@@ -4253,7 +4603,7 @@ width: 2px;
         <property name="geometry">
          <rect>
           <x>218</x>
-          <y>26</y>
+          <y>-2</y>
           <width>61</width>
           <height>51</height>
          </rect>
@@ -4287,7 +4637,7 @@ width: 2px;
         <property name="geometry">
          <rect>
           <x>158</x>
-          <y>26</y>
+          <y>-2</y>
           <width>61</width>
           <height>51</height>
          </rect>
@@ -4312,7 +4662,7 @@ width: 2px;
         <property name="geometry">
          <rect>
           <x>190</x>
-          <y>98</y>
+          <y>70</y>
           <width>16</width>
           <height>16</height>
          </rect>
@@ -4357,7 +4707,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>-1</x>
-          <y>98</y>
+          <y>70</y>
           <width>41</width>
           <height>20</height>
          </rect>
@@ -4384,7 +4734,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>47</x>
-          <y>100</y>
+          <y>72</y>
           <width>38</width>
           <height>20</height>
          </rect>
@@ -4433,7 +4783,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>107</x>
-          <y>100</y>
+          <y>72</y>
           <width>38</width>
           <height>20</height>
          </rect>
@@ -4482,7 +4832,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>296</x>
-          <y>100</y>
+          <y>72</y>
           <width>38</width>
           <height>20</height>
          </rect>
@@ -4531,7 +4881,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>47</x>
-          <y>140</y>
+          <y>112</y>
           <width>46</width>
           <height>21</height>
          </rect>
@@ -4585,7 +4935,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>9</x>
-          <y>140</y>
+          <y>112</y>
           <width>31</width>
           <height>20</height>
          </rect>
@@ -4612,7 +4962,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>207</x>
-          <y>95</y>
+          <y>67</y>
           <width>41</width>
           <height>21</height>
          </rect>
@@ -4639,7 +4989,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>250</x>
-          <y>130</y>
+          <y>102</y>
           <width>41</width>
           <height>41</height>
          </rect>
@@ -4664,7 +5014,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>290</x>
-          <y>130</y>
+          <y>102</y>
           <width>51</width>
           <height>41</height>
          </rect>
@@ -4691,7 +5041,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>107</x>
-          <y>140</y>
+          <y>112</y>
           <width>61</width>
           <height>21</height>
          </rect>
@@ -4738,7 +5088,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>183</x>
-          <y>140</y>
+          <y>112</y>
           <width>53</width>
           <height>21</height>
          </rect>
@@ -4806,22 +5156,14 @@ border-radius: 4px;
       </widget>
      </widget>
      <widget class="QWidget" name="filter">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>341</width>
-        <height>146</height>
-       </rect>
-      </property>
-      <attribute name="label">
+      <attribute name="title">
        <string>filter</string>
       </attribute>
       <widget class="QGroupBox" name="env_2">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>-30</y>
+         <x>1</x>
+         <y>-19</y>
          <width>361</width>
          <height>171</height>
         </rect>
@@ -4838,8 +5180,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_pre_mix_15">
         <property name="geometry">
          <rect>
-          <x>290</x>
-          <y>70</y>
+          <x>285</x>
+          <y>64</y>
           <width>51</width>
           <height>20</height>
          </rect>
@@ -4868,8 +5210,8 @@ border-radius: 4px;
         </property>
         <property name="geometry">
          <rect>
-          <x>35</x>
-          <y>26</y>
+          <x>30</x>
+          <y>20</y>
           <width>61</width>
           <height>51</height>
          </rect>
@@ -4905,8 +5247,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_pre_mix_16">
         <property name="geometry">
          <rect>
-          <x>100</x>
-          <y>70</y>
+          <x>95</x>
+          <y>64</y>
           <width>51</width>
           <height>20</height>
          </rect>
@@ -4930,8 +5272,8 @@ border-radius: 4px;
        <widget class="QDial" name="env_2_decay_time">
         <property name="geometry">
          <rect>
-          <x>95</x>
-          <y>26</y>
+          <x>90</x>
+          <y>20</y>
           <width>61</width>
           <height>51</height>
          </rect>
@@ -4958,8 +5300,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_pre_mix_17">
         <property name="geometry">
          <rect>
-          <x>223</x>
-          <y>70</y>
+          <x>218</x>
+          <y>64</y>
           <width>51</width>
           <height>20</height>
          </rect>
@@ -4985,8 +5327,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_pre_mix_18">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>70</y>
+          <x>35</x>
+          <y>64</y>
           <width>51</width>
           <height>20</height>
          </rect>
@@ -5012,8 +5354,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_pre_mix_19">
         <property name="geometry">
          <rect>
-          <x>163</x>
-          <y>70</y>
+          <x>158</x>
+          <y>64</y>
           <width>51</width>
           <height>20</height>
          </rect>
@@ -5039,8 +5381,8 @@ border-radius: 4px;
        <widget class="QDial" name="env_2_release_time">
         <property name="geometry">
          <rect>
-          <x>284</x>
-          <y>26</y>
+          <x>279</x>
+          <y>20</y>
           <width>61</width>
           <height>51</height>
          </rect>
@@ -5067,8 +5409,8 @@ border-radius: 4px;
        <widget class="QDial" name="env_2_sus_time">
         <property name="geometry">
          <rect>
-          <x>218</x>
-          <y>26</y>
+          <x>213</x>
+          <y>20</y>
           <width>61</width>
           <height>51</height>
          </rect>
@@ -5095,8 +5437,8 @@ border-radius: 4px;
        <widget class="QDial" name="env_2_sus_level">
         <property name="geometry">
          <rect>
-          <x>158</x>
-          <y>26</y>
+          <x>153</x>
+          <y>20</y>
           <width>61</width>
           <height>51</height>
          </rect>
@@ -5123,8 +5465,8 @@ border-radius: 4px;
        <widget class="QCheckBox" name="env_2_sus_pedal">
         <property name="geometry">
          <rect>
-          <x>190</x>
-          <y>98</y>
+          <x>185</x>
+          <y>92</y>
           <width>16</width>
           <height>16</height>
          </rect>
@@ -5168,8 +5510,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_pre_mix_20">
         <property name="geometry">
          <rect>
-          <x>-1</x>
-          <y>98</y>
+          <x>-6</x>
+          <y>92</y>
           <width>41</width>
           <height>20</height>
          </rect>
@@ -5195,8 +5537,8 @@ border-radius: 4px;
        <widget class="QComboBox" name="env_2_attack_slope">
         <property name="geometry">
          <rect>
-          <x>47</x>
-          <y>100</y>
+          <x>42</x>
+          <y>94</y>
           <width>38</width>
           <height>20</height>
          </rect>
@@ -5244,8 +5586,8 @@ border-radius: 4px;
        <widget class="QComboBox" name="env_2_decay_slope">
         <property name="geometry">
          <rect>
-          <x>107</x>
-          <y>100</y>
+          <x>102</x>
+          <y>94</y>
           <width>38</width>
           <height>20</height>
          </rect>
@@ -5293,8 +5635,8 @@ border-radius: 4px;
        <widget class="QComboBox" name="env_2_release_slope">
         <property name="geometry">
          <rect>
-          <x>296</x>
-          <y>100</y>
+          <x>291</x>
+          <y>94</y>
           <width>38</width>
           <height>20</height>
          </rect>
@@ -5342,8 +5684,8 @@ border-radius: 4px;
        <widget class="QComboBox" name="env_2_loop">
         <property name="geometry">
          <rect>
-          <x>47</x>
-          <y>140</y>
+          <x>42</x>
+          <y>134</y>
           <width>46</width>
           <height>21</height>
          </rect>
@@ -5396,8 +5738,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_pre_mix_35">
         <property name="geometry">
          <rect>
-          <x>9</x>
-          <y>140</y>
+          <x>4</x>
+          <y>134</y>
           <width>31</width>
           <height>20</height>
          </rect>
@@ -5423,8 +5765,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_sus_pedal_2">
         <property name="geometry">
          <rect>
-          <x>207</x>
-          <y>95</y>
+          <x>202</x>
+          <y>89</y>
           <width>41</width>
           <height>21</height>
          </rect>
@@ -5450,8 +5792,8 @@ border-radius: 4px;
        <widget class="QDial" name="env_2_velocity">
         <property name="geometry">
          <rect>
-          <x>250</x>
-          <y>130</y>
+          <x>245</x>
+          <y>124</y>
           <width>41</width>
           <height>41</height>
          </rect>
@@ -5475,8 +5817,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_pre_mix_37">
         <property name="geometry">
          <rect>
-          <x>290</x>
-          <y>130</y>
+          <x>285</x>
+          <y>124</y>
           <width>51</width>
           <height>41</height>
          </rect>
@@ -5502,8 +5844,8 @@ border-radius: 4px;
        <widget class="QComboBox" name="env_2_freerun">
         <property name="geometry">
          <rect>
-          <x>107</x>
-          <y>140</y>
+          <x>102</x>
+          <y>134</y>
           <width>61</width>
           <height>21</height>
          </rect>
@@ -5549,8 +5891,8 @@ border-radius: 4px;
        <widget class="QComboBox" name="env_2_reset">
         <property name="geometry">
          <rect>
-          <x>183</x>
-          <y>140</y>
+          <x>178</x>
+          <y>134</y>
           <width>53</width>
           <height>21</height>
          </rect>
@@ -5595,23 +5937,15 @@ border-radius: 4px;
        </widget>
       </widget>
      </widget>
-     <widget class="QWidget" name="pitch_mod">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>341</width>
-        <height>146</height>
-       </rect>
-      </property>
-      <attribute name="label">
+     <widget class="QWidget" name="pitchmod">
+      <attribute name="title">
        <string>pitch/mod</string>
       </attribute>
       <widget class="QGroupBox" name="env_3">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>-28</y>
+         <x>-18</x>
+         <y>-21</y>
          <width>361</width>
          <height>171</height>
         </rect>
@@ -5628,8 +5962,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_pre_mix_21">
         <property name="geometry">
          <rect>
-          <x>290</x>
-          <y>70</y>
+          <x>304</x>
+          <y>66</y>
           <width>51</width>
           <height>20</height>
          </rect>
@@ -5658,8 +5992,8 @@ border-radius: 4px;
         </property>
         <property name="geometry">
          <rect>
-          <x>35</x>
-          <y>26</y>
+          <x>49</x>
+          <y>22</y>
           <width>61</width>
           <height>51</height>
          </rect>
@@ -5695,8 +6029,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_pre_mix_22">
         <property name="geometry">
          <rect>
-          <x>100</x>
-          <y>70</y>
+          <x>114</x>
+          <y>66</y>
           <width>51</width>
           <height>20</height>
          </rect>
@@ -5720,8 +6054,8 @@ border-radius: 4px;
        <widget class="QDial" name="env_3_decay_time">
         <property name="geometry">
          <rect>
-          <x>95</x>
-          <y>26</y>
+          <x>109</x>
+          <y>22</y>
           <width>61</width>
           <height>51</height>
          </rect>
@@ -5748,8 +6082,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_pre_mix_23">
         <property name="geometry">
          <rect>
-          <x>223</x>
-          <y>70</y>
+          <x>237</x>
+          <y>66</y>
           <width>51</width>
           <height>20</height>
          </rect>
@@ -5775,8 +6109,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_pre_mix_24">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>70</y>
+          <x>54</x>
+          <y>66</y>
           <width>51</width>
           <height>20</height>
          </rect>
@@ -5802,8 +6136,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_pre_mix_25">
         <property name="geometry">
          <rect>
-          <x>163</x>
-          <y>70</y>
+          <x>177</x>
+          <y>66</y>
           <width>51</width>
           <height>20</height>
          </rect>
@@ -5829,8 +6163,8 @@ border-radius: 4px;
        <widget class="QDial" name="env_3_release_time">
         <property name="geometry">
          <rect>
-          <x>284</x>
-          <y>26</y>
+          <x>298</x>
+          <y>22</y>
           <width>61</width>
           <height>51</height>
          </rect>
@@ -5857,8 +6191,8 @@ border-radius: 4px;
        <widget class="QDial" name="env_3_sus_time">
         <property name="geometry">
          <rect>
-          <x>218</x>
-          <y>26</y>
+          <x>232</x>
+          <y>22</y>
           <width>61</width>
           <height>51</height>
          </rect>
@@ -5885,8 +6219,8 @@ border-radius: 4px;
        <widget class="QDial" name="env_3_sus_level">
         <property name="geometry">
          <rect>
-          <x>158</x>
-          <y>26</y>
+          <x>172</x>
+          <y>22</y>
           <width>61</width>
           <height>51</height>
          </rect>
@@ -5913,8 +6247,8 @@ border-radius: 4px;
        <widget class="QCheckBox" name="env_3_sus_pedal">
         <property name="geometry">
          <rect>
-          <x>190</x>
-          <y>98</y>
+          <x>204</x>
+          <y>94</y>
           <width>16</width>
           <height>16</height>
          </rect>
@@ -5958,8 +6292,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_pre_mix_26">
         <property name="geometry">
          <rect>
-          <x>-1</x>
-          <y>98</y>
+          <x>13</x>
+          <y>94</y>
           <width>41</width>
           <height>20</height>
          </rect>
@@ -5985,8 +6319,8 @@ border-radius: 4px;
        <widget class="QComboBox" name="env_3_attack_slope">
         <property name="geometry">
          <rect>
-          <x>47</x>
-          <y>100</y>
+          <x>61</x>
+          <y>96</y>
           <width>38</width>
           <height>20</height>
          </rect>
@@ -6034,8 +6368,8 @@ border-radius: 4px;
        <widget class="QComboBox" name="env_3_decay_slope">
         <property name="geometry">
          <rect>
-          <x>107</x>
-          <y>100</y>
+          <x>121</x>
+          <y>96</y>
           <width>38</width>
           <height>20</height>
          </rect>
@@ -6083,8 +6417,8 @@ border-radius: 4px;
        <widget class="QComboBox" name="env_3_release_slope">
         <property name="geometry">
          <rect>
-          <x>296</x>
-          <y>100</y>
+          <x>310</x>
+          <y>96</y>
           <width>38</width>
           <height>20</height>
          </rect>
@@ -6132,8 +6466,8 @@ border-radius: 4px;
        <widget class="QComboBox" name="env_3_loop">
         <property name="geometry">
          <rect>
-          <x>47</x>
-          <y>140</y>
+          <x>61</x>
+          <y>136</y>
           <width>46</width>
           <height>21</height>
          </rect>
@@ -6186,8 +6520,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_pre_mix_38">
         <property name="geometry">
          <rect>
-          <x>9</x>
-          <y>140</y>
+          <x>23</x>
+          <y>136</y>
           <width>31</width>
           <height>20</height>
          </rect>
@@ -6213,8 +6547,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_sus_pedal_3">
         <property name="geometry">
          <rect>
-          <x>207</x>
-          <y>95</y>
+          <x>221</x>
+          <y>91</y>
           <width>41</width>
           <height>21</height>
          </rect>
@@ -6240,8 +6574,8 @@ border-radius: 4px;
        <widget class="QDial" name="env_3_velocity">
         <property name="geometry">
          <rect>
-          <x>250</x>
-          <y>130</y>
+          <x>264</x>
+          <y>126</y>
           <width>41</width>
           <height>41</height>
          </rect>
@@ -6265,8 +6599,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_pre_mix_39">
         <property name="geometry">
          <rect>
-          <x>290</x>
-          <y>130</y>
+          <x>304</x>
+          <y>126</y>
           <width>51</width>
           <height>41</height>
          </rect>
@@ -6292,8 +6626,8 @@ border-radius: 4px;
        <widget class="QComboBox" name="env_3_freerun">
         <property name="geometry">
          <rect>
-          <x>107</x>
-          <y>140</y>
+          <x>121</x>
+          <y>136</y>
           <width>61</width>
           <height>21</height>
          </rect>
@@ -6339,8 +6673,8 @@ border-radius: 4px;
        <widget class="QComboBox" name="env_3_reset">
         <property name="geometry">
          <rect>
-          <x>183</x>
-          <y>140</y>
+          <x>197</x>
+          <y>136</y>
           <width>53</width>
           <height>21</height>
          </rect>
@@ -6386,54 +6720,9 @@ border-radius: 4px;
       </widget>
      </widget>
     </widget>
-    <widget class="Line" name="line_OSC_2">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>6</y>
-       <width>21</width>
-       <height>221</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: red;
-width: 2px;
-</string>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Plain</enum>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_env">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>-4</y>
-       <width>41</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans</family>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: red</string>
-     </property>
-     <property name="text">
-      <string>env</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
+    <zorder>label_env</zorder>
+    <zorder>tab_envelopes</zorder>
+    <zorder>line_OSC_2</zorder>
    </widget>
    <widget class="Line" name="line_3">
     <property name="geometry">
@@ -6470,7 +6759,7 @@ width: 2px;
      <property name="geometry">
       <rect>
        <x>290</x>
-       <y>-6</y>
+       <y>-5</y>
        <width>41</width>
        <height>41</height>
       </rect>
@@ -6621,9 +6910,9 @@ width: 2px;
      <widget class="QLabel" name="filter_2_label">
       <property name="geometry">
        <rect>
-        <x>5</x>
+        <x>15</x>
         <y>5</y>
-        <width>31</width>
+        <width>16</width>
         <height>41</height>
        </rect>
       </property>
@@ -7140,9 +7429,9 @@ border-radius: 4px;
      <widget class="QLabel" name="filter_1_label">
       <property name="geometry">
        <rect>
-        <x>5</x>
+        <x>15</x>
         <y>5</y>
-        <width>31</width>
+        <width>16</width>
         <height>41</height>
        </rect>
       </property>
@@ -7440,7 +7729,7 @@ border-radius: 4px;
      <widget class="QComboBox" name="filter_1_polarity">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>2</x>
         <y>15</y>
         <width>16</width>
         <height>21</height>
@@ -7448,7 +7737,7 @@ border-radius: 4px;
       </property>
       <property name="font">
        <font>
-        <family>DejaVu Sans Mono</family>
+        <family>DejaVu Sans</family>
         <pointsize>8</pointsize>
        </font>
       </property>
@@ -7490,6 +7779,7 @@ border-radius: 4px;
        </property>
       </item>
      </widget>
+     <zorder>filter_1_polarity</zorder>
      <zorder>label_f1tof2</zorder>
      <zorder>filter_1_envamt</zorder>
      <zorder>filter_1_freq</zorder>
@@ -7498,7 +7788,6 @@ border-radius: 4px;
      <zorder>filter_1_type</zorder>
      <zorder>filter_1_res</zorder>
      <zorder>f1_to_f2_level</zorder>
-     <zorder>filter_1_polarity</zorder>
     </widget>
     <zorder>filter_1</zorder>
     <zorder>label_filter_5</zorder>
@@ -10983,328 +11272,6 @@ border-radius:10px;
      </property>
     </widget>
    </widget>
-   <widget class="QGroupBox" name="vox_group_pt2">
-    <property name="geometry">
-     <rect>
-      <x>19</x>
-      <y>271</y>
-      <width>301</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string/>
-    </property>
-    <widget class="QComboBox" name="pitch_wheel_mode">
-     <property name="geometry">
-      <rect>
-       <x>263</x>
-       <y>11</y>
-       <width>38</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans Mono</family>
-       <pointsize>8</pointsize>
-      </font>
-     </property>
-     <property name="acceptDrops">
-      <bool>false</bool>
-     </property>
-     <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;pitch wheel mode&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background: #faa</string>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>8</width>
-       <height>16</height>
-      </size>
-     </property>
-     <property name="duplicatesEnabled">
-      <bool>false</bool>
-     </property>
-     <property name="frame">
-      <bool>false</bool>
-     </property>
-     <item>
-      <property name="text">
-       <string>held</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>all</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QLabel" name="label_drift">
-     <property name="geometry">
-      <rect>
-       <x>218</x>
-       <y>10</y>
-       <width>31</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans</family>
-       <pointsize>8</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"/>
-     </property>
-     <property name="text">
-      <string>drift</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_pitch_wheel_mode">
-     <property name="geometry">
-      <rect>
-       <x>263</x>
-       <y>-7</y>
-       <width>38</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans</family>
-       <pointsize>8</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"/>
-     </property>
-     <property name="text">
-      <string>bend</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QDial" name="analog_drift">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>191</x>
-       <y>0</y>
-       <width>31</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;analog drift&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"/>
-     </property>
-     <property name="minimum">
-      <number>0</number>
-     </property>
-     <property name="maximum">
-      <number>100</number>
-     </property>
-     <property name="singleStep">
-      <number>1</number>
-     </property>
-     <property name="pageStep">
-      <number>10</number>
-     </property>
-     <property name="value">
-      <number>0</number>
-     </property>
-     <property name="notchTarget">
-      <double>100.000000000000000</double>
-     </property>
-     <property name="notchesVisible">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="osc_sync">
-     <property name="geometry">
-      <rect>
-       <x>40</x>
-       <y>13</y>
-       <width>16</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="toolTip">
-      <string/>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: lightgrey;
-border-style: solid;
-border-color: grey;
-width:8px;
-height: 8px;
-border-width: 1px;
-border-radius: 4px;
-
-</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>8</width>
-       <height>8</height>
-      </size>
-     </property>
-     <property name="checkable">
-      <bool>true</bool>
-     </property>
-     <property name="checked">
-      <bool>false</bool>
-     </property>
-     <property name="autoRepeat">
-      <bool>false</bool>
-     </property>
-     <property name="tristate">
-      <bool>false</bool>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="osc_sync_type">
-     <property name="geometry">
-      <rect>
-       <x>61</x>
-       <y>11</y>
-       <width>38</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans Mono</family>
-       <pointsize>8</pointsize>
-      </font>
-     </property>
-     <property name="acceptDrops">
-      <bool>false</bool>
-     </property>
-     <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync type&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>8</width>
-       <height>16</height>
-      </size>
-     </property>
-     <property name="duplicatesEnabled">
-      <bool>false</bool>
-     </property>
-     <property name="frame">
-      <bool>false</bool>
-     </property>
-     <item>
-      <property name="text">
-       <string>soft</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>hard</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QComboBox" name="osc_sync_route">
-     <property name="geometry">
-      <rect>
-       <x>105</x>
-       <y>11</y>
-       <width>71</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans Mono</family>
-       <pointsize>8</pointsize>
-      </font>
-     </property>
-     <property name="acceptDrops">
-      <bool>false</bool>
-     </property>
-     <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>8</width>
-       <height>16</height>
-      </size>
-     </property>
-     <property name="duplicatesEnabled">
-      <bool>false</bool>
-     </property>
-     <property name="frame">
-      <bool>false</bool>
-     </property>
-     <item>
-      <property name="text">
-       <string>osc2</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>osc2+osc3</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QLabel" name="label_sync">
-     <property name="geometry">
-      <rect>
-       <x>3</x>
-       <y>10</y>
-       <width>31</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans</family>
-       <pointsize>10</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"/>
-     </property>
-     <property name="text">
-      <string>sync</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <zorder>label_pitch_wheel_mode</zorder>
-    <zorder>pitch_wheel_mode</zorder>
-    <zorder>label_drift</zorder>
-    <zorder>analog_drift</zorder>
-    <zorder>osc_sync</zorder>
-    <zorder>osc_sync_type</zorder>
-    <zorder>osc_sync_route</zorder>
-    <zorder>label_sync</zorder>
-   </widget>
    <widget class="QGroupBox" name="vox_group_pt1">
     <property name="geometry">
      <rect>
@@ -11612,7 +11579,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>140</x>
-       <y>10</y>
+       <y>11</y>
        <width>91</width>
        <height>20</height>
       </rect>
@@ -11669,7 +11636,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>275</x>
-       <y>3</y>
+       <y>5</y>
        <width>31</width>
        <height>31</height>
       </rect>
@@ -11699,7 +11666,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>245</x>
-       <y>3</y>
+       <y>5</y>
        <width>31</width>
        <height>31</height>
       </rect>
@@ -11736,7 +11703,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>50</x>
-       <y>12</y>
+       <y>13</y>
        <width>16</width>
        <height>16</height>
       </rect>
@@ -11781,7 +11748,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-1</y>
+       <y>0</y>
        <width>41</width>
        <height>41</height>
       </rect>
@@ -11827,7 +11794,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>80</x>
-       <y>10</y>
+       <y>11</y>
        <width>51</width>
        <height>20</height>
       </rect>
@@ -11867,6 +11834,187 @@ border-radius: 4px;
       </property>
      </item>
     </widget>
+   </widget>
+   <widget class="Line" name="line_OSC_3">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>312</y>
+      <width>21</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: red;
+width: 2px;
+</string>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_env_2">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>310</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>DejaVu Sans</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: red</string>
+    </property>
+    <property name="text">
+     <string>fm</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QDial" name="fm_amount">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>67</x>
+      <y>302</y>
+      <width>41</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:lightgrey</string>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>1000</number>
+    </property>
+    <property name="singleStep">
+     <number>1</number>
+    </property>
+    <property name="pageStep">
+     <number>10</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="notchTarget">
+     <double>1000.000000000000000</double>
+    </property>
+    <property name="notchesVisible">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="fm_algorithm">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>318</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>DejaVu Sans Mono</family>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>8</width>
+      <height>16</height>
+     </size>
+    </property>
+    <property name="duplicatesEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+    <item>
+     <property name="text">
+      <string>3 &gt; 2 &gt; 1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2+3 &gt; 1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2 &gt; 1</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="fm_type">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>318</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>DejaVu Sans Mono</family>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>8</width>
+      <height>16</height>
+     </size>
+    </property>
+    <property name="duplicatesEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+    <item>
+     <property name="text">
+      <string>lin</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>exp</string>
+     </property>
+    </item>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
