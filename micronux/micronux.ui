@@ -131,7 +131,7 @@ QGroupBox {
     <property name="geometry">
      <rect>
       <x>534</x>
-      <y>238</y>
+      <y>230</y>
       <width>131</width>
       <height>121</height>
      </rect>
@@ -513,7 +513,7 @@ width: 2px;
     <property name="geometry">
      <rect>
       <x>337</x>
-      <y>71</y>
+      <y>63</y>
       <width>181</width>
       <height>231</height>
      </rect>
@@ -1893,7 +1893,7 @@ width: 2px;
     <property name="geometry">
      <rect>
       <x>21</x>
-      <y>0</y>
+      <y>-8</y>
       <width>311</width>
       <height>301</height>
      </rect>
@@ -3251,9 +3251,9 @@ width: 2px;
      <property name="geometry">
       <rect>
        <x>299</x>
-       <y>15</y>
+       <y>75</y>
        <width>21</width>
-       <height>281</height>
+       <height>221</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -4250,7 +4250,7 @@ border-radius: 4px;
     <property name="geometry">
      <rect>
       <x>15</x>
-      <y>370</y>
+      <y>368</y>
       <width>381</width>
       <height>181</height>
      </rect>
@@ -4258,7 +4258,7 @@ border-radius: 4px;
     <property name="title">
      <string/>
     </property>
-    <widget class="Line" name="line_OSC_2">
+    <widget class="Line" name="line_ENV">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -6722,13 +6722,13 @@ border-radius: 4px;
     </widget>
     <zorder>label_env</zorder>
     <zorder>tab_envelopes</zorder>
-    <zorder>line_OSC_2</zorder>
+    <zorder>line_ENV</zorder>
    </widget>
    <widget class="Line" name="line_3">
     <property name="geometry">
      <rect>
       <x>514</x>
-      <y>79</y>
+      <y>71</y>
       <width>20</width>
       <height>161</height>
      </rect>
@@ -6747,7 +6747,7 @@ border-radius: 4px;
     <property name="geometry">
      <rect>
       <x>528</x>
-      <y>74</y>
+      <y>66</y>
       <width>331</width>
       <height>161</height>
      </rect>
@@ -7801,9 +7801,9 @@ border-radius: 4px;
     <property name="geometry">
      <rect>
       <x>860</x>
-      <y>81</y>
+      <y>73</y>
       <width>20</width>
-      <height>241</height>
+      <height>221</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -7820,7 +7820,7 @@ border-radius: 4px;
     <property name="geometry">
      <rect>
       <x>885</x>
-      <y>73</y>
+      <y>65</y>
       <width>121</width>
       <height>261</height>
      </rect>
@@ -8556,7 +8556,7 @@ border-radius: 4px;
     <property name="geometry">
      <rect>
       <x>675</x>
-      <y>231</y>
+      <y>223</y>
       <width>181</width>
       <height>16</height>
      </rect>
@@ -8574,8 +8574,8 @@ border-radius: 4px;
    <widget class="QGroupBox" name="knob_assign">
     <property name="geometry">
      <rect>
-      <x>690</x>
-      <y>261</y>
+      <x>680</x>
+      <y>250</y>
       <width>161</width>
       <height>41</height>
      </rect>
@@ -8637,9 +8637,10 @@ border-radius: 4px;
 	color: #b00;
 }
 QComboBox {
-background:#444;
+background:#faa;
 color:#444;
 border-radius:10px;
+padding-left:3px;
 }</string>
      </property>
      <property name="maxVisibleItems">
@@ -9517,9 +9518,9 @@ border-radius:10px;
 	background-color: white;
 }
 QComboBox {
-background:#444;
+background:#faa;
 color:#444;
-border-radius:10px;
+border-radius:10px;padding-left:3px;
 }</string>
      </property>
      <property name="maxVisibleItems">
@@ -10369,10 +10370,10 @@ border-radius:10px;
 	background-color: white;
 }
 QComboBox {
-background:#444;
+background:#faa;
 color:#444;
 border-radius:10px;
-}</string>
+padding-left:3px;}</string>
      </property>
      <property name="maxVisibleItems">
       <number>10</number>
@@ -11276,7 +11277,7 @@ border-radius:10px;
     <property name="geometry">
      <rect>
       <x>360</x>
-      <y>8</y>
+      <y>0</y>
       <width>281</width>
       <height>51</height>
      </rect>
@@ -11567,7 +11568,7 @@ border-radius: 4px;
     <property name="geometry">
      <rect>
       <x>670</x>
-      <y>8</y>
+      <y>0</y>
       <width>311</width>
       <height>51</height>
      </rect>
@@ -11835,186 +11836,1553 @@ border-radius: 4px;
      </item>
     </widget>
    </widget>
-   <widget class="Line" name="line_OSC_3">
-    <property name="geometry">
-     <rect>
-      <x>45</x>
-      <y>312</y>
-      <width>21</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: red;
-width: 2px;
-</string>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_env_2">
+   <widget class="QGroupBox" name="fm_group">
     <property name="geometry">
      <rect>
       <x>15</x>
       <y>310</y>
-      <width>41</width>
-      <height>31</height>
+      <width>221</width>
+      <height>41</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>DejaVu Sans</family>
-      <pointsize>12</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: red</string>
-    </property>
-    <property name="text">
-     <string>fm</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QDial" name="fm_amount">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>67</x>
-      <y>302</y>
-      <width>41</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="toolTip">
+    <property name="title">
      <string/>
     </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:lightgrey</string>
-    </property>
-    <property name="minimum">
-     <number>0</number>
-    </property>
-    <property name="maximum">
-     <number>1000</number>
-    </property>
-    <property name="singleStep">
-     <number>1</number>
-    </property>
-    <property name="pageStep">
-     <number>10</number>
-    </property>
-    <property name="value">
-     <number>0</number>
-    </property>
-    <property name="notchTarget">
-     <double>1000.000000000000000</double>
-    </property>
-    <property name="notchesVisible">
-     <bool>true</bool>
-    </property>
+    <widget class="QComboBox" name="fm_type">
+     <property name="geometry">
+      <rect>
+       <x>92</x>
+       <y>6</y>
+       <width>31</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans Mono</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>8</width>
+       <height>16</height>
+      </size>
+     </property>
+     <property name="duplicatesEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>lin</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>exp</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="Line" name="line_FM">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>0</y>
+       <width>21</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: red;
+width: 2px;
+</string>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="QDial" name="fm_amount">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>46</x>
+       <y>-10</y>
+       <width>41</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:lightgrey</string>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>1000</number>
+     </property>
+     <property name="singleStep">
+      <number>1</number>
+     </property>
+     <property name="pageStep">
+      <number>10</number>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="notchTarget">
+      <double>1000.000000000000000</double>
+     </property>
+     <property name="notchesVisible">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="fm_algorithm">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>6</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans Mono</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>8</width>
+       <height>16</height>
+      </size>
+     </property>
+     <property name="duplicatesEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>3 &gt; 2 &gt; 1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2+3 &gt; 1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2 &gt; 1</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_env_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>-2</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: red</string>
+     </property>
+     <property name="text">
+      <string>fm</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
    </widget>
-   <widget class="QComboBox" name="fm_algorithm">
+   <widget class="QGroupBox" name="lfo_group">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>318</y>
-      <width>71</width>
-      <height>20</height>
+      <x>420</x>
+      <y>370</y>
+      <width>271</width>
+      <height>181</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>DejaVu Sans Mono</family>
-      <pointsize>8</pointsize>
-     </font>
+    <property name="title">
+     <string/>
     </property>
-    <property name="acceptDrops">
-     <bool>false</bool>
-    </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>8</width>
-      <height>16</height>
-     </size>
-    </property>
-    <property name="duplicatesEnabled">
-     <bool>false</bool>
-    </property>
-    <property name="frame">
-     <bool>false</bool>
-    </property>
-    <item>
-     <property name="text">
-      <string>3 &gt; 2 &gt; 1</string>
+    <widget class="QLabel" name="label_sync_6">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>120</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
      </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>2+3 &gt; 1</string>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
      </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>2 &gt; 1</string>
+     <property name="styleSheet">
+      <string notr="true"/>
      </property>
-    </item>
-   </widget>
-   <widget class="QComboBox" name="fm_type">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>318</y>
-      <width>31</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>DejaVu Sans Mono</family>
-      <pointsize>8</pointsize>
-     </font>
-    </property>
-    <property name="acceptDrops">
-     <bool>false</bool>
-    </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>8</width>
-      <height>16</height>
-     </size>
-    </property>
-    <property name="duplicatesEnabled">
-     <bool>false</bool>
-    </property>
-    <property name="frame">
-     <bool>false</bool>
-    </property>
-    <item>
      <property name="text">
-      <string>lin</string>
+      <string>input</string>
      </property>
-    </item>
-    <item>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="lfo_2_synced_rate">
+     <property name="geometry">
+      <rect>
+       <x>105</x>
+       <y>81</y>
+       <width>56</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans Mono</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="currentIndex">
+      <number>5</number>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>8</width>
+       <height>16</height>
+      </size>
+     </property>
+     <property name="duplicatesEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>x 16</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 12</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 10</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 8</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 6</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 5 1/3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 2 2/3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1 1/2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1 1/3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 3/4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 2/3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1/2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 3/8</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1/3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1/4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 3/16</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1/6</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1/8</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 3/32</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1/12</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1/16</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QCheckBox" name="sh_tempo">
+     <property name="geometry">
+      <rect>
+       <x>85</x>
+       <y>151</y>
+       <width>16</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: lightgrey;
+border-style: solid;
+border-color: grey;
+width:8px;
+height: 8px;
+border-width: 1px;
+border-radius: 4px;
+
+</string>
+     </property>
      <property name="text">
-      <string>exp</string>
+      <string/>
      </property>
-    </item>
+     <property name="iconSize">
+      <size>
+       <width>8</width>
+       <height>8</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <property name="autoRepeat">
+      <bool>false</bool>
+     </property>
+     <property name="tristate">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="sh_input">
+     <property name="geometry">
+      <rect>
+       <x>124</x>
+       <y>121</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans Mono</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>8</width>
+       <height>16</height>
+      </size>
+     </property>
+     <property name="duplicatesEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>global random</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_sync_3">
+     <property name="geometry">
+      <rect>
+       <x>41</x>
+       <y>1</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>rate</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="lfo_1_reset">
+     <property name="geometry">
+      <rect>
+       <x>171</x>
+       <y>35</y>
+       <width>61</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans Mono</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>8</width>
+       <height>16</height>
+      </size>
+     </property>
+     <property name="duplicatesEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>mono</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>poly</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>key mono</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>key poly</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>arp mono</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QCheckBox" name="lfo_2_tempo_sync">
+     <property name="geometry">
+      <rect>
+       <x>85</x>
+       <y>83</y>
+       <width>16</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: lightgrey;
+border-style: solid;
+border-color: grey;
+width:8px;
+height: 8px;
+border-width: 1px;
+border-radius: 4px;
+
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>8</width>
+       <height>8</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <property name="autoRepeat">
+      <bool>false</bool>
+     </property>
+     <property name="tristate">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QDial" name="lfo_2_rate">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>41</x>
+       <y>71</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:lightgrey</string>
+     </property>
+     <property name="minimum">
+      <number>10</number>
+     </property>
+     <property name="maximum">
+      <number>1000000</number>
+     </property>
+     <property name="singleStep">
+      <number>1</number>
+     </property>
+     <property name="pageStep">
+      <number>10</number>
+     </property>
+     <property name="value">
+      <number>10</number>
+     </property>
+     <property name="notchTarget">
+      <double>1000.000000000000000</double>
+     </property>
+     <property name="notchesVisible">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="lfo_1_synced_rate">
+     <property name="geometry">
+      <rect>
+       <x>105</x>
+       <y>35</y>
+       <width>56</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans Mono</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="currentIndex">
+      <number>5</number>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>8</width>
+       <height>16</height>
+      </size>
+     </property>
+     <property name="duplicatesEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>x 16</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 12</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 10</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 8</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 6</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 5 1/3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 2 2/3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1 1/2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1 1/3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 3/4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 2/3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1/2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 3/8</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1/3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1/4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 3/16</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1/6</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1/8</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 3/32</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1/12</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1/16</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="Line" name="line_LFO">
+     <property name="geometry">
+      <rect>
+       <x>22</x>
+       <y>0</y>
+       <width>21</width>
+       <height>178</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: red;
+width: 2px;
+</string>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lfo_2_label">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>80</y>
+       <width>21</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>2</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QDial" name="lfo_1_rate">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>41</x>
+       <y>25</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:lightgrey</string>
+     </property>
+     <property name="minimum">
+      <number>10</number>
+     </property>
+     <property name="maximum">
+      <number>1000000</number>
+     </property>
+     <property name="singleStep">
+      <number>1</number>
+     </property>
+     <property name="pageStep">
+      <number>10</number>
+     </property>
+     <property name="value">
+      <number>10</number>
+     </property>
+     <property name="notchTarget">
+      <double>1000.000000000000000</double>
+     </property>
+     <property name="notchesVisible">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="lfo_1_tempo_sync">
+     <property name="geometry">
+      <rect>
+       <x>85</x>
+       <y>37</y>
+       <width>16</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: lightgrey;
+border-style: solid;
+border-color: grey;
+width:8px;
+height: 8px;
+border-width: 1px;
+border-radius: 4px;
+
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>8</width>
+       <height>8</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <property name="autoRepeat">
+      <bool>false</bool>
+     </property>
+     <property name="tristate">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_env_3">
+     <property name="geometry">
+      <rect>
+       <x>-8</x>
+       <y>-2</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: red</string>
+     </property>
+     <property name="text">
+      <string>lfo</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="sh_synced_rate">
+     <property name="geometry">
+      <rect>
+       <x>105</x>
+       <y>149</y>
+       <width>56</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans Mono</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="currentIndex">
+      <number>5</number>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>8</width>
+       <height>16</height>
+      </size>
+     </property>
+     <property name="duplicatesEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>x 16</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 12</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 10</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 8</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 6</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 5 1/3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 2 2/3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1 1/2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1 1/3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 3/4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 2/3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1/2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 3/8</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1/3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1/4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 3/16</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1/6</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1/8</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 3/32</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1/12</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x 1/16</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="lfo_2_reset">
+     <property name="geometry">
+      <rect>
+       <x>171</x>
+       <y>81</y>
+       <width>61</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans Mono</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>8</width>
+       <height>16</height>
+      </size>
+     </property>
+     <property name="duplicatesEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>mono</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>poly</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>key mono</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>key poly</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>arp mono</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="lfo_2_label_2">
+     <property name="geometry">
+      <rect>
+       <x>-1</x>
+       <y>136</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>sh</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_sync_4">
+     <property name="geometry">
+      <rect>
+       <x>171</x>
+       <y>1</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>reset</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_sync_5">
+     <property name="geometry">
+      <rect>
+       <x>235</x>
+       <y>1</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>m1</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QDial" name="sh_rate">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>41</x>
+       <y>125</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:lightgrey</string>
+     </property>
+     <property name="minimum">
+      <number>10</number>
+     </property>
+     <property name="maximum">
+      <number>1000000</number>
+     </property>
+     <property name="singleStep">
+      <number>1</number>
+     </property>
+     <property name="pageStep">
+      <number>10</number>
+     </property>
+     <property name="value">
+      <number>10</number>
+     </property>
+     <property name="notchTarget">
+      <double>1000.000000000000000</double>
+     </property>
+     <property name="notchesVisible">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_sync_2">
+     <property name="geometry">
+      <rect>
+       <x>83</x>
+       <y>1</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>sync</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lfo_1_label">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>34</y>
+       <width>21</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QDial" name="lfo_1_mod_wheel">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>235</x>
+       <y>25</y>
+       <width>31</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:red</string>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="singleStep">
+      <number>1</number>
+     </property>
+     <property name="pageStep">
+      <number>10</number>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="notchTarget">
+      <double>100.000000000000000</double>
+     </property>
+     <property name="notchesVisible">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QDial" name="lfo_2_mod_wheel">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>235</x>
+       <y>71</y>
+       <width>31</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:red</string>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="singleStep">
+      <number>1</number>
+     </property>
+     <property name="pageStep">
+      <number>10</number>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="notchTarget">
+      <double>100.000000000000000</double>
+     </property>
+     <property name="notchesVisible">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QDial" name="sh_smoothing">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>235</x>
+       <y>141</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:lightgrey</string>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="singleStep">
+      <number>1</number>
+     </property>
+     <property name="pageStep">
+      <number>10</number>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="notchTarget">
+      <double>100.000000000000000</double>
+     </property>
+     <property name="notchesVisible">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="sh_reset">
+     <property name="geometry">
+      <rect>
+       <x>171</x>
+       <y>149</y>
+       <width>61</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans Mono</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>8</width>
+       <height>16</height>
+      </size>
+     </property>
+     <property name="duplicatesEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>mono</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>poly</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>key mono</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>key poly</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>arp mono</string>
+      </property>
+     </item>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

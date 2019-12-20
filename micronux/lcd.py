@@ -13,7 +13,8 @@ nicer_names = {
 'amount':'fm amount',
 'freq':'frequency',
 'res':'resonance',
-'envamt':'env amount'
+'envamt':'env amount',
+'wheel':'slider'
 }
 
 prev_setting = ''

@@ -19,7 +19,9 @@ percentages = [
 'keytrack',
 'envamt',
 'drift',
-'detune'
+'detune',
+'wheel',
+'smoothing'
 ]
 
 keywords = {
@@ -100,14 +102,13 @@ def disp_val(val, setting):
                 unit = ''
 
     # frequency
-    elif type == 'freq':
+    elif (type == 'freq') or (type == 'rate'):
         if setting.endswith('offset_freq'):
             pad = 4
             if val < 0:
                 pad = 5;
             disp = str(val/100).ljust(pad, '0')
-            #  can range from -4.00 to 4.00
-        elif int(val) >= 20000:
+        else:
             unit = 'hz'
             roundings = 2
             if int(val) > 100000:
@@ -120,6 +121,7 @@ def disp_val(val, setting):
                     roundings = 3
                 disp = round(float(val/1000000), roundings)
             disp = str(disp).ljust(5, '0')
+
     # left-right pan
     elif type == 'pan':
         if val < 0:
