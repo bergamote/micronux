@@ -2383,6 +2383,9 @@ width: 2px;
       <property name="minimum">
        <number>-99</number>
       </property>
+      <property name="maximum">
+       <number>99</number>
+      </property>
       <property name="singleStep">
        <number>1</number>
       </property>
@@ -4258,7 +4261,7 @@ border-radius: 4px;
     <property name="title">
      <string/>
     </property>
-    <widget class="Line" name="line_ENV">
+    <widget class="Line" name="line_12">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -4318,7 +4321,7 @@ width: 2px;
      <property name="font">
       <font>
        <family>DejaVu Sans</family>
-       <pointsize>11</pointsize>
+       <pointsize>10</pointsize>
        <weight>50</weight>
        <bold>false</bold>
        <strikeout>false</strikeout>
@@ -6722,7 +6725,7 @@ border-radius: 4px;
     </widget>
     <zorder>label_env</zorder>
     <zorder>tab_envelopes</zorder>
-    <zorder>line_ENV</zorder>
+    <zorder>line_12</zorder>
    </widget>
    <widget class="Line" name="line_3">
     <property name="geometry">
@@ -11257,7 +11260,7 @@ border-radius:10px;
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="Line" name="line_OSC_4">
+    <widget class="Line" name="line_13">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -11274,6 +11277,19 @@ border-radius:10px;
      </property>
      <property name="orientation">
       <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="sh_widginPop">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>test</string>
      </property>
     </widget>
    </widget>
@@ -11896,7 +11912,7 @@ border-radius: 4px;
       </property>
      </item>
     </widget>
-    <widget class="Line" name="line_FM">
+    <widget class="Line" name="line_11">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -12315,11 +12331,181 @@ border-radius: 4px;
      </property>
      <item>
       <property name="text">
+       <string>note-on velocity</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>release velocity</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>key track</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>m1 wheel</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>m2 wheel</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>pitch wheel</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>sustain pedal</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>expression pedal</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>amp env level</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>filter env level</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>pitch/mod env level</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>lfo 1 sine</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>lfo 1 cosine</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>lfo 1 triangle</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>lfo 1 cos-triangle</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>lfo 1 saw</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>lfo 1 cos-saw</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>lfo 1 square</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>lfo 1 cos-square</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>lfo 2 sine</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>lfo 2 cosine</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>lfo 2 triangle</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>lfo 2 cos-triangle</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>lfo 2 saw</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>lfo 2 cos-saw</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>lfo 2 square</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>lfo 2 cos-square</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>voice random</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
        <string>global random</string>
       </property>
      </item>
+     <item>
+      <property name="text">
+       <string>portamento level</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>portamento effect</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>tracking generator</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>step track</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>midi channel pressure</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>midi poly aftertouch</string>
+      </property>
+     </item>
     </widget>
-    <widget class="QLabel" name="label_sync_3">
+    <widget class="QLabel" name="label_lfo_rate">
      <property name="geometry">
       <rect>
        <x>41</x>
@@ -12652,7 +12838,7 @@ border-radius: 4px;
       </property>
      </item>
     </widget>
-    <widget class="Line" name="line_LFO">
+    <widget class="Line" name="line_14">
      <property name="geometry">
       <rect>
        <x>22</x>
@@ -13033,7 +13219,7 @@ border-radius: 4px;
       </property>
      </item>
     </widget>
-    <widget class="QLabel" name="lfo_2_label_2">
+    <widget class="QLabel" name="sh_label">
      <property name="geometry">
       <rect>
        <x>-1</x>
@@ -13060,7 +13246,7 @@ border-radius: 4px;
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="label_sync_4">
+    <widget class="QLabel" name="label_lfo_reset">
      <property name="geometry">
       <rect>
        <x>171</x>
@@ -13087,7 +13273,7 @@ border-radius: 4px;
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="label_sync_5">
+    <widget class="QLabel" name="label_lfo_to_m1">
      <property name="geometry">
       <rect>
        <x>235</x>
@@ -13154,7 +13340,7 @@ border-radius: 4px;
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="label_sync_2">
+    <widget class="QLabel" name="label_lfo_sync">
      <property name="geometry">
       <rect>
        <x>83</x>
@@ -13391,8 +13577,8 @@ border-radius: 4px;
    <widget class="QLabel" name="label_env_4">
     <property name="geometry">
      <rect>
-      <x>244</x>
-      <y>308</y>
+      <x>230</x>
+      <y>312</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -13415,13 +13601,13 @@ border-radius: 4px;
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="Line" name="line_FM_2">
+   <widget class="Line" name="line_10">
     <property name="geometry">
      <rect>
-      <x>274</x>
-      <y>310</y>
+      <x>260</x>
+      <y>314</y>
       <width>21</width>
-      <height>81</height>
+      <height>74</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -13436,10 +13622,10 @@ width: 2px;
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="label_sync_7">
+   <widget class="QLabel" name="label_drive">
     <property name="geometry">
      <rect>
-      <x>294</x>
+      <x>290</x>
       <y>310</y>
       <width>41</width>
       <height>21</height>
@@ -13469,7 +13655,7 @@ width: 2px;
     </property>
     <property name="geometry">
      <rect>
-      <x>294</x>
+      <x>290</x>
       <y>320</y>
       <width>41</width>
       <height>51</height>
@@ -13506,7 +13692,7 @@ width: 2px;
    <widget class="QComboBox" name="fm_type_2">
     <property name="geometry">
      <rect>
-      <x>294</x>
+      <x>280</x>
       <y>370</y>
       <width>101</width>
       <height>20</height>
@@ -13581,7 +13767,7 @@ width: 2px;
     </property>
     <property name="geometry">
      <rect>
-      <x>354</x>
+      <x>360</x>
       <y>320</y>
       <width>41</width>
       <height>51</height>
@@ -13621,8 +13807,8 @@ width: 2px;
     </property>
     <property name="geometry">
      <rect>
-      <x>454</x>
-      <y>306</y>
+      <x>470</x>
+      <y>308</y>
       <width>51</width>
       <height>51</height>
      </rect>
@@ -13655,10 +13841,10 @@ width: 2px;
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label_sync_8">
+   <widget class="QLabel" name="label_effects">
     <property name="geometry">
      <rect>
-      <x>344</x>
+      <x>351</x>
       <y>310</y>
       <width>61</width>
       <height>21</height>
@@ -13682,11 +13868,11 @@ width: 2px;
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_sync_9">
+   <widget class="QLabel" name="label_output_level">
     <property name="geometry">
      <rect>
-      <x>404</x>
-      <y>322</y>
+      <x>420</x>
+      <y>324</y>
       <width>61</width>
       <height>21</height>
      </rect>
@@ -13713,7 +13899,7 @@ width: 2px;
     <property name="geometry">
      <rect>
       <x>340</x>
-      <y>293</y>
+      <y>295</y>
       <width>171</width>
       <height>16</height>
      </rect>
@@ -13731,9 +13917,9 @@ width: 2px;
    <widget class="Line" name="line_9">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>353</y>
-      <width>101</width>
+      <x>430</x>
+      <y>356</y>
+      <width>81</width>
       <height>16</height>
      </rect>
     </property>
@@ -13752,7 +13938,7 @@ width: 2px;
      <rect>
       <x>700</x>
       <y>310</y>
-      <width>300</width>
+      <width>298</width>
       <height>241</height>
      </rect>
     </property>
@@ -13794,6 +13980,120 @@ width: 2px;
      </attribute>
     </widget>
    </widget>
+   <widget class="QLabel" name="label_fx_mix_wet">
+    <property name="geometry">
+     <rect>
+      <x>346</x>
+      <y>350</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>DejaVu Sans</family>
+      <pointsize>8</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>wet</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_fx_mix_dry">
+    <property name="geometry">
+     <rect>
+      <x>394</x>
+      <y>350</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>DejaVu Sans</family>
+      <pointsize>8</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>dry</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widg_input" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>1001</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:#efefef;</string>
+    </property>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>870</x>
+       <y>530</y>
+       <width>91</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Close</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </widget>
+   <zorder>widg_input</zorder>
+   <zorder>screen</zorder>
+   <zorder>side_line_right</zorder>
+   <zorder>side_line_left</zorder>
+   <zorder>pre_filter_mix</zorder>
+   <zorder>oscilators</zorder>
+   <zorder>envelopes</zorder>
+   <zorder>line_3</zorder>
+   <zorder>filters</zorder>
+   <zorder>line_4</zorder>
+   <zorder>post_filter_mix</zorder>
+   <zorder>line_5</zorder>
+   <zorder>knob_assign</zorder>
+   <zorder>vox_group_pt1</zorder>
+   <zorder>portamento_group</zorder>
+   <zorder>fm_group</zorder>
+   <zorder>lfo_group</zorder>
+   <zorder>label_env_4</zorder>
+   <zorder>line_10</zorder>
+   <zorder>label_drive</zorder>
+   <zorder>drive_level</zorder>
+   <zorder>fm_type_2</zorder>
+   <zorder>effects_wetdry_mix</zorder>
+   <zorder>output_level</zorder>
+   <zorder>label_effects</zorder>
+   <zorder>label_output_level</zorder>
+   <zorder>line_8</zorder>
+   <zorder>line_9</zorder>
+   <zorder>tabWidget</zorder>
+   <zorder>label_fx_mix_wet</zorder>
+   <zorder>label_fx_mix_dry</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -13827,11 +14127,6 @@ width: 2px;
    <addaction name="menuFile"/>
    <addaction name="menuMIDI"/>
   </widget>
-  <action name="actionOpen_txt">
-   <property name="text">
-    <string>Open txt...</string>
-   </property>
-  </action>
   <action name="actionsettings">
    <property name="text">
     <string>Settings...</string>
@@ -13845,11 +14140,6 @@ width: 2px;
   <action name="actionReceive">
    <property name="text">
     <string>Receive...</string>
-   </property>
-  </action>
-  <action name="actionOpen_syx">
-   <property name="text">
-    <string>Open syx...</string>
    </property>
   </action>
   <action name="actionSave">

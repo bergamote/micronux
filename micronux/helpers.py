@@ -21,7 +21,8 @@ percentages = [
 'drift',
 'detune',
 'wheel',
-'smoothing'
+'smoothing',
+'mix'
 ]
 
 keywords = {
@@ -56,7 +57,7 @@ def get_unit(str):
 def clean_val(val):
     unit = get_unit(val)
     if unit == 'pct':
-        if isinstance(float(val[:-1]), float):
+        if '.' in val:
             clean = float(val[:-1]) * 10
         else:
             clean = int(val[:-1])
