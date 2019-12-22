@@ -43,6 +43,8 @@ def mapping(settings, app, window):
                 keyword = value
                 if value in keywords:
                     keyword = keywords[value]
+                if value.startswith('x '):
+                    keyword = value[2:]
                 new_index = widgoo.findText(keyword)
                 widgoo.setCurrentIndex(new_index)
             elif (widg_type == 'QDial') or (widg_type == 'QSlider'):

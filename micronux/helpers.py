@@ -33,7 +33,9 @@ keywords = {
 '3 -> 2 -> 1': '3 > 2 > 1',
 '2+3 -> 1': '2+3 > 1',
 '2 -> 1': '2 > 1',
-'linear': 'lin'
+'linear': 'lin',
+'m1 wheel': 'm1 slider',
+'m2 wheel': 'm2 slider'
 }
 
 # get string value unit
@@ -51,6 +53,8 @@ def get_unit(str):
         unit = 'hz'
     elif str.endswith(' KHz'):
         unit = 'khz'
+    elif str.endswith('% fx1'):
+        unit = 'fxbal'
     return unit
 
 # make number strings into integer
@@ -67,6 +71,8 @@ def clean_val(val):
         clean = int(float(val[:-2]) * 1000000)
     elif unit == 'bal':
         clean = int(val[:-4])
+    elif unit == 'fxbal':
+        clean = int(val[:-5])
     elif unit == 'hz':
         clean = int(float(val[:-3]) * 1000)
     elif unit == 'khz':
@@ -138,7 +144,7 @@ def disp_val(val, setting):
 
     # f1 to f2 balance
     elif type == 'balance':
-        if setting.endswith('extin_balance'):
+        if (setting == 'extin_balance'):
             val = int((val+100)/2)
         unit = '%'
         f1 = str(val)

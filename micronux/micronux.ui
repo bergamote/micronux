@@ -87,6 +87,7 @@ QComboBox:on {
     padding-top: 0px;
     padding-left: 0px;
 	margin: 0px;
+	color: #b00;
 }
 QComboBox QAbstractItemView {
     selection-background-color: #ccc;
@@ -96,7 +97,7 @@ QComboBox QAbstractItemView {
 	color: #333;
 }
 
-QToolBox::tab:selected {
+QToolBox::tab {
     background: transparent;
 	border-top: 1px solid grey;
     border-radius:0px;
@@ -6758,7 +6759,7 @@ border-radius: 4px;
     <property name="title">
      <string/>
     </property>
-    <widget class="QLabel" name="label_filter_5">
+    <widget class="QLabel" name="label_filter_keytrack">
      <property name="geometry">
       <rect>
        <x>290</x>
@@ -6788,7 +6789,7 @@ border-radius: 4px;
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="label_filter_6">
+    <widget class="QLabel" name="label_filter_envamt">
      <property name="geometry">
       <rect>
        <x>250</x>
@@ -7228,7 +7229,7 @@ border-radius: 4px;
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QLabel" name="label_sus_pedal_4">
+     <widget class="QLabel" name="label_filter_2_offset">
       <property name="geometry">
        <rect>
         <x>117</x>
@@ -7256,7 +7257,7 @@ border-radius: 4px;
       </property>
      </widget>
     </widget>
-    <widget class="QLabel" name="label_filter_4">
+    <widget class="QLabel" name="label_filter_res">
      <property name="geometry">
       <rect>
        <x>210</x>
@@ -7283,7 +7284,7 @@ border-radius: 4px;
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="label_filter_3">
+    <widget class="QLabel" name="label_filter_freq">
      <property name="geometry">
       <rect>
        <x>40</x>
@@ -7793,11 +7794,11 @@ border-radius: 4px;
      <zorder>f1_to_f2_level</zorder>
     </widget>
     <zorder>filter_1</zorder>
-    <zorder>label_filter_5</zorder>
-    <zorder>label_filter_6</zorder>
+    <zorder>label_filter_keytrack</zorder>
+    <zorder>label_filter_envamt</zorder>
     <zorder>filter_2</zorder>
-    <zorder>label_filter_4</zorder>
-    <zorder>label_filter_3</zorder>
+    <zorder>label_filter_res</zorder>
+    <zorder>label_filter_freq</zorder>
     <zorder>label_filter</zorder>
    </widget>
    <widget class="Line" name="line_4">
@@ -8591,7 +8592,7 @@ border-radius: 4px;
     <property name="title">
      <string/>
     </property>
-    <widget class="QLabel" name="label_knob_4">
+    <widget class="QLabel" name="label_knob_z">
      <property name="geometry">
       <rect>
        <x>130</x>
@@ -9470,7 +9471,7 @@ border-radius:10px;
       </property>
      </item>
     </widget>
-    <widget class="QLabel" name="label_knob_3">
+    <widget class="QLabel" name="label_knob_x">
      <property name="geometry">
       <rect>
        <x>70</x>
@@ -11202,7 +11203,7 @@ border-radius:10px;
       </property>
      </item>
     </widget>
-    <widget class="QLabel" name="label_knob_2">
+    <widget class="QLabel" name="label_knob_y">
      <property name="geometry">
       <rect>
        <x>100</x>
@@ -12062,7 +12063,7 @@ width: 2px;
     <property name="title">
      <string/>
     </property>
-    <widget class="QLabel" name="label_sync_6">
+    <widget class="QLabel" name="label_sh_input">
      <property name="geometry">
       <rect>
        <x>80</x>
@@ -12092,9 +12093,9 @@ width: 2px;
     <widget class="QComboBox" name="lfo_2_synced_rate">
      <property name="geometry">
       <rect>
-       <x>105</x>
+       <x>120</x>
        <y>81</y>
-       <width>56</width>
+       <width>41</width>
        <height>20</height>
       </rect>
      </property>
@@ -12111,7 +12112,7 @@ width: 2px;
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="currentIndex">
-      <number>5</number>
+      <number>0</number>
      </property>
      <property name="iconSize">
       <size>
@@ -12127,134 +12128,134 @@ width: 2px;
      </property>
      <item>
       <property name="text">
-       <string>x 16</string>
+       <string>16</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 12</string>
+       <string>12</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 10</string>
+       <string>10 2/3</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 8</string>
+       <string>8</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 6</string>
+       <string>6</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 5 1/3</string>
+       <string>5 1/3</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 4</string>
+       <string>4</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 3</string>
+       <string>3</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 2 2/3</string>
+       <string>2 2/3</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 2</string>
+       <string>2</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1 1/2</string>
+       <string>1 1/2</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1 1/3</string>
+       <string>1 1/3</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1</string>
+       <string>1</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 3/4</string>
+       <string>3/4</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 2/3</string>
+       <string>2/3</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1/2</string>
+       <string>1/2</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 3/8</string>
+       <string>3/8</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1/3</string>
+       <string>1/3</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1/4</string>
+       <string>1/4</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 3/16</string>
+       <string>3/16</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1/6</string>
+       <string>1/6</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1/8</string>
+       <string>1/8</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 3/32</string>
+       <string>3/32</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1/12</string>
+       <string>1/12</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1/16</string>
+       <string>1/16</string>
       </property>
      </item>
     </widget>
     <widget class="QCheckBox" name="sh_tempo">
      <property name="geometry">
       <rect>
-       <x>85</x>
+       <x>90</x>
        <y>151</y>
        <width>16</width>
        <height>16</height>
@@ -12346,12 +12347,12 @@ border-radius: 4px;
      </item>
      <item>
       <property name="text">
-       <string>m1 wheel</string>
+       <string>m1 slider</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>m2 wheel</string>
+       <string>m2 slider</string>
       </property>
      </item>
      <item>
@@ -12594,7 +12595,7 @@ border-radius: 4px;
     <widget class="QCheckBox" name="lfo_2_tempo_sync">
      <property name="geometry">
       <rect>
-       <x>85</x>
+       <x>90</x>
        <y>83</y>
        <width>16</width>
        <height>16</height>
@@ -12679,9 +12680,9 @@ border-radius: 4px;
     <widget class="QComboBox" name="lfo_1_synced_rate">
      <property name="geometry">
       <rect>
-       <x>105</x>
+       <x>120</x>
        <y>35</y>
-       <width>56</width>
+       <width>41</width>
        <height>20</height>
       </rect>
      </property>
@@ -12698,7 +12699,7 @@ border-radius: 4px;
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="currentIndex">
-      <number>5</number>
+      <number>0</number>
      </property>
      <property name="iconSize">
       <size>
@@ -12714,127 +12715,127 @@ border-radius: 4px;
      </property>
      <item>
       <property name="text">
-       <string>x 16</string>
+       <string>16</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 12</string>
+       <string>12</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 10</string>
+       <string>10 2/3</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 8</string>
+       <string>8</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 6</string>
+       <string>6</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 5 1/3</string>
+       <string>5 1/3</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 4</string>
+       <string>4</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 3</string>
+       <string>3</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 2 2/3</string>
+       <string>2 2/3</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 2</string>
+       <string>2</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1 1/2</string>
+       <string>1 1/2</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1 1/3</string>
+       <string>1 1/3</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1</string>
+       <string>1</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 3/4</string>
+       <string>3/4</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 2/3</string>
+       <string>2/3</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1/2</string>
+       <string>1/2</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 3/8</string>
+       <string>3/8</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1/3</string>
+       <string>1/3</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1/4</string>
+       <string>1/4</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 3/16</string>
+       <string>3/16</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1/6</string>
+       <string>1/6</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1/8</string>
+       <string>1/8</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 3/32</string>
+       <string>3/32</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1/12</string>
+       <string>1/12</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1/16</string>
+       <string>1/16</string>
       </property>
      </item>
     </widget>
@@ -12929,7 +12930,7 @@ width: 2px;
     <widget class="QCheckBox" name="lfo_1_tempo_sync">
      <property name="geometry">
       <rect>
-       <x>85</x>
+       <x>90</x>
        <y>37</y>
        <width>16</width>
        <height>16</height>
@@ -12971,7 +12972,7 @@ border-radius: 4px;
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="label_env_3">
+    <widget class="QLabel" name="label_lfos">
      <property name="geometry">
       <rect>
        <x>-8</x>
@@ -13001,9 +13002,9 @@ border-radius: 4px;
     <widget class="QComboBox" name="sh_synced_rate">
      <property name="geometry">
       <rect>
-       <x>105</x>
+       <x>120</x>
        <y>149</y>
-       <width>56</width>
+       <width>41</width>
        <height>20</height>
       </rect>
      </property>
@@ -13020,7 +13021,7 @@ border-radius: 4px;
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="currentIndex">
-      <number>5</number>
+      <number>0</number>
      </property>
      <property name="iconSize">
       <size>
@@ -13036,127 +13037,127 @@ border-radius: 4px;
      </property>
      <item>
       <property name="text">
-       <string>x 16</string>
+       <string>16</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 12</string>
+       <string>12</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 10</string>
+       <string>10 2/3</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 8</string>
+       <string>8</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 6</string>
+       <string>6</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 5 1/3</string>
+       <string>5 1/3</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 4</string>
+       <string>4</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 3</string>
+       <string>3</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 2 2/3</string>
+       <string>2 2/3</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 2</string>
+       <string>2</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1 1/2</string>
+       <string>1 1/2</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1 1/3</string>
+       <string>1 1/3</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1</string>
+       <string>1</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 3/4</string>
+       <string>3/4</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 2/3</string>
+       <string>2/3</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1/2</string>
+       <string>1/2</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 3/8</string>
+       <string>3/8</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1/3</string>
+       <string>1/3</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1/4</string>
+       <string>1/4</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 3/16</string>
+       <string>3/16</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1/6</string>
+       <string>1/6</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1/8</string>
+       <string>1/8</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 3/32</string>
+       <string>3/32</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1/12</string>
+       <string>1/12</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>x 1/16</string>
+       <string>1/16</string>
       </property>
      </item>
     </widget>
@@ -13573,8 +13574,89 @@ border-radius: 4px;
       </property>
      </item>
     </widget>
+    <widget class="QLabel" name="label_lfo_1_x">
+     <property name="geometry">
+      <rect>
+       <x>106</x>
+       <y>34</y>
+       <width>16</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>x</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_lfo_2_x">
+     <property name="geometry">
+      <rect>
+       <x>106</x>
+       <y>80</y>
+       <width>16</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>x</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_sh_x">
+     <property name="geometry">
+      <rect>
+       <x>106</x>
+       <y>148</y>
+       <width>16</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>x</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
    </widget>
-   <widget class="QLabel" name="label_env_4">
+   <widget class="QLabel" name="label_output">
     <property name="geometry">
      <rect>
       <x>230</x>
@@ -13949,15 +14031,1042 @@ width: 2px;
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background: #efefef</string>
+     <string notr="true">background-color: #efefef</string>
     </property>
     <property name="currentIndex">
      <number>0</number>
     </property>
     <widget class="QWidget" name="effects">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <attribute name="title">
       <string>effects</string>
      </attribute>
+     <widget class="QToolBox" name="fx_toolBox">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>40</y>
+        <width>291</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="tabSpacing">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="fx_1">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>291</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>fx 1</string>
+       </attribute>
+       <widget class="QDial" name="fx_param_a">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>-6</y>
+          <width>51</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="minimum">
+         <number>-128</number>
+        </property>
+        <property name="maximum">
+         <number>127</number>
+        </property>
+        <property name="singleStep">
+         <number>1</number>
+        </property>
+        <property name="pageStep">
+         <number>10</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="invertedAppearance">
+         <bool>false</bool>
+        </property>
+        <property name="notchTarget">
+         <double>1000.000000000000000</double>
+        </property>
+        <property name="notchesVisible">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_fx_param_a">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>44</y>
+          <width>51</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>DejaVu Sans</family>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>feedback</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QDial" name="fx_param_b">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>-6</y>
+          <width>51</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="minimum">
+         <number>-128</number>
+        </property>
+        <property name="maximum">
+         <number>127</number>
+        </property>
+        <property name="singleStep">
+         <number>1</number>
+        </property>
+        <property name="pageStep">
+         <number>10</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="invertedAppearance">
+         <bool>false</bool>
+        </property>
+        <property name="notchTarget">
+         <double>1000.000000000000000</double>
+        </property>
+        <property name="notchesVisible">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_fx_param_b">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>44</y>
+          <width>51</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>DejaVu Sans</family>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>notch</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QDial" name="fx_param_c">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>-6</y>
+          <width>51</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="minimum">
+         <number>-128</number>
+        </property>
+        <property name="maximum">
+         <number>127</number>
+        </property>
+        <property name="singleStep">
+         <number>1</number>
+        </property>
+        <property name="pageStep">
+         <number>10</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="invertedAppearance">
+         <bool>false</bool>
+        </property>
+        <property name="notchTarget">
+         <double>1000.000000000000000</double>
+        </property>
+        <property name="notchesVisible">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_fx_param_c">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>44</y>
+          <width>51</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>DejaVu Sans</family>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>rate</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QDial" name="fx_param_d">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>-6</y>
+          <width>51</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="minimum">
+         <number>-128</number>
+        </property>
+        <property name="maximum">
+         <number>127</number>
+        </property>
+        <property name="singleStep">
+         <number>1</number>
+        </property>
+        <property name="pageStep">
+         <number>10</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="invertedAppearance">
+         <bool>false</bool>
+        </property>
+        <property name="notchTarget">
+         <double>1000.000000000000000</double>
+        </property>
+        <property name="notchesVisible">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_fx_param_d">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>44</y>
+          <width>51</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>DejaVu Sans</family>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>depth</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QDial" name="fx_param_e">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>53</y>
+          <width>51</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="minimum">
+         <number>-128</number>
+        </property>
+        <property name="maximum">
+         <number>127</number>
+        </property>
+        <property name="singleStep">
+         <number>1</number>
+        </property>
+        <property name="pageStep">
+         <number>10</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="invertedAppearance">
+         <bool>false</bool>
+        </property>
+        <property name="notchTarget">
+         <double>1000.000000000000000</double>
+        </property>
+        <property name="notchesVisible">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_fx_param_e">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>103</y>
+          <width>51</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>DejaVu Sans</family>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>shape</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QDial" name="fx_param_f">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>53</y>
+          <width>51</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="minimum">
+         <number>-128</number>
+        </property>
+        <property name="maximum">
+         <number>127</number>
+        </property>
+        <property name="singleStep">
+         <number>1</number>
+        </property>
+        <property name="pageStep">
+         <number>10</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="invertedAppearance">
+         <bool>false</bool>
+        </property>
+        <property name="notchTarget">
+         <double>1000.000000000000000</double>
+        </property>
+        <property name="notchesVisible">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QDial" name="fx_param_g">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>53</y>
+          <width>51</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="minimum">
+         <number>-128</number>
+        </property>
+        <property name="maximum">
+         <number>127</number>
+        </property>
+        <property name="singleStep">
+         <number>1</number>
+        </property>
+        <property name="pageStep">
+         <number>10</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="invertedAppearance">
+         <bool>false</bool>
+        </property>
+        <property name="notchTarget">
+         <double>1000.000000000000000</double>
+        </property>
+        <property name="notchesVisible">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_fx_param_f">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>103</y>
+          <width>51</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>DejaVu Sans</family>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>stages</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_fx_param_g">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>103</y>
+          <width>51</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>DejaVu Sans</family>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>sync</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="fx_param_c_synced">
+        <property name="geometry">
+         <rect>
+          <x>244</x>
+          <y>80</y>
+          <width>41</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>DejaVu Sans Mono</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="acceptDrops">
+         <bool>false</bool>
+        </property>
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:lightgrey</string>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>8</width>
+          <height>16</height>
+         </size>
+        </property>
+        <property name="duplicatesEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="frame">
+         <bool>false</bool>
+        </property>
+        <item>
+         <property name="text">
+          <string>16</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>12</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>10 2/3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>8</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>6</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>5 1/3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2 2/3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>1 1/2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>1 1/3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>3/4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2/3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>1/2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>3/8</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>1/3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>1/4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>3/16</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>1/6</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>1/8</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>3/32</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>1/12</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>1/16</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="label_fx_param_c_synced">
+        <property name="geometry">
+         <rect>
+          <x>236</x>
+          <y>60</y>
+          <width>51</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>DejaVu Sans</family>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>sync</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_lfo_sync_5">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>79</y>
+          <width>16</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>DejaVu Sans</family>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>x</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <zorder>label_lfo_sync_5</zorder>
+       <zorder>fx_param_a</zorder>
+       <zorder>label_fx_param_a</zorder>
+       <zorder>fx_param_b</zorder>
+       <zorder>label_fx_param_b</zorder>
+       <zorder>fx_param_c</zorder>
+       <zorder>label_fx_param_c</zorder>
+       <zorder>fx_param_d</zorder>
+       <zorder>label_fx_param_d</zorder>
+       <zorder>fx_param_e</zorder>
+       <zorder>label_fx_param_e</zorder>
+       <zorder>fx_param_f</zorder>
+       <zorder>fx_param_g</zorder>
+       <zorder>label_fx_param_f</zorder>
+       <zorder>label_fx_param_g</zorder>
+       <zorder>fx_param_c_synced</zorder>
+       <zorder>label_fx_param_c_synced</zorder>
+      </widget>
+      <widget class="QWidget" name="fx_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>291</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>fx 2</string>
+       </attribute>
+      </widget>
+     </widget>
+     <widget class="QComboBox" name="fx_type">
+      <property name="geometry">
+       <rect>
+        <x>7</x>
+        <y>10</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>DejaVu Sans Mono</family>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:lightgrey</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>8</width>
+        <height>16</height>
+       </size>
+      </property>
+      <property name="duplicatesEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="frame">
+       <bool>false</bool>
+      </property>
+      <item>
+       <property name="text">
+        <string>bypass</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>super phaser</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>string phaser</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>theta flanger</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>thru 0 flanger</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>chorus</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>vocoder</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="fx2_type">
+      <property name="geometry">
+       <rect>
+        <x>185</x>
+        <y>10</y>
+        <width>101</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>DejaVu Sans Mono</family>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:lightgrey</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>8</width>
+        <height>16</height>
+       </size>
+      </property>
+      <property name="duplicatesEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="frame">
+       <bool>false</bool>
+      </property>
+      <item>
+       <property name="text">
+        <string>bypass</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>mono delay</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>stereo delay</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>split L/R delay</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>hall reverb</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>plate reverb</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>room reverb</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_fx2">
+      <property name="geometry">
+       <rect>
+        <x>159</x>
+        <y>10</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>DejaVu Sans</family>
+        <pointsize>8</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>fx2</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QDial" name="fx1_fx2_balance">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>121</x>
+        <y>0</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:lightgrey</string>
+      </property>
+      <property name="minimum">
+       <number>0</number>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="pageStep">
+       <number>10</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+      <property name="invertedAppearance">
+       <bool>true</bool>
+      </property>
+      <property name="invertedControls">
+       <bool>false</bool>
+      </property>
+      <property name="notchTarget">
+       <double>1000.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_fx1">
+      <property name="geometry">
+       <rect>
+        <x>104</x>
+        <y>10</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>DejaVu Sans</family>
+        <pointsize>8</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>fx1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="mod_1">
      <attribute name="title">
@@ -14080,7 +15189,7 @@ width: 2px;
    <zorder>portamento_group</zorder>
    <zorder>fm_group</zorder>
    <zorder>lfo_group</zorder>
-   <zorder>label_env_4</zorder>
+   <zorder>label_output</zorder>
    <zorder>line_10</zorder>
    <zorder>label_drive</zorder>
    <zorder>drive_level</zorder>
