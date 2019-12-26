@@ -1,4 +1,5 @@
-# module:   lcd.py
+# module: lcd.py
+#
 # Updating the info display.
 
 from micronux.helpers import clean_val, disp_val, last_word

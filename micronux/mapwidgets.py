@@ -1,4 +1,5 @@
 # module: mapwidgets.py
+#
 # Map settings to widgets.
 
 from micronux.helpers import clean_val, disp_val, last_word

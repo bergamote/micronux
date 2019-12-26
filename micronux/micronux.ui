@@ -4283,7 +4283,7 @@ width: 2px;
       <enum>Qt::Vertical</enum>
      </property>
     </widget>
-    <widget class="QLabel" name="label_env">
+    <widget class="QLabel" name="label_envelopes">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -4340,7 +4340,7 @@ width: 2px;
      <property name="currentIndex">
       <number>0</number>
      </property>
-     <widget class="QWidget" name="amp">
+     <widget class="QWidget" name="env_amp">
       <attribute name="title">
        <string>amp</string>
       </attribute>
@@ -4362,7 +4362,7 @@ width: 2px;
        <property name="flat">
         <bool>true</bool>
        </property>
-       <widget class="QLabel" name="label_pre_mix_8">
+       <widget class="QLabel" name="label_env_1_release">
         <property name="geometry">
          <rect>
           <x>290</x>
@@ -4429,7 +4429,7 @@ width: 2px;
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QLabel" name="label_pre_mix_4">
+       <widget class="QLabel" name="label_env_1_decay">
         <property name="geometry">
          <rect>
           <x>100</x>
@@ -4488,7 +4488,7 @@ width: 2px;
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QLabel" name="label_pre_mix_7">
+       <widget class="QLabel" name="label_env_1_sustime">
         <property name="geometry">
          <rect>
           <x>223</x>
@@ -4515,7 +4515,7 @@ width: 2px;
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="label_pre_mix_3">
+       <widget class="QLabel" name="label_env_1_attack">
         <property name="geometry">
          <rect>
           <x>40</x>
@@ -4542,7 +4542,7 @@ width: 2px;
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="label_pre_mix_5">
+       <widget class="QLabel" name="label_env_1_suslevel">
         <property name="geometry">
          <rect>
           <x>163</x>
@@ -4707,7 +4707,7 @@ border-radius: 4px;
          <bool>false</bool>
         </property>
        </widget>
-       <widget class="QLabel" name="label_pre_mix_10">
+       <widget class="QLabel" name="label_env_1_slope">
         <property name="geometry">
          <rect>
           <x>-1</x>
@@ -4935,7 +4935,7 @@ border-radius: 4px;
          </property>
         </item>
        </widget>
-       <widget class="QLabel" name="label_pre_mix_34">
+       <widget class="QLabel" name="label_env_1_loop">
         <property name="geometry">
          <rect>
           <x>9</x>
@@ -4962,7 +4962,7 @@ border-radius: 4px;
          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="label_sus_pedal">
+       <widget class="QLabel" name="label_env_1_sus_pedal">
         <property name="geometry">
          <rect>
           <x>207</x>
@@ -5014,7 +5014,7 @@ border-radius: 4px;
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QLabel" name="label_pre_mix_36">
+       <widget class="QLabel" name="label_env_1_velo">
         <property name="geometry">
          <rect>
           <x>290</x>
@@ -5135,31 +5135,59 @@ border-radius: 4px;
          </property>
         </item>
        </widget>
+       <widget class="QLabel" name="label_env_1">
+        <property name="geometry">
+         <rect>
+          <x>8</x>
+          <y>9</y>
+          <width>31</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>DejaVu Sans</family>
+          <pointsize>11</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>1</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
        <zorder>env_1_release_time</zorder>
-       <zorder>label_pre_mix_8</zorder>
-       <zorder>label_pre_mix_4</zorder>
+       <zorder>label_env_1_release</zorder>
+       <zorder>label_env_1_decay</zorder>
        <zorder>env_1_decay_time</zorder>
-       <zorder>label_pre_mix_7</zorder>
-       <zorder>label_pre_mix_3</zorder>
-       <zorder>label_pre_mix_5</zorder>
+       <zorder>label_env_1_sustime</zorder>
+       <zorder>label_env_1_attack</zorder>
+       <zorder>label_env_1_suslevel</zorder>
        <zorder>env_1_sus_time</zorder>
        <zorder>env_1_sus_level</zorder>
        <zorder>env_1_sus_pedal</zorder>
-       <zorder>label_pre_mix_10</zorder>
+       <zorder>label_env_1_slope</zorder>
        <zorder>env_1_attack_slope</zorder>
        <zorder>env_1_decay_slope</zorder>
        <zorder>env_1_release_slope</zorder>
        <zorder>env_1_loop</zorder>
-       <zorder>label_pre_mix_34</zorder>
-       <zorder>label_sus_pedal</zorder>
+       <zorder>label_env_1_loop</zorder>
+       <zorder>label_env_1_sus_pedal</zorder>
        <zorder>env_1_velocity</zorder>
-       <zorder>label_pre_mix_36</zorder>
+       <zorder>label_env_1_velo</zorder>
        <zorder>env_1_attack_time</zorder>
        <zorder>env_1_freerun_2</zorder>
        <zorder>env_1_reset_2</zorder>
+       <zorder>label_env_1</zorder>
       </widget>
      </widget>
-     <widget class="QWidget" name="filter">
+     <widget class="QWidget" name="env_filter">
       <attribute name="title">
        <string>filter</string>
       </attribute>
@@ -5181,7 +5209,7 @@ border-radius: 4px;
        <property name="flat">
         <bool>true</bool>
        </property>
-       <widget class="QLabel" name="label_pre_mix_15">
+       <widget class="QLabel" name="label_env_2_release">
         <property name="geometry">
          <rect>
           <x>285</x>
@@ -5248,7 +5276,7 @@ border-radius: 4px;
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QLabel" name="label_pre_mix_16">
+       <widget class="QLabel" name="label_env_2_decay">
         <property name="geometry">
          <rect>
           <x>95</x>
@@ -5301,7 +5329,7 @@ border-radius: 4px;
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QLabel" name="label_pre_mix_17">
+       <widget class="QLabel" name="label_env_2_sustime">
         <property name="geometry">
          <rect>
           <x>218</x>
@@ -5328,7 +5356,7 @@ border-radius: 4px;
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="label_pre_mix_18">
+       <widget class="QLabel" name="label_env_2_attack">
         <property name="geometry">
          <rect>
           <x>35</x>
@@ -5355,7 +5383,7 @@ border-radius: 4px;
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="label_pre_mix_19">
+       <widget class="QLabel" name="label_env_2_suslevel">
         <property name="geometry">
          <rect>
           <x>158</x>
@@ -5511,7 +5539,7 @@ border-radius: 4px;
          <bool>false</bool>
         </property>
        </widget>
-       <widget class="QLabel" name="label_pre_mix_20">
+       <widget class="QLabel" name="label_env_2_slope">
         <property name="geometry">
          <rect>
           <x>-6</x>
@@ -5739,7 +5767,7 @@ border-radius: 4px;
          </property>
         </item>
        </widget>
-       <widget class="QLabel" name="label_pre_mix_35">
+       <widget class="QLabel" name="label_env_2_loop">
         <property name="geometry">
          <rect>
           <x>4</x>
@@ -5766,7 +5794,7 @@ border-radius: 4px;
          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="label_sus_pedal_2">
+       <widget class="QLabel" name="label_env_2_sus_pedal">
         <property name="geometry">
          <rect>
           <x>202</x>
@@ -5818,7 +5846,7 @@ border-radius: 4px;
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QLabel" name="label_pre_mix_37">
+       <widget class="QLabel" name="label_env_2_velo">
         <property name="geometry">
          <rect>
           <x>285</x>
@@ -5939,9 +5967,36 @@ border-radius: 4px;
          </property>
         </item>
        </widget>
+       <widget class="QLabel" name="label_env_2">
+        <property name="geometry">
+         <rect>
+          <x>3</x>
+          <y>31</y>
+          <width>31</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>DejaVu Sans</family>
+          <pointsize>11</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>2</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </widget>
      </widget>
-     <widget class="QWidget" name="pitchmod">
+     <widget class="QWidget" name="env_pitchmod">
       <attribute name="title">
        <string>pitch/mod</string>
       </attribute>
@@ -5963,7 +6018,7 @@ border-radius: 4px;
        <property name="flat">
         <bool>true</bool>
        </property>
-       <widget class="QLabel" name="label_pre_mix_21">
+       <widget class="QLabel" name="label_env_3_release">
         <property name="geometry">
          <rect>
           <x>304</x>
@@ -6006,7 +6061,7 @@ border-radius: 4px;
          <string/>
         </property>
         <property name="styleSheet">
-         <string notr="true"/>
+         <string notr="true">background:#eee</string>
         </property>
         <property name="minimum">
          <number>500</number>
@@ -6030,7 +6085,7 @@ border-radius: 4px;
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QLabel" name="label_pre_mix_22">
+       <widget class="QLabel" name="label_env_3_decay">
         <property name="geometry">
          <rect>
           <x>114</x>
@@ -6068,7 +6123,7 @@ border-radius: 4px;
          <string/>
         </property>
         <property name="styleSheet">
-         <string notr="true"/>
+         <string notr="true">background:#eee</string>
         </property>
         <property name="minimum">
          <number>500</number>
@@ -6083,7 +6138,7 @@ border-radius: 4px;
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QLabel" name="label_pre_mix_23">
+       <widget class="QLabel" name="label_env_3_sustime">
         <property name="geometry">
          <rect>
           <x>237</x>
@@ -6110,7 +6165,7 @@ border-radius: 4px;
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="label_pre_mix_24">
+       <widget class="QLabel" name="label_env_3_attack">
         <property name="geometry">
          <rect>
           <x>54</x>
@@ -6137,7 +6192,7 @@ border-radius: 4px;
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="label_pre_mix_25">
+       <widget class="QLabel" name="label_env_3_suslevel">
         <property name="geometry">
          <rect>
           <x>177</x>
@@ -6177,7 +6232,7 @@ border-radius: 4px;
          <string/>
         </property>
         <property name="styleSheet">
-         <string notr="true"/>
+         <string notr="true">background:#eee</string>
         </property>
         <property name="minimum">
          <number>2000</number>
@@ -6205,7 +6260,7 @@ border-radius: 4px;
          <string/>
         </property>
         <property name="styleSheet">
-         <string notr="true"/>
+         <string notr="true">background:#eee</string>
         </property>
         <property name="minimum">
          <number>500</number>
@@ -6233,7 +6288,7 @@ border-radius: 4px;
          <string/>
         </property>
         <property name="styleSheet">
-         <string notr="true"/>
+         <string notr="true">background:#eee</string>
         </property>
         <property name="minimum">
          <number>-100</number>
@@ -6293,7 +6348,7 @@ border-radius: 4px;
          <bool>false</bool>
         </property>
        </widget>
-       <widget class="QLabel" name="label_pre_mix_26">
+       <widget class="QLabel" name="label_env_3_slope">
         <property name="geometry">
          <rect>
           <x>13</x>
@@ -6521,7 +6576,7 @@ border-radius: 4px;
          </property>
         </item>
        </widget>
-       <widget class="QLabel" name="label_pre_mix_38">
+       <widget class="QLabel" name="label_env_3_loop">
         <property name="geometry">
          <rect>
           <x>23</x>
@@ -6548,7 +6603,7 @@ border-radius: 4px;
          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="label_sus_pedal_3">
+       <widget class="QLabel" name="label_env_3_sus_pedal">
         <property name="geometry">
          <rect>
           <x>221</x>
@@ -6588,7 +6643,7 @@ border-radius: 4px;
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;key velocity tracking&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="styleSheet">
-         <string notr="true"/>
+         <string notr="true">background:#eee</string>
         </property>
         <property name="maximum">
          <number>100</number>
@@ -6600,7 +6655,7 @@ border-radius: 4px;
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QLabel" name="label_pre_mix_39">
+       <widget class="QLabel" name="label_env_3_velo">
         <property name="geometry">
          <rect>
           <x>304</x>
@@ -6721,10 +6776,37 @@ border-radius: 4px;
          </property>
         </item>
        </widget>
+       <widget class="QLabel" name="label_env_3">
+        <property name="geometry">
+         <rect>
+          <x>22</x>
+          <y>33</y>
+          <width>31</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>DejaVu Sans</family>
+          <pointsize>11</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>3</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </widget>
      </widget>
     </widget>
-    <zorder>label_env</zorder>
+    <zorder>label_envelopes</zorder>
     <zorder>tab_envelopes</zorder>
     <zorder>line_12</zorder>
    </widget>
@@ -6896,10 +6978,10 @@ border-radius: 4px;
        <number>20000000</number>
       </property>
       <property name="singleStep">
-       <number>33</number>
+       <number>1</number>
       </property>
       <property name="pageStep">
-       <number>1200</number>
+       <number>100</number>
       </property>
       <property name="value">
        <number>20000</number>
@@ -7415,10 +7497,10 @@ border-radius: 4px;
        <number>20000000</number>
       </property>
       <property name="singleStep">
-       <number>33</number>
+       <number>1</number>
       </property>
       <property name="pageStep">
-       <number>1200</number>
+       <number>100</number>
       </property>
       <property name="value">
        <number>20000</number>
@@ -11231,7 +11313,7 @@ border-radius:10px;
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="label_post_mix_filters_2">
+    <widget class="QLabel" name="label_assign_knob">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -11306,7 +11388,7 @@ border-radius:10px;
     <property name="title">
      <string/>
     </property>
-    <widget class="QLabel" name="label_unison_2">
+    <widget class="QLabel" name="label_detune">
      <property name="geometry">
       <rect>
        <x>229</x>
@@ -11654,7 +11736,7 @@ border-radius: 4px;
       </property>
      </item>
     </widget>
-    <widget class="QLabel" name="label_unison_3">
+    <widget class="QLabel" name="label_porta_time">
      <property name="geometry">
       <rect>
        <x>275</x>
@@ -11766,7 +11848,7 @@ border-radius: 4px;
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="label_vox_2">
+    <widget class="QLabel" name="label_portamento">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -12023,7 +12105,7 @@ width: 2px;
       </property>
      </item>
     </widget>
-    <widget class="QLabel" name="label_env_2">
+    <widget class="QLabel" name="label_fm">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -12050,7 +12132,7 @@ width: 2px;
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="label_pre_mix_6">
+    <widget class="QLabel" name="label_fm_type">
      <property name="geometry">
       <rect>
        <x>100</x>
@@ -14113,7 +14195,7 @@ width: 2px;
         </property>
         <property name="geometry">
          <rect>
-          <x>20</x>
+          <x>40</x>
           <y>-6</y>
           <width>51</width>
           <height>51</height>
@@ -14153,7 +14235,7 @@ width: 2px;
        <widget class="QLabel" name="label_fx_param_a">
         <property name="geometry">
          <rect>
-          <x>20</x>
+          <x>40</x>
           <y>44</y>
           <width>51</width>
           <height>16</height>
@@ -14183,7 +14265,7 @@ width: 2px;
         </property>
         <property name="geometry">
          <rect>
-          <x>80</x>
+          <x>100</x>
           <y>-6</y>
           <width>51</width>
           <height>51</height>
@@ -14223,7 +14305,7 @@ width: 2px;
        <widget class="QLabel" name="label_fx_param_b">
         <property name="geometry">
          <rect>
-          <x>80</x>
+          <x>100</x>
           <y>44</y>
           <width>51</width>
           <height>16</height>
@@ -14253,7 +14335,7 @@ width: 2px;
         </property>
         <property name="geometry">
          <rect>
-          <x>140</x>
+          <x>160</x>
           <y>-6</y>
           <width>51</width>
           <height>51</height>
@@ -14293,7 +14375,7 @@ width: 2px;
        <widget class="QLabel" name="label_fx_param_c">
         <property name="geometry">
          <rect>
-          <x>140</x>
+          <x>160</x>
           <y>44</y>
           <width>51</width>
           <height>16</height>
@@ -14323,7 +14405,7 @@ width: 2px;
         </property>
         <property name="geometry">
          <rect>
-          <x>200</x>
+          <x>220</x>
           <y>-6</y>
           <width>51</width>
           <height>51</height>
@@ -14363,7 +14445,7 @@ width: 2px;
        <widget class="QLabel" name="label_fx_param_d">
         <property name="geometry">
          <rect>
-          <x>200</x>
+          <x>220</x>
           <y>44</y>
           <width>51</width>
           <height>16</height>
@@ -14393,7 +14475,7 @@ width: 2px;
         </property>
         <property name="geometry">
          <rect>
-          <x>50</x>
+          <x>70</x>
           <y>53</y>
           <width>51</width>
           <height>51</height>
@@ -14433,7 +14515,7 @@ width: 2px;
        <widget class="QLabel" name="label_fx_param_e">
         <property name="geometry">
          <rect>
-          <x>50</x>
+          <x>70</x>
           <y>103</y>
           <width>51</width>
           <height>16</height>
@@ -14463,7 +14545,7 @@ width: 2px;
         </property>
         <property name="geometry">
          <rect>
-          <x>110</x>
+          <x>130</x>
           <y>53</y>
           <width>51</width>
           <height>51</height>
@@ -14506,7 +14588,7 @@ width: 2px;
         </property>
         <property name="geometry">
          <rect>
-          <x>170</x>
+          <x>190</x>
           <y>53</y>
           <width>51</width>
           <height>51</height>
@@ -14546,7 +14628,7 @@ width: 2px;
        <widget class="QLabel" name="label_fx_param_f">
         <property name="geometry">
          <rect>
-          <x>110</x>
+          <x>130</x>
           <y>103</y>
           <width>51</width>
           <height>16</height>
@@ -14573,7 +14655,7 @@ width: 2px;
        <widget class="QLabel" name="label_fx_param_g">
         <property name="geometry">
          <rect>
-          <x>170</x>
+          <x>190</x>
           <y>103</y>
           <width>51</width>
           <height>16</height>
@@ -14603,8 +14685,8 @@ width: 2px;
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>291</width>
-         <height>121</height>
+         <width>100</width>
+         <height>30</height>
         </rect>
        </property>
        <attribute name="label">
@@ -15267,6 +15349,9 @@ width: 2px;
     </property>
    </widget>
    <widget class="QWidget" name="widg_input" native="true">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -15351,7 +15436,7 @@ width: 2px;
     <property name="title">
      <string>MIDI</string>
     </property>
-    <addaction name="actionsettings"/>
+    <addaction name="actionSettings"/>
     <addaction name="separator"/>
     <addaction name="actionSend"/>
     <addaction name="actionReceive"/>
@@ -15359,7 +15444,7 @@ width: 2px;
    <addaction name="menuFile"/>
    <addaction name="menuMIDI"/>
   </widget>
-  <action name="actionsettings">
+  <action name="actionSettings">
    <property name="text">
     <string>Settings...</string>
    </property>

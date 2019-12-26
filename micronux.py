@@ -1,5 +1,6 @@
-# File: micronux.py
-# A Python/QT setting editor for the Micron synth
+#! /usr/bin/python3
+#
+# A Python3/QT5 program editor for the Micron synth
 
 import sys
 from micronux import gui, textfile, mapwidgets, lcd

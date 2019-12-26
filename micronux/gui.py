@@ -1,5 +1,5 @@
-# File: gui.py
-###########################
+# module: gui.py
+#
 # Import PySide2, load .ui file
 # and show window.
 # note: main needs sys module and
