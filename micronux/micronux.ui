@@ -12161,7 +12161,7 @@ width: 2px;
    <widget class="QGroupBox" name="lfo_group">
     <property name="geometry">
      <rect>
-      <x>410</x>
+      <x>404</x>
       <y>377</y>
       <width>271</width>
       <height>181</height>
@@ -14125,9 +14125,9 @@ width: 2px;
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>687</x>
+      <x>679</x>
       <y>310</y>
-      <width>311</width>
+      <width>317</width>
       <height>241</height>
      </rect>
     </property>
@@ -14153,7 +14153,7 @@ width: 2px;
      <widget class="QToolBox" name="fx_toolBox">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>1</x>
         <y>40</y>
         <width>311</width>
         <height>171</height>
@@ -14685,8 +14685,8 @@ width: 2px;
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>100</width>
-         <height>30</height>
+         <width>311</width>
+         <height>121</height>
         </rect>
        </property>
        <attribute name="label">
@@ -14977,7 +14977,7 @@ width: 2px;
      <widget class="QComboBox" name="fx_type">
       <property name="geometry">
        <rect>
-        <x>7</x>
+        <x>10</x>
         <y>10</y>
         <width>101</width>
         <height>20</height>
@@ -15049,7 +15049,7 @@ width: 2px;
      <widget class="QComboBox" name="fx2_type">
       <property name="geometry">
        <rect>
-        <x>199</x>
+        <x>202</x>
         <y>10</y>
         <width>101</width>
         <height>20</height>
@@ -15121,7 +15121,7 @@ width: 2px;
      <widget class="QLabel" name="label_fx2">
       <property name="geometry">
        <rect>
-        <x>172</x>
+        <x>175</x>
         <y>10</y>
         <width>21</width>
         <height>21</height>
@@ -15151,7 +15151,7 @@ width: 2px;
       </property>
       <property name="geometry">
        <rect>
-        <x>133</x>
+        <x>136</x>
         <y>0</y>
         <width>41</width>
         <height>41</height>
@@ -15194,7 +15194,7 @@ width: 2px;
      <widget class="QLabel" name="label_fx1">
       <property name="geometry">
        <rect>
-        <x>115</x>
+        <x>118</x>
         <y>10</y>
         <width>21</width>
         <height>21</height>
@@ -15221,7 +15221,7 @@ width: 2px;
      <widget class="QLabel" name="label_fx_name">
       <property name="geometry">
        <rect>
-        <x>97</x>
+        <x>111</x>
         <y>43</y>
         <width>91</width>
         <height>21</height>
@@ -15248,8 +15248,8 @@ width: 2px;
      <widget class="QLabel" name="label_fx2_name">
       <property name="geometry">
        <rect>
-        <x>98</x>
-        <y>190</y>
+        <x>112</x>
+        <y>189</y>
         <width>91</width>
         <height>21</height>
        </rect>
@@ -15288,17 +15288,17 @@ width: 2px;
       <string>modC</string>
      </attribute>
     </widget>
-    <widget class="QWidget" name="track">
+    <widget class="QWidget" name="tracking">
      <attribute name="title">
-      <string>track</string>
+      <string>tracking</string>
      </attribute>
      <widget class="QGroupBox" name="tracking_groupBox">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>10</y>
+        <x>3</x>
+        <y>30</y>
         <width>311</width>
-        <height>191</height>
+        <height>181</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -16441,6 +16441,194 @@ QSlider {
       <zorder>label_tracking_n16</zorder>
       <zorder>label_tracking_16</zorder>
       <zorder>label_tracking_17</zorder>
+     </widget>
+     <widget class="QComboBox" name="tracking_preset">
+      <property name="geometry">
+       <rect>
+        <x>85</x>
+        <y>11</y>
+        <width>61</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>DejaVu Sans Mono</family>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:lightgrey</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>8</width>
+        <height>16</height>
+       </size>
+      </property>
+      <property name="duplicatesEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="frame">
+       <bool>false</bool>
+      </property>
+      <item>
+       <property name="text">
+        <string>custom</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>bypass</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>negate</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>abs val</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>neg abs</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>exp+</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>exp-</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>zero</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>maximum</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>minimum</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_tracking_preset">
+      <property name="geometry">
+       <rect>
+        <x>22</x>
+        <y>10</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>DejaVu Sans</family>
+        <pointsize>10</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>preset</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_tracking_numpoints">
+      <property name="geometry">
+       <rect>
+        <x>202</x>
+        <y>10</y>
+        <width>51</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>DejaVu Sans</family>
+        <pointsize>10</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>points</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="tracking_numpoints">
+      <property name="geometry">
+       <rect>
+        <x>255</x>
+        <y>11</y>
+        <width>24</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>DejaVu Sans Mono</family>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:lightgrey</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>8</width>
+        <height>16</height>
+       </size>
+      </property>
+      <property name="duplicatesEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="frame">
+       <bool>false</bool>
+      </property>
+      <item>
+       <property name="text">
+        <string>12</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>16</string>
+       </property>
+      </item>
      </widget>
     </widget>
    </widget>
