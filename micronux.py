@@ -2,7 +2,7 @@
 #
 # A Python3/QT5 program editor for the Micron synth
 
-import sys
+import sys, os.path
 from micronux import gui, textfile, mapwidgets, lcd
 
 debug = True
@@ -12,8 +12,23 @@ myQtGui = gui.make_gui('micronux/micronux.ui', 'Micronux', 'fusion')
 app = myQtGui['app']
 window = myQtGui['window']
 
+print(sys.argv)
+
 # import settings text file
-settings = textfile.import_file('test.txt')
+file_name = 'test.txt'
+
+if len(sys.argv) > 1:
+    arg = sys.argv[1]
+    if not arg.endswith('.txt'):
+        print('File type must be .txt')
+    else:
+        if os.path.isfile(sys.argv[1]):
+                file_name = sys.argv[1]
+        else:
+            print('File '+sys.argv[1]+' not found.')
+
+print('### Loading '+file_name)
+settings = textfile.import_file(file_name)
 
 # set values to widgets
 mapwidgets.mapping(settings, app, window)
@@ -44,5 +59,6 @@ def open_widgin():
 
 window.pushButton.clicked.connect(close_widgin)
 window.sh_widginPop.clicked.connect(open_widgin)
+
 
 sys.exit(app.exec_())

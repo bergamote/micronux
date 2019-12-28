@@ -5,7 +5,7 @@
 ### Read sysex.txt into settings
 def import_file(file_name):
     txt_file = open(file_name)
-    settings = {}
+    settings = {'file_name':file_name}
     for line in txt_file:
         line = line.strip()
         if line:
