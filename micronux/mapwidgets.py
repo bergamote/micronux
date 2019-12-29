@@ -25,7 +25,7 @@ def mapping(settings, app, window):
 
                 debug_line = 'QRadioButton -> '+waveform.objectName()
                 debug_line += ': '+button_name+' ('+value+')'
-                print(debug_line)
+                # print(debug_line)
 
     # Go through all the widgets,
     # if the name matches a setting name
@@ -59,6 +59,6 @@ def mapping(settings, app, window):
 
             debug_line = widg_type+' -> '+name+': '
             debug_line += str(value)+' ('+settings[name]+')'
-            print(debug_line)
+            # print(debug_line)
 
     window.setWindowTitle(settings['name']+" | Micronux")

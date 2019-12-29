@@ -39,6 +39,8 @@ keywords = {
 'm2 wheel': 'm2 slider'
 }
 
+mark_positive = ['semi','fine','octave']
+
 # get string value unit
 def get_unit(str):
     unit = ''
@@ -158,5 +160,8 @@ def disp_val(val, setting):
     # percents
     elif type in percentages:
         unit = '%'
+
+    if type in mark_positive and (val > 0):
+        disp =  '+'+disp
 
     return (disp, unit)

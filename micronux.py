@@ -15,12 +15,12 @@ window = myQtGui['window']
 print(sys.argv)
 
 # import settings text file
-file_name = 'test.txt'
+file_name = 'prog/default.txt'
 
 if len(sys.argv) > 1:
     arg = sys.argv[1]
-    if not arg.endswith('.txt'):
-        print('File type must be .txt')
+    if not (arg.endswith('.txt') or arg.endswith('.syx')):
+        print('File type must be .txt or .syx')
     else:
         if os.path.isfile(sys.argv[1]):
                 file_name = sys.argv[1]

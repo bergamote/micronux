@@ -1,21 +1,21 @@
 #----------------------------------------
-# Micron program:  my.syx
-# Generated on Sat Nov  2 11:54:01 2019
+# Micron program:  /home/herberts/apps/micron/micronedit/default.syx
+# Generated on Fri Nov 15 23:42:45 2019
 #----------------------------------------
 
 #----------------------------------------
 # Identification
 #----------------------------------------
 
-name:                 WahWehWuhWoo
+name:                 Program
 ion location:         edit 0
 
 # "micron file id" can range from 0 to 16383
-micron file id:       8746
+micron file id:       0
 
 # "category" can be:
 #   bass, lead, pad, string, brass, key, comp, drum, sfx
-category:             pad
+category:             comp
 
 # "knob * param" can be:
 #   Voice Polyphony, Voice Unison, Voice UsnDetune, Voice Portamnto, 
@@ -57,9 +57,9 @@ category:             pad
 #   Track Point 13, Track Point 14, Track Point 15, Track Point 16, Category, 
 #   Knob X Param, Knob Y Param, Knob Z Param, Filter 2 Freq Offset, 
 #   LFO 1 Rate Sync, LFO 2 Rate Sync, S/H Rate Sync
-knob x param:         Out Drive Level
-knob y param:         Env 1 Atk Time
-knob z param:         Pre Noise Level
+knob x param:         Filter 1 Freq
+knob y param:         Filter 1 Res
+knob z param:         Post Fltr 1 Pan
 
 #----------------------------------------
 # Voice
@@ -75,7 +75,7 @@ unison:               off
 unison voices:        2
 
 # "unison detune" can range from 0% to 100%
-unison detune:        11%
+unison detune:        0%
 
 # "portamento" can be:  on, off
 portamento:           off
@@ -94,7 +94,7 @@ portamento time:      160.223 ms
 pitch wheel mode:     all
 
 # "analog drift" can range from 0% to 100%
-analog drift:         10%
+analog drift:         0%
 
 # "osc sync" can be:  on, off
 osc sync:             off
@@ -109,7 +109,7 @@ osc sync route:       osc2
 fm amount:            0.0%
 
 # "fm algorithm" can be:  3 -> 2 -> 1, 2+3 -> 1, 2 -> 1
-fm algorithm:         2+3 -> 1
+fm algorithm:         2 -> 1
 
 # "fm type" can be:  linear, exp
 fm type:              linear
@@ -119,18 +119,18 @@ fm type:              linear
 #----------------------------------------
 
 # "osc * waveform" can be:  sine, tri/saw, pulse
-osc 1 waveform:       tri/saw
-osc 2 waveform:       tri/saw
+osc 1 waveform:       sine
+osc 2 waveform:       sine
 osc 3 waveform:       sine
 
 # "osc * shape" can range from -100% to 100%
-osc 1 shape:          -100%
-osc 2 shape:          80%
-osc 3 shape:          -100%
+osc 1 shape:          0%
+osc 2 shape:          0%
+osc 3 shape:          0%
 
 # "osc * octave" can be:  -3, -2, -1, 0, 1, 2, 3
 osc 1 octave:         0
-osc 2 octave:         2
+osc 2 octave:         0
 osc 3 octave:         0
 
 # "osc * pitch semi" can be:
@@ -141,8 +141,8 @@ osc 3 pitch semi:     0
 
 # "osc * pitch fine" can range from -99.5 to 99.5
 osc 1 pitch fine:     0.0
-osc 2 pitch fine:     -10.0
-osc 3 pitch fine:     8.5
+osc 2 pitch fine:     0.0
+osc 3 pitch fine:     0.0
 
 # "osc * p wheel range" can range from 0 to 12
 osc 1 p wheel range:  2
@@ -154,28 +154,28 @@ osc 3 p wheel range:  2
 #----------------------------------------
 
 # "osc 1 level" can range from 0% to 100%
-osc 1 level:          82%
+osc 1 level:          100%
 
 # "osc 2 level" can range from 0% to 100%
-osc 2 level:          80%
+osc 2 level:          0%
 
 # "osc 3 level" can range from 0% to 100%
-osc 3 level:          86%
+osc 3 level:          0%
 
 # "ringmod level" can range from 0% to 100%
 ringmod level:        0%
 
 # "noise level" can range from 0% to 100%
-noise level:          65%
+noise level:          0%
 
 # "extin level" can range from 0% to 100%
 extin level:          0%
 
 # "osc 1 balance" can range from 100% f1 to 0% f1
-osc 1 balance:        50% f1
+osc 1 balance:        100% f1
 
 # "osc 2 balance" can range from 100% f1 to 0% f1
-osc 2 balance:        50% f1
+osc 2 balance:        100% f1
 
 # "osc 3 balance" can range from 100% f1 to 0% f1
 osc 3 balance:        50% f1
@@ -193,7 +193,7 @@ extin balance:        0%
 f1 to f2 level:       0%
 
 # "noise type" can be:  pink, white
-noise type:           white
+noise type:           pink
 
 #----------------------------------------
 # Filters
@@ -206,51 +206,51 @@ noise type:           white
 #   phase warp, comb filter 1, comb filter 2, vocal formant 1, 
 #   vocal formant 2, vocal formant 3, bandlimit, op 4-pole highpass, 
 #   comb filter 3, comb filter 4
-filter 1 type:        vocal formant 3
-filter 2 type:        vocal formant 3
+filter 1 type:        bypass
+filter 2 type:        bypass
 
 # "filter * freq" can range from 20.000 Hz to 20.000 KHz
-filter 1 freq:        111.900 Hz
-filter 2 freq:        20.000 Hz
+filter 1 freq:        10.000 KHz
+filter 2 freq:        10.000 KHz
 
 # "filter * res" can range from 0% to 100%
-filter 1 res:         61%
-filter 2 res:         58%
+filter 1 res:         0%
+filter 2 res:         0%
 
 # "filter * keytrack" can range from -100% to 200%
-filter 1 keytrack:    0%
-filter 2 keytrack:    0%
+filter 1 keytrack:    100%
+filter 2 keytrack:    100%
 
 # "filter * envamt" can range from -100% to 100%
-filter 1 envamt:      -45%
-filter 2 envamt:      -45%
+filter 1 envamt:      0%
+filter 2 envamt:      0%
 
 # "filter 2 absoffset" can be:  absolute, offset
-filter 2 absoffset:   offset
+filter 2 absoffset:   absolute
 
 # "filter 2 offset freq" can range from -4.00 to 4.00
-filter 2 offset freq: -0.05
+filter 2 offset freq: 0.00
 
 # "filter 1 level" can range from 0% to 100%
 filter 1 level:       100%
 
 # "filter 2 level" can range from 0% to 100%
-filter 2 level:       100%
+filter 2 level:       0%
 
 # "prefilter level" can range from 0% to 100%
 prefilter level:      0%
 
 # "filter 1 pan" can range from -100% to 100%
-filter 1 pan:         -100%
+filter 1 pan:         0%
 
 # "filter 2 pan" can range from -100% to 100%
-filter 2 pan:         100%
+filter 2 pan:         0%
 
 # "prefilter pan" can range from -100% to 100%
 prefilter pan:        0%
 
 # "filter 1 polarity" can be:  positive, negative
-filter 1 polarity:    negative
+filter 1 polarity:    positive
 
 # "prefilter signal" can be:
 #   osc 1, osc 2, osc 3, filter 1 mix, filter 2 mix, ringmod, noise
@@ -263,16 +263,16 @@ prefilter signal:     osc 1
 # "drive type" can be:
 #   bypass, compressor, rms limiter, tube overdrive, distortion, tube amp, 
 #   fuzz pedal
-drive type:           tube amp
+drive type:           bypass
 
 # "drive level" can range from 0% to 100%
-drive level:          39%
+drive level:          0%
 
 # "output level" can range from 0% to 100%
-output level:         88%
+output level:         100%
 
 # "effects wetdry mix" can range from -100% to 100%
-effects wetdry mix:   -52%
+effects wetdry mix:   -100%
 
 #----------------------------------------
 # Effects
@@ -284,39 +284,39 @@ fx1 fx2 balance:      50% fx1
 # "fx type" can be:
 #   bypass, super phaser, string phaser, theta flanger, thru 0 flanger, 
 #   chorus, vocoder
-fx type:              super phaser
+fx type:              bypass
 
 # "fx param *" can range from -128 to 127
 fx param a:           100
-fx param b:           29
-fx param c:           90
+fx param b:           79
+fx param c:           87
 fx param d:           100
 fx param e:           0
-fx param f:           1
-fx param g:           1
+fx param f:           0
+fx param g:           0
 
 # "fx param c synced" can be:
 #   x 16, x 12, x 10 2/3, x 8, x 6, x 5 1/3, x 4, x 3, x 2 2/3, x 2, x 1 1/2, 
 #   x 1 1/3, x 1, x 3/4, x 2/3, x 1/2, x 3/8, x 1/3, x 1/4, x 3/16, x 1/6, 
 #   x 1/8, x 3/32, x 1/12, x 1/16
-fx param c synced:    x 16
+fx param c synced:    x 1
 
 # "fx2 type" can be:
 #   bypass, mono delay, stereo delay, split L/R delay, hall reverb, 
 #   plate reverb, room reverb
-fx2 type:             plate reverb
+fx2 type:             bypass
 
 # "fx2 param a" can range from -32768 to 32767
 fx2 param a:          100
 
 # "fx2 param b" can range from -32768 to 32767
-fx2 param b:          52
+fx2 param b:          37
 
 # "fx2 param c" can range from -32768 to 32767
-fx2 param c:          75
+fx2 param c:          59
 
 # "fx2 param d" can range from -32768 to 32767
-fx2 param d:          75
+fx2 param d:          1
 
 # "fx2 param a synced" can be:
 #   x 16, x 12, x 10 2/3, x 8, x 6, x 5 1/3, x 4, x 3, x 2 2/3, x 2, x 1 1/2, 
@@ -329,8 +329,8 @@ fx2 param a synced:   x 1
 #----------------------------------------
 
 # "env * attack time" can range from 0.500 ms to 30.000 s
-env 1 attack time:    872.203 ms
-env 2 attack time:    1.666 s
+env 1 attack time:    0.500 ms
+env 2 attack time:    0.500 ms
 env 3 attack time:    0.500 ms
 
 # "env * attack slope" can be:  lin, exp+, exp-
@@ -339,9 +339,9 @@ env 2 attack slope:   lin
 env 3 attack slope:   lin
 
 # "env * decay time" can range from 0.500 ms to 30.000 s
-env 1 decay time:     1.824 ms
-env 2 decay time:     21.338 ms
-env 3 decay time:     352.471 ms
+env 1 decay time:     0.500 ms
+env 2 decay time:     0.500 ms
+env 3 decay time:     0.500 ms
 
 # "env * decay slope" can be:  lin, exp+, exp-
 env 1 decay slope:    lin
@@ -349,7 +349,7 @@ env 2 decay slope:    lin
 env 3 decay slope:    lin
 
 # "env * sus time" can range from 0.500 ms to hold
-env 1 sus time:       28.733 s
+env 1 sus time:       hold
 env 2 sus time:       hold
 env 3 sus time:       hold
 
@@ -360,11 +360,11 @@ env 1 sus level:      100%
 env 2 sus level:      100%
 
 # "env 3 sus level" can range from -100% to 100%
-env 3 sus level:      0%
+env 3 sus level:      100%
 
 # "env * release time" can range from 2.000 ms to hold
-env 1 release time:   337.504 ms
-env 2 release time:   1.986 s
+env 1 release time:   2.000 ms
+env 2 release time:   2.000 ms
 env 3 release time:   2.000 ms
 
 # "env * release slope" can be:  lin, exp+, exp-
@@ -390,11 +390,11 @@ env 3 freerun:        release
 # "env * loop" can be:  decay, zero, hold, off
 env 1 loop:           off
 env 2 loop:           off
-env 3 loop:           decay
+env 3 loop:           off
 
 # "env * sus pedal" can be:  on, off
 env 1 sus pedal:      on
-env 2 sus pedal:      off
+env 2 sus pedal:      on
 env 3 sus pedal:      on
 
 #----------------------------------------
@@ -402,23 +402,23 @@ env 3 sus pedal:      on
 #----------------------------------------
 
 # "lfo * tempo sync" can be:  on, off
-lfo 1 tempo sync:     on
+lfo 1 tempo sync:     off
 lfo 2 tempo sync:     off
 
 # "lfo * rate" can range from 0.010 Hz to 1.000 KHz
-lfo 1 rate:           2.244 Hz
-lfo 2 rate:           2.842 Hz
+lfo 1 rate:           8.003 Hz
+lfo 2 rate:           8.003 Hz
 
 # "lfo * synced rate" can be:
 #   x 16, x 12, x 10 2/3, x 8, x 6, x 5 1/3, x 4, x 3, x 2 2/3, x 2, x 1 1/2, 
 #   x 1 1/3, x 1, x 3/4, x 2/3, x 1/2, x 3/8, x 1/3, x 1/4, x 3/16, x 1/6, 
 #   x 1/8, x 3/32, x 1/12, x 1/16
-lfo 1 synced rate:    x 1
-lfo 2 synced rate:    x 16
+lfo 1 synced rate:    x 16
+lfo 2 synced rate:    x 8
 
 # "lfo * reset" can be:  mono, poly, key mono, key poly, arp mono
-lfo 1 reset:          arp mono
-lfo 2 reset:          arp mono
+lfo 1 reset:          mono
+lfo 2 reset:          mono
 
 # "lfo * mod wheel 1" can range from 0% to 100%
 lfo 1 mod wheel 1:    0%
@@ -428,7 +428,7 @@ lfo 2 mod wheel 1:    0%
 sh tempo sync:        off
 
 # "sh rate" can range from 0.010 Hz to 1.000 KHz
-sh rate:              0.100 Hz
+sh rate:              8.003 Hz
 
 # "sh synced rate" can be:
 #   x 16, x 12, x 10 2/3, x 8, x 6, x 5 1/3, x 4, x 3, x 2 2/3, x 2, x 1 1/2, 
@@ -462,7 +462,7 @@ sh reset:             mono
 #   midi cc 106, midi cc 107, midi cc 108, midi cc 109, midi cc 110, 
 #   midi cc 111, midi cc 112, midi cc 113, midi cc 114, midi cc 115, 
 #   midi cc 116, midi cc 117, midi cc 118, midi cc 119, key track extreme
-sh input:             global random
+sh input:             voice random
 
 # "sh smoothing" can range from 1% to 100%
 sh smoothing:         1%
@@ -494,7 +494,7 @@ sh smoothing:         1%
 #   midi cc 106, midi cc 107, midi cc 108, midi cc 109, midi cc 110, 
 #   midi cc 111, midi cc 112, midi cc 113, midi cc 114, midi cc 115, 
 #   midi cc 116, midi cc 117, midi cc 118, midi cc 119, key track extreme
-tracking input:       note-on velocity
+tracking input:       lfo 2 saw
 
 # "tracking preset" can be:
 #   custom, bypass, negate, abs val, neg abs, exp+, exp-, zero, maximum, 
@@ -505,39 +505,39 @@ tracking preset:      custom
 tracking numpoints:   16
 
 # "tracking point *" can range from -100% to 100%
-tracking point -16:   -100%
-tracking point -15:   -93%
-tracking point -14:   -87%
-tracking point -13:   -81%
-tracking point -12:   -75%
-tracking point -11:   -68%
-tracking point -10:   -62%
-tracking point -9:    -56%
-tracking point -8:    -50%
-tracking point -7:    -43%
-tracking point -6:    -37%
-tracking point -5:    -31%
-tracking point -4:    -25%
-tracking point -3:    -18%
-tracking point -2:    -12%
-tracking point -1:    -6%
+tracking point -16:   0%
+tracking point -15:   0%
+tracking point -14:   0%
+tracking point -13:   0%
+tracking point -12:   0%
+tracking point -11:   0%
+tracking point -10:   0%
+tracking point -9:    0%
+tracking point -8:    0%
+tracking point -7:    0%
+tracking point -6:    0%
+tracking point -5:    0%
+tracking point -4:    0%
+tracking point -3:    0%
+tracking point -2:    0%
+tracking point -1:    0%
 tracking point 0:     0%
-tracking point 1:     6%
-tracking point 2:     12%
-tracking point 3:     18%
-tracking point 4:     25%
-tracking point 5:     31%
-tracking point 6:     37%
-tracking point 7:     43%
-tracking point 8:     50%
-tracking point 9:     56%
-tracking point 10:    62%
-tracking point 11:    68%
-tracking point 12:    75%
-tracking point 13:    81%
-tracking point 14:    87%
-tracking point 15:    93%
-tracking point 16:    100%
+tracking point 1:     0%
+tracking point 2:     0%
+tracking point 3:     0%
+tracking point 4:     0%
+tracking point 5:     0%
+tracking point 6:     0%
+tracking point 7:     0%
+tracking point 8:     0%
+tracking point 9:     0%
+tracking point 10:    0%
+tracking point 11:    0%
+tracking point 12:    0%
+tracking point 13:    0%
+tracking point 14:    0%
+tracking point 15:    0%
+tracking point 16:    0%
 
 #----------------------------------------
 # Mod Matrix
@@ -567,10 +567,10 @@ tracking point 16:    100%
 #   midi cc 109, midi cc 110, midi cc 111, midi cc 112, midi cc 113, 
 #   midi cc 114, midi cc 115, midi cc 116, midi cc 117, midi cc 118, 
 #   midi cc 119, key track extreme
-mod 1 source:         lfo 1 sine
-mod 2 source:         lfo 1 cosine
-mod 3 source:         m1 wheel
-mod 4 source:         m2 wheel
+mod 1 source:         none
+mod 2 source:         none
+mod 3 source:         none
+mod 4 source:         none
 mod 5 source:         none
 mod 6 source:         none
 mod 7 source:         none
@@ -601,10 +601,10 @@ mod 12 source:        none
 #   p/m env sust time, p/m env sust level, p/m env release, dummy, 
 #   effects mix, effects parameter a, effects parameter b, 
 #   effects parameter c, effects parameter d, voice pitch narrow
-mod 1 dest:           filter 1 freq
-mod 2 dest:           filter 2 freq
-mod 3 dest:           filter 1 res
-mod 4 dest:           lfo 1 rate
+mod 1 dest:           none
+mod 2 dest:           none
+mod 3 dest:           none
+mod 4 dest:           none
 mod 5 dest:           none
 mod 6 dest:           none
 mod 7 dest:           none
@@ -615,10 +615,10 @@ mod 11 dest:          none
 mod 12 dest:          none
 
 # "mod * level" can range from -100.0% to 100.0%
-mod 1 level:          52.3%
-mod 2 level:          51.1%
-mod 3 level:          88.8%
-mod 4 level:          27.5%
+mod 1 level:          0.0%
+mod 2 level:          0.0%
+mod 3 level:          0.0%
+mod 4 level:          0.0%
 mod 5 level:          0.0%
 mod 6 level:          0.0%
 mod 7 level:          0.0%
@@ -650,10 +650,10 @@ mod 12 offset:        0.0%
 arp mode:             off
 
 # "arp pattern" can range from 0 to 31
-arp pattern:          0
+arp pattern:          1
 
 # "arp tempo mult" can be:  1/4, 1/3, 1/2, 1, 2, 3, 4
-arp tempo mult:       1/4
+arp tempo mult:       1
 
 # "arp length" can be:
 #   2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
