@@ -2,7 +2,7 @@
 #
 # A Python3/QT5 program editor for the Micron synth
 
-import sys, os.path
+import sys, os.path, subprocess
 from micronux import gui, textfile, mapwidgets, lcd
 
 debug = True
@@ -12,20 +12,25 @@ myQtGui = gui.make_gui('micronux/micronux.ui', 'Micronux', 'fusion')
 app = myQtGui['app']
 window = myQtGui['window']
 
-print(sys.argv)
+# amidi -l
+midi_port = 'hw:2,0,0'
 
 # import settings text file
-file_name = 'prog/default.txt'
+file_name = 'prog/default'
 
 if len(sys.argv) > 1:
     arg = sys.argv[1]
-    if not (arg.endswith('.txt') or arg.endswith('.syx')):
+    if arg == '-r':
+        cache = './prog/cache.syx'
+        subprocess.run(['amidi', '-t', '3', '-p', midi_port, '-r',cache])
+        file_name = cache
+    elif not (arg.endswith('.txt') or arg.endswith('.syx')):
         print('File type must be .txt or .syx')
     else:
-        if os.path.isfile(sys.argv[1]):
-                file_name = sys.argv[1]
+        if os.path.isfile(arg):
+            file_name = arg
         else:
-            print('File '+sys.argv[1]+' not found.')
+            print('File '+arg+' not found.')
 
 print('### Loading '+file_name)
 settings = textfile.import_file(file_name)

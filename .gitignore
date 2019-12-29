@@ -1,4 +1,6 @@
 micronux/__pycache__/
 *.py[cod]
-text.txt
+prog/*.txt
+prog/*.syx
+
 

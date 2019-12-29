@@ -3,12 +3,12 @@
 # alesis micron/ion program decoder/encoder.
 import subprocess
 
-ion_decoder_path = 'micronux/ion_program_decoder.pl'
+ion_decoder_path = 'alesis/ion_program_decoder.pl'
 
 ### Read sysex.txt into settings
 def import_file(file_name):
     if file_name.endswith('.syx'):
-        subprocess.run([ion_decoder_path, file_name])
+        subprocess.run([ion_decoder_path, '-b', file_name])
         file_name = file_name[:-3]+'txt'
 
     txt_file = open(file_name)
