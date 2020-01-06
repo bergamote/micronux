@@ -21,7 +21,7 @@ else:
         settings = trader.import_file(args[1])
     else:
         print('Error opening "'+args[1]+'": File not found')
-        sys.exit()
+        sys.exit(1)
 
 # setup app and window
 myQtGui = gui.make_gui('micronux/micronux.ui', 'Micronux', 'fusion')

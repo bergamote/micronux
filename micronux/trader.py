@@ -14,10 +14,10 @@ def import_file(file_name):
             file_name = file_name[:-3]+'txt'
         else:
             # show program_decoder error
-            sys.exit()
+            sys.exit(1)
     elif not file_name.endswith('.txt'):
         print('File type must be .txt or .syx')
-        sys.exit()
+        sys.exit(1)
 
     txt_file = open(file_name)
     settings = {'file_name':file_name}
@@ -40,7 +40,7 @@ def receive_file(args):
         args[2]
     except:
         print('Please specify a MIDI port (amidi -l).')
-        sys.exit()
+        sys.exit(1)
     else:
         # receive sysex with amidi
         midi_port = args[2]
@@ -53,4 +53,4 @@ def receive_file(args):
             return settings
         else:
             # show amidi error
-            sys.exit()
+            sys.exit(1)

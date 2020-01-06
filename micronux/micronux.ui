@@ -513,7 +513,7 @@ width: 2px;
    <widget class="QGroupBox" name="pre_filter_mix">
     <property name="geometry">
      <rect>
-      <x>337</x>
+      <x>334</x>
       <y>63</y>
       <width>181</width>
       <height>231</height>
@@ -16894,8 +16894,8 @@ QSlider {
   </connection>
  </connections>
  <buttongroups>
+  <buttongroup name="osc_1_waveform"/>
   <buttongroup name="osc_2_waveform"/>
   <buttongroup name="osc_3_waveform"/>
-  <buttongroup name="osc_1_waveform"/>
  </buttongroups>
 </ui>
