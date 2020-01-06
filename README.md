@@ -16,13 +16,21 @@ Micronux is in early days development and doesn't do anything useful right now. 
 
 ### Usage
 
-You'll need python3, PySide2 and make the script executable
+You'll need python3, PySide2 and make the script executable. You'll also need amidi to receive and send sysex.
 
+    sudo apt install amidi python3-pip
     pip3 install PySide2
     chmod +x micronux.py
     ./micronux.py
 
-So far *Micronux* only reads the test.txt file (as produced by Alesis' program decoder) and display most of it's values.
+*Micronux* reads the `default.txt` file in the `prog` folder.    
+**For now**, to open a different text or sysex file, you can specify its path on the command line:
+
+    ./micronux.py mysysex.syx
+
+And you can receive a sysex from the Micron with the option `-r` followed by the MIDI port address (as listed by `amidi -l`):
+
+    ./micronux.py -r <midi_port>
 
 
 ### About
