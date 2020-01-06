@@ -1893,7 +1893,7 @@ width: 2px;
    <widget class="QGroupBox" name="oscilators">
     <property name="geometry">
      <rect>
-      <x>21</x>
+      <x>12</x>
       <y>-8</y>
       <width>311</width>
       <height>301</height>
@@ -4253,7 +4253,7 @@ border-radius: 4px;
    <widget class="QGroupBox" name="envelopes">
     <property name="geometry">
      <rect>
-      <x>15</x>
+      <x>6</x>
       <y>375</y>
       <width>381</width>
       <height>181</height>
@@ -8665,7 +8665,7 @@ border-radius: 4px;
    <widget class="QGroupBox" name="knob_assign">
     <property name="geometry">
      <rect>
-      <x>680</x>
+      <x>690</x>
       <y>250</y>
       <width>161</width>
       <height>41</height>
@@ -11942,7 +11942,7 @@ border-radius: 4px;
    <widget class="QGroupBox" name="fm_group">
     <property name="geometry">
      <rect>
-      <x>15</x>
+      <x>6</x>
       <y>305</y>
       <width>181</width>
       <height>51</height>
@@ -12161,7 +12161,7 @@ width: 2px;
    <widget class="QGroupBox" name="lfo_group">
     <property name="geometry">
      <rect>
-      <x>404</x>
+      <x>400</x>
       <y>377</y>
       <width>271</width>
       <height>181</height>
@@ -13766,7 +13766,7 @@ border-radius: 4px;
    <widget class="QLabel" name="label_output">
     <property name="geometry">
      <rect>
-      <x>227</x>
+      <x>221</x>
       <y>312</y>
       <width>41</width>
       <height>31</height>
@@ -13793,7 +13793,7 @@ border-radius: 4px;
    <widget class="Line" name="line_10">
     <property name="geometry">
      <rect>
-      <x>257</x>
+      <x>251</x>
       <y>314</y>
       <width>21</width>
       <height>74</height>
@@ -13814,7 +13814,7 @@ width: 2px;
    <widget class="QLabel" name="label_drive">
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>284</x>
       <y>310</y>
       <width>41</width>
       <height>21</height>
@@ -13844,7 +13844,7 @@ width: 2px;
     </property>
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>284</x>
       <y>320</y>
       <width>41</width>
       <height>51</height>
@@ -13881,7 +13881,7 @@ width: 2px;
    <widget class="QComboBox" name="fm_type_2">
     <property name="geometry">
      <rect>
-      <x>277</x>
+      <x>271</x>
       <y>370</y>
       <width>81</width>
       <height>20</height>
@@ -13956,7 +13956,7 @@ width: 2px;
     </property>
     <property name="geometry">
      <rect>
-      <x>360</x>
+      <x>354</x>
       <y>320</y>
       <width>41</width>
       <height>51</height>
@@ -13996,7 +13996,7 @@ width: 2px;
     </property>
     <property name="geometry">
      <rect>
-      <x>470</x>
+      <x>464</x>
       <y>308</y>
       <width>51</width>
       <height>51</height>
@@ -14033,7 +14033,7 @@ width: 2px;
    <widget class="QLabel" name="label_effects">
     <property name="geometry">
      <rect>
-      <x>351</x>
+      <x>345</x>
       <y>310</y>
       <width>61</width>
       <height>21</height>
@@ -14060,7 +14060,7 @@ width: 2px;
    <widget class="QLabel" name="label_output_level">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>414</x>
       <y>324</y>
       <width>61</width>
       <height>21</height>
@@ -16635,7 +16635,7 @@ QSlider {
    <widget class="QLabel" name="label_fx_mix_wet">
     <property name="geometry">
      <rect>
-      <x>346</x>
+      <x>340</x>
       <y>350</y>
       <width>21</width>
       <height>21</height>
@@ -16662,7 +16662,7 @@ QSlider {
    <widget class="QLabel" name="label_fx_mix_dry">
     <property name="geometry">
      <rect>
-      <x>394</x>
+      <x>388</x>
       <y>350</y>
       <width>21</width>
       <height>21</height>
@@ -16894,8 +16894,8 @@ QSlider {
   </connection>
  </connections>
  <buttongroups>
-  <buttongroup name="osc_1_waveform"/>
   <buttongroup name="osc_2_waveform"/>
   <buttongroup name="osc_3_waveform"/>
+  <buttongroup name="osc_1_waveform"/>
  </buttongroups>
 </ui>

@@ -7,7 +7,7 @@ from micronux.helpers import keywords
 
 def mapping(settings, app, window):
 
-    print("### Mapping settings:")
+    print("### Mapping settings")
 
     # button groups (QRadioButton)
     waveform_groups = [
