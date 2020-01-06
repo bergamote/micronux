@@ -2,26 +2,12 @@
 #
 # A Python3/QT5 program editor for the Micron synth
 
-import sys, os.path, subprocess
+import sys
 from micronux import gui, trader, mapwidgets, lcd
 
 debug = True
 
-# Check the command line
-args = sys.argv
-if len(args) == 1:
-    # Without argument, load the default program
-    settings = trader.import_file('prog/default.txt')
-else:
-    # receive sysex option
-    if args[1] == '-r':
-        settings = trader.receive_file(args)
-    # otherwise check if argument is a valid file
-    elif os.path.isfile(args[1]):
-        settings = trader.import_file(args[1])
-    else:
-        print('Error opening "'+args[1]+'": File not found')
-        sys.exit(1)
+settings = trader.startup(sys.argv)
 
 # setup app and window
 myQtGui = gui.make_gui('micronux/micronux.ui', 'Micronux', 'fusion')
