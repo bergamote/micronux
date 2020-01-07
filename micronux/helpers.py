@@ -150,12 +150,33 @@ def disp_val(val, setting):
         if (setting == 'extin_balance'):
             val = int((val+100)/2)
         unit = '%'
-        f1 = str(val)
-        f2 = str(100-val)
+        f2 = str(val)
+        f1 = str(100-val)
         separator = '|'
         if (val > 90) and (val < 100):
-            f2 = ' '+f2
-        disp = f1+separator+f2
+            f1 = ' '+f1
+        if val == 0:
+            disp = '100'
+        elif val == 100:
+            disp = '100  '
+        else:
+            disp = f2+separator+f1
+
+    # wetdry mix
+    elif type == 'mix':
+        val = int((val+100)/2)
+        unit = '%'
+        dry = str(val)
+        wet = str(100-val)
+        separator = '|'
+        if (val < 10) and (val > 0):
+            dry = ' '+dry
+        if val == 0:
+            disp = '100  '
+        elif val == 100:
+            disp = '100'
+        else:
+            disp = wet+separator+dry
 
     # percents
     elif type in percentages:

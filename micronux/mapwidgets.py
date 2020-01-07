@@ -32,8 +32,8 @@ def mapping(settings, app, window):
     # assign the value to the widget.
     for widgoo in app.allWidgets():
         name = widgoo.objectName()
+        widg_type = type(widgoo).__name__
         if name in settings:
-            widg_type = type(widgoo).__name__
             value = settings[name]
             if widg_type == 'QCheckBox':
                 if (value == 'on') or (value == 'offset'):
@@ -60,5 +60,12 @@ def mapping(settings, app, window):
             debug_line = widg_type+' -> '+name+': '
             debug_line += str(value)+' ('+settings[name]+')'
             # print(debug_line)
+
+        # Set labels for fx tabs
+        if widg_type == 'QLabel':
+            if name == 'label_fx_name':
+                widgoo.setText(settings['fx_type'])
+            if name == 'label_fx2_name':
+                widgoo.setText(settings['fx2_type'])
 
     window.setWindowTitle(settings['name']+" | Micronux")

@@ -11,6 +11,7 @@ nicer_names = {
 'semi':'semitone',
 'fine':'cent',
 'balance':'f1 | f2  ',
+'mix':    'wet|dry  ',
 'amount':'fm amount',
 'freq':'frequency',
 'res':'resonance',
