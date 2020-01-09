@@ -40,6 +40,8 @@ def update(app, window, settings):
     # look for a nicer name
     if nice_name in nicer_names:
         nice_name = nicer_names[nice_name]
+    if setting_name == 'fx1_fx2_balance':
+        nice_name = 'fx1|fx2  '
     # only update display if name changed
     if prev_setting != setting_name:
         prev_setting = setting_name

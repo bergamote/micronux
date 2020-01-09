@@ -5,25 +5,35 @@
 from micronux.helpers import clean_val, disp_val, last_word
 from micronux.helpers import keywords
 
+easy_numbers = [
+'QDial',
+'QSlider',
+'QDoubleSpinBox'
+]
+easy_strings = [
+'QLabel',
+'QLineEdit'
+]
+
 def mapping(settings, app, window):
 
     print("### Mapping settings")
 
-    # button groups (QRadioButton)
-    waveform_groups = [
+    # radio button groups (QRadioButton)
+    radio_groups = [
         window.osc_1_waveform,
         window.osc_2_waveform,
-        window.osc_3_waveform
+        window.osc_3_waveform,
     ]
 
-    for waveform in waveform_groups:
-        for button in waveform.buttons():
+    for group in radio_groups:
+        for button in group.buttons():
             button_name = last_word(button.objectName())
-            value = settings[waveform.objectName()]
+            value = settings[group.objectName()]
             if value.startswith(button_name):
                 button.toggle()
 
-                debug_line = 'QRadioButton -> '+waveform.objectName()
+                debug_line = 'QRadioButton -> '+group.objectName()
                 debug_line += ': '+button_name+' ('+value+')'
                 # print(debug_line)
 
@@ -35,11 +45,13 @@ def mapping(settings, app, window):
         widg_type = type(widgoo).__name__
         if name in settings:
             value = settings[name]
+            
             if widg_type == 'QCheckBox':
                 if (value == 'on') or (value == 'offset'):
                     widgoo.setChecked(True)
                 elif (value == 'off') or (value == 'absolute'):
                     widgoo.setChecked(False)
+
             elif widg_type == 'QComboBox':
                 keyword = value
                 if value in keywords:
@@ -48,13 +60,14 @@ def mapping(settings, app, window):
                     keyword = value[2:]
                 new_index = widgoo.findText(keyword)
                 widgoo.setCurrentIndex(new_index)
-            elif (widg_type == 'QDial') or (widg_type == 'QSlider'):
+
+            elif widg_type in easy_numbers:
                 if value != 'hold':
                     value = clean_val(value)
                 else:
                     value = 30000001
                 widgoo.setValue(value)
-            elif (widg_type == 'QLabel') or (widg_type == 'QLineEdit'):
+            elif widg_type in easy_strings:
                 widgoo.setText(value)
 
             debug_line = widg_type+' -> '+name+': '
