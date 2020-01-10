@@ -45,7 +45,7 @@ def mapping(settings, app, window):
         widg_type = type(widgoo).__name__
         if name in settings:
             value = settings[name]
-            
+
             if widg_type == 'QCheckBox':
                 if (value == 'on') or (value == 'offset'):
                     widgoo.setChecked(True)
@@ -82,3 +82,4 @@ def mapping(settings, app, window):
                 widgoo.setText(settings['fx2_type'])
 
     window.setWindowTitle(settings['name']+" | Micronux")
+    window.osc_1_shape.setFocus()

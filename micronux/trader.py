@@ -9,10 +9,13 @@ cache = './prog/received.syx'
 
 ### Read sysex into settings
 def import_file(file_name):
+    # convert to text if sysex
     if file_name.endswith('.syx'):
-        # convert to text if sysex
-
-        # TODO check file length, take last 434 bytes
+        if fix_syx(file_name):
+            file_name = fix_syx(file_name)
+        else:
+            # if not valid sysex load default
+            file_name = 'prog/default.txt'
 
         cmd = [ion_decoder_path, '-b', file_name]
         result = subprocess.run(cmd)
@@ -60,7 +63,7 @@ def receive_file(args):
             # show amidi error
             sys.exit(1)
 
-### Check the command line
+### Check the command line arguments
 def startup(args):
     if len(args) == 1:
         # Without argument, load the default program
@@ -76,3 +79,33 @@ def startup(args):
             print('Error opening "'+args[1]+'": File not found')
             sys.exit(1)
     return settings
+
+### Fix sysex file
+# (if size isn't 434 bytes)
+def fix_syx(path):
+    size = os.path.getsize(path)
+    error_msg = 'invalid syx file (should be 434 bytes)'
+    if size != 434:
+        if size < 434:
+            print(error_msg)
+            return False
+        else:
+            # if too long, check length between
+            # f0 00 and f7, if that's 434 bytes
+            # chop the start off.
+            new_file = path[:-4]+'_fixed.syx'
+            with open(path, 'rb') as f:
+                s = f.read()
+            start = s.find(b'\xf0\x00')
+            end = s.find(b'\xf7')+1
+            if (end - start) == 434:
+                new_content = s[start:end]
+                fixed = open(new_file, 'wb')
+                fixed.write(new_content)
+                fixed.close()
+                return new_file
+            else:
+                print(error_msg)
+                return False
+    else:
+        return path
