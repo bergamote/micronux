@@ -17,7 +17,7 @@ easy_strings = [
 
 def mapping(settings, app, window):
 
-    print("### Mapping settings")
+    print("Mapping settings")
 
     # radio button groups (QRadioButton)
     radio_groups = [

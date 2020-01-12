@@ -24,13 +24,17 @@ def import_file(file_name):
 
     txt_file = open(file_name)
     settings = {'file_name':file_name}
-    print('### Loading settings from '+file_name)
+    print('Loading settings from '+file_name)
     for line in txt_file:
         line = line.strip()
         if line:
             if not line.startswith('#'): # remove comments
                 pair = line.split(':')
                 name = pair[0].replace(' ','_')
+                # QT doesn't allow the minus symbol
+                # in widget names so we replace it
+                if name.startswith('tracking_point_'):
+                    name = name.replace('-','m')
                 value = pair[1].strip()
                 settings[name] = value
     txt_file.close()
