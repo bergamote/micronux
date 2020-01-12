@@ -5,18 +5,12 @@
 import subprocess, sys, os.path
 
 ion_decoder_path = 'alesis/ion_program_decoder.pl'
-cache = './prog/received.syx'
 
 ### Read sysex into settings
 def import_file(file_name):
     # convert to text if sysex
     if file_name.endswith('.syx'):
-        if fix_syx(file_name):
-            file_name = fix_syx(file_name)
-        else:
-            # if not valid sysex load default
-            file_name = 'prog/default.txt'
-
+        fix_syx(file_name)
         cmd = [ion_decoder_path, '-b', file_name]
         result = subprocess.run(cmd)
         if result.returncode == 0:
@@ -48,15 +42,17 @@ def receive_file(args):
         # check if port given
         args[2]
     except:
-        print('Please specify a MIDI port (amidi -l).')
+        print('Please specify a MIDI port')
         sys.exit(1)
     else:
-        # receive sysex with amidi
+        # dump amidi port to file
+        cache = './prog/received.syx'
         midi_port = args[2]
         cmd = ['amidi', '-t', '3', '-p']
         cmd +=  [midi_port, '-r',cache]
         result = subprocess.run(cmd)
         if result.returncode == 0:
+            fix_syx(cache)
             settings = import_file(cache)
             return settings
         else:
@@ -66,7 +62,7 @@ def receive_file(args):
 ### Check the command line arguments
 def startup(args):
     if len(args) == 1:
-        # Without argument, load the default program
+        # without argument, load the default program
         settings = import_file('prog/default.txt')
     else:
         # receive sysex option
@@ -80,32 +76,24 @@ def startup(args):
             sys.exit(1)
     return settings
 
-### Fix sysex file
-# (if size isn't 434 bytes)
+### Fix syx function
+# try to trim down sysex files when
+# size is more than 434 bytes
 def fix_syx(path):
     size = os.path.getsize(path)
-    error_msg = 'invalid syx file (should be 434 bytes)'
-    if size != 434:
-        if size < 434:
-            print(error_msg)
-            return False
-        else:
-            # if too long, check length between
-            # f0 00 and f7, if that's 434 bytes
-            # chop the start off.
-            new_file = path[:-4]+'_fixed.syx'
-            with open(path, 'rb') as f:
-                s = f.read()
-            start = s.find(b'\xf0\x00')
-            end = s.find(b'\xf7')+1
-            if (end - start) == 434:
-                new_content = s[start:end]
-                fixed = open(new_file, 'wb')
-                fixed.write(new_content)
-                fixed.close()
-                return new_file
-            else:
-                print(error_msg)
-                return False
-    else:
-        return path
+    if size > 434:
+        with open(path, 'rb') as file:
+            syx = file.read()
+        start = syx.find(b'\xf0\x00')
+        end = syx.find(b'\xf7')+1
+        # if length between f0 00 and f7
+        # is 434 byte we trim it down
+        if (end - start) == 434:
+            new_content = syx[start:end]
+            # backup old sysex
+            backup = open(path[:-4]+'_old.syx', 'wb')
+            backup.write(syx)
+            backup.close()
+            fixed = open(path, 'wb')
+            fixed.write(new_content)
+            fixed.close()

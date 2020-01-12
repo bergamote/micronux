@@ -82,4 +82,4 @@ def mapping(settings, app, window):
                 widgoo.setText(settings['fx2_type'])
 
     window.setWindowTitle(settings['name']+" | Micronux")
-    window.osc_1_shape.setFocus()
+    window.output_level.setFocus()
