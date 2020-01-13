@@ -1,0 +1,48 @@
+# module: definitions
+#
+# useful lists and dics
+
+easy_numbers = [
+'QDial',
+'QSlider',
+'QDoubleSpinBox'
+]
+easy_strings = [
+'QLabel',
+'QLineEdit'
+]
+
+units = {
+'%': 'pct',
+' s': 's',
+' ms': 'ms',
+' Hz': 'hz',
+' KHz': 'khz'
+}
+percentages = [
+'level',
+'shape',
+'res',
+'keytrack',
+'envamt',
+'drift',
+'detune',
+'wheel',
+'smoothing',
+'mix'
+]
+
+keywords = {
+'positive': '+',
+'negative': '-',
+'filter 1 mix': 'f1 mix',
+'filter 2 mix': 'f2 mix',
+'3 -> 2 -> 1': '3 > 2 > 1',
+'2+3 -> 1': '2+3 > 1',
+'2 -> 1': '2 > 1',
+'linear': 'lin',
+'m1 wheel': 'm1 slider',
+'m2 wheel': 'm2 slider'
+}
+
+mark_positive = ['semi','fine','octave']

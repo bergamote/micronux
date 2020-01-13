@@ -4,7 +4,6 @@
 
 from micronux.helpers import clean_val, disp_val, last_word
 
-debug = True
 
 # setings better names for display
 nicer_names = {
@@ -42,10 +41,12 @@ def update(app, window, settings):
         nice_name = nicer_names[nice_name]
     if setting_name == 'fx1_fx2_balance':
         nice_name = 'fx1|fx2  '
+    if setting_name.startswith('tracking_point_'):
+        nice_name = setting_name.replace('tracking_point_', 'point ')
+        nice_name = nice_name.replace('m', '-')
     # only update display if name changed
     if prev_setting != setting_name:
         prev_setting = setting_name
         window.display_setting_name.setText(nice_name)
 
-        if debug:
-            print('editing ' + setting_name)
+        # print('editing ' + setting_name)

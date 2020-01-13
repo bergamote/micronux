@@ -2,44 +2,11 @@
 #
 # Useful functions.
 
+from micronux.definitions import units, percentages, keywords, mark_positive
+
 # get the last word of string
 def last_word(str):
     return str.rsplit('_', 1)[-1]
-
-units = {
-'%': 'pct',
-' s': 's',
-' ms': 'ms',
-' Hz': 'hz',
-' KHz': 'khz'
-}
-percentages = [
-'level',
-'shape',
-'res',
-'keytrack',
-'envamt',
-'drift',
-'detune',
-'wheel',
-'smoothing',
-'mix'
-]
-
-keywords = {
-'positive': '+',
-'negative': '-',
-'filter 1 mix': 'f1 mix',
-'filter 2 mix': 'f2 mix',
-'3 -> 2 -> 1': '3 > 2 > 1',
-'2+3 -> 1': '2+3 > 1',
-'2 -> 1': '2 > 1',
-'linear': 'lin',
-'m1 wheel': 'm1 slider',
-'m2 wheel': 'm2 slider'
-}
-
-mark_positive = ['semi','fine','octave']
 
 # get string value unit
 def get_unit(str):
@@ -62,6 +29,8 @@ def get_unit(str):
 
 # make number strings into integer
 def clean_val(val):
+    if val == 'hold':
+        return 30000001
     unit = get_unit(val)
     if unit == 'pct':
         if '.' in val:
@@ -181,7 +150,10 @@ def disp_val(val, setting):
     # percents
     elif type in percentages:
         unit = '%'
+    elif setting.startswith('tracking_point_'):
+        unit = '%'
 
+    # show + sign when needed
     if type in mark_positive and (val > 0):
         disp =  '+'+disp
 

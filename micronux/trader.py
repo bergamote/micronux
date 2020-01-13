@@ -6,6 +6,33 @@ import subprocess, sys, os.path
 
 ion_decoder_path = 'alesis/ion_program_decoder.pl'
 
+# convert text line to name/value pair
+def text_to_setting(line):
+    line = line.strip()
+    if line:
+        if line.startswith('#'): # remove comments
+            return False
+        else:
+            pair = line.split(':')
+            # remove white spaces
+            name = pair[0].replace(' ','_')
+            # QT doesn't allow the minus symbol
+            # in widget names so we replace it
+            if name.startswith('tracking_point_'):
+                name = name.replace('-','m')
+            value = pair[1].strip()
+            return [name, value]
+    else:
+        return False
+
+# convert name/value pair to text line
+def setting_to_text(name, value):
+    if name.startswith('tracking_point_'):
+        name = name.replace('m','-')
+    name = name.replace('_',' ')
+    line = name+': '+value+'\n'
+    return line
+
 ### Read sysex into settings
 def import_file(file_name):
     # convert to text if sysex
@@ -21,24 +48,20 @@ def import_file(file_name):
     elif not file_name.endswith('.txt'):
         print('File type must be .txt or .syx')
         sys.exit(1)
-
+    # read text file into a dic
     txt_file = open(file_name)
     settings = {'file_name':file_name}
     print('Loading settings from '+file_name)
     for line in txt_file:
-        line = line.strip()
-        if line:
-            if not line.startswith('#'): # remove comments
-                pair = line.split(':')
-                name = pair[0].replace(' ','_')
-                # QT doesn't allow the minus symbol
-                # in widget names so we replace it
-                if name.startswith('tracking_point_'):
-                    name = name.replace('-','m')
-                value = pair[1].strip()
-                settings[name] = value
+        pair = text_to_setting(line)
+        if pair:
+            settings[pair[0]] = pair[1]
     txt_file.close()
     return settings
+
+
+def export_file(file_name):
+    return True
 
 ### Receive sysex and return settings
 def receive_file(args):

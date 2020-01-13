@@ -3,17 +3,7 @@
 # Map settings to widgets.
 
 from micronux.helpers import clean_val, disp_val, last_word
-from micronux.helpers import keywords
-
-easy_numbers = [
-'QDial',
-'QSlider',
-'QDoubleSpinBox'
-]
-easy_strings = [
-'QLabel',
-'QLineEdit'
-]
+from micronux.definitions import easy_numbers, easy_strings, keywords
 
 def mapping(settings, app, window):
 
@@ -62,11 +52,9 @@ def mapping(settings, app, window):
                 widgoo.setCurrentIndex(new_index)
 
             elif widg_type in easy_numbers:
-                if value != 'hold':
-                    value = clean_val(value)
-                else:
-                    value = 30000001
+                value = clean_val(value)
                 widgoo.setValue(value)
+
             elif widg_type in easy_strings:
                 widgoo.setText(value)
 

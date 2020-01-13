@@ -521,7 +521,7 @@ width: 2px;
     <property name="geometry">
      <rect>
       <x>334</x>
-      <y>58</y>
+      <y>52</y>
       <width>181</width>
       <height>231</height>
      </rect>
@@ -3237,7 +3237,7 @@ width: 2px;
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>10</y>
+       <y>13</y>
        <width>31</width>
        <height>21</height>
       </rect>
@@ -6823,7 +6823,7 @@ border-radius: 4px;
     <property name="geometry">
      <rect>
       <x>537</x>
-      <y>61</y>
+      <y>55</y>
       <width>331</width>
       <height>161</height>
      </rect>
@@ -7896,7 +7896,7 @@ border-radius: 4px;
     <property name="geometry">
      <rect>
       <x>892</x>
-      <y>60</y>
+      <y>54</y>
       <width>121</width>
       <height>241</height>
      </rect>
@@ -8633,25 +8633,6 @@ border-radius: 4px;
      </property>
     </widget>
    </widget>
-   <widget class="Line" name="line_5">
-    <property name="geometry">
-     <rect>
-      <x>733</x>
-      <y>206</y>
-      <width>131</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:grey</string>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
    <widget class="QGroupBox" name="vox_group_pt1">
     <property name="geometry">
      <rect>
@@ -8784,7 +8765,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>24</x>
-       <y>40</y>
+       <y>38</y>
        <width>241</width>
        <height>16</height>
       </rect>
@@ -9158,7 +9139,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>21</x>
-       <y>39</y>
+       <y>38</y>
        <width>271</width>
        <height>16</height>
       </rect>
@@ -9222,7 +9203,7 @@ border-radius: 4px;
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>307</y>
+      <y>303</y>
       <width>171</width>
       <height>51</height>
      </rect>
@@ -11610,8 +11591,8 @@ border-radius: 4px;
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>311</width>
-         <height>125</height>
+         <width>100</width>
+         <height>30</height>
         </rect>
        </property>
        <attribute name="label">
@@ -23261,7 +23242,7 @@ QSlider {
     <property name="geometry">
      <rect>
       <x>660</x>
-      <y>232</y>
+      <y>227</y>
       <width>211</width>
       <height>91</height>
      </rect>
@@ -23606,7 +23587,7 @@ QSlider {
      <property name="geometry">
       <rect>
        <x>-1</x>
-       <y>-10</y>
+       <y>-8</y>
        <width>31</width>
        <height>31</height>
       </rect>
@@ -23635,7 +23616,7 @@ QSlider {
        <x>23</x>
        <y>-5</y>
        <width>21</width>
-       <height>71</height>
+       <height>81</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -26421,7 +26402,7 @@ border-radius:10px;
     <property name="geometry">
      <rect>
       <x>382</x>
-      <y>313</y>
+      <y>309</y>
       <width>58</width>
       <height>20</height>
      </rect>
@@ -26451,7 +26432,7 @@ border-radius:10px;
     <property name="geometry">
      <rect>
       <x>433</x>
-      <y>310</y>
+      <y>306</y>
       <width>58</width>
       <height>25</height>
      </rect>
@@ -26542,7 +26523,7 @@ background-color: #efefef;
     <property name="geometry">
      <rect>
       <x>200</x>
-      <y>359</y>
+      <y>358</y>
       <width>291</width>
       <height>20</height>
      </rect>
@@ -26561,7 +26542,7 @@ background-color: #efefef;
     <property name="geometry">
      <rect>
       <x>199</x>
-      <y>313</y>
+      <y>309</y>
       <width>44</width>
       <height>20</height>
      </rect>
@@ -26613,7 +26594,7 @@ background-color: #efefef;
     <property name="geometry">
      <rect>
       <x>266</x>
-      <y>326</y>
+      <y>322</y>
       <width>51</width>
       <height>41</height>
      </rect>
@@ -26641,7 +26622,7 @@ background-color: #efefef;
     <property name="geometry">
      <rect>
       <x>393</x>
-      <y>340</y>
+      <y>336</y>
       <width>31</width>
       <height>20</height>
      </rect>
@@ -26713,7 +26694,7 @@ background-color: #efefef;
     <property name="geometry">
      <rect>
       <x>379</x>
-      <y>340</y>
+      <y>336</y>
       <width>16</width>
       <height>21</height>
      </rect>
@@ -26740,7 +26721,7 @@ background-color: #efefef;
     <property name="geometry">
      <rect>
       <x>252</x>
-      <y>308</y>
+      <y>304</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -26765,7 +26746,7 @@ background-color: #efefef;
     <property name="geometry">
      <rect>
       <x>236</x>
-      <y>330</y>
+      <y>326</y>
       <width>31</width>
       <height>41</height>
      </rect>
@@ -26793,7 +26774,7 @@ background-color: #efefef;
     <property name="geometry">
      <rect>
       <x>196</x>
-      <y>340</y>
+      <y>336</y>
       <width>41</width>
       <height>20</height>
      </rect>
@@ -26818,7 +26799,7 @@ background-color: #efefef;
     <property name="geometry">
      <rect>
       <x>348</x>
-      <y>304</y>
+      <y>300</y>
       <width>31</width>
       <height>41</height>
      </rect>
@@ -26849,7 +26830,7 @@ background-color: #efefef;
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>313</y>
+      <y>309</y>
       <width>41</width>
       <height>20</height>
      </rect>
@@ -26874,7 +26855,7 @@ background-color: #efefef;
     <property name="geometry">
      <rect>
       <x>318</x>
-      <y>340</y>
+      <y>336</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -26926,7 +26907,7 @@ background-color: #efefef;
     <property name="geometry">
      <rect>
       <x>430</x>
-      <y>340</y>
+      <y>336</y>
       <width>61</width>
       <height>20</height>
      </rect>
@@ -27012,7 +26993,6 @@ background-color: #efefef;
    <zorder>filters</zorder>
    <zorder>line_4</zorder>
    <zorder>post_filter_mix</zorder>
-   <zorder>line_5</zorder>
    <zorder>vox_group_pt1</zorder>
    <zorder>portamento_group</zorder>
    <zorder>fm_group</zorder>
