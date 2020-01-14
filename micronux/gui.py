@@ -7,8 +7,9 @@
 
 import sys
 from PySide2.QtUiTools import QUiLoader
-from PySide2.QtWidgets import QApplication
+from PySide2.QtWidgets import QApplication, QFileDialog
 from PySide2.QtCore import QFile, Qt
+from PySide2.QtGui import QIcon
 
 ### just to remove an ugly error message
 from PySide2.QtCore import QCoreApplication
@@ -31,7 +32,7 @@ def make_gui(gui_file, title='Untitled', style='fusion'):
 
     ### Setup and show window
     window.setWindowTitle(title)
-    # window.setWindowIcon('icon.png')
+    window.setWindowIcon(QIcon('micronux/icon.png'))
     window.show()
 
     return {'app': app,'window': window}

@@ -5,9 +5,7 @@
 from micronux.helpers import clean_val, disp_val, last_word
 from micronux.definitions import easy_numbers, easy_strings, keywords
 
-def mapping(settings, app, window):
-
-    print("Mapping settings")
+def load(settings, app, window):
 
     # radio button groups (QRadioButton)
     radio_groups = [

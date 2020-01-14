@@ -46,3 +46,17 @@ keywords = {
 }
 
 mark_positive = ['semi','fine','octave']
+
+
+# setings better names for display
+nicer_names = {
+'semi':'semitone',
+'fine':'cent',
+'balance':'f1 | f2  ',
+'mix':    'wet|dry  ',
+'amount':'fm amount',
+'freq':'frequency',
+'res':'resonance',
+'envamt':'env amount',
+'wheel':'slider'
+}

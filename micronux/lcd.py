@@ -3,20 +3,7 @@
 # Updating the info display.
 
 from micronux.helpers import clean_val, disp_val, last_word
-
-
-# setings better names for display
-nicer_names = {
-'semi':'semitone',
-'fine':'cent',
-'balance':'f1 | f2  ',
-'mix':    'wet|dry  ',
-'amount':'fm amount',
-'freq':'frequency',
-'res':'resonance',
-'envamt':'env amount',
-'wheel':'slider'
-}
+from micronux.definitions import nicer_names
 
 prev_setting = ''
 
@@ -39,6 +26,7 @@ def update(app, window, settings):
     # look for a nicer name
     if nice_name in nicer_names:
         nice_name = nicer_names[nice_name]
+    # exception for fx balance
     if setting_name == 'fx1_fx2_balance':
         nice_name = 'fx1|fx2  '
     if setting_name.startswith('tracking_point_'):
