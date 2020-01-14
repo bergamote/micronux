@@ -20,9 +20,8 @@ class mx():
 
 # set values to widgets
 mapwidgets.load(mx.settings, mx.app, mx.window)
-mx.loaded = True
 
-# Add changed value to changed_settings
+# Keep track of settings that changed
 def setting_changed():
     if mx.loaded:
         widget = mx.app.focusWidget().objectName()
@@ -35,6 +34,20 @@ def setting_changed():
 def pass_to_lcd():
     if mx.loaded:
         lcd.update(mx.app, mx.window, mx.settings)
+
+
+# make title of fx toolbox tab reflect last selected fx
+# and focus its tab
+def fx_toolbox_title():
+    if mx.loaded:
+        tool_box = mx.window.fx_toolBox
+        fx_widget = mx.app.focusWidget()
+        if fx_widget.objectName() == 'fx_type':
+            tool_box.setCurrentIndex(0)
+            tool_box.setItemText(0,fx_widget.currentText())
+        elif fx_widget.objectName() == 'fx2_type':
+            tool_box.setCurrentIndex(1)
+            tool_box.setItemText(1,fx_widget.currentText())
 
 
 # Open file
@@ -51,8 +64,9 @@ def open_file():
 mx.window.actionOpen.triggered.connect(open_file)
 
 
-# Connect widget changes to setting_changed function
+# Connecting widgets
 for widget in mx.app.allWidgets():
+    widg_name = widget.objectName()
     widg_type = type(widget).__name__
     if widg_type in easy_numbers:
         widget.valueChanged.connect(setting_changed)
@@ -61,6 +75,10 @@ for widget in mx.app.allWidgets():
             widget.valueChanged.connect(pass_to_lcd)
     elif widg_type == 'QComboBox':
         widget.currentIndexChanged.connect(setting_changed)
+        if widg_name.startswith('fx') and widg_name.endswith('type'):
+            widget.currentIndexChanged.connect(fx_toolbox_title)
+    elif widg_type == 'QCheckBox':
+        widget.stateChanged.connect(setting_changed)
 
 
 # Test for pop up window
@@ -80,5 +98,8 @@ mx.window.sh_widginPop.clicked.connect(open_widgin)
 
 # Connect Quit menu
 mx.window.actionQuit.triggered.connect(sys.exit)
+
+
+mx.loaded = True
 
 sys.exit(mx.app.exec_())

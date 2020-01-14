@@ -1,7 +1,7 @@
 ### To do list
 *micronux*
 
-  
+
   - improve widgets:
 
       - effects: focus correct toolbox on effect change. Update a/b/c/... labels, change widget min/max value and swap widget when needed (ie: sync on/off with 2 radio buttons instead of a dial)
@@ -10,12 +10,14 @@
 
   - show value on "lcd" when focusing (right-click) on a widget
 
-  - add open/save functionality (detect automatically if file is syx or txt with extension).
+  - receive sysex from menu bar (now only command line)
+
+  - add save functionality (syx or txt files).
 
   - option to rename program (pop up dialogue)
 
-  - send program with **amidi**
-  
+  - send program with **amidi** from menu bar
+
   - request program sysex from within micronux
 
   - button to revert modified program to synth received program.  

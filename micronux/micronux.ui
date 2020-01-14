@@ -11102,7 +11102,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>-4</y>
+          <y>-3</y>
           <width>51</width>
           <height>51</height>
          </rect>
@@ -11142,7 +11142,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>46</y>
+          <y>47</y>
           <width>51</width>
           <height>16</height>
          </rect>
@@ -11172,7 +11172,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>95</x>
-          <y>-4</y>
+          <y>-3</y>
           <width>51</width>
           <height>51</height>
          </rect>
@@ -11212,7 +11212,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>95</x>
-          <y>46</y>
+          <y>47</y>
           <width>51</width>
           <height>16</height>
          </rect>
@@ -11242,7 +11242,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>166</x>
-          <y>-4</y>
+          <y>-3</y>
           <width>51</width>
           <height>51</height>
          </rect>
@@ -11282,7 +11282,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>166</x>
-          <y>46</y>
+          <y>47</y>
           <width>51</width>
           <height>16</height>
          </rect>
@@ -11312,7 +11312,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>-4</y>
+          <y>-3</y>
           <width>51</width>
           <height>51</height>
          </rect>
@@ -11352,7 +11352,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>46</y>
+          <y>47</y>
           <width>51</width>
           <height>16</height>
          </rect>
@@ -11381,8 +11381,8 @@ border-radius: 4px;
         </property>
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>53</y>
+          <x>57</x>
+          <y>58</y>
           <width>51</width>
           <height>51</height>
          </rect>
@@ -11421,8 +11421,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_fx_param_e">
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>103</y>
+          <x>57</x>
+          <y>108</y>
           <width>51</width>
           <height>16</height>
          </rect>
@@ -11452,7 +11452,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>130</x>
-          <y>53</y>
+          <y>58</y>
           <width>51</width>
           <height>51</height>
          </rect>
@@ -11494,8 +11494,8 @@ border-radius: 4px;
         </property>
         <property name="geometry">
          <rect>
-          <x>200</x>
-          <y>53</y>
+          <x>203</x>
+          <y>58</y>
           <width>51</width>
           <height>51</height>
          </rect>
@@ -11535,7 +11535,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>130</x>
-          <y>103</y>
+          <y>108</y>
           <width>51</width>
           <height>16</height>
          </rect>
@@ -11561,8 +11561,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_fx_param_g">
         <property name="geometry">
          <rect>
-          <x>200</x>
-          <y>103</y>
+          <x>203</x>
+          <y>108</y>
           <width>51</width>
           <height>16</height>
          </rect>
@@ -11591,8 +11591,8 @@ border-radius: 4px;
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>100</width>
-         <height>30</height>
+         <width>311</width>
+         <height>125</height>
         </rect>
        </property>
        <attribute name="label">
@@ -11604,8 +11604,8 @@ border-radius: 4px;
         </property>
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>10</y>
+          <x>17</x>
+          <y>20</y>
           <width>61</width>
           <height>61</height>
          </rect>
@@ -11644,8 +11644,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_fx2_param_a">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>70</y>
+          <x>17</x>
+          <y>80</y>
           <width>61</width>
           <height>21</height>
          </rect>
@@ -11674,8 +11674,8 @@ border-radius: 4px;
         </property>
         <property name="geometry">
          <rect>
-          <x>90</x>
-          <y>10</y>
+          <x>89</x>
+          <y>20</y>
           <width>61</width>
           <height>61</height>
          </rect>
@@ -11714,8 +11714,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_fx2_param_b">
         <property name="geometry">
          <rect>
-          <x>90</x>
-          <y>70</y>
+          <x>89</x>
+          <y>80</y>
           <width>61</width>
           <height>21</height>
          </rect>
@@ -11744,8 +11744,8 @@ border-radius: 4px;
         </property>
         <property name="geometry">
          <rect>
-          <x>160</x>
-          <y>10</y>
+          <x>161</x>
+          <y>20</y>
           <width>61</width>
           <height>61</height>
          </rect>
@@ -11784,8 +11784,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_fx2_param_c">
         <property name="geometry">
          <rect>
-          <x>160</x>
-          <y>70</y>
+          <x>161</x>
+          <y>80</y>
           <width>61</width>
           <height>21</height>
          </rect>
@@ -11814,8 +11814,8 @@ border-radius: 4px;
         </property>
         <property name="geometry">
          <rect>
-          <x>230</x>
-          <y>10</y>
+          <x>233</x>
+          <y>20</y>
           <width>61</width>
           <height>61</height>
          </rect>
@@ -11854,8 +11854,8 @@ border-radius: 4px;
        <widget class="QLabel" name="label_fx2_param_d">
         <property name="geometry">
          <rect>
-          <x>230</x>
-          <y>70</y>
+          <x>233</x>
+          <y>80</y>
           <width>61</width>
           <height>21</height>
          </rect>
@@ -12119,60 +12119,6 @@ border-radius: 4px;
       </property>
       <property name="text">
        <string>fx1</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_fx_name">
-      <property name="geometry">
-       <rect>
-        <x>111</x>
-        <y>43</y>
-        <width>91</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>DejaVu Sans</family>
-        <pointsize>10</pointsize>
-        <weight>50</weight>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color:#333</string>
-      </property>
-      <property name="text">
-       <string>fx1 name</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_fx2_name">
-      <property name="geometry">
-       <rect>
-        <x>112</x>
-        <y>193</y>
-        <width>91</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>DejaVu Sans</family>
-        <pointsize>10</pointsize>
-        <weight>50</weight>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color:#333</string>
-      </property>
-      <property name="text">
-       <string>fx2 name</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -27128,40 +27074,7 @@ background-color: #efefef;
   <tabstop>env_1_velocity</tabstop>
  </tabstops>
  <resources/>
- <connections>
-  <connection>
-   <sender>fx_type</sender>
-   <signal>currentIndexChanged(QString)</signal>
-   <receiver>label_fx_name</receiver>
-   <slot>setText(QString)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>777</x>
-     <y>405</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>807</x>
-     <y>439</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>fx2_type</sender>
-   <signal>currentIndexChanged(QString)</signal>
-   <receiver>label_fx2_name</receiver>
-   <slot>setText(QString)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>932</x>
-     <y>392</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>862</x>
-     <y>589</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
  <buttongroups>
   <buttongroup name="osc_1_waveform"/>
   <buttongroup name="osc_2_waveform"/>

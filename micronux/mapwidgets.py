@@ -44,10 +44,23 @@ def load(settings, app, window):
                 keyword = value
                 if value in keywords:
                     keyword = keywords[value]
+                # already write multiply symbol in QtDesigner
                 if value.startswith('x '):
                     keyword = value[2:]
+
                 new_index = widgoo.findText(keyword)
                 widgoo.setCurrentIndex(new_index)
+
+                if name == 'fx_type':
+                    window.fx_toolBox.setItemText(
+                        0, widgoo.currentText() )
+                    if widgoo.currentText() == 'bypass':
+                        window.fx_toolBox.setCurrentIndex(1)
+                if name == 'fx2_type':
+                    window.fx_toolBox.setItemText(
+                        1, widgoo.currentText() )
+                    if widgoo.currentText() == 'bypass':
+                        window.fx_toolBox.setCurrentIndex(0)
 
             elif widg_type in easy_numbers:
                 value = clean_val(value)
@@ -55,17 +68,10 @@ def load(settings, app, window):
 
             elif widg_type in easy_strings:
                 widgoo.setText(value)
-
+                
             debug_line = widg_type+' -> '+name+': '
             debug_line += str(value)+' ('+settings[name]+')'
             # print(debug_line)
-
-        # Set labels for fx tabs
-        if widg_type == 'QLabel':
-            if name == 'label_fx_name':
-                widgoo.setText(settings['fx_type'])
-            if name == 'label_fx2_name':
-                widgoo.setText(settings['fx2_type'])
 
     window.setWindowTitle(settings['name']+" | Micronux")
     window.output_level.setFocus()

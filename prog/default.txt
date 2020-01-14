@@ -1,6 +1,6 @@
 #----------------------------------------
 # Micron program:  /home/herberts/apps/micron/my-micron-editor/dev/prog/default.syx
-# Generated on Tue Jan 14 01:34:12 2020
+# Generated on Tue Jan 14 23:31:31 2020
 #----------------------------------------
 
 #----------------------------------------

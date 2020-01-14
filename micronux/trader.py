@@ -5,6 +5,7 @@
 import subprocess, sys, os.path
 
 ion_decoder_path = 'alesis/ion_program_decoder.pl'
+default_prog = 'prog/default.txt'
 
 # convert text line to name/value pair
 def text_to_setting(line):
@@ -14,10 +15,9 @@ def text_to_setting(line):
             return False
         else:
             pair = line.split(':')
-            # remove white spaces
+            # white spaces not allowed
             name = pair[0].replace(' ','_')
-            # QT doesn't allow the minus symbol
-            # in widget names so we replace it
+            # minus symbol not allowed
             if name.startswith('tracking_point_'):
                 name = name.replace('-','m')
             value = pair[1].strip()
@@ -43,14 +43,14 @@ def import_file(file_name):
         if result.returncode == 0:
             file_name = file_name[:-3]+'txt'
         else:
-            # show program_decoder error
-            sys.exit(1)
+            # alesis' script shows error
+            file_name = default_prog
     elif not file_name.endswith('.txt'):
         print('File type must be .txt or .syx')
-        sys.exit(1)
+        file_name = default_prog
     # read text file into a dic
     txt_file = open(file_name)
-    settings = {'file_name':file_name}
+    settings = {}
     print('Loading settings from '+file_name)
     for line in txt_file:
         pair = text_to_setting(line)
@@ -64,37 +64,36 @@ def export_file(file_name):
     return True
 
 ### Receive sysex and return settings
-def receive_file(args):
-    try:
-        # check if port given
-        args[2]
-    except:
-        print('Please specify a MIDI port')
-        sys.exit(1)
+def receive_file(midi_port):
+    # dump amidi port to file
+    cache = './prog/received.syx'
+    cmd = ['amidi', '-t', '3', '-p']
+    cmd +=  [midi_port, '-r',cache]
+    result = subprocess.run(cmd)
+    if result.returncode == 0:
+        fix_syx(cache)
+        settings = import_file(cache)
+        return settings
     else:
-        # dump amidi port to file
-        cache = './prog/received.syx'
-        midi_port = args[2]
-        cmd = ['amidi', '-t', '3', '-p']
-        cmd +=  [midi_port, '-r',cache]
-        result = subprocess.run(cmd)
-        if result.returncode == 0:
-            fix_syx(cache)
-            settings = import_file(cache)
-            return settings
-        else:
-            # show amidi error
-            sys.exit(1)
+        # shows amidi error
+        return False
 
 ### Check the command line arguments
 def startup(args):
     if len(args) == 1:
         # without argument, load the default program
-        settings = import_file('prog/default.txt')
+        settings = import_file(default_prog)
     else:
         # receive sysex option
         if args[1] == '-r':
-            settings = receive_file(args)
+            try:
+                # check if port given
+                args[2]
+            except:
+                print('Please specify a MIDI port')
+                sys.exit(1)
+            else:
+                settings = receive_file(arg[2])
         # otherwise check if argument is a valid file
         elif os.path.isfile(args[1]):
             settings = import_file(args[1])
@@ -114,7 +113,7 @@ def fix_syx(path):
         start = syx.find(b'\xf0\x00')
         end = syx.find(b'\xf7')+1
         # if length between f0 00 and f7
-        # is 434 byte we trim it down
+        # is 434 byte, it's a micron sysex
         if (end - start) == 434:
             new_content = syx[start:end]
             # backup old sysex
