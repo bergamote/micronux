@@ -51,7 +51,7 @@ def import_file(file_name):
     # read text file into a dic
     txt_file = open(file_name)
     settings = {}
-    print('Loading settings from '+file_name)
+    print('loading '+file_name)
     for line in txt_file:
         pair = text_to_setting(line)
         if pair:

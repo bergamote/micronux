@@ -3,12 +3,12 @@
 # A Python3/QT5 program editor for the Micron synth
 
 import sys
-from micronux import gui, trader, mapwidgets, lcd
+from micronux import gui, trader, mapwidgets, lcd, effects
 from micronux.definitions import easy_numbers
 
-debug = True
 
 class mx():
+    debug = True
     settings = trader.startup(sys.argv)
     changed_settings = []
     # setup app and window
@@ -52,7 +52,7 @@ def fx_toolbox_title():
 
 # Open file
 def open_file():
-    fname, _ = gui.QFileDialog.getOpenFileName(None, 'Open file',
+    fname, _ = gui.QFileDialog.getOpenFileName(mx.window, 'Open file',
      './prog',"Sysex or Text Files (*.syx *.txt)")
     if fname:
         mx.settings = trader.import_file(fname)
