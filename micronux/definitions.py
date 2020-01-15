@@ -2,6 +2,14 @@
 #
 # useful lists and dics
 
+def get_button_groups(window):
+    button_groups = [
+        window.osc_1_waveform,
+        window.osc_2_waveform,
+        window.osc_3_waveform
+    ]
+    return button_groups
+
 easy_numbers = [
 'QDial',
 'QSlider',

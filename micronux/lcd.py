@@ -8,7 +8,8 @@ from micronux.definitions import nicer_names
 prev_setting = ''
 
 # update display with value, unit and nice name
-def update(app, window, settings):
+def update(mx):
+    app, window, settings = mx.app, mx.window, mx.settings
     global prev_setting
     value = app.focusWidget().value()
     setting_name = app.focusWidget().objectName()

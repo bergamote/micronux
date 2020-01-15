@@ -11047,7 +11047,7 @@ border-radius: 4px;
      <string notr="true">background-color: #efefef</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="effects">
      <property name="enabled">
@@ -11591,8 +11591,8 @@ border-radius: 4px;
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>311</width>
-         <height>125</height>
+         <width>100</width>
+         <height>30</height>
         </rect>
        </property>
        <attribute name="label">
@@ -22938,7 +22938,7 @@ QSlider {
        </property>
       </item>
      </widget>
-     <widget class="QComboBox" name="sh_input_2">
+     <widget class="QComboBox" name="tracking_input">
       <property name="geometry">
        <rect>
         <x>137</x>
@@ -27076,8 +27076,8 @@ background-color: #efefef;
  <resources/>
  <connections/>
  <buttongroups>
+  <buttongroup name="osc_3_waveform"/>
   <buttongroup name="osc_1_waveform"/>
   <buttongroup name="osc_2_waveform"/>
-  <buttongroup name="osc_3_waveform"/>
  </buttongroups>
 </ui>

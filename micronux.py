@@ -4,7 +4,7 @@
 
 import sys
 from micronux import gui, trader, mapwidgets, lcd, effects
-from micronux.definitions import easy_numbers
+from micronux.definitions import easy_numbers, get_button_groups
 
 
 class mx():
@@ -19,25 +19,34 @@ class mx():
 
 
 # set values to widgets
-mapwidgets.load(mx.settings, mx.app, mx.window)
+mapwidgets.load(mx)
 
 # Keep track of settings that changed
 def setting_changed():
     if mx.loaded:
-        widget = mx.app.focusWidget().objectName()
+        widget = mx.app.focusWidget()
+        # workaround for radiobuttons
+        if 'waveform' in widget.objectName():
+            wave = widget.objectName()
+            if '1' in wave:
+                widget = mx.window.osc_1_waveform
+            elif '2' in wave:
+                widget = mx.window.osc_2_waveform
+            elif '3' in wave:
+                widget = mx.window.osc_3_waveform
         if not widget in mx.changed_settings:
             mx.changed_settings.append(widget)
-            print(mx.changed_settings)
+            # print(mx.changed_settings)
 
 
 # Update sliders values to 'lcd'
 def pass_to_lcd():
     if mx.loaded:
-        lcd.update(mx.app, mx.window, mx.settings)
+        lcd.update(mx)
 
 
-# make title of fx toolbox tab reflect last selected fx
-# and focus its tab
+# Make title of fx toolbox tab reflect
+# last selected fx and focus its tab
 def fx_toolbox_title():
     if mx.loaded:
         tool_box = mx.window.fx_toolBox
@@ -57,14 +66,19 @@ def open_file():
     if fname:
         mx.settings = trader.import_file(fname)
         mx.loaded = False
-        mapwidgets.load(mx.settings, mx.app, mx.window)
+        mapwidgets.load(mx)
         mx.loaded = True
         mx.changed_settings.clear()
 
 mx.window.actionOpen.triggered.connect(open_file)
 
 
-# Connecting widgets
+# Connecting buttongroups and widgets
+radio_groups = get_button_groups(mx.window)
+
+for group in radio_groups:
+    group.buttonClicked.connect(setting_changed)
+
 for widget in mx.app.allWidgets():
     widg_name = widget.objectName()
     widg_type = type(widget).__name__
@@ -91,6 +105,14 @@ def close_widgin():
 def open_widgin():
     widgin.show()
     widgin.raise_()
+
+    #test for export
+    print('### changed settings')
+    for widget in mx.changed_settings:
+        value = 'new_value'
+        line = trader.setting_to_text(widget.objectName(), value)
+        print(line.strip())
+
 
 mx.window.pushButton.clicked.connect(close_widgin)
 mx.window.sh_widginPop.clicked.connect(open_widgin)

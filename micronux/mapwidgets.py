@@ -3,16 +3,13 @@
 # Map settings to widgets.
 
 from micronux.helpers import clean_val, disp_val, last_word
-from micronux.definitions import easy_numbers, easy_strings, keywords
+from micronux.definitions import easy_numbers, easy_strings, \
+    keywords, get_button_groups
 
-def load(settings, app, window):
-
+def load(mx):
+    settings, app, window = mx.settings, mx.app, mx.window
     # radio button groups (QRadioButton)
-    radio_groups = [
-        window.osc_1_waveform,
-        window.osc_2_waveform,
-        window.osc_3_waveform,
-    ]
+    radio_groups = get_button_groups(window)
 
     for group in radio_groups:
         for button in group.buttons():
@@ -68,7 +65,7 @@ def load(settings, app, window):
 
             elif widg_type in easy_strings:
                 widgoo.setText(value)
-                
+
             debug_line = widg_type+' -> '+name+': '
             debug_line += str(value)+' ('+settings[name]+')'
             # print(debug_line)
