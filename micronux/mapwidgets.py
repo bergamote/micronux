@@ -4,6 +4,7 @@
 
 from micronux.helpers import clean_val, disp_val, last_word
 import micronux.definitions as df
+import micronux.effects as fx
 
 def load(mx):
     settings, app, window = mx.settings, mx.app, mx.window
@@ -51,11 +52,13 @@ def load(mx):
                 if name == 'fx_type':
                     window.fx_toolBox.setItemText(
                         0, widgoo.currentText() )
+                    fx.set_fx(mx, 1)
                     if widgoo.currentText() == 'bypass':
                         window.fx_toolBox.setCurrentIndex(1)
                 if name == 'fx2_type':
                     window.fx_toolBox.setItemText(
                         1, widgoo.currentText() )
+                    fx.set_fx(mx, 2)
                     if widgoo.currentText() == 'bypass':
                         window.fx_toolBox.setCurrentIndex(0)
 

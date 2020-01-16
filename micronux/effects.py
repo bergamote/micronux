@@ -2,6 +2,7 @@
 #
 # definitions and functions for effects
 
+from PySide2 import QtWidgets
 
 feedback = manual_delay = lfo_depth = notch_frequency = \
 sibilance_boost = decay = analysis_mix = \
@@ -148,21 +149,26 @@ def switch(mx):
     tool_box = mx.window.fx_toolBox
     fx_widget = mx.app.focusWidget()
     if fx_widget.objectName() == 'fx_type':
-        fx = fx_type_list[fx_widget.currentIndex()]
-        mx.window.label_fx_param_a.setText(fx['a'][0])
-        mx.window.label_fx_param_b.setText(fx['b'][0])
-        mx.window.label_fx_param_c.setText(fx['c'][0])
-        mx.window.label_fx_param_d.setText(fx['d'][0])
-        mx.window.label_fx_param_e.setText(fx['e'][0])
-        mx.window.label_fx_param_f.setText(fx['f'][0])
-        mx.window.label_fx_param_g.setText(fx['g'][0])
         tool_box.setCurrentIndex(0)
         tool_box.setItemText(0,fx_widget.currentText())
+        set_fx(mx, 1)
     elif fx_widget.objectName() == 'fx2_type':
-        fx2 = fx2_type_list[fx_widget.currentIndex()]
-        mx.window.label_fx2_param_a.setText(fx2['a'][0])
-        mx.window.label_fx2_param_b.setText(fx2['b'][0])
-        mx.window.label_fx2_param_c.setText(fx2['c'][0])
-        mx.window.label_fx2_param_d.setText(fx2['d'][0])
         tool_box.setCurrentIndex(1)
         tool_box.setItemText(1,fx_widget.currentText())
+        set_fx(mx, 2)
+
+def set_fx(mx, fx_num):
+    if fx_num == 1:
+        fx = fx_type_list[mx.window.fx_type.currentIndex()]
+        labels = mx.window.fx_1.findChildren(QtWidgets.QLabel)
+        for label in labels:
+            name = label.objectName()
+            param = name[-1:]
+            label.setText(fx[param][0])
+    if fx_num == 2:
+        fx2 = fx2_type_list[mx.window.fx2_type.currentIndex()]
+        labels = mx.window.fx_2.findChildren(QtWidgets.QLabel)
+        for label in labels:
+            name = label.objectName()
+            param = name[-1:]
+            label.setText(fx2[param][0])
