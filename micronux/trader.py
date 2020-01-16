@@ -66,14 +66,14 @@ def export_file(file_name):
     return True
 
 ### Receive sysex and return settings
-def receive_file(midi_port):
+def receive_sysex(midi_port):
     # dump amidi port to file
     cmd = ['amidi', '-t', '3', '-p']
     cmd +=  [midi_port, '-r', midi_cache]
     result = subprocess.run(cmd)
     if result.returncode == 0:
-        fix_syx(cache)
-        settings = import_file(cache)
+        fix_syx(midi_cache)
+        settings = import_file(midi_cache)
         return settings
     else:
         # shows amidi error
@@ -94,7 +94,7 @@ def startup(args):
                 print('Please specify a MIDI port')
                 sys.exit(1)
             else:
-                settings = receive_file(arg[2])
+                settings = receive_sysex(arg[2])
         # otherwise check if argument is a valid file
         elif os.path.isfile(args[1]):
             settings = import_file(args[1])

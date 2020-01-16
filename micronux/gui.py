@@ -7,7 +7,7 @@
 
 import sys
 from PySide2.QtUiTools import QUiLoader
-from PySide2.QtWidgets import QApplication, QFileDialog
+from PySide2.QtWidgets import QApplication, QFileDialog, QDialog
 from PySide2.QtCore import QFile, Qt
 from PySide2.QtGui import QIcon
 
@@ -36,3 +36,6 @@ def make_gui(gui_file, title='Untitled', style='fusion'):
     window.show()
 
     return {'app': app,'window': window}
+
+def receive_dialogue(mx):
+    diag = QDialog('Receiving sysex')

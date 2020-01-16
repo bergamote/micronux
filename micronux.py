@@ -17,6 +17,8 @@ class mx():
     window = myQtGui['window']
     loaded = False
 
+    # for now midi port hard coded
+    midi_port = 'hw:2,0,0'
 
 # set values to widgets
 mapwidgets.load(mx)
@@ -52,6 +54,31 @@ def fx_switch():
         effects.switch(mx)
 
 
+
+
+# Test for pop up window
+widgin = mx.window.widg_input
+widgin.hide()
+
+def close_widgin():
+    widgin.hide()
+
+def open_widgin():
+    widgin.show()
+    widgin.raise_()
+
+    #test for export
+    for widget in mx.changed_settings:
+        value = 'new_value'
+        line = trader.setting_to_text(widget.objectName(), value)
+        print(line.strip())
+
+mx.window.pushButton.clicked.connect(close_widgin)
+mx.window.sh_widginPop.clicked.connect(open_widgin)
+
+
+
+
 # Open file
 def open_file():
     fname, _ = gui.QFileDialog.getOpenFileName(mx.window,
@@ -64,6 +91,29 @@ def open_file():
         mx.changed_settings.clear()
 
 mx.window.actionOpen.triggered.connect(open_file)
+
+
+# Receive sysex
+def receive_file():
+    
+    pop = gui.QDialog()
+    pop.setWindowTitle("Receiving...")
+    pop.setWindowModality(gui.Qt.ApplicationModal)
+    pop.resize(300, 1)
+    pop.show()
+
+    sysex = trader.receive_sysex(mx.midi_port)
+    if sysex:
+        mx.settings = sysex
+        mx.loaded = False
+        mapwidgets.load(mx)
+        mx.loaded = True
+        mx.changed_settings.clear()
+    else:
+        print('no sysex received')
+    close_widgin()
+
+mx.window.actionReceive.triggered.connect(receive_file)
 
 
 # Connecting buttongroups and widgets
@@ -86,29 +136,6 @@ for widget in mx.app.allWidgets():
             widget.currentIndexChanged.connect(fx_switch)
     elif widg_type == 'QCheckBox':
         widget.stateChanged.connect(setting_changed)
-
-
-# Test for pop up window
-widgin = mx.window.widg_input
-widgin.hide()
-
-def close_widgin():
-    widgin.hide()
-
-def open_widgin():
-    widgin.show()
-    widgin.raise_()
-
-    #test for export
-    print('### changed settings')
-    for widget in mx.changed_settings:
-        value = 'new_value'
-        line = trader.setting_to_text(widget.objectName(), value)
-        print(line.strip())
-
-
-mx.window.pushButton.clicked.connect(close_widgin)
-mx.window.sh_widginPop.clicked.connect(open_widgin)
 
 
 # Connect Quit menu
