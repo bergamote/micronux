@@ -164,7 +164,19 @@ def set_fx(mx, fx_num):
         for label in labels:
             name = label.objectName()
             param = name[-1:]
-            label.setText(fx[param][0])
+            text = fx[param][0]
+            label.setText(text)
+        dials = mx.window.fx_1.findChildren(QtWidgets.QDial)
+        for dial in dials:
+            name = dial.objectName()
+            param = name[-1:]
+            if fx[param][1]:
+                min = fx[param][1]['min']
+                max = fx[param][1]['max']
+                dial.setRange(min, max)
+            else:
+                dial.setRange(0, 0)
+
     if fx_num == 2:
         fx2 = fx2_type_list[mx.window.fx2_type.currentIndex()]
         labels = mx.window.fx_2.findChildren(QtWidgets.QLabel)
@@ -172,3 +184,13 @@ def set_fx(mx, fx_num):
             name = label.objectName()
             param = name[-1:]
             label.setText(fx2[param][0])
+        dials = mx.window.fx_2.findChildren(QtWidgets.QDial)
+        for dial in dials:
+            name = dial.objectName()
+            param = name[-1:]
+            if fx2[param][1]:
+                min = fx2[param][1]['min']
+                max = fx2[param][1]['max']
+                dial.setRange(min, max)
+            else:
+                dial.setRange(0, 0)

@@ -42,7 +42,9 @@ def setting_changed():
 # Update sliders values to 'lcd'
 def pass_to_lcd():
     if mx.loaded:
-        lcd.update(mx)
+        widg_type = type(mx.app.focusWidget()).__name__
+        if (widg_type == 'QDial') or (widg_type == 'QSlider'):
+            lcd.update(mx)
 
 # Update fx tab, widgets and labels
 def fx_switch():
