@@ -3,13 +3,12 @@
 # Map settings to widgets.
 
 from micronux.helpers import clean_val, disp_val, last_word
-from micronux.definitions import easy_numbers, easy_strings, \
-    keywords, get_button_groups
+import micronux.definitions as df
 
 def load(mx):
     settings, app, window = mx.settings, mx.app, mx.window
     # radio button groups (QRadioButton)
-    radio_groups = get_button_groups(window)
+    radio_groups = df.get_button_groups(window)
 
     for group in radio_groups:
         for button in group.buttons():
@@ -38,10 +37,11 @@ def load(mx):
                     widgoo.setChecked(False)
 
             elif widg_type == 'QComboBox':
+                # display better dropdown choices
                 keyword = value
-                if value in keywords:
-                    keyword = keywords[value]
-                # already write multiply symbol in QtDesigner
+                if value in df.keywords:
+                    keyword = df.keywords[value]
+                # we already write x symbol in QtDesigner
                 if value.startswith('x '):
                     keyword = value[2:]
 
@@ -59,11 +59,11 @@ def load(mx):
                     if widgoo.currentText() == 'bypass':
                         window.fx_toolBox.setCurrentIndex(0)
 
-            elif widg_type in easy_numbers:
+            elif widg_type in df.easy_numbers:
                 value = clean_val(value)
                 widgoo.setValue(value)
 
-            elif widg_type in easy_strings:
+            elif widg_type in df.easy_strings:
                 widgoo.setText(value)
 
             debug_line = widg_type+' -> '+name+': '

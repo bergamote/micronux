@@ -34,9 +34,9 @@ def setting_changed():
                 widget = mx.window.osc_2_waveform
             elif '3' in wave:
                 widget = mx.window.osc_3_waveform
+
         if not widget in mx.changed_settings:
             mx.changed_settings.append(widget)
-            # print(mx.changed_settings)
 
 
 # Update sliders values to 'lcd'
@@ -45,24 +45,16 @@ def pass_to_lcd():
         lcd.update(mx)
 
 
-# Make title of fx toolbox tab reflect
-# last selected fx and focus its tab
-def fx_toolbox_title():
+# Update fx tab, widgets and labels
+def fx_switch():
     if mx.loaded:
-        tool_box = mx.window.fx_toolBox
-        fx_widget = mx.app.focusWidget()
-        if fx_widget.objectName() == 'fx_type':
-            tool_box.setCurrentIndex(0)
-            tool_box.setItemText(0,fx_widget.currentText())
-        elif fx_widget.objectName() == 'fx2_type':
-            tool_box.setCurrentIndex(1)
-            tool_box.setItemText(1,fx_widget.currentText())
+        effects.switch(mx)
 
 
 # Open file
 def open_file():
-    fname, _ = gui.QFileDialog.getOpenFileName(mx.window, 'Open file',
-     './prog',"Sysex or Text Files (*.syx *.txt)")
+    fname, _ = gui.QFileDialog.getOpenFileName(mx.window,
+     'Open file', './prog',"Sysex or Text Files (*.syx *.txt)")
     if fname:
         mx.settings = trader.import_file(fname)
         mx.loaded = False
@@ -90,7 +82,7 @@ for widget in mx.app.allWidgets():
     elif widg_type == 'QComboBox':
         widget.currentIndexChanged.connect(setting_changed)
         if widg_name.startswith('fx') and widg_name.endswith('type'):
-            widget.currentIndexChanged.connect(fx_toolbox_title)
+            widget.currentIndexChanged.connect(fx_switch)
     elif widg_type == 'QCheckBox':
         widget.stateChanged.connect(setting_changed)
 

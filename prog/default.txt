@@ -1,19 +1,21 @@
 #----------------------------------------
-# Micron program:  /home/herberts/apps/micron/my-micron-editor/dev/prog/default.syx
-# Generated on Tue Jan 14 23:31:31 2020
+# Micron program:  default.syx
+#
+# From MicronAU 
+# https://github.com/retroware/micronau
 #----------------------------------------
 
 #----------------------------------------
 # Identification
 #----------------------------------------
 
-name:                 Program
+name:                 init
 ion location:         edit 0
 micron file id:       0
 category:             comp
 knob x param:         Filter 1 Freq
 knob y param:         Filter 1 Res
-knob z param:         Post Fltr 1 Pan
+knob z param:         Voice FM Amount
 
 #----------------------------------------
 # Voice
@@ -26,7 +28,7 @@ unison detune:        0%
 portamento:           off
 portamento mode:      normal
 portamento type:      fixed
-portamento time:      160.223 ms
+portamento time:      10.000 ms
 pitch wheel mode:     all
 analog drift:         0%
 osc sync:             off
@@ -40,10 +42,10 @@ fm type:              linear
 # Oscillators
 #----------------------------------------
 
-osc 1 waveform:       sine
+osc 1 waveform:       tri/saw
 osc 2 waveform:       sine
 osc 3 waveform:       sine
-osc 1 shape:          0%
+osc 1 shape:          100%
 osc 2 shape:          0%
 osc 3 shape:          0%
 osc 1 octave:         0
@@ -55,9 +57,9 @@ osc 3 pitch semi:     0
 osc 1 pitch fine:     0.0
 osc 2 pitch fine:     0.0
 osc 3 pitch fine:     0.0
-osc 1 p wheel range:  2
-osc 2 p wheel range:  2
-osc 3 p wheel range:  2
+osc 1 p wheel range:  0
+osc 2 p wheel range:  0
+osc 3 p wheel range:  0
 
 #----------------------------------------
 # Prefilter Mix
@@ -70,7 +72,7 @@ ringmod level:        0%
 noise level:          0%
 extin level:          0%
 osc 1 balance:        100% f1
-osc 2 balance:        100% f1
+osc 2 balance:        50% f1
 osc 3 balance:        50% f1
 ringmod balance:      50% f1
 noise balance:        50% f1
@@ -84,12 +86,12 @@ noise type:           pink
 
 filter 1 type:        bypass
 filter 2 type:        bypass
-filter 1 freq:        10.000 KHz
-filter 2 freq:        10.000 KHz
+filter 1 freq:        20.000 KHz
+filter 2 freq:        20.000 Hz
 filter 1 res:         0%
 filter 2 res:         0%
-filter 1 keytrack:    100%
-filter 2 keytrack:    100%
+filter 1 keytrack:    0%
+filter 2 keytrack:    0%
 filter 1 envamt:      0%
 filter 2 envamt:      0%
 filter 2 absoffset:   absolute
@@ -118,20 +120,20 @@ effects wetdry mix:   -100%
 
 fx1 fx2 balance:      50% fx1
 fx type:              bypass
-fx param a:           100
-fx param b:           79
-fx param c:           87
-fx param d:           100
+fx param a:           0
+fx param b:           0
+fx param c:           0
+fx param d:           0
 fx param e:           0
 fx param f:           0
 fx param g:           0
-fx param c synced:    x 1
+fx param c synced:    x 16
 fx2 type:             bypass
-fx2 param a:          100
-fx2 param b:          37
+fx2 param a:          87
+fx2 param b:          45
 fx2 param c:          59
 fx2 param d:          1
-fx2 param a synced:   x 1
+fx2 param a synced:   x 1/16
 
 #----------------------------------------
 # Envelopes
@@ -183,61 +185,61 @@ env 3 sus pedal:      on
 
 lfo 1 tempo sync:     off
 lfo 2 tempo sync:     off
-lfo 1 rate:           8.003 Hz
-lfo 2 rate:           8.003 Hz
+lfo 1 rate:           0.010 Hz
+lfo 2 rate:           0.010 Hz
 lfo 1 synced rate:    x 16
-lfo 2 synced rate:    x 8
+lfo 2 synced rate:    x 16
 lfo 1 reset:          mono
 lfo 2 reset:          mono
 lfo 1 mod wheel 1:    0%
 lfo 2 mod wheel 1:    0%
 sh tempo sync:        off
-sh rate:              8.003 Hz
+sh rate:              0.010 Hz
 sh synced rate:       x 16
 sh reset:             mono
-sh input:             voice random
+sh input:             note-on velocity
 sh smoothing:         1%
 
 #----------------------------------------
 # Tracking Generator
 #----------------------------------------
 
-tracking input:       lfo 2 saw
-tracking preset:      custom
+tracking input:       note-on velocity
+tracking preset:      bypass
 tracking numpoints:   16
-tracking point -16:   0%
-tracking point -15:   0%
-tracking point -14:   0%
-tracking point -13:   0%
-tracking point -12:   0%
-tracking point -11:   0%
-tracking point -10:   0%
-tracking point -9:    0%
-tracking point -8:    0%
-tracking point -7:    0%
-tracking point -6:    0%
-tracking point -5:    0%
-tracking point -4:    0%
-tracking point -3:    0%
-tracking point -2:    0%
-tracking point -1:    0%
+tracking point -16:   -100%
+tracking point -15:   -94%
+tracking point -14:   -88%
+tracking point -13:   -81%
+tracking point -12:   -75%
+tracking point -11:   -69%
+tracking point -10:   -63%
+tracking point -9:    -56%
+tracking point -8:    -50%
+tracking point -7:    -44%
+tracking point -6:    -38%
+tracking point -5:    -31%
+tracking point -4:    -25%
+tracking point -3:    -19%
+tracking point -2:    -13%
+tracking point -1:    -6%
 tracking point 0:     0%
-tracking point 1:     0%
-tracking point 2:     0%
-tracking point 3:     0%
-tracking point 4:     0%
-tracking point 5:     0%
-tracking point 6:     0%
-tracking point 7:     0%
-tracking point 8:     0%
-tracking point 9:     0%
-tracking point 10:    0%
-tracking point 11:    0%
-tracking point 12:    0%
-tracking point 13:    0%
-tracking point 14:    0%
-tracking point 15:    0%
-tracking point 16:    0%
+tracking point 1:     6%
+tracking point 2:     13%
+tracking point 3:     19%
+tracking point 4:     25%
+tracking point 5:     31%
+tracking point 6:     38%
+tracking point 7:     44%
+tracking point 8:     50%
+tracking point 9:     56%
+tracking point 10:    63%
+tracking point 11:    69%
+tracking point 12:    75%
+tracking point 13:    81%
+tracking point 14:    88%
+tracking point 15:    94%
+tracking point 16:    100%
 
 #----------------------------------------
 # Mod Matrix
@@ -255,18 +257,18 @@ mod 9 source:         none
 mod 10 source:        none
 mod 11 source:        none
 mod 12 source:        none
-mod 1 dest:           none
-mod 2 dest:           none
-mod 3 dest:           none
-mod 4 dest:           none
-mod 5 dest:           none
-mod 6 dest:           none
-mod 7 dest:           none
-mod 8 dest:           none
-mod 9 dest:           none
-mod 10 dest:          none
-mod 11 dest:          none
-mod 12 dest:          none
+mod 1 dest:           dummy
+mod 2 dest:           dummy
+mod 3 dest:           dummy
+mod 4 dest:           dummy
+mod 5 dest:           dummy
+mod 6 dest:           dummy
+mod 7 dest:           dummy
+mod 8 dest:           dummy
+mod 9 dest:           dummy
+mod 10 dest:          dummy
+mod 11 dest:          dummy
+mod 12 dest:          dummy
 mod 1 level:          0.0%
 mod 2 level:          0.0%
 mod 3 level:          0.0%
@@ -296,11 +298,11 @@ mod 12 offset:        0.0%
 # Ion Arpeggiator
 #----------------------------------------
 
-arp mode:             off
-arp pattern:          1
-arp tempo mult:       1
+arp mode:             on
+arp pattern:          0
+arp tempo mult:       1/4
 arp length:           2
 arp octave range:     0
 arp octave span:      up
 arp note order:       forward
-arp tempo:            120.0
+arp tempo:            50.0

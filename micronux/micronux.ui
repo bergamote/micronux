@@ -11047,7 +11047,7 @@ border-radius: 4px;
      <string notr="true">background-color: #efefef</string>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="effects">
      <property name="enabled">
@@ -27076,8 +27076,8 @@ background-color: #efefef;
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="osc_3_waveform"/>
   <buttongroup name="osc_1_waveform"/>
   <buttongroup name="osc_2_waveform"/>
+  <buttongroup name="osc_3_waveform"/>
  </buttongroups>
 </ui>

@@ -23,8 +23,7 @@ You'll need python3, PySide2 and make the script executable. You'll also need am
     chmod +x micronux.py
     ./micronux.py
 
-*Micronux* reads the `default.txt` file in the `prog` folder.    
-**For now**, to open a different text or sysex file, you can specify its path on the command line:
+By default *Micronux* reads the `default.txt` file in the `prog` folder. You can load Micron Programs (syx or txt) from the Open menu or from the command line:
 
     ./micronux.py mysysex.syx
 

@@ -6,6 +6,7 @@ import subprocess, sys, os.path
 
 ion_decoder_path = 'alesis/ion_program_decoder.pl'
 default_prog = 'prog/default.txt'
+midi_cache = 'prog/received.syx'
 
 # convert text line to name/value pair
 def text_to_setting(line):
@@ -35,20 +36,21 @@ def setting_to_text(name, value):
 
 ### Read sysex into settings
 def import_file(file_name):
-    # convert to text if sysex
+    # convert syx to text
     if file_name.endswith('.syx'):
         fix_syx(file_name)
         cmd = [ion_decoder_path, '-b', file_name]
         result = subprocess.run(cmd)
         if result.returncode == 0:
+            # change file suffix
             file_name = file_name[:-3]+'txt'
         else:
-            # alesis' script shows error
+            # alesis' script shows error here
             file_name = default_prog
     elif not file_name.endswith('.txt'):
         print('File type must be .txt or .syx')
         file_name = default_prog
-    # read text file into a dic
+    # read text file into a dict
     txt_file = open(file_name)
     settings = {}
     print('loading '+file_name)
@@ -66,9 +68,8 @@ def export_file(file_name):
 ### Receive sysex and return settings
 def receive_file(midi_port):
     # dump amidi port to file
-    cache = './prog/received.syx'
     cmd = ['amidi', '-t', '3', '-p']
-    cmd +=  [midi_port, '-r',cache]
+    cmd +=  [midi_port, '-r', midi_cache]
     result = subprocess.run(cmd)
     if result.returncode == 0:
         fix_syx(cache)

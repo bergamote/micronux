@@ -126,3 +126,16 @@ if __name__ == "__main__":
         for setting in effect:
             print(effect[setting])
         print('----------------------------------')
+
+
+# Focus selected effect tab and update
+# labels and widgets min/max
+def switch(mx):
+    tool_box = mx.window.fx_toolBox
+    fx_widget = mx.app.focusWidget()
+    if fx_widget.objectName() == 'fx_type':
+        tool_box.setCurrentIndex(0)
+        tool_box.setItemText(0,fx_widget.currentText())
+    elif fx_widget.objectName() == 'fx2_type':
+        tool_box.setCurrentIndex(1)
+        tool_box.setItemText(1,fx_widget.currentText())

@@ -12,7 +12,7 @@
 
   - receive sysex from menu bar (now only command line)
 
-  - add save functionality (syx or txt files).
+  - add save functionality (syx or txt files)
 
   - option to rename program (pop up dialogue)
 
@@ -26,11 +26,11 @@
 
   - implement a non-linear slider for time, and maybe freq, related settings (log curve)
 
-  - use *amidi* and *alsa conf* to make the midi port selectable from a menu. Automatically select if only one port.
+  - use *amidi* and *alsa conf* to make the midi port selectable from a menu. Automatically select if only one port
 
-  - reimplement the decoder/encoder perl script in python (maybe).
+  - reimplement the decoder/encoder perl script in python (maybe)
 
-  - make a 1920x1080 layout with **Qt Designer** where all envelopes, effects, mods and tracking are visible. Maybe not a great idea (settings overload).
+  - make a 1920x1080 layout with **Qt Designer** where all envelopes, effects, mods and tracking are visible. Maybe not a great idea (settings overload)
 
   - add visual representation of oscillators, and everything else (if possible)!
 
