@@ -137,8 +137,8 @@ QGroupBox {
    <widget class="QGroupBox" name="screen">
     <property name="geometry">
      <rect>
-      <x>522</x>
-      <y>214</y>
+      <x>516</x>
+      <y>210</y>
       <width>131</width>
       <height>121</height>
      </rect>
@@ -520,7 +520,7 @@ width: 2px;
    <widget class="QGroupBox" name="pre_filter_mix">
     <property name="geometry">
      <rect>
-      <x>334</x>
+      <x>326</x>
       <y>52</y>
       <width>181</width>
       <height>231</height>
@@ -1915,7 +1915,7 @@ width: 2px;
     <widget class="QLabel" name="label_wheel">
      <property name="geometry">
       <rect>
-       <x>260</x>
+       <x>257</x>
        <y>20</y>
        <width>41</width>
        <height>21</height>
@@ -2087,7 +2087,7 @@ width: 2px;
      <widget class="QDial" name="osc_1_octave">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>166</x>
         <y>0</y>
         <width>31</width>
         <height>31</height>
@@ -2233,7 +2233,7 @@ width: 2px;
      <widget class="QDial" name="osc_1_pitch_semi">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>166</x>
         <y>30</y>
         <width>31</width>
         <height>31</height>
@@ -2379,7 +2379,7 @@ width: 2px;
      <widget class="QDial" name="osc_1_pitch_fine">
       <property name="geometry">
        <rect>
-        <x>195</x>
+        <x>191</x>
         <y>0</y>
         <width>51</width>
         <height>61</height>
@@ -2413,7 +2413,7 @@ width: 2px;
      <widget class="QDial" name="osc_1_p_wheel_range">
       <property name="geometry">
        <rect>
-        <x>250</x>
+        <x>247</x>
         <y>10</y>
         <width>31</width>
         <height>41</height>
@@ -2707,7 +2707,7 @@ width: 2px;
      <widget class="QDial" name="osc_3_octave">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>166</x>
         <y>0</y>
         <width>31</width>
         <height>31</height>
@@ -2856,7 +2856,7 @@ width: 2px;
      <widget class="QDial" name="osc_3_pitch_semi">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>166</x>
         <y>30</y>
         <width>31</width>
         <height>31</height>
@@ -3005,7 +3005,7 @@ width: 2px;
      <widget class="QDial" name="osc_3_pitch_fine">
       <property name="geometry">
        <rect>
-        <x>195</x>
+        <x>191</x>
         <y>0</y>
         <width>51</width>
         <height>61</height>
@@ -3033,7 +3033,7 @@ width: 2px;
      <widget class="QDial" name="osc_3_p_wheel_range">
       <property name="geometry">
        <rect>
-        <x>250</x>
+        <x>247</x>
         <y>10</y>
         <width>31</width>
         <height>41</height>
@@ -3403,7 +3403,7 @@ width: 2px;
      <widget class="QDial" name="osc_2_octave">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>166</x>
         <y>0</y>
         <width>31</width>
         <height>31</height>
@@ -3552,7 +3552,7 @@ width: 2px;
      <widget class="QDial" name="osc_2_pitch_semi">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>166</x>
         <y>30</y>
         <width>31</width>
         <height>31</height>
@@ -3701,7 +3701,7 @@ width: 2px;
      <widget class="QDial" name="osc_2_pitch_fine">
       <property name="geometry">
        <rect>
-        <x>195</x>
+        <x>191</x>
         <y>0</y>
         <width>51</width>
         <height>61</height>
@@ -3729,7 +3729,7 @@ width: 2px;
      <widget class="QDial" name="osc_2_p_wheel_range">
       <property name="geometry">
        <rect>
-        <x>250</x>
+        <x>247</x>
         <y>10</y>
         <width>31</width>
         <height>41</height>
@@ -3884,7 +3884,7 @@ width: 2px;
     <widget class="QLabel" name="label_tune">
      <property name="geometry">
       <rect>
-       <x>184</x>
+       <x>180</x>
        <y>18</y>
        <width>71</width>
        <height>21</height>
@@ -3923,7 +3923,7 @@ width: 2px;
      <widget class="QComboBox" name="pitch_wheel_mode">
       <property name="geometry">
        <rect>
-        <x>263</x>
+        <x>260</x>
         <y>11</y>
         <width>38</width>
         <height>20</height>
@@ -3970,7 +3970,7 @@ width: 2px;
      <widget class="QLabel" name="label_drift">
       <property name="geometry">
        <rect>
-        <x>218</x>
+        <x>214</x>
         <y>10</y>
         <width>31</width>
         <height>21</height>
@@ -3997,7 +3997,7 @@ width: 2px;
      <widget class="QLabel" name="label_pitch_wheel_mode">
       <property name="geometry">
        <rect>
-        <x>263</x>
+        <x>260</x>
         <y>-7</y>
         <width>38</width>
         <height>21</height>
@@ -4027,7 +4027,7 @@ width: 2px;
       </property>
       <property name="geometry">
        <rect>
-        <x>191</x>
+        <x>187</x>
         <y>0</y>
         <width>31</width>
         <height>41</height>
@@ -6803,7 +6803,7 @@ border-radius: 4px;
    <widget class="Line" name="line_3">
     <property name="geometry">
      <rect>
-      <x>519</x>
+      <x>515</x>
       <y>71</y>
       <width>20</width>
       <height>131</height>
@@ -11591,8 +11591,8 @@ border-radius: 4px;
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>100</width>
-         <height>30</height>
+         <width>311</width>
+         <height>125</height>
         </rect>
        </property>
        <attribute name="label">
@@ -26328,7 +26328,7 @@ border-radius:10px;
    <widget class="Line" name="line">
     <property name="geometry">
      <rect>
-      <x>310</x>
+      <x>304</x>
       <y>70</y>
       <width>21</width>
       <height>201</height>
@@ -26435,7 +26435,7 @@ background-color: #efefef;
      <enum>QAbstractSpinBox::DefaultStepType</enum>
     </property>
     <property name="value">
-     <double>50.000000000000000</double>
+     <double>120.000000000000000</double>
     </property>
    </widget>
    <widget class="QLabel" name="label_arp">

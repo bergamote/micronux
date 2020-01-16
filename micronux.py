@@ -44,7 +44,6 @@ def pass_to_lcd():
     if mx.loaded:
         lcd.update(mx)
 
-
 # Update fx tab, widgets and labels
 def fx_switch():
     if mx.loaded:

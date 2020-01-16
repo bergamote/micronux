@@ -44,9 +44,10 @@ chorus = {
 'c': ['rate', lfo_rate],
 'd': ['depth', lfo_depth],
 'e': ['shape', lfo_shape],
-'f': ['sync', tempo_sync]
+'f': ['sync', tempo_sync],
+'g': ['---', False],
+'name': 'chorus'
 }
-chorus['name'] = 'chorus'
 
 theta_flanger = chorus.copy()
 theta_flanger['a'][1]['min'] = -100
@@ -56,7 +57,7 @@ thru_0_flanger = theta_flanger.copy()
 thru_0_flanger['name'] = 'thru 0 flanger'
 
 super_phaser = theta_flanger.copy()
-super_phaser['b'] = ['frequency', notch_frequency]
+super_phaser['b'] = ['freq', notch_frequency]
 string_phaser = super_phaser.copy()
 super_phaser['f'] = ['stages', stages]
 super_phaser['g'] = ['sync', tempo_sync]
@@ -68,9 +69,9 @@ vocoder = {
 'a': ['gain', analysis_gain],
 'b': ['sibilance', sibilance_boost],
 'c': ['decay', decay],
-'d': ['band shift', band_shift],
-'e': ['synthesis in', synthesis_input],
-'f': ['analysis in', analysis_signal_in],
+'d': ['band', band_shift],
+'e': ['synthesis', synthesis_input],
+'f': ['analysis', analysis_signal_in],
 'g': ['mix', analysis_mix],
 'name': 'vocoder'
 }
@@ -114,11 +115,24 @@ bypass = {
 }
 bypass['name'] = 'bypass'
 
-effects_list = [
-bypass, super_phaser, string_phaser,
-theta_flanger, thru_0_flanger, chorus, vocoder,
-mono_delay, stereo_delay, split_LR_delay, hall_reverb,
-plate_reverb, room_reverb
+fx_type_list = [
+    bypass,
+    super_phaser,
+    string_phaser,
+    theta_flanger,
+    thru_0_flanger,
+    chorus,
+    vocoder
+]
+
+fx2_type_list = [
+    bypass,
+    mono_delay,
+    stereo_delay,
+    split_LR_delay,
+    hall_reverb,
+    plate_reverb,
+    room_reverb
 ]
 
 if __name__ == "__main__":
@@ -129,13 +143,26 @@ if __name__ == "__main__":
 
 
 # Focus selected effect tab and update
-# labels and widgets min/max
+# labels and widgets' min/max
 def switch(mx):
     tool_box = mx.window.fx_toolBox
     fx_widget = mx.app.focusWidget()
     if fx_widget.objectName() == 'fx_type':
+        fx = fx_type_list[fx_widget.currentIndex()]
+        mx.window.label_fx_param_a.setText(fx['a'][0])
+        mx.window.label_fx_param_b.setText(fx['b'][0])
+        mx.window.label_fx_param_c.setText(fx['c'][0])
+        mx.window.label_fx_param_d.setText(fx['d'][0])
+        mx.window.label_fx_param_e.setText(fx['e'][0])
+        mx.window.label_fx_param_f.setText(fx['f'][0])
+        mx.window.label_fx_param_g.setText(fx['g'][0])
         tool_box.setCurrentIndex(0)
         tool_box.setItemText(0,fx_widget.currentText())
     elif fx_widget.objectName() == 'fx2_type':
+        fx2 = fx2_type_list[fx_widget.currentIndex()]
+        mx.window.label_fx2_param_a.setText(fx2['a'][0])
+        mx.window.label_fx2_param_b.setText(fx2['b'][0])
+        mx.window.label_fx2_param_c.setText(fx2['c'][0])
+        mx.window.label_fx2_param_d.setText(fx2['d'][0])
         tool_box.setCurrentIndex(1)
         tool_box.setItemText(1,fx_widget.currentText())
