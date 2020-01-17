@@ -20,7 +20,7 @@ class mx():
     # for now midi port hard coded
     midi_port = 'hw:2,0,0'
     midi_cache = 'prog/received.syx'
-    
+
 # set values to widgets
 mapwidgets.load(mx)
 
@@ -88,25 +88,8 @@ def open_file():
 
 mx.win.actionOpen.triggered.connect(open_file)
 
-
-# Receive sysex needs threads to show timer countdown
+# Receive sysex from Micron with menu bar 'Receive...'
 def receive_file():
-    mx.win.pop_label.setText('Receiving sysex...')
-    mx.win.pop_pushButton.hide()
-    open_widgin()
-
-    thread_1 = threading.Thread(target=thread_receive_file)
-    thread_2 = threading.Thread(target=receive_countdown)
-
-    thread_1.start()
-    thread_2.start()
-
-def receive_countdown():
-    for count in [4,3,2,1]:
-        mx.win.pop_label_small.setText(str(count))
-        time.sleep(1)
-
-def thread_receive_file():
     sysex = trader.receive_sysex(mx)
     if sysex:
         mx.settings = sysex

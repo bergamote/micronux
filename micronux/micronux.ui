@@ -37,7 +37,10 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">QAbstractSlider {
+   <string notr="true">#centralwidget {
+	background-color: #efefef
+}
+QAbstractSlider {
 	selection-background-color: darkgreen;
 }
 QSlider::groove:vertical {
@@ -132,7 +135,7 @@ QGroupBox {
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">b</string>
+    <string notr="true"/>
    </property>
    <widget class="QGroupBox" name="screen">
     <property name="geometry">
