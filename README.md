@@ -23,11 +23,11 @@ You'll need python3, PySide2 and make the script executable. You'll also need am
     chmod +x micronux.py
     ./micronux.py
 
-By default *Micronux* reads the `default.txt` file in the `prog` folder. You can load Micron Programs (syx or txt) from the Open menu or from the command line:
+By default *Micronux* reads the `default.txt` file in the `prog` folder. You can load Micron Programs (syx or txt) from the `File > Open...` menu or from the command line:
 
     ./micronux.py mysysex.syx
 
-And you can receive a sysex from the Micron with the option `-r` followed by the MIDI port address (as listed by `amidi -l`):
+And you can receive a sysex from the Micron using `MIDI > Receive...` (temporarily the midi port is hard coded at the start of `micronux.py`) or from the command line with the option `-r` followed by the MIDI port address (as listed by `amidi -l`):
 
     ./micronux.py -r <midi_port>
 
