@@ -36,6 +36,3 @@ def make_gui(gui_file, title='Untitled', style='fusion'):
     window.show()
 
     return {'app': app,'window': window}
-
-def receive_dialogue(mx):
-    diag = QDialog('Receiving sysex')

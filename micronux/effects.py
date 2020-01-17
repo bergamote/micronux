@@ -146,7 +146,7 @@ if __name__ == "__main__":
 # Focus selected effect tab and update
 # labels and widgets' min/max
 def switch(mx):
-    tool_box = mx.window.fx_toolBox
+    tool_box = mx.win.fx_toolBox
     fx_widget = mx.app.focusWidget()
     if fx_widget.objectName() == 'fx_type':
         tool_box.setCurrentIndex(0)
@@ -159,14 +159,14 @@ def switch(mx):
 
 def set_fx(mx, fx_num):
     if fx_num == 1:
-        fx = fx_type_list[mx.window.fx_type.currentIndex()]
-        labels = mx.window.fx_1.findChildren(QtWidgets.QLabel)
+        fx = fx_type_list[mx.win.fx_type.currentIndex()]
+        labels = mx.win.fx_1.findChildren(QtWidgets.QLabel)
         for label in labels:
             name = label.objectName()
             param = name[-1:]
             text = fx[param][0]
             label.setText(text)
-        dials = mx.window.fx_1.findChildren(QtWidgets.QDial)
+        dials = mx.win.fx_1.findChildren(QtWidgets.QDial)
         for dial in dials:
             name = dial.objectName()
             param = name[-1:]
@@ -178,13 +178,13 @@ def set_fx(mx, fx_num):
                 dial.setRange(0, 0)
 
     if fx_num == 2:
-        fx2 = fx2_type_list[mx.window.fx2_type.currentIndex()]
-        labels = mx.window.fx_2.findChildren(QtWidgets.QLabel)
+        fx2 = fx2_type_list[mx.win.fx2_type.currentIndex()]
+        labels = mx.win.fx_2.findChildren(QtWidgets.QLabel)
         for label in labels:
             name = label.objectName()
             param = name[-1:]
             label.setText(fx2[param][0])
-        dials = mx.window.fx_2.findChildren(QtWidgets.QDial)
+        dials = mx.win.fx_2.findChildren(QtWidgets.QDial)
         for dial in dials:
             name = dial.objectName()
             param = name[-1:]

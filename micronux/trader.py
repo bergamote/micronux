@@ -6,7 +6,6 @@ import subprocess, sys, os.path
 
 ion_decoder_path = 'alesis/ion_program_decoder.pl'
 default_prog = 'prog/default.txt'
-midi_cache = 'prog/received.syx'
 
 # convert text line to name/value pair
 def text_to_setting(line):
@@ -66,14 +65,14 @@ def export_file(file_name):
     return True
 
 ### Receive sysex and return settings
-def receive_sysex(midi_port):
+def receive_sysex(mx):
     # dump amidi port to file
-    cmd = ['amidi', '-t', '3', '-p']
-    cmd +=  [midi_port, '-r', midi_cache]
+    cmd = ['amidi', '-t', '4', '-p']
+    cmd +=  [mx.midi_port, '-r', mx.midi_cache]
     result = subprocess.run(cmd)
     if result.returncode == 0:
-        fix_syx(midi_cache)
-        settings = import_file(midi_cache)
+        fix_syx(mx.midi_cache)
+        settings = import_file(mx.midi_cache)
         return settings
     else:
         # shows amidi error

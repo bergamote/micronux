@@ -2,7 +2,7 @@
 #
 # A Python3/QT5 program editor for the Micron synth
 
-import sys
+import sys, time, threading
 from micronux import gui, trader, mapwidgets, lcd, effects
 from micronux.definitions import easy_numbers, get_button_groups
 
@@ -14,12 +14,13 @@ class mx():
     # setup app and window
     myQtGui = gui.make_gui('micronux/micronux.ui', 'Micronux', 'fusion')
     app = myQtGui['app']
-    window = myQtGui['window']
+    win = myQtGui['window']
     loaded = False
 
     # for now midi port hard coded
     midi_port = 'hw:2,0,0'
-
+    midi_cache = 'prog/received.syx'
+    
 # set values to widgets
 mapwidgets.load(mx)
 
@@ -31,11 +32,11 @@ def setting_changed():
         if 'waveform' in widget.objectName():
             wave = widget.objectName()
             if '1' in wave:
-                widget = mx.window.osc_1_waveform
+                widget = mx.win.osc_1_waveform
             elif '2' in wave:
-                widget = mx.window.osc_2_waveform
+                widget = mx.win.osc_2_waveform
             elif '3' in wave:
-                widget = mx.window.osc_3_waveform
+                widget = mx.win.osc_3_waveform
 
         if not widget in mx.changed_settings:
             mx.changed_settings.append(widget)
@@ -54,18 +55,15 @@ def fx_switch():
         effects.switch(mx)
 
 
-
-
 # Test for pop up window
-widgin = mx.window.widg_input
-widgin.hide()
+mx.win.pop.hide()
 
 def close_widgin():
-    widgin.hide()
+    mx.win.pop.hide()
 
 def open_widgin():
-    widgin.show()
-    widgin.raise_()
+    mx.win.pop.show()
+    mx.win.pop.raise_()
 
     #test for export
     for widget in mx.changed_settings:
@@ -73,15 +71,13 @@ def open_widgin():
         line = trader.setting_to_text(widget.objectName(), value)
         print(line.strip())
 
-mx.window.pushButton.clicked.connect(close_widgin)
-mx.window.sh_widginPop.clicked.connect(open_widgin)
-
-
+mx.win.pop_pushButton.clicked.connect(close_widgin)
+mx.win.sh_widginPop.clicked.connect(open_widgin)
 
 
 # Open file
 def open_file():
-    fname, _ = gui.QFileDialog.getOpenFileName(mx.window,
+    fname, _ = gui.QFileDialog.getOpenFileName(mx.win,
      'Open file', './prog',"Sysex or Text Files (*.syx *.txt)")
     if fname:
         mx.settings = trader.import_file(fname)
@@ -90,19 +86,28 @@ def open_file():
         mx.loaded = True
         mx.changed_settings.clear()
 
-mx.window.actionOpen.triggered.connect(open_file)
+mx.win.actionOpen.triggered.connect(open_file)
 
 
-# Receive sysex
+# Receive sysex needs threads to show timer countdown
 def receive_file():
-    
-    pop = gui.QDialog()
-    pop.setWindowTitle("Receiving...")
-    pop.setWindowModality(gui.Qt.ApplicationModal)
-    pop.resize(300, 1)
-    pop.show()
+    mx.win.pop_label.setText('Receiving sysex...')
+    mx.win.pop_pushButton.hide()
+    open_widgin()
 
-    sysex = trader.receive_sysex(mx.midi_port)
+    thread_1 = threading.Thread(target=thread_receive_file)
+    thread_2 = threading.Thread(target=receive_countdown)
+
+    thread_1.start()
+    thread_2.start()
+
+def receive_countdown():
+    for count in [4,3,2,1]:
+        mx.win.pop_label_small.setText(str(count))
+        time.sleep(1)
+
+def thread_receive_file():
+    sysex = trader.receive_sysex(mx)
     if sysex:
         mx.settings = sysex
         mx.loaded = False
@@ -111,13 +116,17 @@ def receive_file():
         mx.changed_settings.clear()
     else:
         print('no sysex received')
-    close_widgin()
 
-mx.window.actionReceive.triggered.connect(receive_file)
+    close_widgin()
+    mx.win.pop_label.setText('')
+    mx.win.pop_label_small.setText('')
+    mx.win.pop_pushButton.show()
+
+mx.win.actionReceive.triggered.connect(receive_file)
 
 
 # Connecting buttongroups and widgets
-radio_groups = get_button_groups(mx.window)
+radio_groups = get_button_groups(mx.win)
 
 for group in radio_groups:
     group.buttonClicked.connect(setting_changed)
@@ -139,7 +148,7 @@ for widget in mx.app.allWidgets():
 
 
 # Connect Quit menu
-mx.window.actionQuit.triggered.connect(sys.exit)
+mx.win.actionQuit.triggered.connect(sys.exit)
 
 
 mx.loaded = True

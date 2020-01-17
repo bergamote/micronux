@@ -7,7 +7,7 @@ import micronux.definitions as df
 import micronux.effects as fx
 
 def load(mx):
-    settings, app, window = mx.settings, mx.app, mx.window
+    settings, app, window = mx.settings, mx.app, mx.win
     # radio button groups (QRadioButton)
     radio_groups = df.get_button_groups(window)
 
