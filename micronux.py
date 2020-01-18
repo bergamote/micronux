@@ -63,7 +63,6 @@ def clear_lcd():
 
 # Test for pop up window
 mx.win.pop.hide()
-mx.win.pop_pushButton.hide()
 
 def close_widgin():
     mx.win.pop.hide()
@@ -81,7 +80,6 @@ def test_button():
         line = trader.setting_to_text(widget.objectName(), value)
         print(line.strip())
 
-mx.win.pop_pushButton.clicked.connect(close_widgin)
 mx.win.sh_widginPop.clicked.connect(test_button)
 
 
@@ -97,7 +95,7 @@ def open_file():
         mx.changed_settings.clear()
         lcd.message(mx, 'file_loaded')
 
-mx.win.actionOpen.triggered.connect(open_file)
+mx.win.ctrl_open.clicked.connect(open_file)
 
 
 # Receive sysex from Micron with menu bar 'Receive...'
@@ -118,7 +116,7 @@ def receive_file():
         lcd.message(mx, 'receive_error')
     close_widgin()
 
-mx.win.actionReceive.triggered.connect(receive_interface)
+mx.win.ctrl_receive.clicked.connect(receive_interface)
 
 
 # Connecting buttongroups and widgets
@@ -141,10 +139,6 @@ for widget in mx.app.allWidgets():
             widget.currentIndexChanged.connect(fx_switch)
     elif widg_type == 'QCheckBox':
         widget.stateChanged.connect(setting_changed)
-
-
-# Connect Quit menu
-mx.win.actionQuit.triggered.connect(sys.exit)
 
 
 mx.loaded = True
