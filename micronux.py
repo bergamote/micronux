@@ -3,7 +3,7 @@
 # A Python3/QT5 program editor for the Micron synth
 
 import sys
-from micronux import gui, trader, mapwidgets, lcd, effects
+from micronux import gui, trader, mapwidgets, lcd, effects, midi
 from micronux.definitions import easy_numbers, get_button_groups
 from PySide2.QtCore import QTimer
 
@@ -26,6 +26,7 @@ class mx():
 # set values to widgets
 mapwidgets.load(mx)
 lcd.message(mx, 'startup')
+
 
 # Keep track of settings that changed
 def setting_changed():
@@ -72,14 +73,16 @@ def open_widgin():
     mx.win.pop.raise_()
     mx.win.lcdScreen.raise_()
 
+def test_button():
     #test for export
+    print('---------------')
     for widget in mx.changed_settings:
         value = 'new_value'
         line = trader.setting_to_text(widget.objectName(), value)
         print(line.strip())
 
 mx.win.pop_pushButton.clicked.connect(close_widgin)
-mx.win.sh_widginPop.clicked.connect(open_widgin)
+mx.win.sh_widginPop.clicked.connect(test_button)
 
 
 # Open file
@@ -104,8 +107,8 @@ def receive_interface():
     QTimer.singleShot(0, receive_file)
 
 def receive_file():
-    if trader.receive_sysex(mx.midi_port):
-        mx.settings = trader.import_file(trader.midi_cache)
+    if midi.receive_sysex(mx.midi_port):
+        mx.settings = trader.import_file(midi.cache)
         mx.loaded = False
         mapwidgets.load(mx)
         mx.loaded = True
