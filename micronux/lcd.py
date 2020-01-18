@@ -3,7 +3,7 @@
 # Updating the info display.
 
 from micronux.helpers import clean_val, disp_val, last_word
-from micronux.definitions import nicer_names
+from micronux.definitions import lcd_messages, nicer_names
 
 prev_setting = ''
 
@@ -38,10 +38,13 @@ def update(mx):
         prev_setting = setting_name
         win.display_setting_name.setText(nice_name)
 
-
         # print('editing ' + setting_name)
 
-def receive(mx):
-    mx.win.display_setting_value.setText('MIDI')
-    mx.win.display_setting_unit.setText('')
-    mx.win.display_setting_name.setText('waiting')
+
+def message(mx, type):
+    w = mx.win
+    msg = lcd_messages
+    if type in msg:
+        w.display_setting_value.setText(msg[type][0])
+        w.display_setting_unit.setText(msg[type][1])
+        w.display_setting_name.setText(msg[type][2])

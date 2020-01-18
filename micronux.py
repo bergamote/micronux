@@ -9,20 +9,23 @@ from PySide2.QtCore import QTimer
 
 class mx():
     debug = True
-    settings = trader.startup(sys.argv)
+    # for now midi port hard coded
+    midi_port = 'hw:2,0,0'
+
+    file_to_load = trader.startup(sys.argv)
+    settings = trader.import_file(file_to_load)
     changed_settings = []
+
     # setup app and window
     myQtGui = gui.make_gui('micronux/micronux.ui', 'Micronux', 'fusion')
     app = myQtGui['app']
     win = myQtGui['window']
     loaded = False
 
-    # for now midi port hard coded
-    midi_port = 'hw:2,0,0'
-    midi_cache = 'prog/received.syx'
 
 # set values to widgets
 mapwidgets.load(mx)
+lcd.message(mx, 'startup')
 
 # Keep track of settings that changed
 def setting_changed():
@@ -54,6 +57,8 @@ def fx_switch():
     if mx.loaded:
         effects.switch(mx)
 
+def clear_lcd():
+    lcd.message(mx, 'clear')
 
 # Test for pop up window
 mx.win.pop.hide()
@@ -87,30 +92,28 @@ def open_file():
         mapwidgets.load(mx)
         mx.loaded = True
         mx.changed_settings.clear()
+        lcd.message(mx, 'file_loaded')
 
 mx.win.actionOpen.triggered.connect(open_file)
 
+
 # Receive sysex from Micron with menu bar 'Receive...'
 def receive_interface():
-    lcd.receive(mx)
+    lcd.message(mx, 'receiving')
     open_widgin()
     QTimer.singleShot(0, receive_file)
 
 def receive_file():
-    sysex = trader.receive_sysex(mx)
-    if sysex:
-        mx.settings = sysex
+    if trader.receive_sysex(mx.midi_port):
+        mx.settings = trader.import_file(trader.midi_cache)
         mx.loaded = False
         mapwidgets.load(mx)
         mx.loaded = True
         mx.changed_settings.clear()
+        lcd.message(mx, 'receive_success')
     else:
-        print('no sysex received')
-
+        lcd.message(mx, 'receive_error')
     close_widgin()
-    #mx.win.pop_label.setText('')
-    #mx.win.pop_label_small.setText('')
-    mx.win.pop_pushButton.show()
 
 mx.win.actionReceive.triggered.connect(receive_interface)
 

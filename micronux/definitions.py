@@ -55,7 +55,6 @@ keywords = {
 
 mark_positive = ['semi','fine','octave']
 
-
 # setings better names for display
 nicer_names = {
 'semi':'semitone',
@@ -67,4 +66,13 @@ nicer_names = {
 'res':'resonance',
 'envamt':'env amount',
 'wheel':'slider'
+}
+
+lcd_messages = {
+'clear': ['','',''],
+'startup': ['alesi','s','micronux'],
+'receiving': ['MIDI','','waiting'],
+'receive_error': ['error','','try again'],
+'receive_success': ['sysex','','received'],
+'file_loaded': ['file','','loaded']
 }

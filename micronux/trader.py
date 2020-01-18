@@ -6,6 +6,7 @@ import subprocess, sys, os.path
 
 ion_decoder_path = 'alesis/ion_program_decoder.pl'
 default_prog = 'prog/default.txt'
+midi_cache = 'prog/received.syx'
 
 # convert text line to name/value pair
 def text_to_setting(line):
@@ -33,26 +34,31 @@ def setting_to_text(name, value):
     line = name+': '+value+'\n'
     return line
 
+def syx_to_txt(file_path):
+    cmd = [ion_decoder_path, '-b', file_path]
+    result = subprocess.run(cmd)
+    if result.returncode == 0:
+        return True
+    else:
+        return False
+
 ### Read sysex into settings
 def import_file(file_name):
     # convert syx to text
+    prog = file_name
     if file_name.endswith('.syx'):
-        fix_syx(file_name)
-        cmd = [ion_decoder_path, '-b', file_name]
-        result = subprocess.run(cmd)
-        if result.returncode == 0:
-            # change file suffix
-            file_name = file_name[:-3]+'txt'
-        else:
-            # alesis' script shows error here
-            file_name = default_prog
+        if fix_syx(file_name):
+            if syx_to_txt(file_name):
+                prog = file_name[:-3]+'txt'
+            else:
+                prog = default_prog
     elif not file_name.endswith('.txt'):
         print('File type must be .txt or .syx')
-        file_name = default_prog
+        prog = default_prog
     # read text file into a dict
-    txt_file = open(file_name)
+    txt_file = open(prog)
     settings = {}
-    print('loading '+file_name)
+    print('loading '+prog)
     for line in txt_file:
         pair = text_to_setting(line)
         if pair:
@@ -65,25 +71,23 @@ def export_file(file_name):
     return False
 
 ### Receive sysex and return settings
-def receive_sysex(mx):
-    # dump amidi port to file
+def receive_sysex(port):
+    # listen from amidi into cache file
     cmd = ['amidi', '-t', '4', '-p']
-    cmd +=  [mx.midi_port, '-r', mx.midi_cache]
+    cmd +=  [port, '-r', midi_cache]
     result = subprocess.run(cmd)
     if result.returncode == 0:
-        fix_syx(mx.midi_cache)
-        settings = import_file(mx.midi_cache)
-        return settings
+        if fix_syx(midi_cache):
+            return True
     else:
         # shows amidi error
         return False
 
 ### Check the command line arguments
 def startup(args):
-    if len(args) == 1:
-        # without argument, load the default program
-        settings = import_file(default_prog)
-    else:
+    # without argument, load the default program
+    prog = default_prog
+    if len(args) > 1:
         # receive sysex option
         if args[1] == '-r':
             try:
@@ -93,19 +97,21 @@ def startup(args):
                 print('Please specify a MIDI port')
                 sys.exit(1)
             else:
-                settings = receive_sysex(arg[2])
+                if receive_sysex(args[2]):
+                    prog = midi_cache
         # otherwise check if argument is a valid file
         elif os.path.isfile(args[1]):
-            settings = import_file(args[1])
+            prog = args[1]
         else:
             print('Error opening "'+args[1]+'": File not found')
             sys.exit(1)
-    return settings
+    return prog
 
 ### Fix syx function
 # try to trim down sysex files when
 # size is more than 434 bytes
 def fix_syx(path):
+    valid_syx = True
     size = os.path.getsize(path)
     if size > 434:
         with open(path, 'rb') as file:
@@ -123,3 +129,10 @@ def fix_syx(path):
             fixed = open(path, 'wb')
             fixed.write(new_content)
             fixed.close()
+        else:
+            valid_syx = False
+            print('wrong size sysex')
+    elif size < 434:
+        valid_syx = False
+        print('wrong size sysex')
+    return valid_syx
