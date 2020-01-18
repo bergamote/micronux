@@ -137,7 +137,7 @@ QGroupBox {
    <property name="styleSheet">
     <string notr="true"/>
    </property>
-   <widget class="QGroupBox" name="screen">
+   <widget class="QGroupBox" name="lcdScreen">
     <property name="geometry">
      <rect>
       <x>516</x>
@@ -443,7 +443,7 @@ border-bottom-right-radius:4;</string>
      <property name="font">
       <font>
        <family>DejaVu Sans Mono</family>
-       <pointsize>10</pointsize>
+       <pointsize>11</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -457,7 +457,10 @@ padding-right: -2px;
 </string>
      </property>
      <property name="text">
-      <string>program name</string>
+      <string>name</string>
+     </property>
+     <property name="maxLength">
+      <number>14</number>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -11594,8 +11597,8 @@ border-radius: 4px;
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>311</width>
-         <height>125</height>
+         <width>100</width>
+         <height>30</height>
         </rect>
        </property>
        <attribute name="label">
@@ -26343,7 +26346,7 @@ border-radius:10px;
       </font>
      </property>
      <property name="text">
-      <string>.</string>
+      <string/>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -26365,7 +26368,7 @@ border-radius:10px;
       </font>
      </property>
      <property name="text">
-      <string>.</string>
+      <string/>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -26991,7 +26994,7 @@ background-color: #efefef;
    <zorder>fm_group</zorder>
    <zorder>lfo_group</zorder>
    <zorder>tabWidget</zorder>
-   <zorder>screen</zorder>
+   <zorder>lcdScreen</zorder>
    <zorder>groupBox</zorder>
    <zorder>knob_assign</zorder>
    <zorder>line</zorder>

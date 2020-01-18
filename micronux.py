@@ -2,10 +2,10 @@
 #
 # A Python3/QT5 program editor for the Micron synth
 
-import sys, time, threading
+import sys
 from micronux import gui, trader, mapwidgets, lcd, effects
 from micronux.definitions import easy_numbers, get_button_groups
-
+from PySide2.QtCore import QTimer
 
 class mx():
     debug = True
@@ -57,6 +57,7 @@ def fx_switch():
 
 # Test for pop up window
 mx.win.pop.hide()
+mx.win.pop_pushButton.hide()
 
 def close_widgin():
     mx.win.pop.hide()
@@ -64,6 +65,7 @@ def close_widgin():
 def open_widgin():
     mx.win.pop.show()
     mx.win.pop.raise_()
+    mx.win.lcdScreen.raise_()
 
     #test for export
     for widget in mx.changed_settings:
@@ -89,6 +91,11 @@ def open_file():
 mx.win.actionOpen.triggered.connect(open_file)
 
 # Receive sysex from Micron with menu bar 'Receive...'
+def receive_interface():
+    lcd.receive(mx)
+    open_widgin()
+    QTimer.singleShot(0, receive_file)
+
 def receive_file():
     sysex = trader.receive_sysex(mx)
     if sysex:
@@ -101,11 +108,11 @@ def receive_file():
         print('no sysex received')
 
     close_widgin()
-    mx.win.pop_label.setText('')
-    mx.win.pop_label_small.setText('')
+    #mx.win.pop_label.setText('')
+    #mx.win.pop_label_small.setText('')
     mx.win.pop_pushButton.show()
 
-mx.win.actionReceive.triggered.connect(receive_file)
+mx.win.actionReceive.triggered.connect(receive_interface)
 
 
 # Connecting buttongroups and widgets

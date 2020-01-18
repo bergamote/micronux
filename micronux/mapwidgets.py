@@ -74,4 +74,8 @@ def load(mx):
             # print(debug_line)
 
     window.setWindowTitle(settings['name']+" | Micronux")
+    #window.display_setting_value.setText(str(window.output_level.value()))
+    window.display_setting_value.setText('alesi')
+    window.display_setting_unit.setText('s')
+    window.display_setting_name.setText('micronux')
     window.output_level.setFocus()

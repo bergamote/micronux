@@ -62,7 +62,7 @@ def import_file(file_name):
 
 
 def export_file(file_name):
-    return True
+    return False
 
 ### Receive sysex and return settings
 def receive_sysex(mx):

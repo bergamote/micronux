@@ -9,7 +9,7 @@ prev_setting = ''
 
 # update display with value, unit and nice name
 def update(mx):
-    app, window, settings = mx.app, mx.win, mx.settings
+    app, win, settings = mx.app, mx.win, mx.settings
     global prev_setting
     value = app.focusWidget().value()
     setting_name = app.focusWidget().objectName()
@@ -17,11 +17,11 @@ def update(mx):
 
     # update value
     display_value = disp_val(value, setting_name)
-    window.display_setting_value.setText(display_value[0])
+    win.display_setting_value.setText(display_value[0])
 
     # update unit
     unit = display_value[1]
-    window.display_setting_unit.setText(unit)
+    win.display_setting_unit.setText(unit)
 
     # update name
     # look for a nicer name
@@ -36,6 +36,12 @@ def update(mx):
     # only update display if name changed
     if prev_setting != setting_name:
         prev_setting = setting_name
-        window.display_setting_name.setText(nice_name)
+        win.display_setting_name.setText(nice_name)
+
 
         # print('editing ' + setting_name)
+
+def receive(mx):
+    mx.win.display_setting_value.setText('MIDI')
+    mx.win.display_setting_unit.setText('')
+    mx.win.display_setting_name.setText('waiting')
