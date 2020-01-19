@@ -9,8 +9,6 @@ from PySide2.QtCore import QTimer
 
 class mx():
     debug = True
-    # for now midi port hard coded
-    midi_port = 'hw:2,0,0'
 
     file_to_load = trader.startup(sys.argv)
     settings = trader.import_file(file_to_load)
@@ -105,7 +103,8 @@ def receive_interface():
     QTimer.singleShot(0, receive_file)
 
 def receive_file():
-    if midi.receive_sysex(mx.midi_port):
+    port = mx.win.ctrl_midi_port.currentText()
+    if midi.receive_sysex(port):
         mx.settings = trader.import_file(midi.cache)
         mx.loaded = False
         mapwidgets.load(mx)

@@ -35,6 +35,7 @@ def receive_sysex(port):
     if port:
         cmd = ['amidi', '-t', '4', '-p']
         cmd +=  [port, '-r', cache]
+        print('listening at '+port)
         result = subprocess.run(cmd)
         if result.returncode == 0:
             if fix_syx(cache):
