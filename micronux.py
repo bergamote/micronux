@@ -147,7 +147,7 @@ if len(midi_ports):
     for port in midi_ports:
         mx.win.ctrl_midi_port.addItems([port])
 else:
-    mx.win.ctrl_midi_port.addItems(['no MIDI port'])
+    mx.win.ctrl_midi_port.addItems(['No MIDI port'])
 
 def change_midi_port():
     port_name = mx.win.ctrl_midi_port.currentText()
