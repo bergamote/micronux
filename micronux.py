@@ -141,6 +141,21 @@ for widget in mx.app.allWidgets():
         widget.stateChanged.connect(setting_changed)
 
 
+# Show and connect MIDI ports combobox
+midi_ports = midi.list_midi_ports()
+if len(midi_ports):
+    for port in midi_ports:
+        mx.win.ctrl_midi_port.addItems([port])
+else:
+    mx.win.ctrl_midi_port.addItems(['no MIDI port'])
+
+def change_midi_port():
+    port_name = mx.win.ctrl_midi_port.currentText()
+    mx.midi_port = midi.check_midi_port(port_name)
+
+mx.win.ctrl_midi_port.currentIndexChanged.connect(change_midi_port)
+
+
 mx.loaded = True
 
 sys.exit(mx.app.exec_())

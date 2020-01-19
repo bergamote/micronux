@@ -141,7 +141,7 @@ QGroupBox {
     <property name="geometry">
      <rect>
       <x>516</x>
-      <y>210</y>
+      <y>240</y>
       <width>131</width>
       <height>121</height>
      </rect>
@@ -9209,7 +9209,7 @@ border-radius: 4px;
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>315</y>
+      <y>311</y>
       <width>171</width>
       <height>51</height>
      </rect>
@@ -26259,7 +26259,7 @@ border-radius:10px;
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">color:red</string>
      </property>
      <property name="text">
       <string>assign</string>
@@ -26281,7 +26281,7 @@ border-radius:10px;
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: grey</string>
+      <string notr="true">color: red</string>
      </property>
      <property name="frameShadow">
       <enum>QFrame::Plain</enum>
@@ -26381,8 +26381,8 @@ border-radius:10px;
    <widget class="QPushButton" name="sh_widginPop">
     <property name="geometry">
      <rect>
-      <x>670</x>
-      <y>320</y>
+      <x>657</x>
+      <y>313</y>
       <width>21</width>
       <height>21</height>
      </rect>
@@ -26976,73 +26976,14 @@ background-color: #efefef;
      </property>
     </widget>
    </widget>
-   <widget class="QPushButton" name="ctrl_save">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>598</x>
-      <y>382</y>
-      <width>44</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>save</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="ctrl_open">
-    <property name="geometry">
-     <rect>
-      <x>519</x>
-      <y>382</y>
-      <width>53</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>open...</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_file">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>383</y>
-      <width>31</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>DejaVu Sans</family>
-      <pointsize>10</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true"/>
-    </property>
-    <property name="text">
-     <string>file</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-    <property name="wordWrap">
-     <bool>true</bool>
-    </property>
-   </widget>
    <widget class="QComboBox" name="ctrl_midi_port">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
       <x>520</x>
-      <y>352</y>
+      <y>384</y>
       <width>121</width>
       <height>20</height>
      </rect>
@@ -27079,7 +27020,7 @@ background-color: #efefef;
     <property name="geometry">
      <rect>
       <x>582</x>
-      <y>329</y>
+      <y>358</y>
       <width>41</width>
       <height>21</height>
      </rect>
@@ -27092,7 +27033,7 @@ background-color: #efefef;
     <property name="geometry">
      <rect>
       <x>519</x>
-      <y>329</y>
+      <y>358</y>
       <width>61</width>
       <height>21</height>
      </rect>
@@ -27108,7 +27049,7 @@ background-color: #efefef;
     <property name="geometry">
      <rect>
       <x>626</x>
-      <y>331</y>
+      <y>360</y>
       <width>16</width>
       <height>16</height>
      </rect>
@@ -27149,7 +27090,71 @@ border-radius: 4px;
      <bool>false</bool>
     </property>
    </widget>
+   <widget class="QPushButton" name="ctrl_open_2">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>598</x>
+      <y>215</y>
+      <width>45</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>DejaVu Sans</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>revert</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ctrl_save">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>558</x>
+      <y>215</y>
+      <width>38</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>DejaVu Sans</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>save</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ctrl_open">
+    <property name="geometry">
+     <rect>
+      <x>518</x>
+      <y>215</y>
+      <width>38</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>DejaVu Sans</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>open</string>
+    </property>
+   </widget>
    <zorder>pop</zorder>
+   <zorder>arp_group</zorder>
    <zorder>side_line_right</zorder>
    <zorder>side_line_left</zorder>
    <zorder>pre_filter_mix</zorder>
@@ -27169,14 +27174,13 @@ border-radius: 4px;
    <zorder>knob_assign</zorder>
    <zorder>line</zorder>
    <zorder>sh_widginPop</zorder>
-   <zorder>arp_group</zorder>
-   <zorder>ctrl_save</zorder>
-   <zorder>ctrl_open</zorder>
-   <zorder>label_file</zorder>
    <zorder>ctrl_midi_port</zorder>
    <zorder>ctrl_send</zorder>
    <zorder>ctrl_receive</zorder>
    <zorder>ctrl_auto_send</zorder>
+   <zorder>ctrl_open_2</zorder>
+   <zorder>ctrl_save</zorder>
+   <zorder>ctrl_open</zorder>
   </widget>
  </widget>
  <tabstops>
@@ -27222,8 +27226,8 @@ border-radius: 4px;
  <resources/>
  <connections/>
  <buttongroups>
+  <buttongroup name="osc_2_waveform"/>
   <buttongroup name="osc_3_waveform"/>
   <buttongroup name="osc_1_waveform"/>
-  <buttongroup name="osc_2_waveform"/>
  </buttongroups>
 </ui>
