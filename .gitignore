@@ -3,3 +3,4 @@ micronux/__pycache__/
 prog/*.txt
 prog/*.syx
 !prog/default.txt
+micronux.desktop

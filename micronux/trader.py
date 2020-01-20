@@ -56,7 +56,7 @@ def import_file(file_name):
         print('File type must be .txt or .syx')
         prog = default_prog
     # read text file into a dict
-    txt_file = open(prog)
+    txt_file = open(prog, 'r')
     settings = {}
     print('loading '+prog)
     for line in txt_file:
@@ -87,6 +87,21 @@ def startup(args):
             else:
                 if midi.receive_sysex(args[2]):
                     prog = midi.cache
+        # create launcher option
+        elif args[1] == '--create-launcher':
+            path = sys.path[0]
+            l = "[Desktop Entry]\nType=Application\n"
+            l += "Terminal=false\nName=Micronux\n"
+            l += "Icon="+path+"/micronux/icon.png\n"
+            l += "Exec=./micronux.py\n"
+            l += "Categories=Application;\n"
+            l += "GenericName=Micron Program Editor\n"
+            l += "Path="+path
+            launcher = open(path+'/micronux.desktop', 'w')
+            launcher.write(l)
+            launcher.close()
+            subprocess.run(['chmod','+x', path+'/micronux.desktop'])
+            sys.exit(0)
         # otherwise check if argument is a valid file
         elif os.path.isfile(args[1]):
             prog = args[1]
