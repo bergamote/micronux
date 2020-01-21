@@ -34,7 +34,7 @@ def clean_val(val):
     unit = get_unit(val)
     if unit == 'pct':
         if '.' in val:
-            clean = float(val[:-1]) * 10
+            clean = int(float(val[:-1]) * 10)
         else:
             clean = int(val[:-1])
     elif unit == 'ms':
@@ -56,7 +56,7 @@ def clean_val(val):
 
 # make weird units into displayable value
 def disp_val(val, setting):
-    type = last_word(setting)
+    type = setting.rsplit('_', 1)[-1]
     unit = ''
     disp = str(val)
 

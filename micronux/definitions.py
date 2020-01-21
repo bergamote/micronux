@@ -25,8 +25,18 @@ units = {
 ' s': 's',
 ' ms': 'ms',
 ' Hz': 'hz',
-' KHz': 'khz'
+' KHz': 'khz',
+'% f1': 'bal',
+'% fx1': 'fxbal'
 }
+
+unit_ratios = {
+'ms': 1000,
+'s': 1000000,
+'hz': 1000,
+'khz': 1000000
+}
+
 percentages = [
 'level',
 'shape',
