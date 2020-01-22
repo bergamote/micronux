@@ -18,6 +18,7 @@ def check_midi_port(midi_port):
     else:
         return False
 
+# List all midi ports
 def list_midi_ports():
     result = subprocess.check_output(['amidi', '-l'])
     lines = (result.decode('ascii')).splitlines()
@@ -29,7 +30,7 @@ def list_midi_ports():
     return ports
 
 ### Receive sysex
-def receive_sysex(port):
+def receive(port):
     # listen from amidi into cache file
     port = check_midi_port(port)
     if port:

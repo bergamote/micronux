@@ -2398,10 +2398,10 @@ width: 2px;
        <string notr="true"/>
       </property>
       <property name="minimum">
-       <number>-99</number>
+       <number>-999</number>
       </property>
       <property name="maximum">
-       <number>99</number>
+       <number>999</number>
       </property>
       <property name="singleStep">
        <number>1</number>
@@ -3024,7 +3024,10 @@ width: 2px;
        <string notr="true"/>
       </property>
       <property name="minimum">
-       <number>-99</number>
+       <number>-999</number>
+      </property>
+      <property name="maximum">
+       <number>999</number>
       </property>
       <property name="singleStep">
        <number>1</number>
@@ -3720,7 +3723,10 @@ width: 2px;
        <string notr="true"/>
       </property>
       <property name="minimum">
-       <number>-99</number>
+       <number>-999</number>
+      </property>
+      <property name="maximum">
+       <number>999</number>
       </property>
       <property name="singleStep">
        <number>1</number>
@@ -10773,7 +10779,7 @@ border-radius: 4px;
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QDial" name="lfo_1_mod_wheel">
+    <widget class="QDial" name="lfo_1_mod_wheel_1">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -10813,7 +10819,7 @@ border-radius: 4px;
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QDial" name="lfo_2_mod_wheel">
+    <widget class="QDial" name="lfo_2_mod_wheel_1">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -11053,7 +11059,7 @@ border-radius: 4px;
      <string notr="true">background-color: #efefef</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="effects">
      <property name="enabled">
@@ -26378,7 +26384,7 @@ border-radius:10px;
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="QPushButton" name="sh_widginPop">
+   <widget class="QPushButton" name="test_button">
     <property name="geometry">
      <rect>
       <x>657</x>
@@ -27173,7 +27179,7 @@ border-radius: 4px;
    <zorder>groupBox</zorder>
    <zorder>knob_assign</zorder>
    <zorder>line</zorder>
-   <zorder>sh_widginPop</zorder>
+   <zorder>test_button</zorder>
    <zorder>ctrl_midi_port</zorder>
    <zorder>ctrl_send</zorder>
    <zorder>ctrl_receive</zorder>

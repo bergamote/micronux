@@ -2,14 +2,6 @@
 #
 # useful lists and dics
 
-def get_button_groups(window):
-    button_groups = [
-        window.osc_1_waveform,
-        window.osc_2_waveform,
-        window.osc_3_waveform
-    ]
-    return button_groups
-
 easy_numbers = [
 'QDial',
 'QSlider',
@@ -82,7 +74,8 @@ lcd_messages = {
 'clear': ['','',''],
 'startup': ['alesi','s','micronux'],
 'receiving': ['MIDI','','waiting'],
-'receive_error': ['error','','try again'],
-'receive_success': ['sysex','','received'],
-'file_loaded': ['file','','loaded']
+'receive_error': ['error',':(','try again'],
+'receive_success': ['sysex',':)','received'],
+'file_loaded': ['file',':)','loaded'],
+'file_error': ['error',':(','bad file']
 }
