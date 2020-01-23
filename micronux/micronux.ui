@@ -4340,7 +4340,7 @@ width: 2px;
       <enum>QTabWidget::Rounded</enum>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="env_amp">
       <attribute name="title">
@@ -11603,8 +11603,8 @@ border-radius: 4px;
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>100</width>
-         <height>30</height>
+         <width>311</width>
+         <height>125</height>
         </rect>
        </property>
        <attribute name="label">
@@ -26320,50 +26320,6 @@ border-radius:10px;
     <property name="styleSheet">
      <string notr="true">background:#efefef;</string>
     </property>
-    <widget class="QLabel" name="pop_label">
-     <property name="geometry">
-      <rect>
-       <x>280</x>
-       <y>200</y>
-       <width>471</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans Mono</family>
-       <pointsize>18</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="pop_label_small">
-     <property name="geometry">
-      <rect>
-       <x>280</x>
-       <y>260</y>
-       <width>471</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans Mono</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
    </widget>
    <widget class="Line" name="line">
     <property name="geometry">
@@ -26988,9 +26944,9 @@ background-color: #efefef;
     </property>
     <property name="geometry">
      <rect>
-      <x>516</x>
+      <x>517</x>
       <y>384</y>
-      <width>130</width>
+      <width>105</width>
       <height>20</height>
      </rect>
     </property>
@@ -27025,7 +26981,7 @@ background-color: #efefef;
     </property>
     <property name="geometry">
      <rect>
-      <x>587</x>
+      <x>603</x>
       <y>358</y>
       <width>41</width>
       <height>21</height>
@@ -27054,8 +27010,8 @@ background-color: #efefef;
     </property>
     <property name="geometry">
      <rect>
-      <x>630</x>
-      <y>360</y>
+      <x>585</x>
+      <y>361</y>
       <width>16</width>
       <height>16</height>
      </rect>
@@ -27064,7 +27020,7 @@ background-color: #efefef;
      <string/>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: lightgrey;
+     <string notr="true">background: #dedede;
 border-style: solid;
 border-color: grey;
 width:8px;
@@ -27159,6 +27115,22 @@ border-radius: 4px;
      <string>open</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="ctrl_midi_update">
+    <property name="geometry">
+     <rect>
+      <x>626</x>
+      <y>386</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:lightgrey</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
    <zorder>pop</zorder>
    <zorder>arp_group</zorder>
    <zorder>side_line_right</zorder>
@@ -27187,6 +27159,7 @@ border-radius: 4px;
    <zorder>ctrl_open_2</zorder>
    <zorder>ctrl_save</zorder>
    <zorder>ctrl_open</zorder>
+   <zorder>ctrl_midi_update</zorder>
   </widget>
  </widget>
  <tabstops>

@@ -14,9 +14,7 @@ settings_list, allSettings = importer.open_file(file_to_load)
 
 ui = gui.micronux_ui(settings_list, allSettings)
 
-ui.connect_widgets()
-
-ui.assign_values(settings_list, allSettings)
+ui.map_widgets(settings_list, allSettings, connect=True)
 
 ui.win.show()
 
@@ -32,13 +30,13 @@ ui.win.test_button.clicked.connect(test_button)
 
 # Open file
 def open_file():
-    fname, _ = gui.QFileDialog.getOpenFileName(ui.win,
+    fname, _ = gui.QtWidgets.QFileDialog.getOpenFileName(ui.win,
      'Open file', './prog',"Sysex or Text Files (*.syx *.txt)")
     if fname:
         setup = importer.open_file(fname)
         if setup:
             settings_list, allSettings = setup[0], setup[1]
-            ui.assign_values(settings_list, allSettings)
+            ui.map_widgets(settings_list, allSettings)
             exporter.changed_settings.clear()
             ui.lcd_message('file_loaded')
         else:
@@ -59,7 +57,7 @@ def receive_sysex():
     if midi.receive(port):
         setup = importer.open_file(midi.cache)
         settings_list, allSettings = setup[0], setup[1]
-        ui.assign_values(settings_list, allSettings)
+        ui.map_widgets(settings_list, allSettings)
         exporter.changed_settings.clear()
         ui.lcd_message('receive_success')
     else:

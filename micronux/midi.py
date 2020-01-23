@@ -66,7 +66,7 @@ def fix_syx(path):
         if (end - start) == 434:
             new_content = syx[start:end]
             # backup old sysex
-            backup = open(path[:-4]+'_old.syx', 'wb')
+            backup = open(path[:-4]+'-backup.syx', 'wb')
             backup.write(syx)
             backup.close()
             fixed = open(path, 'wb')

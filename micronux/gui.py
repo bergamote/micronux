@@ -6,7 +6,6 @@
 import sys
 from PySide2 import QtWidgets
 from PySide2.QtUiTools import QUiLoader
-from PySide2.QtWidgets import QApplication, QFileDialog, QDialog
 from PySide2.QtCore import QFile, Qt, QTimer
 from PySide2.QtGui import QIcon
 
@@ -23,7 +22,7 @@ class micronux_ui:
     """gui object"""
 
     def __init__(self, settings_list, allSettings):
-        self.app = QApplication(sys.argv)
+        self.app = QtWidgets.QApplication(sys.argv)
         self.app.setStyle('fusion')
 
         self.settings_list = settings_list
@@ -37,6 +36,7 @@ class micronux_ui:
 
         self.win.setWindowTitle('Micronux')
         self.win.setWindowIcon(QIcon('micronux/icon.png'))
+
 
         self.lcdV = self.win.display_setting_value
         self.lcdU = self.win.display_setting_unit
@@ -52,7 +52,7 @@ class micronux_ui:
 
         self.loaded = False
 
-
+    # Update fx toolBox on fx change
     def fx_switch(self):
         if self.loaded:
             fx = self.app.focusWidget()
@@ -66,7 +66,6 @@ class micronux_ui:
                 tb.setCurrentIndex(f)
 
     # Update fx labels and widgets' min/max
-
     def fx_setup(self, fx_num):
         if fx_num == 1:
             fx_group = self.win.fx_1
@@ -107,6 +106,8 @@ class micronux_ui:
     def lcd_update(self):
         focused = self.app.focusWidget()
         t = type(focused).__name__
+        # changing fx param min/max changes
+        # values even tho they're not focused
         if (t == 'QDial') or (t == 'QSlider'):
             value = focused.value()
             cur_widget = self.allSettings[focused.objectName()]
@@ -123,28 +124,8 @@ class micronux_ui:
             self.lcdN.setText(msg[type][2])
 
 
-    def connect_widgets(self):
-        # Connecting buttongroups
-        for group in self.button_groups:
-            group.buttonClicked.connect(self.pass_to_exp)
-
-        # Connecting widgets
-        for widget in self.app.allWidgets():
-            w_name = widget.objectName()
-            w_type = type(widget).__name__
-            if w_type in df.easy_numbers:
-                widget.valueChanged.connect(self.pass_to_exp)
-                # pass slider values to 'lcd'
-                if (w_type == 'QDial') or (w_type == 'QSlider'):
-                    widget.valueChanged.connect(self.lcd_update)
-            elif w_type == 'QComboBox':
-                widget.currentIndexChanged.connect(self.pass_to_exp)
-                if w_name.startswith('fx') and w_name.endswith('type'):
-                    widget.currentIndexChanged.connect(self.fx_switch)
-            elif w_type == 'QCheckBox':
-                widget.stateChanged.connect(self.pass_to_exp)
-
-        # Show and connect MIDI ports combobox
+    def update_midi_ports(self):
+        self.win.ctrl_midi_port.clear()
         midi_ports = midi.list_midi_ports()
         if len(midi_ports):
             for port in midi_ports:
@@ -152,14 +133,8 @@ class micronux_ui:
         else:
             self.win.ctrl_midi_port.addItems(['No MIDI port'])
 
-        def change_midi_port():
-            port_name = self.win.ctrl_midi_port.currentText()
-            mx.midi_port = midi.check_midi_port(port_name)
 
-        self.win.ctrl_midi_port.currentIndexChanged.connect(change_midi_port)
-
-
-    def assign_values(self, settings_list, allSettings):
+    def map_widgets(self, settings_list, allSettings, connect=False):
         self.loaded = False
         # Assign values to widgets
         for group in self.button_groups:
@@ -168,6 +143,8 @@ class micronux_ui:
                 value = allSettings[group.objectName()].value
                 if value.startswith(button_name):
                     button.toggle()
+            if connect:
+                group.buttonClicked.connect(self.pass_to_exp)
 
         for widget in self.app.allWidgets():
             w_name = widget.objectName()
@@ -180,6 +157,8 @@ class micronux_ui:
                         widget.setChecked(True)
                     elif (value == 'off') or (value == 'absolute'):
                         widget.setChecked(False)
+                    if connect:
+                        widget.stateChanged.connect(self.pass_to_exp)
 
                 elif w_type == 'QComboBox':
                     # display better dropdown choices
@@ -188,28 +167,36 @@ class micronux_ui:
                         keyword = df.nicer_names[value]
                     new_index = widget.findText(keyword)
                     widget.setCurrentIndex(new_index)
+                    if connect:
+                        widget.currentIndexChanged.connect(self.pass_to_exp)
 
-                    if w_name == 'fx_type':
+                    if w_name.startswith('fx') and w_name.endswith('type'):
+                        f = 0
+                        if '2' in w_name:
+                            f = 1
                         self.win.fx_toolBox.setItemText(
-                            0, widget.currentText() )
-                        self.fx_setup(1)
-                        if widget.currentText() == 'bypass':
-                            self.win.fx_toolBox.setCurrentIndex(1)
-                    if w_name == 'fx2_type':
-                        self.win.fx_toolBox.setItemText(
-                            1, widget.currentText() )
-                        self.fx_setup(2)
-                        if widget.currentText() == 'bypass':
-                            self.win.fx_toolBox.setCurrentIndex(0)
+                            f, widget.currentText() )
+                        self.fx_setup(f + 1)
+                        if widget.currentText() != 'bypass':
+                            self.win.fx_toolBox.setCurrentIndex(f)
+                        if connect:
+                            widget.currentIndexChanged.connect(self.fx_switch)
 
                 elif w_type in df.easy_numbers:
                     widget.setValue(allSettings[w_name].normalise_val())
+                    if connect:
+                        widget.valueChanged.connect(self.pass_to_exp)
+                        if (w_type == 'QDial') or (w_type == 'QSlider'):
+                            widget.valueChanged.connect(self.lcd_update)
 
                 elif w_type in df.easy_strings:
                     widget.setText(value)
 
+        if connect:
+            self.update_midi_ports()
+            self.win.ctrl_midi_update.clicked.connect(self.update_midi_ports)
+
         self.win.setWindowTitle(allSettings['name'].value+" | Micronux")
         self.win.output_level.setFocus()
-
 
         self.loaded = True
