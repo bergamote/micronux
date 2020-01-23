@@ -1,6 +1,7 @@
 # module: midi.py
 #
-# Handle all MIDI stuff
+# handle all MIDI stuff
+
 
 import subprocess, os.path
 

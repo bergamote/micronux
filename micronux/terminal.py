@@ -1,9 +1,12 @@
+# module: terminal.py
+#
+# command line options
+
 
 import sys, os.path, subprocess
 
 from micronux import midi
 
-ion_decoder_path = 'alesis/ion_program_decoder.pl'
 default_prog = 'prog/default.txt'
 
 ### Check the command line arguments

@@ -1,12 +1,17 @@
 # module: gui.py
+#
+# user interface
+
 
 import sys
+from PySide2 import QtWidgets
 from PySide2.QtUiTools import QUiLoader
 from PySide2.QtWidgets import QApplication, QFileDialog, QDialog
-from PySide2.QtCore import QFile, Qt
+from PySide2.QtCore import QFile, Qt, QTimer
 from PySide2.QtGui import QIcon
 
-from micronux import midi, exporter, effects
+
+from micronux import midi, exporter
 import micronux.definitions as df
 
 
@@ -49,7 +54,42 @@ class micronux_ui:
 
 
     def fx_switch(self):
-        effects.switch(self)
+        if self.loaded:
+            fx = self.app.focusWidget()
+            tb = self.win.fx_toolBox
+            f = 0
+            if '2' in fx.objectName():
+                f = 1
+            self.fx_setup(f + 1)
+            tb.setItemText(f,fx.currentText())
+            if fx.currentText() != 'bypass':
+                tb.setCurrentIndex(f)
+
+    # Update fx labels and widgets' min/max
+
+    def fx_setup(self, fx_num):
+        if fx_num == 1:
+            fx_group = self.win.fx_1
+            fx_sel = self.win.fx_type.currentText()
+        elif fx_num == 2:
+            fx_group = self.win.fx_2
+            fx_sel = self.win.fx2_type.currentText()
+
+        fx_detail = df.fx_types[fx_sel]
+        labels = fx_group.findChildren(QtWidgets.QLabel)
+        for label in labels:
+            param = label.objectName()[-1:]
+            label.setText(fx_detail[param][0])
+        dials = fx_group.findChildren(QtWidgets.QDial)
+        for dial in dials:
+            param = label.objectName()[-1:]
+            if fx_detail[param][1]:
+                min = fx_detail[param][1]['min']
+                max = fx_detail[param][1]['max']
+                dial.setRange(min, max)
+            else:
+                dial.setRange(0, 0)
+
 
     def pass_to_exp(self):
         if self.loaded:
@@ -152,13 +192,13 @@ class micronux_ui:
                     if w_name == 'fx_type':
                         self.win.fx_toolBox.setItemText(
                             0, widget.currentText() )
-                        effects.set_fx(self, 1)
+                        self.fx_setup(1)
                         if widget.currentText() == 'bypass':
                             self.win.fx_toolBox.setCurrentIndex(1)
                     if w_name == 'fx2_type':
                         self.win.fx_toolBox.setItemText(
                             1, widget.currentText() )
-                        effects.set_fx(self, 2)
+                        self.fx_setup(2)
                         if widget.currentText() == 'bypass':
                             self.win.fx_toolBox.setCurrentIndex(0)
 

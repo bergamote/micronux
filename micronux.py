@@ -1,12 +1,14 @@
 #! /usr/bin/python3
 #
-# A Python3/QT5 program editor for the Micron synth
+#   Micronux
+#
+# A program editor for the Micron synth
+
 
 import sys
-from micronux import gui, command_line, importer, exporter, midi
-from PySide2.QtCore import QTimer
+from micronux import gui, terminal, importer, exporter, midi
 
-file_to_load = command_line.startup(sys.argv)
+file_to_load = terminal.startup(sys.argv)
 
 settings_list, allSettings = importer.open_file(file_to_load)
 
@@ -50,7 +52,7 @@ def receive_interface():
     ui.lcd_message('receiving')
     ui.pop_up()
     ui.win.lcdScreen.raise_()
-    QTimer.singleShot(0, receive_sysex)
+    gui.QTimer.singleShot(0, receive_sysex)
 
 def receive_sysex():
     port = ui.win.ctrl_midi_port.currentText()

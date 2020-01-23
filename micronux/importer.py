@@ -1,10 +1,12 @@
 # module: importer.py
+#
+# open and convert files
+
 
 import subprocess, sys, os.path
 from micronux import settings, midi
 
 ion_decoder_path = 'alesis/ion_program_decoder.pl'
-default_prog = 'prog/default.txt'
 
 # convert syx file to text file
 # using ion_program_decoder.pl
@@ -51,8 +53,6 @@ def open_file(file_path):
             else:
                 file_path = file_path[:-3]+'txt'
         if file_path.endswith('.txt'):
-            return text_file(file_path)  
+            return text_file(file_path)
         else:
             return False
-                
-

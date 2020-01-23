@@ -1,6 +1,7 @@
 # module: settings.py
 #
-# setup settings class
+# setup settings classes
+
 
 import micronux.definitions as df
 
