@@ -3,6 +3,13 @@
 # useful lists, dicts and effects details
 
 
+def get_button_groups(win):
+    group = []
+    group.append(win.osc_1_waveform)
+    group.append(win.osc_2_waveform)
+    group.append(win.osc_3_waveform)
+    return group
+
 easy_numbers = [
     'QDial',
     'QSlider',
@@ -56,7 +63,7 @@ mark_positive = ['semi','fine','octave']
 lcd_messages = {
     'clear': ['','',''],
     'startup': ['alesi','s','micronux'],
-    'receiving': ['MIDI','','waiting'],
+    'receiving': ['MIDI','...','waiting'],
     'receive_error': ['error',':(','try again'],
     'receive_success': ['sysex',':)','received'],
     'file_loaded': ['file',':)','loaded'],

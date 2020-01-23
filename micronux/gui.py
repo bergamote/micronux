@@ -34,21 +34,15 @@ class micronux_ui:
         self.win = loader.load(ui_file)
         ui_file.close()
 
-        self.win.setWindowTitle('Micronux')
-        self.win.setWindowIcon(QIcon('micronux/icon.png'))
+        sw = self.win
+        sw.setWindowTitle('Micronux')
+        sw.setWindowIcon(QIcon('micronux/icon.png'))
 
+        self.lcdV = sw.display_setting_value
+        self.lcdU = sw.display_setting_unit
+        self.lcdN = sw.display_setting_name
 
-        self.lcdV = self.win.display_setting_value
-        self.lcdU = self.win.display_setting_unit
-        self.lcdN = self.win.display_setting_name
-
-        self.prev_setting = ''
-
-        self.button_groups = [
-            self.win.osc_1_waveform,
-            self.win.osc_2_waveform,
-            self.win.osc_3_waveform
-        ]
+        self.button_groups = df.get_button_groups(self.win)
 
         self.loaded = False
 
@@ -81,7 +75,7 @@ class micronux_ui:
             label.setText(fx_detail[param][0])
         dials = fx_group.findChildren(QtWidgets.QDial)
         for dial in dials:
-            param = label.objectName()[-1:]
+            param = dial.objectName()[-1:]
             if fx_detail[param][1]:
                 min = fx_detail[param][1]['min']
                 max = fx_detail[param][1]['max']

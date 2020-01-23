@@ -22,18 +22,19 @@ class micron_setting:
                 self.trim_val = self.value[2:]
 
         self.widget_name = self.name.replace(' ','_')
+        swn = self.widget_name
 
-        self.type = self.widget_name.rsplit('_', 1)[-1]
+        self.type = swn.rsplit('_', 1)[-1]
         self.label = self.type
         if self.type in df.nicer_names:
             self.label = df.nicer_names[self.type]
 
-        if self.widget_name.startswith('tracking_point_'):
+        if swn.startswith('tracking_point_'):
             self.label = 'point '+self.type
-            self.widget_name = self.widget_name.replace('-','m')
-        if self.widget_name == 'fx1_fx2_balance':
+            swn = self.widget_name.replace('-','m')
+        if swn == 'fx1_fx2_balance':
             self.label = 'fx1|fx2  '
-        if self.widget_name == 'lfo_1_mod_wheel_1':
+        if swn == 'lfo_1_mod_wheel_1':
             self.label = 'slider'
 
     def is_number(self, value):
@@ -64,7 +65,7 @@ class micron_setting:
         formated = ''
         if new_value == 30000001:
             formated = 'hold'
-        elif is_number(new_value):
+        elif self.is_number(new_value):
             if (not self.unit or self.unit == 'pct') and '.' in self.value:
                 formated = str(new_value / 10)
             elif self.unit in df.unit_ratios.keys():
@@ -203,6 +204,11 @@ class micron_setting_mix(micron_setting):
             disp = wet+separator+dry
         return disp, unit
 
+class micron_setting_waveform(micron_setting):
+    """mix setting"""
+    def format_val(self, new_value):
+        return False
+
 
 def factory(n,v):
     lword = n.rsplit(' ', 1)[-1]
@@ -218,5 +224,7 @@ def factory(n,v):
         return micron_setting_balance(n,v)
     elif lword == 'mix':
         return micron_setting_mix(n,v)
+    elif lword == 'waveform':
+        return micron_setting_waveform(n,v)
     else:
         return micron_setting(n,v)

@@ -20,3 +20,16 @@ def setting_changed(ui):
 
     if not widget in changed_settings:
         changed_settings.append(widget)
+
+def export_line(ui, allSettings):
+    for widget in changed_settings:
+        setting = allSettings[widget.objectName()]
+        if hasattr(widget, 'value'):
+            new_value = widget.value()
+        elif hasattr(widget, 'currentText'):
+            new_value = widget.currentText()
+        else:
+            new_value = 'nope'
+        line = setting.name+': '
+        line += str(setting.format_val(new_value))
+        print(line)

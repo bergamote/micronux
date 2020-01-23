@@ -22,8 +22,7 @@ ui.win.show()
 def test_button():
     #test for export
     print('---------------')
-    for widget in exporter.changed_settings:
-        print(widget)
+    exporter.export_line(ui, allSettings)
 
 ui.win.test_button.clicked.connect(test_button)
 
