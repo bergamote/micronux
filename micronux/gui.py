@@ -1,9 +1,4 @@
 # module: gui.py
-#
-# Import PySide2, load .ui file
-# and show window.
-# note: main needs sys module and
-# end with sys.exit(app.exec_())
 
 import sys
 from PySide2.QtUiTools import QUiLoader
@@ -11,12 +6,9 @@ from PySide2.QtWidgets import QApplication, QFileDialog, QDialog
 from PySide2.QtCore import QFile, Qt
 from PySide2.QtGui import QIcon
 
-
-from micronux.definitions import lcd_messages
-from micronux import midi
+from micronux import midi, exporter, effects
 import micronux.definitions as df
-import micronux.exporter as exp
-import micronux.effects as fx
+
 
 ### just to remove an ugly error message
 from PySide2.QtCore import QCoreApplication
@@ -56,39 +48,39 @@ class micronux_ui:
         self.loaded = False
 
 
-    def pass_to_lcd(self):
+    def fx_switch(self):
+        effects.switch(self)
+
+    def pass_to_exp(self):
+        if self.loaded:
+            exporter.setting_changed(self)
+
+
+    def pop_down(self):
+        self.win.pop.hide()
+
+    def pop_up(self):
+        self.win.pop.show()
+        self.win.pop.raise_()
+
+
+    def lcd_update(self):
         focused = self.app.focusWidget()
         t = type(focused).__name__
         if (t == 'QDial') or (t == 'QSlider'):
-            val = focused.value()
-            set = self.allSettings[focused.objectName()]
-            self.lcd_update(set, val)
-
-
-    def fx_switch(self):
-        fx.switch(self)
-
-
-    def lcd_update(self, setting, val):
-        v, u = setting.disp_val(val)
-        self.lcdV.setText(v)
-        self.lcdU.setText(u)
-        if self.prev_setting != setting.widget_name:
-            self.lcdN.setText(setting.label)
-            self.prev_setting = setting.widget_name
-
+            value = focused.value()
+            cur_widget = self.allSettings[focused.objectName()]
+            val, unit = cur_widget.disp_val(value)
+            self.lcdV.setText(val)
+            self.lcdU.setText(unit)
+            self.lcdN.setText(cur_widget.label)
 
     def lcd_message(self, type):
-        msg = lcd_messages
+        msg = df.lcd_messages
         if type in msg:
             self.lcdV.setText(msg[type][0])
             self.lcdU.setText(msg[type][1])
             self.lcdN.setText(msg[type][2])
-
-
-    def pass_to_exp(self):
-        if self.loaded:
-            exp.setting_changed(self)
 
 
     def connect_widgets(self):
@@ -104,7 +96,7 @@ class micronux_ui:
                 widget.valueChanged.connect(self.pass_to_exp)
                 # pass slider values to 'lcd'
                 if (w_type == 'QDial') or (w_type == 'QSlider'):
-                    widget.valueChanged.connect(self.pass_to_lcd)
+                    widget.valueChanged.connect(self.lcd_update)
             elif w_type == 'QComboBox':
                 widget.currentIndexChanged.connect(self.pass_to_exp)
                 if w_name.startswith('fx') and w_name.endswith('type'):
@@ -152,21 +144,21 @@ class micronux_ui:
                 elif w_type == 'QComboBox':
                     # display better dropdown choices
                     keyword = allSettings[w_name].trim_val
-                    if value in df.keywords:
-                        keyword = df.keywords[value]
+                    if value in df.nicer_names:
+                        keyword = df.nicer_names[value]
                     new_index = widget.findText(keyword)
                     widget.setCurrentIndex(new_index)
 
                     if w_name == 'fx_type':
                         self.win.fx_toolBox.setItemText(
                             0, widget.currentText() )
-                        fx.set_fx(self, 1)
+                        effects.set_fx(self, 1)
                         if widget.currentText() == 'bypass':
                             self.win.fx_toolBox.setCurrentIndex(1)
                     if w_name == 'fx2_type':
                         self.win.fx_toolBox.setItemText(
                             1, widget.currentText() )
-                        fx.set_fx(self, 2)
+                        effects.set_fx(self, 2)
                         if widget.currentText() == 'bypass':
                             self.win.fx_toolBox.setCurrentIndex(0)
 

@@ -21,7 +21,6 @@ units = {
 '% f1': 'bal',
 '% fx1': 'fxbal'
 }
-
 unit_ratios = {
 'ms': 1000,
 's': 1000000,
@@ -29,20 +28,7 @@ unit_ratios = {
 'khz': 1000000
 }
 
-percentages = [
-'level',
-'shape',
-'res',
-'keytrack',
-'envamt',
-'drift',
-'detune',
-'wheel',
-'smoothing',
-'mix'
-]
-
-keywords = {
+nicer_names = {
 'positive': '+',
 'negative': '-',
 'filter 1 mix': 'f1 mix',
@@ -52,13 +38,7 @@ keywords = {
 '2 -> 1': '2 > 1',
 'linear': 'lin',
 'm1 wheel': 'm1 slider',
-'m2 wheel': 'm2 slider'
-}
-
-mark_positive = ['semi','fine','octave']
-
-# setings better names for display
-nicer_names = {
+'m2 wheel': 'm2 slider',
 'semi':'semitone',
 'fine':'cent',
 'balance':'f1 | f2  ',
@@ -69,6 +49,8 @@ nicer_names = {
 'envamt':'env amount',
 'wheel':'slider'
 }
+
+mark_positive = ['semi','fine','octave']
 
 lcd_messages = {
 'clear': ['','',''],

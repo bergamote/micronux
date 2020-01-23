@@ -1,5 +1,5 @@
 
-import sys, os.path
+import sys, os.path, subprocess
 
 from micronux import midi
 

@@ -19,14 +19,6 @@ ui.assign_values(settings_list, allSettings)
 ui.win.show()
 
 
-def pop_down():
-    ui.win.pop.hide()
-
-def pop_up():
-    ui.win.pop.show()
-    ui.win.pop.raise_()
-
-
 def test_button():
     #test for export
     print('---------------')
@@ -56,20 +48,21 @@ ui.win.ctrl_open.clicked.connect(open_file)
 # Receive sysex
 def receive_interface():
     ui.lcd_message('receiving')
-    pop_up()
+    ui.pop_up()
     ui.win.lcdScreen.raise_()
     QTimer.singleShot(0, receive_sysex)
 
 def receive_sysex():
     port = ui.win.ctrl_midi_port.currentText()
     if midi.receive(port):
-        importer.open_file(midi.cache)
-        
-        exp.changed_settings.clear()
+        setup = importer.open_file(midi.cache)
+        settings_list, allSettings = setup[0], setup[1]
+        ui.assign_values(settings_list, allSettings)
+        exporter.changed_settings.clear()
         ui.lcd_message('receive_success')
     else:
         ui.lcd_message('receive_error')
-    pop_down()
+    ui.pop_down()
 
 ui.win.ctrl_receive.clicked.connect(receive_interface)
 
