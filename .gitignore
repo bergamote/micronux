@@ -1,6 +1,7 @@
 micronux/__pycache__/
 *.py[cod]
-prog/*.txt
-prog/*.syx
-!prog/default.txt
+programs/cache/*
+programs/*.txt
+programs/*.syx
+!programs/default.txt
 micronux.desktop

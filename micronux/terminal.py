@@ -7,7 +7,7 @@ import sys, os.path, subprocess
 from micronux import midi
 
 
-default_prog = 'prog/default.txt'
+default_prog = './programs/default.txt'
 
 ### Check the command line arguments
 def startup(args):
@@ -38,6 +38,7 @@ def startup(args):
             launcher = open(path+'/micronux.desktop', 'w')
             launcher.write(l)
             launcher.close()
+            subprocess.run(['chmod','+x', path+'/micronux.py'])
             subprocess.run(['chmod','+x', path+'/micronux.desktop'])
             sys.exit(0)
         # otherwise check if argument is a valid file

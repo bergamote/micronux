@@ -33,7 +33,7 @@ ui.win.test_button.clicked.connect(test_button)
 # Open file
 def open_file():
     fname, _ = gui.QtWidgets.QFileDialog.getOpenFileName(ui.win,
-     'Open file', './prog',"Sysex or Text Files (*.syx *.txt)")
+     'Open file', './programs/',"Sysex or Text Files (*.syx *.txt)")
     if fname:
         setup = importer.open_file(fname)
         if setup:
@@ -53,7 +53,7 @@ ui.win.ctrl_open.clicked.connect(open_file)
 def save_file():
     prog_name = mx.allSettings['name'].value
     fname, _ = gui.QtWidgets.QFileDialog.getSaveFileName(ui.win,
-     'Save file', './prog/'+prog_name+'.txt',"Sysex or Text Files (*.syx *.txt)")
+     'Save file', './programs/'+prog_name+'.txt',"Sysex or Text Files (*.syx *.txt)")
     if fname:
         export = exporter.save_file(fname, mx.settings_list, mx.allSettings)
         if export:
@@ -75,7 +75,7 @@ def receive_interface():
 def receive_sysex():
     port = ui.win.ctrl_midi_port.currentText()
     if midi.receive(port):
-        setup = importer.open_file(midi.cache)
+        setup = importer.open_file(midi.receive_cache)
         if setup:
             mx.settings_list, mx.allSettings = setup[0], setup[1]
             ui.map_widgets(mx.settings_list, mx.allSettings)

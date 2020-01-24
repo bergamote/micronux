@@ -8,7 +8,7 @@ from micronux import converter
 
 
 newSettings = {}
-cache_file = './prog/cache.txt'
+convert_cache = './programs/cache/convert.txt'
 
 # Keep track of settings that changed
 def setting_changed(ui):
@@ -75,7 +75,7 @@ def save_file(file_path, settings_list, allSettings):
     if file_path.endswith('.txt'):
         fname = file_path
     elif file_path.endswith('.syx'):
-        fname = cache_file
+        fname = convert_cache
     else:
         return False
 
@@ -84,10 +84,9 @@ def save_file(file_path, settings_list, allSettings):
     txt_file.close()
 
     if file_path.endswith('.syx'):
-        if converter.ipd(cache_file):
-            cache_syx = cache_file[:-3]+'syx'
+        if converter.ipd(convert_cache):
+            cache_syx = convert_cache[:-3]+'syx'
             subprocess.run(['mv', cache_syx, file_path])
-            subprocess.run(['rm', cache_file])
         else:
             return False
 

@@ -6,7 +6,9 @@
 import subprocess, os.path
 
 
-cache = 'prog/received.syx'
+receive_cache = 'programs/cache/received.syx'
+send_cache = 'programs/cache/send.txt'
+
 
 ### Check if MIDI port is valid
 # return port address if it is
@@ -38,11 +40,11 @@ def receive(port):
     port = check_midi_port(port)
     if port:
         cmd = ['amidi', '-t', '4', '-p']
-        cmd +=  [port, '-r', cache]
+        cmd +=  [port, '-r', receive_cache]
         print('listening at '+port)
         result = subprocess.run(cmd)
         if result.returncode == 0:
-            if fix_syx(cache):
+            if fix_syx(receive_cache):
                 return True
         else:
             # amidi shows error here
