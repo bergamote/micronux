@@ -24,7 +24,7 @@ def setting_changed(ui):
             widget = ui.win.osc_3_waveform
 
     if not widget in newSettings:
-        newSettings.update({widget.objectName: widget})
+        newSettings.update({widget.objectName(): widget})
     ui.win.ctrl_revert.setEnabled(True)
 
 
