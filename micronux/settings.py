@@ -22,19 +22,18 @@ class micron_setting:
                 self.trim_val = self.value[2:]
 
         self.widget_name = self.name.replace(' ','_')
-        swn = self.widget_name
 
-        self.type = swn.rsplit('_', 1)[-1]
+        self.type = self.widget_name.rsplit('_', 1)[-1]
         self.label = self.type
         if self.type in df.nicer_names:
             self.label = df.nicer_names[self.type]
 
-        if swn.startswith('tracking_point_'):
+        if self.widget_name.startswith('tracking_point_'):
             self.label = 'point '+self.type
-            swn = self.widget_name.replace('-','m')
-        if swn == 'fx1_fx2_balance':
+            self.widget_name = self.widget_name.replace('-','m')
+        if self.widget_name == 'fx1_fx2_balance':
             self.label = 'fx1|fx2  '
-        if swn == 'lfo_1_mod_wheel_1':
+        if self.widget_name == 'lfo_1_mod_wheel_1':
             self.label = 'slider'
 
     def is_number(self, value):
@@ -63,8 +62,15 @@ class micron_setting:
 
     def format_val(self, new_value):
         formated = ''
-        if new_value == 30000001:
-            formated = 'hold'
+        if hasattr(new_value, 'checkState'):
+            if self.value in df.chbox['checked']:
+                i = df.chbox['checked'].index(self.value)
+            else:
+                i = df.chbox['unchecked'].index(self.value)
+            if new_value.isChecked():
+                formated = df.chbox['checked'][i]
+            else:
+                formated = df.chbox['unchecked'][i]
         elif self.is_number(new_value):
             if (not self.unit or self.unit == 'pct') and '.' in self.value:
                 formated = str(new_value / 10)
@@ -74,6 +80,9 @@ class micron_setting:
             else:
                 formated = str(new_value)
         else:
+            for key,val in df.nicer_names.items():
+                if new_value == val:
+                    new_value = key
             formated = new_value
         if self.unit:
             for key,val in df.units.items():
@@ -81,6 +90,7 @@ class micron_setting:
                     formated += key
         if self.value.startswith('x '):
             formated = 'x '+formated
+
         return formated
 
 
@@ -93,6 +103,8 @@ class micron_setting:
         # show + sign when needed
         if self.type in df.mark_positive and (val > 0):
             val =  '+'+str(val)
+        if self.name == 'arp tempo':
+            unit = 'bpm'
         return str(val), unit
 
 
@@ -118,6 +130,22 @@ class micron_setting_time(micron_setting):
                 unit = ''
         return  str(disp), unit
 
+    def format_val(self, new_value):
+        if new_value >= 30000001:
+            val = 'hold'
+            unit = ''
+        else:
+            val = new_value / 1000
+            unit = ' ms'
+            if new_value >= 1000000:
+                val = new_value / 1000000
+                unit = ' s'
+            limit = str(val).split('.')
+            above = limit[0]
+            below = limit[1][0:3]
+            val = above+'.'+below
+        return str(val)+unit
+
 
 class micron_setting_frequency(micron_setting):
     """frequency setting"""
@@ -142,6 +170,22 @@ class micron_setting_frequency(micron_setting):
                 disp = round(float(val/1000000), roundings)
             disp = str(disp).ljust(5, '0')
         return disp, unit
+
+    def format_val(self, new_value):
+        if self.widget_name.endswith('offset_freq'):
+            val = str(new_value/100)
+            unit = ''
+        else:
+            _, disp_unit = self.disp_val(new_value)
+            val = new_value / df.unit_ratios[disp_unit]
+            unit = ' Hz'
+            if new_value >= 1000000:
+                unit = ' KHz'
+            limit = str(val).split('.')
+            above = limit[0]
+            below = limit[1][0:3]
+            val = above+'.'+below
+        return str(val)+unit
 
 
 class micron_setting_pan(micron_setting):
@@ -206,14 +250,19 @@ class micron_setting_mix(micron_setting):
 
 class micron_setting_waveform(micron_setting):
     """mix setting"""
-    def format_val(self, new_value):
-        return False
+    def format_val(self, group):
+        button = group.checkedButton()
+        slug = button.objectName().rsplit('_', 1)[-1]
+        formated = df.waveforms[slug]
+        return formated
 
 
 def factory(n,v):
     lword = n.rsplit(' ', 1)[-1]
     if lword == 'time':
         return micron_setting_time(n,v)
+    elif n.endswith('synced rate'):
+        return micron_setting(n,v)
     elif (lword == 'freq') or (lword == 'rate'):
         return micron_setting_frequency(n,v)
     elif lword == 'pan':

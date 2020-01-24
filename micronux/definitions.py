@@ -19,6 +19,16 @@ easy_strings = [
     'QLabel',
     'QLineEdit'
 ]
+waveforms = {
+    'sin': 'sine',
+    'tri': 'tri/saw',
+    'pul': 'pulse'
+}
+
+chbox = {
+'checked': ['on', 'offset'],
+'unchecked': ['off', 'absolute']
+}
 
 units = {
     '%': 'pct',

@@ -147,9 +147,9 @@ class micronux_ui:
                 value = allSettings[w_name].value
 
                 if w_type == 'QCheckBox':
-                    if (value == 'on') or (value == 'offset'):
+                    if value in df.chbox['checked']:
                         widget.setChecked(True)
-                    elif (value == 'off') or (value == 'absolute'):
+                    elif value in df.chbox['unchecked']:
                         widget.setChecked(False)
                     if connect:
                         widget.stateChanged.connect(self.pass_to_exp)

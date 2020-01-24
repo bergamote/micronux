@@ -26790,70 +26790,6 @@ border-radius:10px;
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QDoubleSpinBox" name="arp_tempo">
-     <property name="geometry">
-      <rect>
-       <x>222</x>
-       <y>20</y>
-       <width>58</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans Mono</family>
-       <pointsize>8</pointsize>
-      </font>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">selection-background-color: white;
-selection-color: black;
-background-color: #efefef;
-</string>
-     </property>
-     <property name="locale">
-      <locale language="English" country="UnitedStates"/>
-     </property>
-     <property name="wrapping">
-      <bool>false</bool>
-     </property>
-     <property name="frame">
-      <bool>true</bool>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-     <property name="buttonSymbols">
-      <enum>QAbstractSpinBox::PlusMinus</enum>
-     </property>
-     <property name="showGroupSeparator" stdset="0">
-      <bool>false</bool>
-     </property>
-     <property name="prefix">
-      <string/>
-     </property>
-     <property name="decimals">
-      <number>1</number>
-     </property>
-     <property name="minimum">
-      <double>50.000000000000000</double>
-     </property>
-     <property name="maximum">
-      <double>250.000000000000000</double>
-     </property>
-     <property name="singleStep">
-      <double>0.100000000000000</double>
-     </property>
-     <property name="stepType">
-      <enum>QAbstractSpinBox::DefaultStepType</enum>
-     </property>
-     <property name="value">
-      <double>120.000000000000000</double>
-     </property>
-    </widget>
     <widget class="QComboBox" name="arp_octave_span">
      <property name="geometry">
       <rect>
@@ -26932,6 +26868,46 @@ background-color: #efefef;
      </property>
      <property name="notchTarget">
       <double>1.000000000000000</double>
+     </property>
+     <property name="notchesVisible">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QDial" name="arp_tempo">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>216</x>
+       <y>11</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:lightgrey</string>
+     </property>
+     <property name="minimum">
+      <number>500</number>
+     </property>
+     <property name="maximum">
+      <number>2500</number>
+     </property>
+     <property name="singleStep">
+      <number>1</number>
+     </property>
+     <property name="pageStep">
+      <number>10</number>
+     </property>
+     <property name="value">
+      <number>500</number>
+     </property>
+     <property name="notchTarget">
+      <double>1000.000000000000000</double>
      </property>
      <property name="notchesVisible">
       <bool>true</bool>

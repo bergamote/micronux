@@ -305,4 +305,4 @@ arp length:           2
 arp octave range:     0
 arp octave span:      up
 arp note order:       forward
-arp tempo:            50.0
+arp tempo:            120.0

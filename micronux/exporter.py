@@ -2,7 +2,6 @@
 #
 # convert and save files
 
-
 changed_settings = []
 
 # Keep track of settings that changed
@@ -28,6 +27,10 @@ def export_line(ui, allSettings):
             new_value = widget.value()
         elif hasattr(widget, 'currentText'):
             new_value = widget.currentText()
+        elif hasattr(widget, 'checkedButton'):
+            new_value = widget
+        elif hasattr(widget, 'checkState'):
+            new_value = widget
         else:
             new_value = 'nope'
         line = setting.name+': '
