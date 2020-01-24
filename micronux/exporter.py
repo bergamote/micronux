@@ -25,6 +25,18 @@ def setting_changed(ui):
 
     if not widget in newSettings:
         newSettings.update({widget.objectName: widget})
+    ui.win.ctrl_revert.setEnabled(True)
+
+
+def clear_changes(ui):
+    newSettings.clear()
+    ui.win.ctrl_revert.setEnabled(False)
+
+
+def revert_changes(ui, settings_list, allSettings):
+    clear_changes(ui)
+    ui.map_widgets(settings_list, allSettings)
+    ui.lcd_message('revert')
 
 
 def export_line(widget, allSettings):

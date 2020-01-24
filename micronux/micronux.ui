@@ -162,7 +162,7 @@ QGroupBox {
      <property name="geometry">
       <rect>
        <x>70</x>
-       <y>20</y>
+       <y>21</y>
        <width>31</width>
        <height>21</height>
       </rect>
@@ -194,8 +194,8 @@ QGroupBox {
     <widget class="QLabel" name="micron_file_id">
      <property name="geometry">
       <rect>
-       <x>99</x>
-       <y>19</y>
+       <x>100</x>
+       <y>20</y>
        <width>31</width>
        <height>21</height>
       </rect>
@@ -229,7 +229,7 @@ QGroupBox {
       <rect>
        <x>-1</x>
        <y>72</y>
-       <width>131</width>
+       <width>132</width>
        <height>41</height>
       </rect>
      </property>
@@ -261,7 +261,7 @@ border-bottom-right-radius:4;</string>
     <widget class="QLabel" name="display_setting_unit">
      <property name="geometry">
       <rect>
-       <x>99</x>
+       <x>100</x>
        <y>35</y>
        <width>31</width>
        <height>41</height>
@@ -334,7 +334,7 @@ border-bottom-right-radius:4;</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>20</y>
+       <y>21</y>
        <width>61</width>
        <height>21</height>
       </rect>
@@ -436,8 +436,8 @@ border-bottom-right-radius:4;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>22</height>
+       <width>131</width>
+       <height>23</height>
       </rect>
      </property>
      <property name="font">
@@ -454,10 +454,11 @@ border-width:2px;
 border-color:lightgreen;
 border-style:solid;
 padding-right: -2px;
+padding-top: 1px;
 </string>
      </property>
      <property name="text">
-      <string>name</string>
+      <string>RockWheelOrgan</string>
      </property>
      <property name="maxLength">
       <number>14</number>
@@ -26920,9 +26921,9 @@ border-radius:10px;
     </property>
     <property name="geometry">
      <rect>
-      <x>517</x>
+      <x>516</x>
       <y>384</y>
-      <width>105</width>
+      <width>111</width>
       <height>20</height>
      </rect>
     </property>
@@ -26957,7 +26958,7 @@ border-radius:10px;
     </property>
     <property name="geometry">
      <rect>
-      <x>603</x>
+      <x>606</x>
       <y>358</y>
       <width>41</width>
       <height>21</height>
@@ -26986,7 +26987,7 @@ border-radius:10px;
     </property>
     <property name="geometry">
      <rect>
-      <x>585</x>
+      <x>587</x>
       <y>361</y>
       <width>16</width>
       <height>16</height>
@@ -27028,13 +27029,13 @@ border-radius: 4px;
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="ctrl_open_2">
+   <widget class="QPushButton" name="ctrl_revert">
     <property name="enabled">
      <bool>false</bool>
     </property>
     <property name="geometry">
      <rect>
-      <x>601</x>
+      <x>602</x>
       <y>215</y>
       <width>45</width>
       <height>21</height>
@@ -27056,7 +27057,7 @@ border-radius: 4px;
     </property>
     <property name="geometry">
      <rect>
-      <x>558</x>
+      <x>559</x>
       <y>215</y>
       <width>38</width>
       <height>21</height>
@@ -27094,7 +27095,7 @@ border-radius: 4px;
    <widget class="QPushButton" name="ctrl_midi_update">
     <property name="geometry">
      <rect>
-      <x>626</x>
+      <x>631</x>
       <y>386</y>
       <width>16</width>
       <height>16</height>
@@ -27132,7 +27133,7 @@ border-radius: 4px;
    <zorder>ctrl_send</zorder>
    <zorder>ctrl_receive</zorder>
    <zorder>ctrl_auto_send</zorder>
-   <zorder>ctrl_open_2</zorder>
+   <zorder>ctrl_revert</zorder>
    <zorder>ctrl_save</zorder>
    <zorder>ctrl_open</zorder>
    <zorder>ctrl_midi_update</zorder>
@@ -27181,8 +27182,8 @@ border-radius: 4px;
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="osc_1_waveform"/>
   <buttongroup name="osc_2_waveform"/>
   <buttongroup name="osc_3_waveform"/>
+  <buttongroup name="osc_1_waveform"/>
  </buttongroups>
 </ui>

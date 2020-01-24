@@ -11,7 +11,6 @@ from micronux import settings, converter
 def text_file(file_path):
     settings_list = []
     allSettings = {}
-    print('loading '+file_path)
     txt_file = open(file_path, 'r')
     for line in txt_file:
         line = line.strip()

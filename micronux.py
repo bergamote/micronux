@@ -39,8 +39,9 @@ def open_file():
         if setup:
             mx.settings_list, mx.allSettings = setup[0], setup[1]
             ui.map_widgets(mx.settings_list, mx.allSettings)
-            exporter.newSettings.clear()
+            exporter.clear_changes(ui)
             ui.lcd_message('open_success')
+            print('loaded '+fname)
         else:
             ui.lcd_message('open_error')
 
@@ -56,7 +57,7 @@ def save_file():
     if fname:
         export = exporter.save_file(fname, mx.settings_list, mx.allSettings)
         if export:
-            exporter.newSettings.clear()
+            exporter.clear_changes(ui)
             ui.lcd_message('save_success')
         else:
             ui.lcd_message('save_error')
@@ -78,13 +79,21 @@ def receive_sysex():
         if setup:
             mx.settings_list, mx.allSettings = setup[0], setup[1]
             ui.map_widgets(mx.settings_list, mx.allSettings)
-            exporter.newSettings.clear()
+            exporter.clear_changes(ui)
             ui.lcd_message('receive_success')
     else:
         ui.lcd_message('receive_error')
     ui.pop_down()
 
 ui.win.ctrl_receive.clicked.connect(receive_interface)
+
+
+# Revert changes
+def revert():
+    exporter.revert_changes(ui, mx.settings_list, mx.allSettings)
+
+ui.win.ctrl_revert.clicked.connect(revert)
+
 
 
 sys.exit(ui.app.exec_())

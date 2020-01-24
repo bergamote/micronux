@@ -79,7 +79,8 @@ lcd_messages = {
     'open_success': ['file',':)','loaded'],
     'open_error': ['error',':(','bad file'],
     'save_success': ['file',':)','saved'],
-    'save_error': ['error',':(','not saved']
+    'save_error': ['error',':(','not saved'],
+    'revert': ['done','','reverted']
 }
 
 
