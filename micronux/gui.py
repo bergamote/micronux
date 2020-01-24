@@ -6,17 +6,16 @@
 import sys
 from PySide2 import QtWidgets
 from PySide2.QtUiTools import QUiLoader
-from PySide2.QtCore import QFile, Qt, QTimer
+from PySide2.QtCore import QFile, Qt, QTimer, QCoreApplication
 from PySide2.QtGui import QIcon
-
 
 from micronux import midi, exporter
 import micronux.definitions as df
 
 
 ### just to remove an ugly error message
-from PySide2.QtCore import QCoreApplication
 QCoreApplication.setAttribute(Qt.AA_ShareOpenGLContexts)
+
 
 class micronux_ui:
     """gui object"""

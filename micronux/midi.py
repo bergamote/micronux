@@ -5,8 +5,8 @@
 
 import subprocess, os.path
 
-cache = 'prog/received.syx'
 
+cache = 'prog/received.syx'
 
 ### Check if MIDI port is valid
 # return port address if it is
@@ -19,6 +19,7 @@ def check_midi_port(midi_port):
     else:
         return False
 
+
 # List all midi ports
 def list_midi_ports():
     result = subprocess.check_output(['amidi', '-l'])
@@ -29,6 +30,7 @@ def list_midi_ports():
         entry = line.split(None, 2)
         ports[entry[2]] = entry[1]
     return ports
+
 
 ### Receive sysex
 def receive(port):

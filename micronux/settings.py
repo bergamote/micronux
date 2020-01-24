@@ -5,6 +5,7 @@
 
 import micronux.definitions as df
 
+
 class micron_setting:
     """generic micron setting"""
 

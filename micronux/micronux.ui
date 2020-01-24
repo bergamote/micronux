@@ -4340,7 +4340,7 @@ width: 2px;
       <enum>QTabWidget::Rounded</enum>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="env_amp">
       <attribute name="title">
@@ -12173,10 +12173,10 @@ border-radius: 4px;
        <string notr="true">background-color:lightgrey</string>
       </property>
       <property name="minimum">
-       <number>-100</number>
+       <number>-1000</number>
       </property>
       <property name="maximum">
-       <number>100</number>
+       <number>1000</number>
       </property>
      </widget>
      <widget class="QLabel" name="label_mod_1">
@@ -13723,10 +13723,10 @@ border-radius: 4px;
        <string notr="true">background-color:lightgrey</string>
       </property>
       <property name="minimum">
-       <number>-100</number>
+       <number>-1000</number>
       </property>
       <property name="maximum">
-       <number>100</number>
+       <number>1000</number>
       </property>
      </widget>
      <widget class="QLabel" name="label_mod_3">
@@ -14490,10 +14490,10 @@ border-radius: 4px;
        <string notr="true">background-color:lightgrey</string>
       </property>
       <property name="minimum">
-       <number>-100</number>
+       <number>-1000</number>
       </property>
       <property name="maximum">
-       <number>100</number>
+       <number>1000</number>
       </property>
      </widget>
      <widget class="QDial" name="mod_4_offset">
@@ -14509,10 +14509,10 @@ border-radius: 4px;
        <string notr="true">background-color:lightgrey</string>
       </property>
       <property name="minimum">
-       <number>-100</number>
+       <number>-1000</number>
       </property>
       <property name="maximum">
-       <number>100</number>
+       <number>1000</number>
       </property>
      </widget>
      <widget class="Line" name="line_19">
@@ -15668,10 +15668,10 @@ border-radius: 4px;
        <string notr="true">background-color:lightgrey</string>
       </property>
       <property name="minimum">
-       <number>-100</number>
+       <number>-1000</number>
       </property>
       <property name="maximum">
-       <number>100</number>
+       <number>1000</number>
       </property>
      </widget>
      <widget class="QComboBox" name="mod_7_dest">
@@ -17025,10 +17025,10 @@ border-radius: 4px;
        <string notr="true">background-color:lightgrey</string>
       </property>
       <property name="minimum">
-       <number>-100</number>
+       <number>-1000</number>
       </property>
       <property name="maximum">
-       <number>100</number>
+       <number>1000</number>
       </property>
      </widget>
      <widget class="Line" name="line_24">
@@ -17404,10 +17404,10 @@ border-radius: 4px;
        <string notr="true">background-color:lightgrey</string>
       </property>
       <property name="minimum">
-       <number>-100</number>
+       <number>-1000</number>
       </property>
       <property name="maximum">
-       <number>100</number>
+       <number>1000</number>
       </property>
      </widget>
      <widget class="QLabel" name="label_mod_6">
@@ -18414,10 +18414,10 @@ border-radius: 4px;
        <string notr="true">background-color:lightgrey</string>
       </property>
       <property name="minimum">
-       <number>-100</number>
+       <number>-1000</number>
       </property>
       <property name="maximum">
-       <number>100</number>
+       <number>1000</number>
       </property>
      </widget>
      <zorder>line_27</zorder>
@@ -18695,10 +18695,10 @@ border-radius: 4px;
        <string notr="true">background-color:lightgrey</string>
       </property>
       <property name="minimum">
-       <number>-100</number>
+       <number>-1000</number>
       </property>
       <property name="maximum">
-       <number>100</number>
+       <number>1000</number>
       </property>
      </widget>
      <widget class="QComboBox" name="mod_12_dest">
@@ -19216,10 +19216,10 @@ border-radius: 4px;
        <string notr="true">background-color:lightgrey</string>
       </property>
       <property name="minimum">
-       <number>-100</number>
+       <number>-1000</number>
       </property>
       <property name="maximum">
-       <number>100</number>
+       <number>1000</number>
       </property>
      </widget>
      <widget class="QComboBox" name="mod_12_source">
@@ -20073,10 +20073,10 @@ border-radius: 4px;
        <string notr="true">background-color:lightgrey</string>
       </property>
       <property name="minimum">
-       <number>-100</number>
+       <number>-1000</number>
       </property>
       <property name="maximum">
-       <number>100</number>
+       <number>1000</number>
       </property>
      </widget>
      <widget class="Line" name="line_32">
@@ -21069,10 +21069,10 @@ border-radius: 4px;
        <string notr="true">background-color:lightgrey</string>
       </property>
       <property name="minimum">
-       <number>-100</number>
+       <number>-1000</number>
       </property>
       <property name="maximum">
-       <number>100</number>
+       <number>1000</number>
       </property>
      </widget>
      <widget class="Line" name="line_35">
@@ -27052,7 +27052,7 @@ border-radius: 4px;
    </widget>
    <widget class="QPushButton" name="ctrl_save">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>

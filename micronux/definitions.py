@@ -76,8 +76,10 @@ lcd_messages = {
     'receiving': ['MIDI','...','waiting'],
     'receive_error': ['error',':(','try again'],
     'receive_success': ['sysex',':)','received'],
-    'file_loaded': ['file',':)','loaded'],
-    'file_error': ['error',':(','bad file']
+    'open_success': ['file',':)','loaded'],
+    'open_error': ['error',':(','bad file'],
+    'save_success': ['file',':)','saved'],
+    'save_error': ['error',':(','not saved']
 }
 
 

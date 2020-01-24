@@ -8,13 +8,16 @@
 import sys
 from micronux import gui, terminal, importer, exporter, midi
 
-file_to_load = terminal.startup(sys.argv)
 
-settings_list, allSettings = importer.open_file(file_to_load)
+class mx:
+    file_to_load = terminal.startup(sys.argv)
+    a, b = importer.open_file(file_to_load)
+    settings_list = a
+    allSettings = b
 
-ui = gui.micronux_ui(settings_list, allSettings)
+ui = gui.micronux_ui(mx.settings_list, mx.allSettings)
 
-ui.map_widgets(settings_list, allSettings, connect=True)
+ui.map_widgets(mx.settings_list, mx.allSettings, connect=True)
 
 ui.win.show()
 
@@ -22,7 +25,7 @@ ui.win.show()
 def test_button():
     #test for export
     print('---------------')
-    exporter.export_line(ui, allSettings)
+    print(exporter.newSettings)
 
 ui.win.test_button.clicked.connect(test_button)
 
@@ -34,14 +37,31 @@ def open_file():
     if fname:
         setup = importer.open_file(fname)
         if setup:
-            settings_list, allSettings = setup[0], setup[1]
-            ui.map_widgets(settings_list, allSettings)
-            exporter.changed_settings.clear()
-            ui.lcd_message('file_loaded')
+            mx.settings_list, mx.allSettings = setup[0], setup[1]
+            ui.map_widgets(mx.settings_list, mx.allSettings)
+            exporter.newSettings.clear()
+            ui.lcd_message('open_success')
         else:
-            ui.lcd_message('file_error')
+            ui.lcd_message('open_error')
 
 ui.win.ctrl_open.clicked.connect(open_file)
+
+
+
+# Save file
+def save_file():
+    prog_name = mx.allSettings['name'].value
+    fname, _ = gui.QtWidgets.QFileDialog.getSaveFileName(ui.win,
+     'Save file', './prog/'+prog_name+'.txt',"Sysex or Text Files (*.syx *.txt)")
+    if fname:
+        export = exporter.save_file(fname, mx.settings_list, mx.allSettings)
+        if export:
+            exporter.newSettings.clear()
+            ui.lcd_message('save_success')
+        else:
+            ui.lcd_message('save_error')
+
+ui.win.ctrl_save.clicked.connect(save_file)
 
 
 # Receive sysex
@@ -55,10 +75,11 @@ def receive_sysex():
     port = ui.win.ctrl_midi_port.currentText()
     if midi.receive(port):
         setup = importer.open_file(midi.cache)
-        settings_list, allSettings = setup[0], setup[1]
-        ui.map_widgets(settings_list, allSettings)
-        exporter.changed_settings.clear()
-        ui.lcd_message('receive_success')
+        if setup:
+            mx.settings_list, mx.allSettings = setup[0], setup[1]
+            ui.map_widgets(mx.settings_list, mx.allSettings)
+            exporter.newSettings.clear()
+            ui.lcd_message('receive_success')
     else:
         ui.lcd_message('receive_error')
     ui.pop_down()

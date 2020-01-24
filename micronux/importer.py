@@ -1,22 +1,10 @@
 # module: importer.py
 #
-# open and convert files
+# open files
 
 
-import subprocess, sys, os.path
-from micronux import settings, midi
-
-ion_decoder_path = 'alesis/ion_program_decoder.pl'
-
-# convert syx file to text file
-# using ion_program_decoder.pl
-def syx_to_txt(file_path):
-    cmd = [ion_decoder_path, '-b', file_path]
-    result = subprocess.run(cmd)
-    if result.returncode == 0:
-        return True
-    else:
-        return False
+import os.path
+from micronux import settings, converter
 
 
 ### Read text file and return settings
@@ -34,8 +22,9 @@ def text_file(file_path):
                     name = pair[0]
                     value = pair[1]
                     set = settings.factory(name, value)
+                    add_to_dict = {set.widget_name: set}
                     settings_list.append(set.widget_name)
-                    allSettings[set.widget_name] = set
+                    allSettings.update(add_to_dict)
                 else:
                     return False
     txt_file.close()
@@ -47,7 +36,7 @@ def open_file(file_path):
         return False
     else:
         if file_path.endswith('.syx'):
-            convert_file = syx_to_txt(file_path)
+            convert_file = converter.ipd(file_path)
             if not convert_file:
                 return False
             else:
