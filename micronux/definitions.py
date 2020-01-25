@@ -60,7 +60,7 @@ nicer_names = {
     'semi':'semitone',
     'fine':'cent',
     'balance':'f1 | f2  ',
-    'mix':    'wet|dry  ',
+    'mix':    'dry|wet  ',
     'amount':'fm amount',
     'freq':'frequency',
     'res':'resonance',
@@ -74,13 +74,13 @@ lcd_messages = {
     'clear': ['','',''],
     'startup': ['alesi','s','micronux'],
     'receiving': ['MIDI','...','waiting'],
-    'receive_error': ['error',':(','try again'],
+    'receive_error': ['MIDI',':(','error'],
     'receive_success': ['sysex',':)','received'],
-    'open_success': ['file',':)','loaded'],
-    'open_error': ['error',':(','bad file'],
-    'save_success': ['file',':)','saved'],
-    'save_error': ['error',':(','not saved'],
-    'revert': ['done','','reverted']
+    'open_success': ['',':)','loaded'],
+    'open_error': ['',':(','error'],
+    'save_success': ['',':)','saved'],
+    'save_error': ['',':(','error'],
+    'revert': ['','','reverted']
 }
 
 

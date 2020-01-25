@@ -20,13 +20,7 @@ ui = gui.micronux_ui(mx.settings_list, mx.allSettings)
 ui.map_widgets(mx.settings_list, mx.allSettings, connect=True)
 
 ui.win.show()
-
-
-def test_button():
-    #test for export
-    print('---------------')
-    print(exporter.newSettings)
-ui.win.test_button.clicked.connect(test_button)
+ui.lcd_message('startup')
 
 
 # Open file
