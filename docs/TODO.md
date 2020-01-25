@@ -1,34 +1,31 @@
 ### To do list
-*micronux*
 
-  - add export:
+*Micronux*
 
-      - button to send program with **amidi**
 
-      - automatically send program on setting change. Note: when? on-release or every-second or what?
+  - option to rename program
 
-  - improve widgets:
+  - automatically send program on setting change
 
-      - effects: swap widget when needed (ie: sync on/off with checkbox instead of a dial) and implement sync multiples (param c sync)
+  - finish effects widget:
 
-      - assign xyz knobs, mods, sh... through pop-up window
+    - assign 'lcd' labels to each param
 
-      - implement a non-linear slider for time, and maybe freq, related settings (log curve)
+    - swap widget when needed (ie: sync on/off with checkbox instead of a dial)
 
+    - implement sync multiples (param c sync)
+
+  - pop-up window for inputs of xyz knobs, mods, sh and tracking
+
+    - add midi cc inputs
+
+  - implement a non-linear slider for time, and maybe freq, related settings (log curve)
+
+  - tooltips
 
   - show value on "lcd" when focusing (right-click) on a widget
 
-  - option to rename program (pop up dialogue)
-
-  - request program sysex from within micronux
-
-  - option to revert modified program to received/opened program.  
-
-  - make a 1920x1080 layout with **Qt Designer** where all envelopes, effects, mods and tracking are visible. Maybe not a great idea (settings overload)
-
-  - add visual representation of oscillators, and everything else (if possible)!
-
-  - reimplement the decoder/encoder perl script in python (maybe)
+  - request program sysex directly from within Micronux
 
 ----
 
