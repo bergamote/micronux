@@ -89,6 +89,4 @@ def save_file(file_path, settings_list, allSettings):
             subprocess.run(['mv', cache_syx, file_path])
         else:
             return False
-
-    print('saved '+file_path)
     return True

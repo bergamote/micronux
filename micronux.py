@@ -26,7 +26,6 @@ def test_button():
     #test for export
     print('---------------')
     print(exporter.newSettings)
-
 ui.win.test_button.clicked.connect(test_button)
 
 
@@ -41,12 +40,10 @@ def open_file():
             ui.map_widgets(mx.settings_list, mx.allSettings)
             exporter.clear_changes(ui)
             ui.lcd_message('open_success')
-            print('loaded '+fname)
         else:
             ui.lcd_message('open_error')
 
 ui.win.ctrl_open.clicked.connect(open_file)
-
 
 
 # Save file
@@ -66,7 +63,7 @@ ui.win.ctrl_save.clicked.connect(save_file)
 
 
 # Receive sysex
-def receive_interface():
+def pass_to_receive():
     ui.lcd_message('receiving')
     ui.pop_up()
     ui.win.lcdScreen.raise_()
@@ -74,7 +71,7 @@ def receive_interface():
 
 def receive_sysex():
     port = ui.win.ctrl_midi_port.currentText()
-    if midi.receive(port):
+    if midi.interface('receive', port):
         setup = importer.open_file(midi.receive_cache)
         if setup:
             mx.settings_list, mx.allSettings = setup[0], setup[1]
@@ -85,7 +82,16 @@ def receive_sysex():
         ui.lcd_message('receive_error')
     ui.pop_down()
 
-ui.win.ctrl_receive.clicked.connect(receive_interface)
+ui.win.ctrl_receive.clicked.connect(pass_to_receive)
+
+
+# Send sysex
+def send_sysex():
+    export = exporter.save_file(midi.send_cache, mx.settings_list, mx.allSettings)
+    port = ui.win.ctrl_midi_port.currentText()
+    midi.interface('send', port)
+
+ui.win.ctrl_send.clicked.connect(send_sysex)
 
 
 # Revert changes

@@ -7,12 +7,12 @@ import subprocess, os.path
 
 
 receive_cache = 'programs/cache/received.syx'
-send_cache = 'programs/cache/send.txt'
+send_cache = 'programs/cache/send.syx'
 
 
 ### Check if MIDI port is valid
 # return port address if it is
-def check_midi_port(midi_port):
+def find_midi_port(midi_port):
     ports_list = list_midi_ports()
     if midi_port in list(ports_list.keys()):
         return ports_list[midi_port]
@@ -34,17 +34,20 @@ def list_midi_ports():
     return ports
 
 
-### Receive sysex
-def receive(port):
-    # listen from amidi into cache file
-    port = check_midi_port(port)
+### interface for midi send/receive sysex
+def interface(action, port):
+    port = find_midi_port(port)
     if port:
-        cmd = ['amidi', '-t', '4', '-p']
-        cmd +=  [port, '-r', receive_cache]
-        print('listening at '+port)
+        cmd = ['amidi', '-p', port]
+        if action == 'receive':
+            cmd += ['-t', '4', '-r', receive_cache]
+        elif action == 'send':
+            cmd += ['-s', send_cache]
         result = subprocess.run(cmd)
         if result.returncode == 0:
-            if fix_syx(receive_cache):
+            if action == 'send':
+                return True
+            elif fix_syx(receive_cache):
                 return True
         else:
             # amidi shows error here
