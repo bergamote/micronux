@@ -10,6 +10,10 @@ def get_button_groups(win):
     group.append(win.osc_3_waveform)
     return group
 
+def last_word(word, s='_'):
+    lw = word.rsplit(s, 1)[-1]
+    return lw
+
 easy_numbers = [
     'QDial',
     'QSlider',
@@ -31,7 +35,7 @@ chbox = {
 }
 
 units = {
-    '%': 'pct',
+    '%': '%',
     ' s': 's',
     ' ms': 'ms',
     ' Hz': 'hz',

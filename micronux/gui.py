@@ -105,9 +105,22 @@ class micronux_ui:
             value = focused.value()
             cur_widget = self.allSettings[focused.objectName()]
             val, unit = cur_widget.disp_val(value)
+            label = cur_widget.label
+            if len(label) == 1:
+                # fx params
+                tb = focused.parent()
+                if df.last_word(tb.objectName()) == '2':
+                    fx = self.win.fx2_type.currentText()
+                else:
+                    fx = self.win.fx_type.currentText()
+                fx_detail = df.fx_types[fx][label]
+                label = fx_detail[0]
+                if len(fx_detail[1]) == 3:
+                    unit = fx_detail[1]['unit']
             self.lcdV.setText(val)
             self.lcdU.setText(unit)
-            self.lcdN.setText(cur_widget.label)
+            self.lcdN.setText(label)
+
 
     def lcd_message(self, type):
         msg = df.lcd_messages
@@ -132,7 +145,7 @@ class micronux_ui:
         # Assign values to widgets
         for group in self.button_groups:
             for button in group.buttons():
-                button_name = button.objectName().rsplit('_', 1)[-1]
+                button_name = df.last_word(button.objectName())
                 value = allSettings[group.objectName()].value
                 if value.startswith(button_name):
                     button.toggle()

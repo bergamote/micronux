@@ -24,7 +24,7 @@ class micron_setting:
 
         self.widget_name = self.name.replace(' ','_')
 
-        self.type = self.widget_name.rsplit('_', 1)[-1]
+        self.type = df.last_word(self.widget_name)
         self.label = self.type
         if self.type in df.nicer_names:
             self.label = df.nicer_names[self.type]
@@ -50,7 +50,7 @@ class micron_setting:
         if self.value == 'hold':
             return 30000001
         elif self.is_number(self.trim_val):
-            if (not self.unit or self.unit == 'pct') and '.' in self.value:
+            if (not self.unit or self.unit == '%') and '.' in self.value:
                 return int(float(self.trim_val) * 10)
             elif self.unit in df.unit_ratios.keys():
                 ratio = df.unit_ratios[self.unit]
@@ -73,7 +73,7 @@ class micron_setting:
             else:
                 formated = df.chbox['unchecked'][i]
         elif self.is_number(new_value):
-            if (not self.unit or self.unit == 'pct') and '.' in self.value:
+            if (not self.unit or self.unit == '%') and '.' in self.value:
                 formated = str(new_value / 10)
             elif self.unit in df.unit_ratios.keys():
                 ratio = df.unit_ratios[self.unit]
@@ -97,17 +97,14 @@ class micron_setting:
 
     def disp_val(self, val):
         unit = ''
-        if self.unit == 'pct':
-            unit = '%'
-        if (not self.unit or self.unit == 'pct') and '.' in self.value:
+        if self.unit:
+            unit = self.unit
+        if (not self.unit or self.unit == '%') and '.' in self.value:
             val = int(val) / 10
         # show + sign when needed
         if self.type in df.mark_positive and (val > 0):
             val =  '+'+str(val)
-        if self.name == 'arp tempo':
-            unit = 'bpm'
-        return str(val), unit
-
+        return  str(val), unit
 
 class micron_setting_time(micron_setting):
     """time setting"""
@@ -253,28 +250,28 @@ class micron_setting_waveform(micron_setting):
     """mix setting"""
     def format_val(self, group):
         button = group.checkedButton()
-        slug = button.objectName().rsplit('_', 1)[-1]
+        slug = df.last_word(button.objectName())
         formated = df.waveforms[slug]
         return formated
 
 
 def factory(n,v):
-    lword = n.rsplit(' ', 1)[-1]
-    if lword == 'time':
+    lw = df.last_word(n, ' ')
+    if lw == 'time':
         return micron_setting_time(n,v)
     elif n.endswith('synced rate'):
         return micron_setting(n,v)
-    elif (lword == 'freq') or (lword == 'rate'):
+    elif (lw == 'freq') or (lw == 'rate'):
         return micron_setting_frequency(n,v)
-    elif lword == 'pan':
+    elif lw == 'pan':
         return micron_setting_pan(n,v)
-    elif lword == 'amount':
+    elif lw == 'amount':
         return micron_setting_fm(n,v)
-    elif lword == 'balance':
+    elif lw == 'balance':
         return micron_setting_balance(n,v)
-    elif lword == 'mix':
+    elif lw == 'mix':
         return micron_setting_mix(n,v)
-    elif lword == 'waveform':
+    elif lw == 'waveform':
         return micron_setting_waveform(n,v)
     else:
         return micron_setting(n,v)
