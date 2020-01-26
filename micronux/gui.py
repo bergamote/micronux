@@ -136,9 +136,12 @@ class micronux_ui:
         if len(midi_ports):
             for port in midi_ports:
                 self.win.ctrl_midi_port.addItems([port])
+            self.win.ctrl_send.setEnabled(True)
+            self.win.ctrl_auto_send.setEnabled(True)
         else:
             self.win.ctrl_midi_port.addItems(['No MIDI port'])
-
+            self.win.ctrl_send.setEnabled(False)
+            self.win.ctrl_auto_send.setEnabled(False)
 
     def map_widgets(self, settings_list, allSettings, connect=False):
         self.loaded = False
@@ -191,7 +194,7 @@ class micronux_ui:
                 elif w_type in df.easy_numbers:
                     widget.setValue(allSettings[w_name].normalise_val())
                     if connect:
-                        widget.valueChanged.connect(self.pass_to_exp)
+                        widget.sliderReleased.connect(self.pass_to_exp)
                         if (w_type == 'QDial') or (w_type == 'QSlider'):
                             widget.valueChanged.connect(self.lcd_update)
 

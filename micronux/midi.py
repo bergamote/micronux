@@ -8,7 +8,7 @@ import subprocess, os.path
 
 receive_cache = 'programs/cache/received.syx'
 send_cache = 'programs/cache/send.syx'
-
+send_ready = True
 
 ### Check if MIDI port is valid
 # return port address if it is

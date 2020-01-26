@@ -4,11 +4,12 @@
 
 
 import subprocess
-from micronux import converter
+from micronux import converter, midi
 
 
 newSettings = {}
 convert_cache = './programs/cache/convert.txt'
+
 
 # Keep track of settings that changed
 def setting_changed(ui):
@@ -25,6 +26,15 @@ def setting_changed(ui):
 
     if not widget in newSettings:
         newSettings.update({widget.objectName(): widget})
+
+        auto_send = ui.win.ctrl_auto_send.isChecked()
+        if auto_send and midi.send_ready:
+            midi.send_ready = False
+            save_file(midi.send_cache, ui.settings_list, ui.allSettings)
+            port = ui.win.ctrl_midi_port.currentText()
+            if midi.interface('send', port):
+                midi.send_ready = True
+
     ui.win.ctrl_revert.setEnabled(True)
 
 

@@ -11604,8 +11604,8 @@ border-radius: 4px;
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>311</width>
-         <height>125</height>
+         <width>100</width>
+         <height>30</height>
         </rect>
        </property>
        <attribute name="label">
@@ -26970,7 +26970,7 @@ border-radius:10px;
    </widget>
    <widget class="QCheckBox" name="ctrl_auto_send">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -27168,8 +27168,8 @@ border-radius: 4px;
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="osc_3_waveform"/>
   <buttongroup name="osc_1_waveform"/>
   <buttongroup name="osc_2_waveform"/>
+  <buttongroup name="osc_3_waveform"/>
  </buttongroups>
 </ui>

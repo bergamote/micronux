@@ -1,6 +1,5 @@
 micronux/__pycache__/
 *.py[cod]
-programs/cache/*
 programs/*.txt
 programs/*.syx
 !programs/default.txt
