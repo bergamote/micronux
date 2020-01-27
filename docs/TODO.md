@@ -5,11 +5,9 @@
 
   - option to rename program
 
-  - automatically send program on setting change
+  - finish effects widgets:
 
-  - finish effects widget:
-
-    - assign 'lcd' labels to each param
+    - fix wrong limits for min/max params
 
     - swap widget when needed (ie: sync on/off with checkbox instead of a dial)
 
