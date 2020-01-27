@@ -140,9 +140,9 @@ QGroupBox {
    <widget class="QGroupBox" name="lcdScreen">
     <property name="geometry">
      <rect>
-      <x>516</x>
-      <y>240</y>
-      <width>131</width>
+      <x>529</x>
+      <y>220</y>
+      <width>141</width>
       <height>121</height>
      </rect>
     </property>
@@ -194,9 +194,9 @@ QGroupBox {
     <widget class="QLabel" name="micron_file_id">
      <property name="geometry">
       <rect>
-       <x>100</x>
+       <x>99</x>
        <y>20</y>
-       <width>31</width>
+       <width>41</width>
        <height>21</height>
       </rect>
      </property>
@@ -229,7 +229,7 @@ QGroupBox {
       <rect>
        <x>-1</x>
        <y>72</y>
-       <width>132</width>
+       <width>141</width>
        <height>41</height>
       </rect>
      </property>
@@ -261,7 +261,7 @@ border-bottom-right-radius:4;</string>
     <widget class="QLabel" name="display_setting_unit">
      <property name="geometry">
       <rect>
-       <x>100</x>
+       <x>109</x>
        <y>35</y>
        <width>31</width>
        <height>41</height>
@@ -299,7 +299,7 @@ border-bottom-right-radius:4;</string>
       <rect>
        <x>0</x>
        <y>40</y>
-       <width>102</width>
+       <width>111</width>
        <height>42</height>
       </rect>
      </property>
@@ -436,7 +436,7 @@ border-bottom-right-radius:4;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>131</width>
+       <width>140</width>
        <height>23</height>
       </rect>
      </property>
@@ -527,7 +527,7 @@ width: 2px;
    <widget class="QGroupBox" name="pre_filter_mix">
     <property name="geometry">
      <rect>
-      <x>326</x>
+      <x>330</x>
       <y>52</y>
       <width>181</width>
       <height>231</height>
@@ -1922,7 +1922,7 @@ width: 2px;
     <widget class="QLabel" name="label_wheel">
      <property name="geometry">
       <rect>
-       <x>257</x>
+       <x>262</x>
        <y>13</y>
        <width>41</width>
        <height>21</height>
@@ -2420,7 +2420,7 @@ width: 2px;
      <widget class="QDial" name="osc_1_p_wheel_range">
       <property name="geometry">
        <rect>
-        <x>247</x>
+        <x>252</x>
         <y>10</y>
         <width>31</width>
         <height>41</height>
@@ -3043,7 +3043,7 @@ width: 2px;
      <widget class="QDial" name="osc_3_p_wheel_range">
       <property name="geometry">
        <rect>
-        <x>247</x>
+        <x>252</x>
         <y>10</y>
         <width>31</width>
         <height>41</height>
@@ -3249,7 +3249,7 @@ width: 2px;
        <x>0</x>
        <y>6</y>
        <width>31</width>
-       <height>21</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -3742,7 +3742,7 @@ width: 2px;
      <widget class="QDial" name="osc_2_p_wheel_range">
       <property name="geometry">
        <rect>
-        <x>247</x>
+        <x>252</x>
         <y>10</y>
         <width>31</width>
         <height>41</height>
@@ -3926,7 +3926,7 @@ width: 2px;
       <rect>
        <x>-2</x>
        <y>253</y>
-       <width>301</width>
+       <width>311</width>
        <height>41</height>
       </rect>
      </property>
@@ -3936,7 +3936,7 @@ width: 2px;
      <widget class="QComboBox" name="pitch_wheel_mode">
       <property name="geometry">
        <rect>
-        <x>260</x>
+        <x>265</x>
         <y>11</y>
         <width>38</width>
         <height>20</height>
@@ -4010,7 +4010,7 @@ width: 2px;
      <widget class="QLabel" name="label_pitch_wheel_mode">
       <property name="geometry">
        <rect>
-        <x>260</x>
+        <x>265</x>
         <y>-7</y>
         <width>38</width>
         <height>21</height>
@@ -4281,9 +4281,9 @@ width: 2px;
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>0</y>
+       <y>-1</y>
        <width>41</width>
-       <height>21</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -4332,7 +4332,7 @@ width: 2px;
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">background: #efefef</string>
+      <string notr="true">background: #efefef;</string>
      </property>
      <property name="tabPosition">
       <enum>QTabWidget::North</enum>
@@ -6816,14 +6816,14 @@ border-radius: 4px;
    <widget class="Line" name="line_3">
     <property name="geometry">
      <rect>
-      <x>515</x>
+      <x>519</x>
       <y>71</y>
       <width>20</width>
       <height>131</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:grey</string>
+     <string notr="true">color:lightgrey</string>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Plain</enum>
@@ -6835,7 +6835,7 @@ border-radius: 4px;
    <widget class="QGroupBox" name="filters">
     <property name="geometry">
      <rect>
-      <x>537</x>
+      <x>535</x>
       <y>55</y>
       <width>331</width>
       <height>161</height>
@@ -6923,7 +6923,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>250</x>
-        <y>0</y>
+        <y>6</y>
         <width>41</width>
         <height>51</height>
        </rect>
@@ -6963,7 +6963,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>35</x>
-        <y>0</y>
+        <y>6</y>
         <width>51</width>
         <height>51</height>
        </rect>
@@ -7000,7 +7000,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>15</x>
-        <y>5</y>
+        <y>11</y>
         <width>16</width>
         <height>41</height>
        </rect>
@@ -7030,7 +7030,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>295</x>
-        <y>5</y>
+        <y>11</y>
         <width>31</width>
         <height>41</height>
        </rect>
@@ -7067,7 +7067,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>90</x>
-        <y>10</y>
+        <y>16</y>
         <width>111</width>
         <height>20</height>
        </rect>
@@ -7196,7 +7196,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>205</x>
-        <y>0</y>
+        <y>6</y>
         <width>41</width>
         <height>51</height>
        </rect>
@@ -7233,7 +7233,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>41</y>
+        <y>47</y>
         <width>16</width>
         <height>16</height>
        </rect>
@@ -7281,7 +7281,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>157</x>
-        <y>33</y>
+        <y>39</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -7318,7 +7318,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>117</x>
-        <y>38</y>
+        <y>44</y>
         <width>41</width>
         <height>21</height>
        </rect>
@@ -7889,14 +7889,14 @@ border-radius: 4px;
    <widget class="Line" name="line_4">
     <property name="geometry">
      <rect>
-      <x>872</x>
+      <x>870</x>
       <y>73</y>
       <width>20</width>
       <height>211</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:grey</string>
+     <string notr="true">color:lightgrey</string>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Plain</enum>
@@ -8784,7 +8784,7 @@ border-radius: 4px;
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:grey</string>
+      <string notr="true">color:lightgrey</string>
      </property>
      <property name="frameShadow">
       <enum>QFrame::Plain</enum>
@@ -9158,7 +9158,7 @@ border-radius: 4px;
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:grey</string>
+      <string notr="true">color:lightgrey</string>
      </property>
      <property name="frameShadow">
       <enum>QFrame::Plain</enum>
@@ -9216,7 +9216,7 @@ border-radius: 4px;
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>311</y>
+      <y>318</y>
       <width>171</width>
       <height>51</height>
      </rect>
@@ -9272,9 +9272,9 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>9</y>
+       <y>-1</y>
        <width>21</width>
-       <height>31</height>
+       <height>51</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -9382,9 +9382,9 @@ width: 2px;
      <property name="geometry">
       <rect>
        <x>4</x>
-       <y>14</y>
+       <y>0</y>
        <width>41</width>
-       <height>21</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -9435,9 +9435,9 @@ width: 2px;
     <property name="geometry">
      <rect>
       <x>400</x>
-      <y>415</y>
+      <y>390</y>
       <width>271</width>
-      <height>181</height>
+      <height>201</height>
      </rect>
     </property>
     <property name="title">
@@ -9447,7 +9447,7 @@ width: 2px;
      <property name="geometry">
       <rect>
        <x>80</x>
-       <y>120</y>
+       <y>175</y>
        <width>41</width>
        <height>21</height>
       </rect>
@@ -9474,7 +9474,7 @@ width: 2px;
      <property name="geometry">
       <rect>
        <x>120</x>
-       <y>81</y>
+       <y>99</y>
        <width>41</width>
        <height>20</height>
       </rect>
@@ -9681,7 +9681,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>124</x>
-       <y>121</y>
+       <y>176</y>
        <width>141</width>
        <height>20</height>
       </rect>
@@ -9895,7 +9895,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>41</x>
-       <y>1</y>
+       <y>22</y>
        <width>41</width>
        <height>21</height>
       </rect>
@@ -9922,7 +9922,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>171</x>
-       <y>35</y>
+       <y>56</y>
        <width>61</width>
        <height>20</height>
       </rect>
@@ -9981,7 +9981,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>90</x>
-       <y>83</y>
+       <y>101</y>
        <width>16</width>
        <height>16</height>
       </rect>
@@ -10029,7 +10029,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>41</x>
-       <y>71</y>
+       <y>89</y>
        <width>41</width>
        <height>41</height>
       </rect>
@@ -10066,7 +10066,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>120</x>
-       <y>35</y>
+       <y>56</y>
        <width>41</width>
        <height>20</height>
       </rect>
@@ -10228,9 +10228,9 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>22</x>
-       <y>0</y>
+       <y>18</y>
        <width>21</width>
-       <height>178</height>
+       <height>191</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -10249,7 +10249,7 @@ width: 2px;
      <property name="geometry">
       <rect>
        <x>9</x>
-       <y>80</y>
+       <y>99</y>
        <width>21</width>
        <height>21</height>
       </rect>
@@ -10279,7 +10279,7 @@ width: 2px;
      <property name="geometry">
       <rect>
        <x>41</x>
-       <y>25</y>
+       <y>46</y>
        <width>41</width>
        <height>41</height>
       </rect>
@@ -10316,7 +10316,7 @@ width: 2px;
      <property name="geometry">
       <rect>
        <x>90</x>
-       <y>37</y>
+       <y>58</y>
        <width>16</width>
        <height>16</height>
       </rect>
@@ -10361,9 +10361,9 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>-6</x>
-       <y>-2</y>
+       <y>14</y>
        <width>41</width>
-       <height>21</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -10550,7 +10550,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>171</x>
-       <y>81</y>
+       <y>99</y>
        <width>61</width>
        <height>20</height>
       </rect>
@@ -10609,7 +10609,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>1</x>
-       <y>136</y>
+       <y>160</y>
        <width>31</width>
        <height>21</height>
       </rect>
@@ -10636,7 +10636,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>171</x>
-       <y>1</y>
+       <y>22</y>
        <width>61</width>
        <height>21</height>
       </rect>
@@ -10663,7 +10663,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>235</x>
-       <y>1</y>
+       <y>22</y>
        <width>31</width>
        <height>21</height>
       </rect>
@@ -10693,7 +10693,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>41</x>
-       <y>125</y>
+       <y>149</y>
        <width>41</width>
        <height>41</height>
       </rect>
@@ -10730,7 +10730,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>83</x>
-       <y>1</y>
+       <y>22</y>
        <width>81</width>
        <height>21</height>
       </rect>
@@ -10757,7 +10757,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>9</x>
-       <y>34</y>
+       <y>56</y>
        <width>21</width>
        <height>21</height>
       </rect>
@@ -10787,7 +10787,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>235</x>
-       <y>25</y>
+       <y>45</y>
        <width>31</width>
        <height>41</height>
       </rect>
@@ -10827,7 +10827,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>235</x>
-       <y>71</y>
+       <y>88</y>
        <width>31</width>
        <height>41</height>
       </rect>
@@ -10963,7 +10963,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>106</x>
-       <y>34</y>
+       <y>56</y>
        <width>16</width>
        <height>21</height>
       </rect>
@@ -10990,7 +10990,7 @@ border-radius: 4px;
      <property name="geometry">
       <rect>
        <x>106</x>
-       <y>80</y>
+       <y>98</y>
        <width>16</width>
        <height>21</height>
       </rect>
@@ -11045,9 +11045,9 @@ border-radius: 4px;
     <property name="geometry">
      <rect>
       <x>690</x>
-      <y>348</y>
+      <y>294</y>
       <width>317</width>
-      <height>246</height>
+      <height>261</height>
      </rect>
     </property>
     <property name="font">
@@ -11057,7 +11057,7 @@ border-radius: 4px;
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #efefef</string>
+     <string notr="true">background-color: #efefef;</string>
     </property>
     <property name="currentIndex">
      <number>0</number>
@@ -11073,9 +11073,9 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>1</x>
-        <y>40</y>
+        <y>50</y>
         <width>311</width>
-        <height>175</height>
+        <height>181</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -11102,7 +11102,7 @@ border-radius: 4px;
          <x>0</x>
          <y>0</y>
          <width>311</width>
-         <height>125</height>
+         <height>131</height>
         </rect>
        </property>
        <attribute name="label">
@@ -11395,7 +11395,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>57</x>
-          <y>58</y>
+          <y>62</y>
           <width>51</width>
           <height>51</height>
          </rect>
@@ -11435,7 +11435,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>57</x>
-          <y>108</y>
+          <y>112</y>
           <width>51</width>
           <height>16</height>
          </rect>
@@ -11465,7 +11465,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>130</x>
-          <y>58</y>
+          <y>62</y>
           <width>51</width>
           <height>51</height>
          </rect>
@@ -11508,7 +11508,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>203</x>
-          <y>58</y>
+          <y>62</y>
           <width>51</width>
           <height>51</height>
          </rect>
@@ -11548,7 +11548,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>130</x>
-          <y>108</y>
+          <y>112</y>
           <width>51</width>
           <height>16</height>
          </rect>
@@ -11575,7 +11575,7 @@ border-radius: 4px;
         <property name="geometry">
          <rect>
           <x>203</x>
-          <y>108</y>
+          <y>112</y>
           <width>51</width>
           <height>16</height>
          </rect>
@@ -11604,8 +11604,8 @@ border-radius: 4px;
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>100</width>
-         <height>30</height>
+         <width>311</width>
+         <height>131</height>
         </rect>
        </property>
        <attribute name="label">
@@ -11617,10 +11617,10 @@ border-radius: 4px;
         </property>
         <property name="geometry">
          <rect>
-          <x>17</x>
-          <y>20</y>
-          <width>61</width>
-          <height>61</height>
+          <x>12</x>
+          <y>-7</y>
+          <width>71</width>
+          <height>71</height>
          </rect>
         </property>
         <property name="toolTip">
@@ -11657,9 +11657,9 @@ border-radius: 4px;
        <widget class="QLabel" name="label_fx2_param_a">
         <property name="geometry">
          <rect>
-          <x>17</x>
-          <y>80</y>
-          <width>61</width>
+          <x>12</x>
+          <y>63</y>
+          <width>71</width>
           <height>21</height>
          </rect>
         </property>
@@ -11687,10 +11687,10 @@ border-radius: 4px;
         </property>
         <property name="geometry">
          <rect>
-          <x>89</x>
-          <y>20</y>
-          <width>61</width>
-          <height>61</height>
+          <x>80</x>
+          <y>39</y>
+          <width>71</width>
+          <height>71</height>
          </rect>
         </property>
         <property name="toolTip">
@@ -11727,9 +11727,9 @@ border-radius: 4px;
        <widget class="QLabel" name="label_fx2_param_b">
         <property name="geometry">
          <rect>
-          <x>89</x>
-          <y>80</y>
-          <width>61</width>
+          <x>80</x>
+          <y>109</y>
+          <width>71</width>
           <height>21</height>
          </rect>
         </property>
@@ -11757,10 +11757,10 @@ border-radius: 4px;
         </property>
         <property name="geometry">
          <rect>
-          <x>161</x>
-          <y>20</y>
-          <width>61</width>
-          <height>61</height>
+          <x>160</x>
+          <y>39</y>
+          <width>71</width>
+          <height>71</height>
          </rect>
         </property>
         <property name="toolTip">
@@ -11797,9 +11797,9 @@ border-radius: 4px;
        <widget class="QLabel" name="label_fx2_param_c">
         <property name="geometry">
          <rect>
-          <x>161</x>
-          <y>80</y>
-          <width>61</width>
+          <x>160</x>
+          <y>109</y>
+          <width>71</width>
           <height>21</height>
          </rect>
         </property>
@@ -11827,10 +11827,10 @@ border-radius: 4px;
         </property>
         <property name="geometry">
          <rect>
-          <x>233</x>
-          <y>20</y>
-          <width>61</width>
-          <height>61</height>
+          <x>228</x>
+          <y>-7</y>
+          <width>71</width>
+          <height>71</height>
          </rect>
         </property>
         <property name="toolTip">
@@ -11867,9 +11867,9 @@ border-radius: 4px;
        <widget class="QLabel" name="label_fx2_param_d">
         <property name="geometry">
          <rect>
-          <x>233</x>
-          <y>80</y>
-          <width>61</width>
+          <x>228</x>
+          <y>63</y>
+          <width>71</width>
           <height>21</height>
          </rect>
         </property>
@@ -11897,7 +11897,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>10</y>
+        <y>14</y>
         <width>101</width>
         <height>20</height>
        </rect>
@@ -11969,7 +11969,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>202</x>
-        <y>10</y>
+        <y>14</y>
         <width>101</width>
         <height>20</height>
        </rect>
@@ -12041,7 +12041,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>175</x>
-        <y>10</y>
+        <y>14</y>
         <width>21</width>
         <height>21</height>
        </rect>
@@ -12071,7 +12071,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>136</x>
-        <y>0</y>
+        <y>4</y>
         <width>41</width>
         <height>41</height>
        </rect>
@@ -12114,7 +12114,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>118</x>
-        <y>10</y>
+        <y>14</y>
         <width>21</width>
         <height>21</height>
        </rect>
@@ -12146,7 +12146,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>13</y>
+        <y>17</y>
         <width>50</width>
         <height>51</height>
        </rect>
@@ -12165,7 +12165,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>13</y>
+        <y>17</y>
         <width>41</width>
         <height>51</height>
        </rect>
@@ -12184,7 +12184,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>23</y>
+        <y>27</y>
         <width>21</width>
         <height>31</height>
        </rect>
@@ -12211,7 +12211,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>17</y>
+        <y>21</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -12438,7 +12438,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>118</x>
-        <y>39</y>
+        <y>43</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -12875,7 +12875,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>90</x>
-        <y>29</y>
+        <y>33</y>
         <width>16</width>
         <height>21</height>
        </rect>
@@ -12894,7 +12894,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>99</x>
-        <y>39</y>
+        <y>43</y>
         <width>21</width>
         <height>20</height>
        </rect>
@@ -12913,7 +12913,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>-2</y>
+        <y>0</y>
         <width>51</width>
         <height>21</height>
        </rect>
@@ -12940,7 +12940,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>-2</y>
+        <y>0</y>
         <width>41</width>
         <height>21</height>
        </rect>
@@ -12967,7 +12967,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>74</y>
+        <y>80</y>
         <width>21</width>
         <height>31</height>
        </rect>
@@ -12994,7 +12994,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>99</x>
-        <y>90</y>
+        <y>96</y>
         <width>21</width>
         <height>20</height>
        </rect>
@@ -13013,7 +13013,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>90</x>
-        <y>80</y>
+        <y>86</y>
         <width>16</width>
         <height>21</height>
        </rect>
@@ -13032,7 +13032,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>118</x>
-        <y>90</y>
+        <y>96</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -13469,7 +13469,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>68</y>
+        <y>74</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -13696,7 +13696,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>64</y>
+        <y>70</y>
         <width>50</width>
         <height>51</height>
        </rect>
@@ -13715,7 +13715,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>64</y>
+        <y>70</y>
         <width>41</width>
         <height>51</height>
        </rect>
@@ -13734,7 +13734,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>125</y>
+        <y>133</y>
         <width>21</width>
         <height>31</height>
        </rect>
@@ -13761,7 +13761,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>99</x>
-        <y>141</y>
+        <y>149</y>
         <width>21</width>
         <height>20</height>
        </rect>
@@ -13780,7 +13780,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>90</x>
-        <y>131</y>
+        <y>139</y>
         <width>16</width>
         <height>21</height>
        </rect>
@@ -13799,7 +13799,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>118</x>
-        <y>141</y>
+        <y>149</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -14236,7 +14236,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>119</y>
+        <y>127</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -14463,7 +14463,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>115</y>
+        <y>123</y>
         <width>50</width>
         <height>51</height>
        </rect>
@@ -14482,7 +14482,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>115</y>
+        <y>123</y>
         <width>41</width>
         <height>51</height>
        </rect>
@@ -14501,7 +14501,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>166</y>
+        <y>176</y>
         <width>41</width>
         <height>51</height>
        </rect>
@@ -14520,7 +14520,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>90</x>
-        <y>182</y>
+        <y>192</y>
         <width>16</width>
         <height>21</height>
        </rect>
@@ -14539,7 +14539,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>118</x>
-        <y>192</y>
+        <y>202</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -14976,7 +14976,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>176</y>
+        <y>186</y>
         <width>21</width>
         <height>31</height>
        </rect>
@@ -15003,7 +15003,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>99</x>
-        <y>192</y>
+        <y>202</y>
         <width>21</width>
         <height>20</height>
        </rect>
@@ -15022,7 +15022,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>166</y>
+        <y>176</y>
         <width>50</width>
         <height>51</height>
        </rect>
@@ -15041,7 +15041,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>170</y>
+        <y>180</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -15303,7 +15303,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>64</y>
+        <y>70</y>
         <width>50</width>
         <height>51</height>
        </rect>
@@ -15322,7 +15322,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>23</y>
+        <y>27</y>
         <width>21</width>
         <height>31</height>
        </rect>
@@ -15349,7 +15349,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>99</x>
-        <y>90</y>
+        <y>96</y>
         <width>21</width>
         <height>20</height>
        </rect>
@@ -15368,7 +15368,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>90</x>
-        <y>80</y>
+        <y>86</y>
         <width>16</width>
         <height>21</height>
        </rect>
@@ -15387,7 +15387,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>119</y>
+        <y>127</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -15614,7 +15614,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>176</y>
+        <y>186</y>
         <width>21</width>
         <height>31</height>
        </rect>
@@ -15641,7 +15641,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>99</x>
-        <y>141</y>
+        <y>149</y>
         <width>21</width>
         <height>20</height>
        </rect>
@@ -15660,7 +15660,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>166</y>
+        <y>176</y>
         <width>41</width>
         <height>51</height>
        </rect>
@@ -15679,7 +15679,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>118</x>
-        <y>141</y>
+        <y>149</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -16116,7 +16116,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>118</x>
-        <y>192</y>
+        <y>202</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -16553,7 +16553,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>118</x>
-        <y>39</y>
+        <y>43</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -16990,7 +16990,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>125</y>
+        <y>133</y>
         <width>21</width>
         <height>31</height>
        </rect>
@@ -17017,7 +17017,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>13</y>
+        <y>17</y>
         <width>41</width>
         <height>51</height>
        </rect>
@@ -17036,7 +17036,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>90</x>
-        <y>29</y>
+        <y>33</y>
         <width>16</width>
         <height>21</height>
        </rect>
@@ -17055,7 +17055,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>99</x>
-        <y>192</y>
+        <y>202</y>
         <width>21</width>
         <height>20</height>
        </rect>
@@ -17074,7 +17074,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>170</y>
+        <y>180</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -17301,7 +17301,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>90</x>
-        <y>182</y>
+        <y>192</y>
         <width>16</width>
         <height>21</height>
        </rect>
@@ -17320,7 +17320,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>166</y>
+        <y>176</y>
         <width>50</width>
         <height>51</height>
        </rect>
@@ -17339,7 +17339,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>115</y>
+        <y>123</y>
         <width>50</width>
         <height>51</height>
        </rect>
@@ -17358,7 +17358,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>13</y>
+        <y>17</y>
         <width>50</width>
         <height>51</height>
        </rect>
@@ -17377,7 +17377,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>90</x>
-        <y>131</y>
+        <y>139</y>
         <width>16</width>
         <height>21</height>
        </rect>
@@ -17396,7 +17396,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>115</y>
+        <y>123</y>
         <width>41</width>
         <height>51</height>
        </rect>
@@ -17415,7 +17415,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>74</y>
+        <y>80</y>
         <width>21</width>
         <height>31</height>
        </rect>
@@ -17442,7 +17442,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>17</y>
+        <y>21</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -17669,7 +17669,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>118</x>
-        <y>90</y>
+        <y>96</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -18106,7 +18106,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>-2</y>
+        <y>0</y>
         <width>51</width>
         <height>21</height>
        </rect>
@@ -18133,7 +18133,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>68</y>
+        <y>74</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -18360,7 +18360,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>99</x>
-        <y>39</y>
+        <y>43</y>
         <width>21</width>
         <height>20</height>
        </rect>
@@ -18379,7 +18379,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>-2</y>
+        <y>0</y>
         <width>41</width>
         <height>21</height>
        </rect>
@@ -18406,7 +18406,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>64</y>
+        <y>70</y>
         <width>41</width>
         <height>51</height>
        </rect>
@@ -18460,7 +18460,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>68</y>
+        <y>74</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -18687,7 +18687,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>115</y>
+        <y>123</y>
         <width>41</width>
         <height>51</height>
        </rect>
@@ -18706,7 +18706,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>118</x>
-        <y>192</y>
+        <y>202</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -19143,7 +19143,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>99</x>
-        <y>39</y>
+        <y>43</y>
         <width>21</width>
         <height>20</height>
        </rect>
@@ -19162,7 +19162,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>-2</y>
+        <y>0</y>
         <width>41</width>
         <height>21</height>
        </rect>
@@ -19189,7 +19189,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>90</x>
-        <y>29</y>
+        <y>33</y>
         <width>16</width>
         <height>21</height>
        </rect>
@@ -19208,7 +19208,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>13</y>
+        <y>17</y>
         <width>41</width>
         <height>51</height>
        </rect>
@@ -19227,7 +19227,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>170</y>
+        <y>180</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -19454,7 +19454,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>17</y>
+        <y>21</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -19681,7 +19681,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>23</y>
+        <y>27</y>
         <width>21</width>
         <height>31</height>
        </rect>
@@ -19708,7 +19708,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>125</y>
+        <y>133</y>
         <width>21</width>
         <height>31</height>
        </rect>
@@ -19735,7 +19735,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>13</y>
+        <y>17</y>
         <width>50</width>
         <height>51</height>
        </rect>
@@ -19754,7 +19754,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>119</y>
+        <y>127</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -19981,7 +19981,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>64</y>
+        <y>70</y>
         <width>50</width>
         <height>51</height>
        </rect>
@@ -20000,7 +20000,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>90</x>
-        <y>80</y>
+        <y>86</y>
         <width>16</width>
         <height>21</height>
        </rect>
@@ -20019,7 +20019,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>115</y>
+        <y>123</y>
         <width>50</width>
         <height>51</height>
        </rect>
@@ -20038,7 +20038,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>-2</y>
+        <y>0</y>
         <width>51</width>
         <height>21</height>
        </rect>
@@ -20065,7 +20065,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>64</y>
+        <y>70</y>
         <width>41</width>
         <height>51</height>
        </rect>
@@ -20084,7 +20084,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>99</x>
-        <y>192</y>
+        <y>202</y>
         <width>21</width>
         <height>20</height>
        </rect>
@@ -20103,7 +20103,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>118</x>
-        <y>141</y>
+        <y>149</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -20540,7 +20540,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>99</x>
-        <y>90</y>
+        <y>96</y>
         <width>21</width>
         <height>20</height>
        </rect>
@@ -20559,7 +20559,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>166</y>
+        <y>176</y>
         <width>50</width>
         <height>51</height>
        </rect>
@@ -20578,7 +20578,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>90</x>
-        <y>131</y>
+        <y>139</y>
         <width>16</width>
         <height>21</height>
        </rect>
@@ -20597,7 +20597,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>118</x>
-        <y>39</y>
+        <y>43</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -21034,7 +21034,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>74</y>
+        <y>80</y>
         <width>21</width>
         <height>31</height>
        </rect>
@@ -21061,7 +21061,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>166</y>
+        <y>176</y>
         <width>41</width>
         <height>51</height>
        </rect>
@@ -21080,7 +21080,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>99</x>
-        <y>141</y>
+        <y>149</y>
         <width>21</width>
         <height>20</height>
        </rect>
@@ -21099,7 +21099,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>176</y>
+        <y>186</y>
         <width>21</width>
         <height>31</height>
        </rect>
@@ -21126,7 +21126,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>90</x>
-        <y>182</y>
+        <y>192</y>
         <width>16</width>
         <height>21</height>
        </rect>
@@ -21145,7 +21145,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>118</x>
-        <y>90</y>
+        <y>96</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -21617,7 +21617,7 @@ border-radius: 4px;
       <property name="geometry">
        <rect>
         <x>3</x>
-        <y>39</y>
+        <y>50</y>
         <width>311</width>
         <height>181</height>
        </rect>
@@ -22767,7 +22767,7 @@ QSlider {
       <property name="geometry">
        <rect>
         <x>138</x>
-        <y>28</y>
+        <y>34</y>
         <width>61</width>
         <height>20</height>
        </rect>
@@ -22854,7 +22854,7 @@ QSlider {
       <property name="geometry">
        <rect>
         <x>83</x>
-        <y>27</y>
+        <y>33</y>
         <width>51</width>
         <height>21</height>
        </rect>
@@ -22881,7 +22881,7 @@ QSlider {
       <property name="geometry">
        <rect>
         <x>204</x>
-        <y>27</y>
+        <y>33</y>
         <width>51</width>
         <height>21</height>
        </rect>
@@ -22908,7 +22908,7 @@ QSlider {
       <property name="geometry">
        <rect>
         <x>254</x>
-        <y>28</y>
+        <y>34</y>
         <width>24</width>
         <height>20</height>
        </rect>
@@ -22955,7 +22955,7 @@ QSlider {
       <property name="geometry">
        <rect>
         <x>137</x>
-        <y>4</y>
+        <y>8</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -23172,7 +23172,7 @@ QSlider {
       <property name="geometry">
        <rect>
         <x>34</x>
-        <y>3</y>
+        <y>7</y>
         <width>101</width>
         <height>21</height>
        </rect>
@@ -23200,9 +23200,9 @@ QSlider {
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>660</x>
-      <y>227</y>
-      <width>211</width>
+      <x>220</x>
+      <y>317</y>
+      <width>241</width>
       <height>91</height>
      </rect>
     </property>
@@ -23221,7 +23221,7 @@ QSlider {
      </property>
      <property name="geometry">
       <rect>
-       <x>160</x>
+       <x>174</x>
        <y>14</y>
        <width>61</width>
        <height>51</height>
@@ -23258,7 +23258,7 @@ QSlider {
     <widget class="QLabel" name="label_effects">
      <property name="geometry">
       <rect>
-       <x>103</x>
+       <x>109</x>
        <y>-3</y>
        <width>61</width>
        <height>21</height>
@@ -23325,7 +23325,7 @@ QSlider {
     <widget class="QLabel" name="label_fx_mix_dry">
      <property name="geometry">
       <rect>
-       <x>137</x>
+       <x>146</x>
        <y>50</y>
        <width>21</width>
        <height>21</height>
@@ -23352,7 +23352,7 @@ QSlider {
     <widget class="QLabel" name="label_output_level">
      <property name="geometry">
       <rect>
-       <x>170</x>
+       <x>184</x>
        <y>-3</y>
        <width>41</width>
        <height>21</height>
@@ -23382,7 +23382,7 @@ QSlider {
      </property>
      <property name="geometry">
       <rect>
-       <x>113</x>
+       <x>119</x>
        <y>14</y>
        <width>41</width>
        <height>41</height>
@@ -23491,7 +23491,7 @@ QSlider {
     <widget class="QLabel" name="label_fx_mix_wet">
      <property name="geometry">
       <rect>
-       <x>109</x>
+       <x>112</x>
        <y>50</y>
        <width>21</width>
        <height>21</height>
@@ -23546,7 +23546,7 @@ QSlider {
      <property name="geometry">
       <rect>
        <x>-1</x>
-       <y>21</y>
+       <y>0</y>
        <width>31</width>
        <height>31</height>
       </rect>
@@ -23594,9 +23594,9 @@ width: 2px;
    <widget class="QGroupBox" name="knob_assign">
     <property name="geometry">
      <rect>
-      <x>822</x>
-      <y>300</y>
-      <width>161</width>
+      <x>687</x>
+      <y>240</y>
+      <width>171</width>
       <height>41</height>
      </rect>
     </property>
@@ -23612,8 +23612,8 @@ width: 2px;
     <widget class="QLabel" name="label_knob_z">
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>20</y>
+       <x>143</x>
+       <y>22</y>
        <width>21</width>
        <height>21</height>
       </rect>
@@ -23640,7 +23640,7 @@ width: 2px;
     <widget class="QComboBox" name="knob_x_param">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>74</x>
        <y>1</y>
        <width>21</width>
        <height>20</height>
@@ -24491,8 +24491,8 @@ border-radius:10px;
     <widget class="QLabel" name="label_knob_x">
      <property name="geometry">
       <rect>
-       <x>70</x>
-       <y>20</y>
+       <x>74</x>
+       <y>22</y>
        <width>21</width>
        <height>21</height>
       </rect>
@@ -24519,7 +24519,7 @@ border-radius:10px;
     <widget class="QComboBox" name="knob_z_param">
      <property name="geometry">
       <rect>
-       <x>130</x>
+       <x>143</x>
        <y>0</y>
        <width>21</width>
        <height>20</height>
@@ -25371,7 +25371,7 @@ border-radius:10px;
     <widget class="QComboBox" name="knob_y_param">
      <property name="geometry">
       <rect>
-       <x>100</x>
+       <x>110</x>
        <y>0</y>
        <width>21</width>
        <height>20</height>
@@ -26223,8 +26223,8 @@ border-radius:10px;
     <widget class="QLabel" name="label_knob_y">
      <property name="geometry">
       <rect>
-       <x>100</x>
-       <y>20</y>
+       <x>110</x>
+       <y>22</y>
        <width>21</width>
        <height>21</height>
       </rect>
@@ -26251,8 +26251,8 @@ border-radius:10px;
     <widget class="QLabel" name="label_assign_knob">
      <property name="geometry">
       <rect>
-       <x>3</x>
-       <y>8</y>
+       <x>0</x>
+       <y>0</y>
        <width>61</width>
        <height>21</height>
       </rect>
@@ -26282,13 +26282,13 @@ border-radius:10px;
      <property name="geometry">
       <rect>
        <x>50</x>
-       <y>4</y>
+       <y>-6</y>
        <width>21</width>
-       <height>31</height>
+       <height>51</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: red</string>
+      <string notr="true">color:red</string>
      </property>
      <property name="frameShadow">
       <enum>QFrame::Plain</enum>
@@ -26325,14 +26325,14 @@ border-radius:10px;
    <widget class="Line" name="line">
     <property name="geometry">
      <rect>
-      <x>304</x>
+      <x>308</x>
       <y>70</y>
       <width>21</width>
       <height>201</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:grey</string>
+     <string notr="true">color:lightgrey</string>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Plain</enum>
@@ -26341,576 +26341,15 @@ border-radius:10px;
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="QGroupBox" name="arp_group">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>308</y>
-      <width>281</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string/>
-    </property>
-    <widget class="QComboBox" name="arp_note_order">
-     <property name="geometry">
-      <rect>
-       <x>92</x>
-       <y>50</y>
-       <width>61</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans Mono</family>
-       <pointsize>8</pointsize>
-      </font>
-     </property>
-     <property name="acceptDrops">
-      <bool>false</bool>
-     </property>
-     <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync type&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-     <property name="currentIndex">
-      <number>0</number>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>8</width>
-       <height>16</height>
-      </size>
-     </property>
-     <property name="duplicatesEnabled">
-      <bool>false</bool>
-     </property>
-     <property name="frame">
-      <bool>false</bool>
-     </property>
-     <item>
-      <property name="text">
-       <string>forward</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>reverse</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>trigger</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>r-n-r in</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>r-n-r x</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>oct jump</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QLabel" name="label_arp">
-     <property name="geometry">
-      <rect>
-       <x>110</x>
-       <y>80</y>
-       <width>41</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans</family>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: red</string>
-     </property>
-     <property name="text">
-      <string>arp</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_arp_tempo_mult">
-     <property name="geometry">
-      <rect>
-       <x>232</x>
-       <y>50</y>
-       <width>16</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans</family>
-       <pointsize>10</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"/>
-     </property>
-     <property name="text">
-      <string>x</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_arp_octave">
-     <property name="geometry">
-      <rect>
-       <x>166</x>
-       <y>-3</y>
-       <width>41</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans</family>
-       <pointsize>8</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"/>
-     </property>
-     <property name="text">
-      <string>octave</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="arp_mode">
-     <property name="geometry">
-      <rect>
-       <x>1</x>
-       <y>18</y>
-       <width>44</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans Mono</family>
-       <pointsize>8</pointsize>
-      </font>
-     </property>
-     <property name="acceptDrops">
-      <bool>false</bool>
-     </property>
-     <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync type&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-     <property name="currentIndex">
-      <number>0</number>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>8</width>
-       <height>16</height>
-      </size>
-     </property>
-     <property name="duplicatesEnabled">
-      <bool>false</bool>
-     </property>
-     <property name="frame">
-      <bool>false</bool>
-     </property>
-     <item>
-      <property name="text">
-       <string>on</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>off</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>latch</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QLabel" name="label_arp_tempo">
-     <property name="geometry">
-      <rect>
-       <x>222</x>
-       <y>-3</y>
-       <width>58</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans</family>
-       <pointsize>8</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"/>
-     </property>
-     <property name="text">
-      <string>tempo</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-     <property name="wordWrap">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QDial" name="arp_pattern">
-     <property name="geometry">
-      <rect>
-       <x>101</x>
-       <y>5</y>
-       <width>51</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color:lightgrey</string>
-     </property>
-     <property name="minimum">
-      <number>0</number>
-     </property>
-     <property name="maximum">
-      <number>31</number>
-     </property>
-     <property name="pageStep">
-      <number>1</number>
-     </property>
-     <property name="notchTarget">
-      <double>1.000000000000000</double>
-     </property>
-     <property name="notchesVisible">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="arp_tempo_mult">
-     <property name="geometry">
-      <rect>
-       <x>246</x>
-       <y>50</y>
-       <width>31</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans Mono</family>
-       <pointsize>8</pointsize>
-      </font>
-     </property>
-     <property name="acceptDrops">
-      <bool>false</bool>
-     </property>
-     <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-     <property name="currentIndex">
-      <number>0</number>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>8</width>
-       <height>16</height>
-      </size>
-     </property>
-     <property name="duplicatesEnabled">
-      <bool>false</bool>
-     </property>
-     <property name="frame">
-      <bool>false</bool>
-     </property>
-     <item>
-      <property name="text">
-       <string>1/4</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1/3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1/2</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>2</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>4</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QDial" name="arp_length">
-     <property name="geometry">
-      <rect>
-       <x>49</x>
-       <y>35</y>
-       <width>31</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color:lightgrey</string>
-     </property>
-     <property name="minimum">
-      <number>2</number>
-     </property>
-     <property name="maximum">
-      <number>16</number>
-     </property>
-     <property name="pageStep">
-      <number>1</number>
-     </property>
-     <property name="notchTarget">
-      <double>1.000000000000000</double>
-     </property>
-     <property name="notchesVisible">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_arp_length">
-     <property name="geometry">
-      <rect>
-       <x>9</x>
-       <y>45</y>
-       <width>41</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans</family>
-       <pointsize>8</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"/>
-     </property>
-     <property name="text">
-      <string>length</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="Line" name="line_10">
-     <property name="geometry">
-      <rect>
-       <x>2</x>
-       <y>67</y>
-       <width>281</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color:red</string>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Plain</enum>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_arp_pattern">
-     <property name="geometry">
-      <rect>
-       <x>52</x>
-       <y>15</y>
-       <width>51</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans</family>
-       <pointsize>8</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"/>
-     </property>
-     <property name="text">
-      <string>pattern</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="arp_octave_span">
-     <property name="geometry">
-      <rect>
-       <x>162</x>
-       <y>50</y>
-       <width>51</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans Mono</family>
-       <pointsize>8</pointsize>
-      </font>
-     </property>
-     <property name="acceptDrops">
-      <bool>false</bool>
-     </property>
-     <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync type&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-     <property name="currentIndex">
-      <number>0</number>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>8</width>
-       <height>16</height>
-      </size>
-     </property>
-     <property name="duplicatesEnabled">
-      <bool>false</bool>
-     </property>
-     <property name="frame">
-      <bool>false</bool>
-     </property>
-     <item>
-      <property name="text">
-       <string>up</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>centered</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>down</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QDial" name="arp_octave_range">
-     <property name="geometry">
-      <rect>
-       <x>166</x>
-       <y>15</y>
-       <width>41</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color:lightgrey</string>
-     </property>
-     <property name="minimum">
-      <number>0</number>
-     </property>
-     <property name="maximum">
-      <number>4</number>
-     </property>
-     <property name="pageStep">
-      <number>1</number>
-     </property>
-     <property name="wrapping">
-      <bool>false</bool>
-     </property>
-     <property name="notchTarget">
-      <double>1.000000000000000</double>
-     </property>
-     <property name="notchesVisible">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QDial" name="arp_tempo">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>216</x>
-       <y>11</y>
-       <width>41</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="toolTip">
-      <string/>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color:lightgrey</string>
-     </property>
-     <property name="minimum">
-      <number>500</number>
-     </property>
-     <property name="maximum">
-      <number>2500</number>
-     </property>
-     <property name="singleStep">
-      <number>1</number>
-     </property>
-     <property name="pageStep">
-      <number>10</number>
-     </property>
-     <property name="value">
-      <number>500</number>
-     </property>
-     <property name="notchTarget">
-      <double>1000.000000000000000</double>
-     </property>
-     <property name="notchesVisible">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </widget>
    <widget class="QComboBox" name="ctrl_midi_port">
     <property name="enabled">
      <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
-      <x>516</x>
-      <y>384</y>
-      <width>111</width>
+      <x>550</x>
+      <y>374</y>
+      <width>118</width>
       <height>20</height>
      </rect>
     </property>
@@ -26939,81 +26378,17 @@ border-radius:10px;
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="ctrl_send">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>606</x>
-      <y>358</y>
-      <width>41</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>send</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="ctrl_receive">
     <property name="geometry">
      <rect>
-      <x>516</x>
-      <y>358</y>
-      <width>61</width>
-      <height>22</height>
+      <x>529</x>
+      <y>345</y>
+      <width>64</width>
+      <height>24</height>
      </rect>
     </property>
     <property name="text">
      <string>receive</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="ctrl_auto_send">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>587</x>
-      <y>362</y>
-      <width>16</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string/>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background: #dedede;
-border-style: solid;
-border-color: grey;
-width:8px;
-height: 8px;
-border-width: 1px;
-border-radius: 4px;
-
-</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>8</width>
-      <height>8</height>
-     </size>
-    </property>
-    <property name="checkable">
-     <bool>true</bool>
-    </property>
-    <property name="checked">
-     <bool>false</bool>
-    </property>
-    <property name="autoRepeat">
-     <bool>false</bool>
-    </property>
-    <property name="tristate">
-     <bool>false</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="ctrl_revert">
@@ -27022,16 +26397,16 @@ border-radius: 4px;
     </property>
     <property name="geometry">
      <rect>
-      <x>602</x>
-      <y>215</y>
-      <width>45</width>
-      <height>21</height>
+      <x>947</x>
+      <y>567</y>
+      <width>61</width>
+      <height>24</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>DejaVu Sans</family>
-      <pointsize>9</pointsize>
+      <pointsize>10</pointsize>
      </font>
     </property>
     <property name="text">
@@ -27044,16 +26419,16 @@ border-radius: 4px;
     </property>
     <property name="geometry">
      <rect>
-      <x>559</x>
-      <y>215</y>
-      <width>38</width>
-      <height>21</height>
+      <x>799</x>
+      <y>567</y>
+      <width>51</width>
+      <height>24</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>DejaVu Sans</family>
-      <pointsize>9</pointsize>
+      <pointsize>10</pointsize>
      </font>
     </property>
     <property name="text">
@@ -27063,40 +26438,285 @@ border-radius: 4px;
    <widget class="QPushButton" name="ctrl_open">
     <property name="geometry">
      <rect>
-      <x>516</x>
-      <y>215</y>
-      <width>38</width>
+      <x>730</x>
+      <y>567</y>
+      <width>61</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>DejaVu Sans</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>open...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ctrl_midi_update">
+    <property name="geometry">
+     <rect>
+      <x>529</x>
+      <y>376</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#555</string>
+    </property>
+    <property name="text">
+     <string>↻</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_pre_mix_osc_2">
+    <property name="geometry">
+     <rect>
+      <x>469</x>
+      <y>346</y>
+      <width>51</width>
       <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>DejaVu Sans</family>
-      <pointsize>9</pointsize>
+      <pointsize>11</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color:red</string>
+    </property>
     <property name="text">
-     <string>open</string>
+     <string>midi</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="ctrl_midi_update">
+   <widget class="QLabel" name="label_pre_mix_osc_3">
     <property name="geometry">
      <rect>
-      <x>631</x>
-      <y>386</y>
-      <width>16</width>
-      <height>16</height>
+      <x>682</x>
+      <y>567</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>DejaVu Sans</family>
+      <pointsize>11</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:red</string>
+    </property>
+    <property name="text">
+     <string>file</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="Line" name="line_10">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>213</y>
+      <width>131</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:lightgrey</string>
+     <string notr="true">color:lightgrey</string>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_37">
+    <property name="geometry">
+     <rect>
+      <x>509</x>
+      <y>346</y>
+      <width>21</width>
+      <height>48</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:red</string>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ctrl_save_as">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>858</x>
+      <y>567</y>
+      <width>81</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>DejaVu Sans</family>
+      <pointsize>10</pointsize>
+     </font>
     </property>
     <property name="text">
+     <string>save as...</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_38">
+    <property name="geometry">
+     <rect>
+      <x>712</x>
+      <y>564</y>
+      <width>21</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:red</string>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>598</x>
+      <y>345</y>
+      <width>71</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+background-color:#cfcfcf; border-radius:4px
+}</string>
+    </property>
+    <property name="title">
      <string/>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <widget class="QCheckBox" name="ctrl_auto_send">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>4</y>
+       <width>16</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: #dedede;
+border-style: solid;
+border-color: grey;
+width:8px;
+height: 8px;
+border-width: 1px;
+border-radius: 4px;
+
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>8</width>
+       <height>8</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <property name="autoRepeat">
+      <bool>false</bool>
+     </property>
+     <property name="tristate">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ctrl_send">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>46</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>send</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="Line" name="line_39">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>290</y>
+      <width>431</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:lightgrey</string>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
     </property>
    </widget>
    <zorder>pop</zorder>
-   <zorder>arp_group</zorder>
    <zorder>side_line_right</zorder>
    <zorder>side_line_left</zorder>
    <zorder>pre_filter_mix</zorder>
@@ -27116,13 +26736,19 @@ border-radius: 4px;
    <zorder>knob_assign</zorder>
    <zorder>line</zorder>
    <zorder>ctrl_midi_port</zorder>
-   <zorder>ctrl_send</zorder>
    <zorder>ctrl_receive</zorder>
-   <zorder>ctrl_auto_send</zorder>
    <zorder>ctrl_revert</zorder>
    <zorder>ctrl_save</zorder>
    <zorder>ctrl_open</zorder>
    <zorder>ctrl_midi_update</zorder>
+   <zorder>label_pre_mix_osc_2</zorder>
+   <zorder>label_pre_mix_osc_3</zorder>
+   <zorder>line_10</zorder>
+   <zorder>line_37</zorder>
+   <zorder>ctrl_save_as</zorder>
+   <zorder>line_38</zorder>
+   <zorder>groupBox_2</zorder>
+   <zorder>line_39</zorder>
   </widget>
  </widget>
  <tabstops>
