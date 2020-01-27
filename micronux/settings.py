@@ -33,7 +33,7 @@ class micron_setting:
             self.label = 'point '+self.type
             self.widget_name = self.widget_name.replace('-','m')
         if self.widget_name == 'fx1_fx2_balance':
-            self.label = 'fx1|fx2  '
+            self.label = ' fx1|fx2  '
         if self.widget_name == 'lfo_1_mod_wheel_1':
             self.label = 'slider'
 
