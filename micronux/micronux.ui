@@ -2411,7 +2411,7 @@ width: 2px;
        <number>0</number>
       </property>
       <property name="notchTarget">
-       <double>100.000000000000000</double>
+       <double>500.000000000000000</double>
       </property>
       <property name="notchesVisible">
        <bool>true</bool>
@@ -3034,7 +3034,7 @@ width: 2px;
        <number>1</number>
       </property>
       <property name="notchTarget">
-       <double>100.000000000000000</double>
+       <double>500.000000000000000</double>
       </property>
       <property name="notchesVisible">
        <bool>true</bool>
@@ -3733,7 +3733,7 @@ width: 2px;
        <number>1</number>
       </property>
       <property name="notchTarget">
-       <double>100.000000000000000</double>
+       <double>500.000000000000000</double>
       </property>
       <property name="notchesVisible">
        <bool>true</bool>
@@ -11924,7 +11924,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="notchTarget">
-       <double>1000.000000000000000</double>
+       <double>50.000000000000000</double>
       </property>
       <property name="notchesVisible">
        <bool>true</bool>
@@ -11980,6 +11980,12 @@ border-radius: 4px;
       <property name="maximum">
        <number>1000</number>
       </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
+      </property>
      </widget>
      <widget class="QDial" name="mod_1_offset">
       <property name="geometry">
@@ -11998,6 +12004,12 @@ border-radius: 4px;
       </property>
       <property name="maximum">
        <number>1000</number>
+      </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="QLabel" name="label_mod_1">
@@ -12350,6 +12362,12 @@ border-radius: 4px;
       <property name="maximum">
        <number>1000</number>
       </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
+      </property>
      </widget>
      <widget class="QDial" name="mod_2_offset">
       <property name="geometry">
@@ -12368,6 +12386,12 @@ border-radius: 4px;
       </property>
       <property name="maximum">
        <number>1000</number>
+      </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="QLabel" name="label_mod_3">
@@ -12527,6 +12551,12 @@ border-radius: 4px;
       <property name="maximum">
        <number>1000</number>
       </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
+      </property>
      </widget>
      <widget class="QDial" name="mod_3_offset">
       <property name="geometry">
@@ -12546,6 +12576,12 @@ border-radius: 4px;
       <property name="maximum">
        <number>1000</number>
       </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
+      </property>
      </widget>
      <widget class="QDial" name="mod_4_offset">
       <property name="geometry">
@@ -12564,6 +12600,12 @@ border-radius: 4px;
       </property>
       <property name="maximum">
        <number>1000</number>
+      </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="Line" name="line_19">
@@ -12685,6 +12727,12 @@ border-radius: 4px;
       </property>
       <property name="maximum">
        <number>1000</number>
+      </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="QComboBox" name="mod_4_source">
@@ -12881,6 +12929,12 @@ border-radius: 4px;
       <property name="maximum">
        <number>1000</number>
       </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
+      </property>
      </widget>
      <widget class="QLabel" name="label_mod_5">
       <property name="geometry">
@@ -13048,6 +13102,12 @@ border-radius: 4px;
       <property name="maximum">
        <number>1000</number>
       </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
+      </property>
      </widget>
      <widget class="QComboBox" name="mod_7_dest">
       <property name="geometry">
@@ -13205,6 +13265,12 @@ border-radius: 4px;
       <property name="maximum">
        <number>1000</number>
       </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
+      </property>
      </widget>
      <widget class="Line" name="line_24">
       <property name="geometry">
@@ -13318,6 +13384,12 @@ border-radius: 4px;
       <property name="maximum">
        <number>1000</number>
       </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
+      </property>
      </widget>
      <widget class="QDial" name="mod_7_level">
       <property name="geometry">
@@ -13337,6 +13409,12 @@ border-radius: 4px;
       <property name="maximum">
        <number>1000</number>
       </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
+      </property>
      </widget>
      <widget class="QDial" name="mod_5_level">
       <property name="geometry">
@@ -13355,6 +13433,12 @@ border-radius: 4px;
       </property>
       <property name="maximum">
        <number>1000</number>
+      </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="Line" name="line_27">
@@ -13393,6 +13477,12 @@ border-radius: 4px;
       </property>
       <property name="maximum">
        <number>1000</number>
+      </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="QLabel" name="label_mod_6">
@@ -13624,6 +13714,12 @@ border-radius: 4px;
       <property name="maximum">
        <number>1000</number>
       </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
+      </property>
      </widget>
      <widget class="QLabel" name="label_9">
       <property name="geometry">
@@ -13725,6 +13821,7 @@ border-radius: 4px;
        <string>➝</string>
       </property>
      </widget>
+     <zorder>label_modB_level</zorder>
      <zorder>line_27</zorder>
      <zorder>line_26</zorder>
      <zorder>line_22</zorder>
@@ -13748,7 +13845,6 @@ border-radius: 4px;
      <zorder>label_mod_6</zorder>
      <zorder>mod_5_source</zorder>
      <zorder>mod_6_dest</zorder>
-     <zorder>label_modB_level</zorder>
      <zorder>mod_6_source</zorder>
      <zorder>line_28</zorder>
      <zorder>label_modB_offset</zorder>
@@ -13818,6 +13914,12 @@ border-radius: 4px;
       </property>
       <property name="maximum">
        <number>1000</number>
+      </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="QComboBox" name="mod_12_dest">
@@ -13939,6 +14041,12 @@ border-radius: 4px;
       </property>
       <property name="maximum">
        <number>1000</number>
+      </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="QComboBox" name="mod_12_source">
@@ -14087,6 +14195,12 @@ border-radius: 4px;
       <property name="maximum">
        <number>1000</number>
       </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
+      </property>
      </widget>
      <widget class="QComboBox" name="mod_11_source">
       <property name="geometry">
@@ -14143,6 +14257,12 @@ border-radius: 4px;
       <property name="maximum">
        <number>1000</number>
       </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
+      </property>
      </widget>
      <widget class="Line" name="line_31">
       <property name="geometry">
@@ -14180,6 +14300,12 @@ border-radius: 4px;
       </property>
       <property name="maximum">
        <number>1000</number>
+      </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="QLabel" name="label_modC_level">
@@ -14226,6 +14352,12 @@ border-radius: 4px;
       </property>
       <property name="maximum">
        <number>1000</number>
+      </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="Line" name="line_32">
@@ -14320,6 +14452,12 @@ border-radius: 4px;
       </property>
       <property name="maximum">
        <number>1000</number>
+      </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="Line" name="line_34">
@@ -14422,6 +14560,12 @@ border-radius: 4px;
       </property>
       <property name="maximum">
        <number>1000</number>
+      </property>
+      <property name="notchTarget">
+       <double>500.000000000000000</double>
+      </property>
+      <property name="notchesVisible">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="Line" name="line_35">
@@ -14626,6 +14770,7 @@ border-radius: 4px;
        <string>➝</string>
       </property>
      </widget>
+     <zorder>label_modC_level</zorder>
      <zorder>line_36</zorder>
      <zorder>line_32</zorder>
      <zorder>line_34</zorder>
@@ -14646,7 +14791,6 @@ border-radius: 4px;
      <zorder>mod_11_source</zorder>
      <zorder>mod_10_level</zorder>
      <zorder>mod_11_level</zorder>
-     <zorder>label_modC_level</zorder>
      <zorder>mod_10_offset</zorder>
      <zorder>mod_11_dest</zorder>
      <zorder>line_33</zorder>
@@ -16198,7 +16342,7 @@ QSlider {
      <property name="geometry">
       <rect>
        <x>146</x>
-       <y>50</y>
+       <y>56</y>
        <width>21</width>
        <height>21</height>
       </rect>
@@ -16255,7 +16399,7 @@ QSlider {
      <property name="geometry">
       <rect>
        <x>119</x>
-       <y>14</y>
+       <y>20</y>
        <width>41</width>
        <height>41</height>
       </rect>
@@ -16282,7 +16426,7 @@ QSlider {
       <number>0</number>
      </property>
      <property name="notchTarget">
-      <double>1000.000000000000000</double>
+      <double>100.000000000000000</double>
      </property>
      <property name="notchesVisible">
       <bool>true</bool>
@@ -16364,7 +16508,7 @@ QSlider {
      <property name="geometry">
       <rect>
        <x>112</x>
-       <y>50</y>
+       <y>56</y>
        <width>21</width>
        <height>21</height>
       </rect>
@@ -19643,8 +19787,8 @@ border-radius: 4px;
  <resources/>
  <connections/>
  <buttongroups>
+  <buttongroup name="osc_1_waveform"/>
   <buttongroup name="osc_2_waveform"/>
   <buttongroup name="osc_3_waveform"/>
-  <buttongroup name="osc_1_waveform"/>
  </buttongroups>
 </ui>
