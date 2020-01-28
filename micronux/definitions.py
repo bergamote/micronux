@@ -87,6 +87,62 @@ lcd_messages = {
     'send_error': ['',':(','not sent'],
 }
 
+general_inputs = [
+    'note-on velocity',
+    'release velocity',
+    'key track',
+    'm1 wheel',
+    'm2 wheel',
+    'pitch wheel',
+    'sustain pedal',
+    'expression pedal',
+    'amp env level',
+    'filter env level',
+    'pitch/mod env level',
+    'lfo 1 sine',
+    'lfo 1 cosine',
+    'lfo 1 triangle',
+    'lfo 1 cos-triangle',
+    'lfo 1 saw',
+    'lfo 1 cos-saw',
+    'lfo 1 square',
+    'lfo 1 cos-square',
+    'lfo 2 sine',
+    'lfo 2 cosine',
+    'lfo 2 triangle',
+    'lfo 2 cos-triangle',
+    'lfo 2 saw',
+    'lfo 2 cos-saw',
+    'lfo 2 square',
+    'lfo 2 cos-square',
+    'voice random',
+    'global random',
+    'portamento level',
+    'portamento effect',
+    'midi channel pressure',
+    'midi poly aftertouch',
+    'key track extreme'
+]
+
+sh_inputs = general_inputs.copy()
+sh_inputs.extend([
+    'tracking generator',
+    'step track'
+])
+
+tracking_inputs = general_inputs.copy()
+tracking_inputs.append(
+    'sh output'
+)
+
+mod_inputs = general_inputs.copy()
+mod_inputs.insert(0, 'none')
+mod_inputs.extend([
+    'sh output',
+    'tracking generator',
+    'step track'
+])
+
 mod_dests = [
     'none',
     'voice pitch',

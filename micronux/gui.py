@@ -199,10 +199,20 @@ class micronux_ui:
                         if connect:
                             widget.currentIndexChanged.connect(self.fx_switch)
 
+                    if w_name == 'sh_input':
+                        if connect:
+                            widget.addItems(df.sh_inputs)
+                    if w_name == 'tracking_input':
+                        if connect:
+                            widget.addItems(df.tracking_inputs)
+                    if w_name.startswith('mod_') and w_name.endswith('_source'):
+                        if connect:
+                            widget.addItems(df.mod_inputs)
                     if w_name.startswith('mod_') and w_name.endswith('_dest'):
                         if connect:
-                            widget.clear()
                             widget.addItems(df.mod_dests)
+
+
                 elif w_type in df.easy_numbers:
                     widget.setValue(allSettings[w_name].normalise_val())
                     if connect:
