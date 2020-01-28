@@ -9382,7 +9382,7 @@ width: 2px;
      <property name="geometry">
       <rect>
        <x>4</x>
-       <y>0</y>
+       <y>-4</y>
        <width>41</width>
        <height>31</height>
       </rect>
@@ -23858,7 +23858,7 @@ QSlider {
      <property name="geometry">
       <rect>
        <x>-1</x>
-       <y>0</y>
+       <y>-3</y>
        <width>31</width>
        <height>31</height>
       </rect>
@@ -23885,7 +23885,7 @@ QSlider {
      <property name="geometry">
       <rect>
        <x>23</x>
-       <y>-5</y>
+       <y>1</y>
        <width>21</width>
        <height>81</height>
       </rect>
@@ -26709,7 +26709,7 @@ border-radius:10px;
     </property>
     <property name="geometry">
      <rect>
-      <x>947</x>
+      <x>790</x>
       <y>567</y>
       <width>61</width>
       <height>24</height>
@@ -26731,7 +26731,7 @@ border-radius:10px;
     </property>
     <property name="geometry">
      <rect>
-      <x>799</x>
+      <x>860</x>
       <y>567</y>
       <width>51</width>
       <height>24</height>
@@ -26752,7 +26752,7 @@ border-radius:10px;
      <rect>
       <x>730</x>
       <y>567</y>
-      <width>61</width>
+      <width>51</width>
       <height>24</height>
      </rect>
     </property>
@@ -26763,7 +26763,7 @@ border-radius:10px;
      </font>
     </property>
     <property name="text">
-     <string>open...</string>
+     <string>open</string>
     </property>
    </widget>
    <widget class="QPushButton" name="ctrl_midi_update">
@@ -26776,7 +26776,7 @@ border-radius:10px;
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:#555</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>↻</string>
@@ -26878,28 +26878,6 @@ border-radius:10px;
     </property>
     <property name="orientation">
      <enum>Qt::Vertical</enum>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="ctrl_save_as">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>858</x>
-      <y>567</y>
-      <width>81</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>DejaVu Sans</family>
-      <pointsize>10</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>save as...</string>
     </property>
    </widget>
    <widget class="Line" name="line_38">
@@ -27057,7 +27035,6 @@ border-radius: 4px;
    <zorder>label_pre_mix_osc_3</zorder>
    <zorder>line_10</zorder>
    <zorder>line_37</zorder>
-   <zorder>ctrl_save_as</zorder>
    <zorder>line_38</zorder>
    <zorder>groupBox_2</zorder>
    <zorder>line_39</zorder>

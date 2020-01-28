@@ -54,7 +54,6 @@ def save_file():
             ui.lcd_message('save_error')
 
 ui.win.ctrl_save.clicked.connect(save_file)
-ui.win.ctrl_save_as.clicked.connect(save_file)
 
 # Receive sysex
 def pass_to_receive():
