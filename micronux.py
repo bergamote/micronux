@@ -44,7 +44,7 @@ ui.win.ctrl_open.clicked.connect(open_file)
 def save_file():
     prog_name = mx.allSettings['name'].value
     fname, _ = gui.QtWidgets.QFileDialog.getSaveFileName(ui.win,
-     'Save file', './programs/'+prog_name+'.txt',"Sysex or Text Files (*.syx *.txt)")
+     'Save file', './programs/'+prog_name+'.txt',".syx or .txt (*.syx *.txt)")
     if fname:
         export = exporter.save_file(fname, mx.settings_list, mx.allSettings)
         if export:
@@ -81,9 +81,13 @@ ui.win.ctrl_receive.clicked.connect(pass_to_receive)
 
 # Send sysex
 def send_sysex():
-    export = exporter.save_file(midi.send_cache, mx.settings_list, mx.allSettings)
-    port = ui.win.ctrl_midi_port.currentText()
-    midi.interface('send', port)
+    cache = exporter.save_file(midi.send_cache, mx.settings_list, mx.allSettings)
+    if cache:
+        port = ui.win.ctrl_midi_port.currentText()
+        if midi.interface('send', port):
+            return True
+        else:
+            ui.lcd_message('send_error')
 
 ui.win.ctrl_send.clicked.connect(send_sysex)
 

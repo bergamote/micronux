@@ -133,17 +133,25 @@ class micronux_ui:
     def update_midi_ports(self):
         self.win.ctrl_midi_port.clear()
         midi_ports = midi.list_midi_ports()
+        enabled_buttons = [
+            self.win.ctrl_receive,
+            self.win.ctrl_send,
+            self.win.ctrl_auto_send
+        ]
         if len(midi_ports):
             for port in midi_ports:
                 self.win.ctrl_midi_port.addItems([port])
-            self.win.ctrl_send.setEnabled(True)
-            self.win.ctrl_auto_send.setEnabled(True)
+            for b in enabled_buttons:
+                b.setEnabled(True)
         else:
             self.win.ctrl_midi_port.addItems(['No MIDI port'])
-            self.win.ctrl_send.setEnabled(False)
-            self.win.ctrl_auto_send.setEnabled(False)
+            self.win.ctrl_midi_port.setEnabled(False)
+            for b in enabled_buttons:
+                b.setEnabled(False)
 
     def map_widgets(self, settings_list, allSettings, connect=False):
+        self.settings_list = settings_list
+        self.allSettings = allSettings
         self.loaded = False
         # Assign values to widgets
         for group in self.button_groups:

@@ -30,10 +30,11 @@ def setting_changed(ui):
         auto_send = ui.win.ctrl_auto_send.isChecked()
         if auto_send and midi.send_ready:
             midi.send_ready = False
-            save_file(midi.send_cache, ui.settings_list, ui.allSettings)
-            port = ui.win.ctrl_midi_port.currentText()
-            if midi.interface('send', port):
-                midi.send_ready = True
+            cache = save_file(midi.send_cache, ui.settings_list, ui.allSettings)
+            if cache:
+                port = ui.win.ctrl_midi_port.currentText()
+                if midi.interface('send', port):
+                    midi.send_ready = True
 
     ui.win.ctrl_revert.setEnabled(True)
 

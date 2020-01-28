@@ -84,7 +84,8 @@ lcd_messages = {
     'open_error': ['',':(','error'],
     'save_success': ['',':)','saved'],
     'save_error': ['',':(','error'],
-    'revert': ['','','reverted']
+    'revert': ['','','reverted'],
+    'send_error': ['',':(','not sent'],
 }
 
 
