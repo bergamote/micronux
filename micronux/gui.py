@@ -211,6 +211,12 @@ class micronux_ui:
                     if w_name.startswith('mod_') and w_name.endswith('_dest'):
                         if connect:
                             widget.addItems(df.mod_dests)
+                    if w_name.startswith('knob_'):
+                        if connect:
+                            if 'x' not in w_name:
+                                x = self.win.knob_x_param
+                                inputs_list = [x.itemText(i) for i in range(x.count())]
+                                widget.addItems(inputs_list)
 
 
                 elif w_type in df.easy_numbers:
