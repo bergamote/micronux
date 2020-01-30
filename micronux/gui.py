@@ -20,11 +20,10 @@ QCoreApplication.setAttribute(Qt.AA_ShareOpenGLContexts)
 class micronux_ui:
     """gui object"""
 
-    def __init__(self, settings_list, allSettings):
+    def __init__(self, allSettings):
         self.app = QtWidgets.QApplication(sys.argv)
         self.app.setStyle('fusion')
 
-        self.settings_list = settings_list
         self.allSettings = allSettings
 
         ui_file = QFile('micronux/micronux.ui')
@@ -155,8 +154,7 @@ class micronux_ui:
             for b in enabled_buttons:
                 b.setEnabled(False)
 
-    def map_widgets(self, settings_list, allSettings, startup=False):
-        self.settings_list = settings_list
+    def map_widgets(self, allSettings, startup=False):
         self.allSettings = allSettings
         self.loaded = False
         # Assign values to widgets
@@ -173,7 +171,7 @@ class micronux_ui:
         for widget in self.app.allWidgets():
             w_name = widget.objectName()
             w_type = type(widget).__name__
-            if w_name in settings_list:
+            if w_name in allSettings:
                 value = allSettings[w_name].value
 
                 if w_type == 'QCheckBox':

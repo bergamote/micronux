@@ -11,13 +11,11 @@ from micronux import gui, terminal, importer, exporter, midi
 
 class mx:
     file_to_load = terminal.startup(sys.argv)
-    a, b = importer.open_file(file_to_load)
-    settings_list = a
-    allSettings = b
+    allSettings = importer.open_file(file_to_load)
 
-ui = gui.micronux_ui(mx.settings_list, mx.allSettings)
+ui = gui.micronux_ui(mx.allSettings)
 
-ui.map_widgets(mx.settings_list, mx.allSettings, startup=True)
+ui.map_widgets(mx.allSettings, startup=True)
 
 ui.win.show()
 ui.lcd_message('startup')
@@ -33,8 +31,8 @@ def open_file():
     if fname:
         setup = importer.open_file(fname)
         if setup:
-            mx.settings_list, mx.allSettings = setup[0], setup[1]
-            ui.map_widgets(mx.settings_list, mx.allSettings)
+            mx.allSettings = setup
+            ui.map_widgets(mx.allSettings)
             exporter.clear_changes(ui)
             ui.lcd_message('open_success')
         else:
@@ -49,7 +47,7 @@ def save_file():
     fname, _ = gui.QtWidgets.QFileDialog.getSaveFileName(ui.win,
      'Save file', './programs/'+prog_name+'.txt',".syx or .txt (*.syx *.txt)")
     if fname:
-        export = exporter.save_file(fname, mx.settings_list, mx.allSettings)
+        export = exporter.save_file(fname, mx.allSettings)
         if export:
             exporter.clear_changes(ui)
             ui.lcd_message('save_success')
@@ -70,8 +68,8 @@ def receive_sysex():
     if midi.interface('receive', port):
         setup = importer.open_file(midi.receive_cache)
         if setup:
-            mx.settings_list, mx.allSettings = setup[0], setup[1]
-            ui.map_widgets(mx.settings_list, mx.allSettings)
+            mx.allSettings = setup
+            ui.map_widgets(mx.allSettings)
             exporter.clear_changes(ui)
             ui.lcd_message('receive_success')
     else:
@@ -83,7 +81,7 @@ ui.win.ctrl_receive.clicked.connect(pass_to_receive)
 
 # Send sysex
 def send_sysex():
-    cache = exporter.save_file(midi.send_cache, mx.settings_list, mx.allSettings)
+    cache = exporter.save_file(midi.send_cache, mx.allSettings)
     if cache:
         port = ui.win.ctrl_midi_port.currentText()
         if midi.interface('send', port):
@@ -96,7 +94,7 @@ ui.win.ctrl_send.clicked.connect(send_sysex)
 
 # Revert changes
 def revert():
-    exporter.revert_changes(ui, mx.settings_list, mx.allSettings)
+    exporter.revert_changes(ui, mx.allSettings)
 
 ui.win.ctrl_revert.clicked.connect(revert)
 
