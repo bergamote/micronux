@@ -18016,7 +18016,7 @@ background-color:#cfcfcf; border-radius:4px
       </rect>
      </property>
      <property name="toolTip">
-      <string/>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;auto-send&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background: #dedede;
