@@ -17,7 +17,7 @@ class mx:
 
 ui = gui.micronux_ui(mx.settings_list, mx.allSettings)
 
-ui.map_widgets(mx.settings_list, mx.allSettings, connect=True)
+ui.map_widgets(mx.settings_list, mx.allSettings, startup=True)
 
 ui.win.show()
 ui.lcd_message('startup')
@@ -25,8 +25,11 @@ ui.lcd_message('startup')
 
 # Open file
 def open_file():
-    fname, _ = gui.QtWidgets.QFileDialog.getOpenFileName(ui.win,
-     'Open file', './programs/',"Sysex or Text Files (*.syx *.txt)")
+    fname, _ = gui.QtWidgets.QFileDialog.getOpenFileName(
+        ui.win,
+        'Open file',
+        './programs/',
+        "Sysex or Text Files (*.syx *.txt)")
     if fname:
         setup = importer.open_file(fname)
         if setup:

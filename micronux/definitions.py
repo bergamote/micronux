@@ -14,14 +14,6 @@ def last_word(word, s='_'):
     lw = word.rsplit(s, 1)[-1]
     return lw
 
-easy_numbers = [
-    'QDial',
-    'QSlider'
-]
-easy_strings = [
-    'QLabel',
-    'QLineEdit'
-]
 waveforms = {
     'sin': 'sine',
     'tri': 'tri/saw',
@@ -91,8 +83,8 @@ general_inputs = [
     'note-on velocity',
     'release velocity',
     'key track',
-    'm1 wheel',
-    'm2 wheel',
+    'm1 slider',
+    'm2 slider',
     'pitch wheel',
     'sustain pedal',
     'expression pedal',

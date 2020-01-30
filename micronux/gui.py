@@ -106,7 +106,8 @@ class micronux_ui:
             cur_widget = self.allSettings[focused.objectName()]
             val, unit = cur_widget.disp_val(value)
             label = cur_widget.label
-            if len(label) == 1:
+            if len(label) == 1 and not label.isdigit():
+
                 # fx params
                 tb = focused.parent()
                 if df.last_word(tb.objectName()) == '2':
@@ -129,6 +130,11 @@ class micronux_ui:
             self.lcdU.setText(msg[type][1])
             self.lcdN.setText(msg[type][2])
 
+    def lcd_clear(self):
+        self.lcdV.setText('')
+        self.lcdU.setText('')
+        self.lcdN.setText('')
+
 
     def update_midi_ports(self):
         self.win.ctrl_midi_port.clear()
@@ -149,7 +155,7 @@ class micronux_ui:
             for b in enabled_buttons:
                 b.setEnabled(False)
 
-    def map_widgets(self, settings_list, allSettings, connect=False):
+    def map_widgets(self, settings_list, allSettings, startup=False):
         self.settings_list = settings_list
         self.allSettings = allSettings
         self.loaded = False
@@ -160,8 +166,9 @@ class micronux_ui:
                 value = allSettings[group.objectName()].value
                 if value.startswith(button_name):
                     button.toggle()
-            if connect:
+            if startup:
                 group.buttonClicked.connect(self.pass_to_exp)
+                group.buttonClicked.connect(self.lcd_clear)
 
         for widget in self.app.allWidgets():
             w_name = widget.objectName()
@@ -174,19 +181,39 @@ class micronux_ui:
                         widget.setChecked(True)
                     elif value in df.chbox['unchecked']:
                         widget.setChecked(False)
-                    if connect:
+                    if startup:
                         widget.stateChanged.connect(self.pass_to_exp)
-
+                        widget.stateChanged.connect(self.lcd_clear)
                 elif w_type == 'QComboBox':
-                    # display better dropdown choices
+                    # Fill in input combo boxes
+                    if w_name == 'sh_input':
+                        if startup:
+                            widget.addItems(df.sh_inputs)
+                    if w_name == 'tracking_input':
+                        if startup:
+                            widget.addItems(df.tracking_inputs)
+                    if w_name.startswith('mod_') and w_name.endswith('_source'):
+                        if startup:
+                            widget.addItems(df.mod_inputs)
+                    if w_name.startswith('mod_') and w_name.endswith('_dest'):
+                        if startup:
+                            widget.addItems(df.mod_dests)
+                    if w_name.startswith('knob_'):
+                        # copy from x knob
+                        if startup:
+                            if 'x' not in w_name:
+                                x = self.win.knob_x_param
+                                inputs_list = [x.itemText(i) for i in range(x.count())]
+                                widget.addItems(inputs_list)
+                    # Display better dropdown choices
                     keyword = allSettings[w_name].trim_val
                     if value in df.nicer_names:
                         keyword = df.nicer_names[value]
                     new_index = widget.findText(keyword)
                     widget.setCurrentIndex(new_index)
-                    if connect:
+                    if startup:
                         widget.currentIndexChanged.connect(self.pass_to_exp)
-
+                        widget.currentIndexChanged.connect(self.lcd_clear)
                     if w_name.startswith('fx') and w_name.endswith('type'):
                         f = 0
                         if '2' in w_name:
@@ -196,40 +223,20 @@ class micronux_ui:
                         self.fx_setup(f + 1)
                         if widget.currentText() != 'bypass':
                             self.win.fx_toolBox.setCurrentIndex(f)
-                        if connect:
+                        if startup:
                             widget.currentIndexChanged.connect(self.fx_switch)
 
-                    if w_name == 'sh_input':
-                        if connect:
-                            widget.addItems(df.sh_inputs)
-                    if w_name == 'tracking_input':
-                        if connect:
-                            widget.addItems(df.tracking_inputs)
-                    if w_name.startswith('mod_') and w_name.endswith('_source'):
-                        if connect:
-                            widget.addItems(df.mod_inputs)
-                    if w_name.startswith('mod_') and w_name.endswith('_dest'):
-                        if connect:
-                            widget.addItems(df.mod_dests)
-                    if w_name.startswith('knob_'):
-                        if connect:
-                            if 'x' not in w_name:
-                                x = self.win.knob_x_param
-                                inputs_list = [x.itemText(i) for i in range(x.count())]
-                                widget.addItems(inputs_list)
 
-
-                elif w_type in df.easy_numbers:
+                elif w_type == 'QDial' or w_type == 'QSlider':
                     widget.setValue(allSettings[w_name].normalise_val())
-                    if connect:
+                    if startup:
                         widget.sliderReleased.connect(self.pass_to_exp)
-                        if (w_type == 'QDial') or (w_type == 'QSlider'):
-                            widget.valueChanged.connect(self.lcd_update)
+                        widget.valueChanged.connect(self.lcd_update)
 
-                elif w_type in df.easy_strings:
+                elif w_type == 'QLabel' or w_type == 'QLineEdit':
                     widget.setText(value)
 
-        if connect:
+        if startup:
             self.update_midi_ports()
             self.win.ctrl_midi_update.clicked.connect(self.update_midi_ports)
 

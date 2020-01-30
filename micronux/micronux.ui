@@ -1046,7 +1046,7 @@ width: 2px;
     <widget class="QDial" name="ringmod_balance">
      <property name="geometry">
       <rect>
-       <x>85</x>
+       <x>84</x>
        <y>183</y>
        <width>21</width>
        <height>21</height>
