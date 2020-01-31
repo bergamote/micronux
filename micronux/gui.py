@@ -108,8 +108,6 @@ class micronux_ui:
             t = type(focused).__name__
             val = ''
             unit = ''
-            if label.endswith('type'): # too generic
-                label = df.rm_last_word(cur_name).replace('_',' ')
             # changing fx param min/max changes
             # values even tho they're not focused
             if (t == 'QDial') or (t == 'QSlider'):
@@ -127,7 +125,12 @@ class micronux_ui:
                     label = fx_detail[0]
                     if len(fx_detail[1]) == 3:
                         unit = fx_detail[1]['unit']
-
+            if label.endswith(('type', 'time', 'level')):
+                label = df.rm_last_word(cur_name).replace('_',' ')
+                if label.startswith('env '):
+                    label = label.split()[-1]
+            if label in df.nicer_names:
+                label = df.nicer_names[label]
             self.lcdV.setText(val)
             self.lcdU.setText(unit)
             self.lcdN.setText(label)

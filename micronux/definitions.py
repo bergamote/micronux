@@ -54,15 +54,17 @@ nicer_names = {
     'linear': 'lin',
     'm1 wheel': 'm1 slider',
     'm2 wheel': 'm2 slider',
-    'semi':'semitone',
-    'fine':'cent',
-    'balance':' f1 | f2  ',
-    'mix':    ' dry|wet  ',
-    'amount':'fm amount',
-    'freq':'frequency',
-    'res':'resonance',
-    'envamt':'env amount',
-    'wheel':'slider'
+    'semi': 'semitone',
+    'fine': 'cent',
+    'balance': ' f1 | f2  ',
+    'mix': ' dry|wet  ',
+    'amount': 'fm amount',
+    'freq': 'frequency',
+    'res': 'resonance',
+    'envamt': 'env amount',
+    'wheel': 'slider',
+    'sus': 'sustain',
+    'fx': 'fx1',
 }
 
 mark_positive = ['semi','fine','octave']
