@@ -101,11 +101,13 @@ class micronux_ui:
             label = ''
             if 'waveform' in focused.objectName():
                 cur_name = df.rm_last_word(cur_name)
-            cur_widget = self.allSettings[cur_name]
+                label = self.allSettings[cur_name].label
+            else:
+                cur_widget = self.allSettings[cur_name]
+                label = cur_widget.label
             t = type(focused).__name__
             val = ''
             unit = ''
-            label = cur_widget.label
             if label.endswith('type'): # too generic
                 label = df.rm_last_word(cur_name).replace('_',' ')
             # changing fx param min/max changes

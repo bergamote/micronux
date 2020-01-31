@@ -49,6 +49,7 @@ def save_file():
     if fname:
         export = exporter.save_file(fname, mx.allSettings)
         if export:
+            mx.allSettings = importer.open_file(fname)
             exporter.clear_changes(ui)
             ui.lcd_message('save_success')
         else:
