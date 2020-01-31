@@ -669,7 +669,7 @@ width: 2px;
       </font>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;balance&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>filter1|filter2 balance</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color:lightgrey</string>
@@ -887,7 +887,7 @@ width: 2px;
       </font>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;balance&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>filter1|filter2 balance</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color:lightgrey</string>
@@ -1176,7 +1176,7 @@ width: 2px;
       </font>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;balance&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>filter1|filter2 balance</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color:lightgrey</string>
@@ -1358,7 +1358,7 @@ width: 2px;
       </font>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;balance&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>filter1|filter2 balance</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color:lightgrey</string>
@@ -1567,7 +1567,7 @@ width: 2px;
       </font>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;balance&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>filter1|filter2 balance</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color:lightgrey</string>
@@ -1613,7 +1613,7 @@ width: 2px;
       <bool>false</bool>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;noise type&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>noise type</string>
      </property>
      <property name="iconSize">
       <size>
@@ -1825,7 +1825,7 @@ width: 2px;
       </font>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;balance&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>filter1|filter2 balance</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color:lightgrey</string>
@@ -2067,7 +2067,7 @@ width: 2px;
        </rect>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;oscilator shape&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>oscilator 1 shape</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:darkgrey</string>
@@ -2690,7 +2690,7 @@ width: 2px;
        </rect>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;oscilator shape&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>oscilator 3 shape</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:darkgrey</string>
@@ -3389,7 +3389,7 @@ width: 2px;
        </rect>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;oscilator shape&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>oscilator 2 shape</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:darkgrey</string>
@@ -3952,7 +3952,7 @@ width: 2px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;pitch wheel mode&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>pitch wheel mode</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background: #faa</string>
@@ -4138,7 +4138,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync type&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>sync type</string>
       </property>
       <property name="iconSize">
        <size>
@@ -4182,7 +4182,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>sync route</string>
       </property>
       <property name="iconSize">
        <size>
@@ -5044,7 +5044,7 @@ border-radius: 4px;
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QComboBox" name="env_1_freerun_2">
+       <widget class="QComboBox" name="env_1_freerun">
         <property name="geometry">
          <rect>
           <x>107</x>
@@ -5091,7 +5091,7 @@ border-radius: 4px;
          </property>
         </item>
        </widget>
-       <widget class="QComboBox" name="env_1_reset_2">
+       <widget class="QComboBox" name="env_1_reset">
         <property name="geometry">
          <rect>
           <x>183</x>
@@ -5185,8 +5185,8 @@ border-radius: 4px;
        <zorder>env_1_velocity</zorder>
        <zorder>label_env_1_velo</zorder>
        <zorder>env_1_attack_time</zorder>
-       <zorder>env_1_freerun_2</zorder>
-       <zorder>env_1_reset_2</zorder>
+       <zorder>env_1_freerun</zorder>
+       <zorder>env_1_reset</zorder>
        <zorder>label_env_1</zorder>
       </widget>
      </widget>
@@ -7938,7 +7938,7 @@ border-radius: 4px;
       </font>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;pre filter source&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>pre filter source</string>
      </property>
      <item>
       <property name="text">
@@ -8109,7 +8109,7 @@ border-radius: 4px;
       </font>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;pan&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>left|right pan</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background:darkgrey</string>
@@ -8263,7 +8263,7 @@ border-radius: 4px;
       </font>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;pan&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>left|right pan</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background:darkgrey</string>
@@ -8466,7 +8466,7 @@ border-radius: 4px;
       </font>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;pan&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>left|right pan</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background:darkgrey</string>
@@ -8704,7 +8704,7 @@ border-radius: 4px;
       <bool>false</bool>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string/>
      </property>
      <property name="iconSize">
       <size>
@@ -8839,7 +8839,7 @@ border-radius: 4px;
       <bool>false</bool>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string/>
      </property>
      <property name="iconSize">
       <size>
@@ -8882,7 +8882,7 @@ border-radius: 4px;
       </rect>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;analog drift&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string/>
      </property>
      <property name="styleSheet">
       <string notr="true"/>
@@ -8971,7 +8971,7 @@ border-radius: 4px;
       <bool>false</bool>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string/>
      </property>
      <property name="currentIndex">
       <number>3</number>
@@ -9049,7 +9049,7 @@ border-radius: 4px;
       </rect>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;analog drift&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string/>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color:darkgrey</string>
@@ -9186,7 +9186,7 @@ border-radius: 4px;
       <bool>false</bool>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string/>
      </property>
      <property name="iconSize">
       <size>
@@ -9243,7 +9243,7 @@ border-radius: 4px;
       <bool>false</bool>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>fm type</string>
      </property>
      <property name="iconSize">
       <size>
@@ -9348,7 +9348,7 @@ width: 2px;
       <bool>false</bool>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>fm algorithm</string>
      </property>
      <property name="iconSize">
       <size>
@@ -9489,7 +9489,7 @@ width: 2px;
       <bool>false</bool>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string/>
      </property>
      <property name="currentIndex">
       <number>0</number>
@@ -9696,7 +9696,7 @@ border-radius: 4px;
       <bool>false</bool>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string/>
      </property>
      <property name="iconSize">
       <size>
@@ -9757,7 +9757,7 @@ border-radius: 4px;
       <bool>false</bool>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string/>
      </property>
      <property name="iconSize">
       <size>
@@ -9901,7 +9901,7 @@ border-radius: 4px;
       <bool>false</bool>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string/>
      </property>
      <property name="currentIndex">
       <number>0</number>
@@ -10223,7 +10223,7 @@ border-radius: 4px;
       <bool>false</bool>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string/>
      </property>
      <property name="currentIndex">
       <number>0</number>
@@ -10385,7 +10385,7 @@ border-radius: 4px;
       <bool>false</bool>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string/>
      </property>
      <property name="iconSize">
       <size>
@@ -10613,7 +10613,7 @@ border-radius: 4px;
       </rect>
      </property>
      <property name="toolTip">
-      <string/>
+      <string>m1 slider</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color:red</string>
@@ -10653,7 +10653,7 @@ border-radius: 4px;
       </rect>
      </property>
      <property name="toolTip">
-      <string/>
+      <string>m1 slider</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color:red</string>
@@ -10693,7 +10693,7 @@ border-radius: 4px;
       </rect>
      </property>
      <property name="toolTip">
-      <string/>
+      <string>smoothing</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color:lightgrey</string>
@@ -10739,7 +10739,7 @@ border-radius: 4px;
       <bool>false</bool>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string/>
      </property>
      <property name="iconSize">
       <size>
@@ -11732,7 +11732,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -11804,7 +11804,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -12058,7 +12058,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -12095,7 +12095,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -12289,7 +12289,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -12326,7 +12326,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -12478,7 +12478,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -12515,7 +12515,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -12646,7 +12646,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -12754,7 +12754,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -13020,7 +13020,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -13128,7 +13128,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -13165,7 +13165,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -13202,7 +13202,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -13329,7 +13329,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -13531,7 +13531,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -13568,7 +13568,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -13632,7 +13632,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -13879,7 +13879,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -13941,7 +13941,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -14068,7 +14068,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -14105,7 +14105,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -14221,7 +14221,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -14398,7 +14398,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -14498,7 +14498,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -14652,7 +14652,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -15978,7 +15978,7 @@ QSlider {
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -16119,7 +16119,7 @@ QSlider {
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -16166,7 +16166,7 @@ QSlider {
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -16451,7 +16451,7 @@ QSlider {
       <bool>false</bool>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>drive type</string>
      </property>
      <property name="currentIndex">
       <number>0</number>
@@ -17759,7 +17759,7 @@ border-radius:10px;
      <bool>false</bool>
     </property>
     <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sync route&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select MIDI port&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="iconSize">
      <size>
@@ -17782,6 +17782,9 @@ border-radius:10px;
       <width>64</width>
       <height>24</height>
      </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;receive sysex&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="text">
      <string>receive</string>
@@ -17827,6 +17830,9 @@ border-radius:10px;
       <pointsize>10</pointsize>
      </font>
     </property>
+    <property name="toolTip">
+     <string>save file</string>
+    </property>
     <property name="text">
      <string>save</string>
     </property>
@@ -17846,6 +17852,9 @@ border-radius:10px;
       <pointsize>10</pointsize>
      </font>
     </property>
+    <property name="toolTip">
+     <string>open file</string>
+    </property>
     <property name="text">
      <string>open</string>
     </property>
@@ -17858,6 +17867,9 @@ border-radius:10px;
       <width>18</width>
       <height>18</height>
      </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;refresh MIDI ports&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="styleSheet">
      <string notr="true"/>
@@ -18063,6 +18075,9 @@ border-radius: 4px;
        <height>24</height>
       </rect>
      </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;send sysex&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
      <property name="styleSheet">
       <string notr="true"/>
      </property>
@@ -18160,8 +18175,8 @@ border-radius: 4px;
   <tabstop>env_1_sus_pedal</tabstop>
   <tabstop>env_1_release_slope</tabstop>
   <tabstop>env_1_loop</tabstop>
-  <tabstop>env_1_freerun_2</tabstop>
-  <tabstop>env_1_reset_2</tabstop>
+  <tabstop>env_1_freerun</tabstop>
+  <tabstop>env_1_reset</tabstop>
   <tabstop>env_1_velocity</tabstop>
  </tabstops>
  <resources/>
