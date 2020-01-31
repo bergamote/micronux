@@ -10,9 +10,11 @@ def get_button_groups(win):
     group.append(win.osc_3_waveform)
     return group
 
-def last_word(word, s='_'):
-    lw = word.rsplit(s, 1)[-1]
-    return lw
+def last_word(str, sep='_'):
+    return str.split(sep)[-1]
+
+def rm_last_word(str, sep='_'):
+    return str.rsplit(sep, 1)[0]
 
 waveforms = {
     'sin': 'sine',

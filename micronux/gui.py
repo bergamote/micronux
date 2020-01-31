@@ -95,27 +95,37 @@ class micronux_ui:
 
 
     def lcd_update(self):
-        focused = self.app.focusWidget()
-        t = type(focused).__name__
-        # changing fx param min/max changes
-        # values even tho they're not focused
-        if (t == 'QDial') or (t == 'QSlider'):
-            value = focused.value()
-            cur_widget = self.allSettings[focused.objectName()]
-            val, unit = cur_widget.disp_val(value)
+        if self.loaded:
+            focused = self.app.focusWidget()
+            cur_name = focused.objectName()
+            label = ''
+            if 'waveform' in focused.objectName():
+                cur_name = df.rm_last_word(cur_name)
+            cur_widget = self.allSettings[cur_name]
+            t = type(focused).__name__
+            val = ''
+            unit = ''
             label = cur_widget.label
-            if len(label) == 1 and not label.isdigit():
+            if label.endswith('type'): # too generic
+                label = df.rm_last_word(cur_name).replace('_',' ')
+            # changing fx param min/max changes
+            # values even tho they're not focused
+            if (t == 'QDial') or (t == 'QSlider'):
+                value = focused.value()
+                val, unit = cur_widget.disp_val(value)
+                label = cur_widget.label
+                if len(label) == 1 and not label.isdigit():
+                    # fx params
+                    tb = focused.parent()
+                    if df.last_word(tb.objectName()) == '2':
+                        fx = self.win.fx2_type.currentText()
+                    else:
+                        fx = self.win.fx_type.currentText()
+                    fx_detail = df.fx_types[fx][label]
+                    label = fx_detail[0]
+                    if len(fx_detail[1]) == 3:
+                        unit = fx_detail[1]['unit']
 
-                # fx params
-                tb = focused.parent()
-                if df.last_word(tb.objectName()) == '2':
-                    fx = self.win.fx2_type.currentText()
-                else:
-                    fx = self.win.fx_type.currentText()
-                fx_detail = df.fx_types[fx][label]
-                label = fx_detail[0]
-                if len(fx_detail[1]) == 3:
-                    unit = fx_detail[1]['unit']
             self.lcdV.setText(val)
             self.lcdU.setText(unit)
             self.lcdN.setText(label)
@@ -165,7 +175,7 @@ class micronux_ui:
                     button.toggle()
             if startup:
                 group.buttonClicked.connect(self.pass_to_exp)
-                group.buttonClicked.connect(self.lcd_clear)
+                group.buttonClicked.connect(self.lcd_update)
 
         for widget in self.app.allWidgets():
             w_name = widget.objectName()
@@ -180,7 +190,7 @@ class micronux_ui:
                         widget.setChecked(False)
                     if startup:
                         widget.stateChanged.connect(self.pass_to_exp)
-                        widget.stateChanged.connect(self.lcd_clear)
+                        widget.stateChanged.connect(self.lcd_update)
                 elif w_type == 'QComboBox':
                     # Fill in input combo boxes
                     if w_name == 'sh_input':
@@ -210,7 +220,7 @@ class micronux_ui:
                     widget.setCurrentIndex(new_index)
                     if startup:
                         widget.currentIndexChanged.connect(self.pass_to_exp)
-                        widget.currentIndexChanged.connect(self.lcd_clear)
+                        widget.currentIndexChanged.connect(self.lcd_update)
                     if w_name.startswith('fx') and w_name.endswith('type'):
                         f = 0
                         if '2' in w_name:
