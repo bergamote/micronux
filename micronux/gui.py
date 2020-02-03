@@ -168,6 +168,22 @@ class micronux_ui:
             for b in enabled_buttons:
                 b.setEnabled(False)
 
+    def set_track_points(self):
+        start_style = '::handle:vertical {background:'
+        style = start_style+'#999}'
+        sel_preset = self.win.tracking_preset.currentText()
+        sel_num = self.win.tracking_numpoints.currentText()
+        if sel_preset == 'custom':
+            style = start_style+'#444}'
+        group = self.win.tracking_groupBox
+        track_sliders = group.findChildren(QtWidgets.QSlider)
+        etp = df.get_edge_track_points(self.win)
+        for widget in track_sliders:
+            if sel_num == '12' and widget in etp:
+                widget.setStyleSheet(start_style+'#999}')
+            else:
+                widget.setStyleSheet(style)
+
     def map_widgets(self, allSettings, startup=False):
         self.allSettings = allSettings
         self.loaded = False
@@ -226,6 +242,11 @@ class micronux_ui:
                     if startup:
                         widget.currentIndexChanged.connect(self.pass_to_exp)
                         widget.currentIndexChanged.connect(self.lcd_update)
+                    if w_name == 'tracking_numpoints' or w_name == 'tracking_preset':
+                        self.set_track_points()
+                        if startup:
+                            widget.currentIndexChanged.connect(self.set_track_points)
+                    # focus fx tabs
                     if w_name.startswith('fx') and w_name.endswith('type'):
                         f = 0
                         if '2' in w_name:

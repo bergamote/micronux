@@ -15914,6 +15914,9 @@ QSlider {
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
+      <zorder>label_tracking_n16</zorder>
+      <zorder>label_tracking_16</zorder>
+      <zorder>label_tracking_17</zorder>
       <zorder>line_n50</zorder>
       <zorder>line_50</zorder>
       <zorder>line_right</zorder>
@@ -15955,9 +15958,6 @@ QSlider {
       <zorder>tracking_point_10</zorder>
       <zorder>tracking_point_15</zorder>
       <zorder>tracking_point_0</zorder>
-      <zorder>label_tracking_n16</zorder>
-      <zorder>label_tracking_16</zorder>
-      <zorder>label_tracking_17</zorder>
      </widget>
      <widget class="QComboBox" name="tracking_preset">
       <property name="geometry">
@@ -17796,7 +17796,7 @@ border-radius:10px;
     </property>
     <property name="geometry">
      <rect>
-      <x>790</x>
+      <x>850</x>
       <y>567</y>
       <width>61</width>
       <height>24</height>
@@ -17818,7 +17818,7 @@ border-radius:10px;
     </property>
     <property name="geometry">
      <rect>
-      <x>860</x>
+      <x>790</x>
       <y>567</y>
       <width>51</width>
       <height>24</height>

@@ -4,11 +4,23 @@
 
 
 def get_button_groups(win):
-    group = []
-    group.append(win.osc_1_waveform)
-    group.append(win.osc_2_waveform)
-    group.append(win.osc_3_waveform)
-    return group
+    return [
+        win.osc_1_waveform,
+        win.osc_2_waveform,
+        win.osc_3_waveform
+    ]
+
+def get_edge_track_points(win):
+    return [
+        win.tracking_point_m16,
+        win.tracking_point_m15,
+        win.tracking_point_m14,
+        win.tracking_point_m13,
+        win.tracking_point_13,
+        win.tracking_point_14,
+        win.tracking_point_15,
+        win.tracking_point_16
+    ]
 
 def last_word(str, sep='_'):
     return str.split(sep)[-1]
