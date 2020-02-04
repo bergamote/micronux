@@ -116,7 +116,13 @@ QDial {
 }
 QGroupBox {
 	border: none;
-}</string>
+}
+QToolTip {
+	background-color: #ddd;
+	color: #333;
+	border: 1px solid #999;
+}
+</string>
   </property>
   <property name="iconSize">
    <size>
@@ -299,7 +305,7 @@ border-bottom-right-radius:4;</string>
       <rect>
        <x>0</x>
        <y>40</y>
-       <width>111</width>
+       <width>112</width>
        <height>42</height>
       </rect>
      </property>
@@ -479,7 +485,7 @@ padding-top: 1px;
    <widget class="Line" name="side_line_right">
     <property name="geometry">
      <rect>
-      <x>1018</x>
+      <x>1017</x>
       <y>0</y>
       <width>20</width>
       <height>600</height>
@@ -503,7 +509,7 @@ width: 2px;
    <widget class="Line" name="side_line_left">
     <property name="geometry">
      <rect>
-      <x>-12</x>
+      <x>-11</x>
       <y>0</y>
       <width>16</width>
       <height>600</height>
@@ -669,7 +675,7 @@ width: 2px;
       </font>
      </property>
      <property name="toolTip">
-      <string>filter1|filter2 balance</string>
+      <string/>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color:lightgrey</string>
@@ -743,6 +749,9 @@ width: 2px;
      </property>
      <property name="focusPolicy">
       <enum>Qt::WheelFocus</enum>
+     </property>
+     <property name="toolTip">
+      <string/>
      </property>
      <property name="styleSheet">
       <string notr="true"/>
@@ -887,7 +896,7 @@ width: 2px;
       </font>
      </property>
      <property name="toolTip">
-      <string>filter1|filter2 balance</string>
+      <string/>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color:lightgrey</string>
@@ -953,6 +962,9 @@ width: 2px;
      <property name="focusPolicy">
       <enum>Qt::WheelFocus</enum>
      </property>
+     <property name="toolTip">
+      <string/>
+     </property>
      <property name="styleSheet">
       <string notr="true"/>
      </property>
@@ -974,6 +986,9 @@ width: 2px;
      </property>
      <property name="focusPolicy">
       <enum>Qt::WheelFocus</enum>
+     </property>
+     <property name="toolTip">
+      <string/>
      </property>
      <property name="maximum">
       <number>100</number>
@@ -1032,6 +1047,9 @@ width: 2px;
      </property>
      <property name="focusPolicy">
       <enum>Qt::WheelFocus</enum>
+     </property>
+     <property name="toolTip">
+      <string/>
      </property>
      <property name="styleSheet">
       <string notr="true"/>
@@ -1176,7 +1194,7 @@ width: 2px;
       </font>
      </property>
      <property name="toolTip">
-      <string>filter1|filter2 balance</string>
+      <string/>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color:lightgrey</string>
@@ -1214,6 +1232,9 @@ width: 2px;
      </property>
      <property name="focusPolicy">
       <enum>Qt::WheelFocus</enum>
+     </property>
+     <property name="toolTip">
+      <string/>
      </property>
      <property name="styleSheet">
       <string notr="true"/>
@@ -1358,7 +1379,7 @@ width: 2px;
       </font>
      </property>
      <property name="toolTip">
-      <string>filter1|filter2 balance</string>
+      <string/>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color:lightgrey</string>
@@ -1426,6 +1447,9 @@ width: 2px;
      </property>
      <property name="focusPolicy">
       <enum>Qt::WheelFocus</enum>
+     </property>
+     <property name="toolTip">
+      <string/>
      </property>
      <property name="maximum">
       <number>100</number>
@@ -1567,7 +1591,7 @@ width: 2px;
       </font>
      </property>
      <property name="toolTip">
-      <string>filter1|filter2 balance</string>
+      <string/>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color:lightgrey</string>
@@ -1825,7 +1849,7 @@ width: 2px;
       </font>
      </property>
      <property name="toolTip">
-      <string>filter1|filter2 balance</string>
+      <string/>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color:lightgrey</string>
@@ -2067,7 +2091,7 @@ width: 2px;
        </rect>
       </property>
       <property name="toolTip">
-       <string>oscilator 1 shape</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:darkgrey</string>
@@ -2219,7 +2243,7 @@ width: 2px;
        </palette>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;octave&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="minimum">
        <number>-3</number>
@@ -2365,7 +2389,7 @@ width: 2px;
        </palette>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;semitone&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="minimum">
        <number>-7</number>
@@ -2393,7 +2417,7 @@ width: 2px;
        </rect>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;fine tune&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true"/>
@@ -2433,8 +2457,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -2442,8 +2466,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -2451,8 +2475,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -2471,8 +2495,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -2480,8 +2504,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -2489,8 +2513,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -2509,8 +2533,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -2518,8 +2542,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -2527,8 +2551,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -2550,10 +2574,10 @@ width: 2px;
        </font>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;pitchbend range&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color:red</string>
+       <string notr="true">background-color:#f66</string>
       </property>
       <property name="minimum">
        <number>0</number>
@@ -2690,7 +2714,7 @@ width: 2px;
        </rect>
       </property>
       <property name="toolTip">
-       <string>oscilator 3 shape</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:darkgrey</string>
@@ -2839,7 +2863,7 @@ width: 2px;
        </palette>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;octave&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true"/>
@@ -2988,10 +3012,10 @@ width: 2px;
        </palette>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;semitone&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
-       <string notr="true">background: #efefef</string>
+       <string notr="true"/>
       </property>
       <property name="minimum">
        <number>-7</number>
@@ -3019,7 +3043,7 @@ width: 2px;
        </rect>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;fine tune&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true"/>
@@ -3056,8 +3080,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -3065,8 +3089,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -3074,8 +3098,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -3094,8 +3118,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -3103,8 +3127,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -3112,8 +3136,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -3132,8 +3156,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -3141,8 +3165,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -3150,8 +3174,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -3173,10 +3197,10 @@ width: 2px;
        </font>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;pitchbend range&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color:red</string>
+       <string notr="true">background-color:#f66</string>
       </property>
       <property name="minimum">
        <number>0</number>
@@ -3389,7 +3413,7 @@ width: 2px;
        </rect>
       </property>
       <property name="toolTip">
-       <string>oscilator 2 shape</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:darkgrey</string>
@@ -3538,7 +3562,7 @@ width: 2px;
        </palette>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;octave&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true"/>
@@ -3687,7 +3711,7 @@ width: 2px;
        </palette>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;semitone&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true"/>
@@ -3718,7 +3742,7 @@ width: 2px;
        </rect>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;fine tune&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true"/>
@@ -3755,8 +3779,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -3764,8 +3788,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -3773,8 +3797,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -3793,8 +3817,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -3802,8 +3826,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -3811,8 +3835,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -3831,8 +3855,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -3840,8 +3864,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -3849,8 +3873,8 @@ width: 2px;
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>255</red>
-            <green>0</green>
-            <blue>0</blue>
+            <green>102</green>
+            <blue>102</blue>
            </color>
           </brush>
          </colorrole>
@@ -3872,10 +3896,10 @@ width: 2px;
        </font>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;pitchbend range&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color:red</string>
+       <string notr="true">background-color:#f66</string>
       </property>
       <property name="minimum">
        <number>0</number>
@@ -4047,7 +4071,7 @@ width: 2px;
        </rect>
       </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;analog drift&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="styleSheet">
        <string notr="true"/>
@@ -5002,7 +5026,7 @@ border-radius: 4px;
          </rect>
         </property>
         <property name="toolTip">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;key velocity tracking&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string/>
         </property>
         <property name="styleSheet">
          <string notr="true">background-color:darkgrey</string>
@@ -5834,7 +5858,7 @@ border-radius: 4px;
          </rect>
         </property>
         <property name="toolTip">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;key velocity tracking&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string/>
         </property>
         <property name="styleSheet">
          <string notr="true">background-color:lightgrey</string>
@@ -6643,7 +6667,7 @@ border-radius: 4px;
          </rect>
         </property>
         <property name="toolTip">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;key velocity tracking&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string/>
         </property>
         <property name="styleSheet">
          <string notr="true">background:#eee</string>
@@ -7077,6 +7101,9 @@ border-radius: 4px;
         <family>DejaVu Sans Mono</family>
         <pointsize>8</pointsize>
        </font>
+      </property>
+      <property name="toolTip">
+       <string>filter type</string>
       </property>
       <property name="styleSheet">
        <string notr="true">QComboBox:on {
@@ -7597,6 +7624,9 @@ border-radius: 4px;
         <pointsize>8</pointsize>
        </font>
       </property>
+      <property name="toolTip">
+       <string>filter type</string>
+      </property>
       <property name="styleSheet">
        <string notr="true">QComboBox:on {
 	color: #b00;
@@ -8108,8 +8138,11 @@ border-radius: 4px;
        <pointsize>10</pointsize>
       </font>
      </property>
+     <property name="focusPolicy">
+      <enum>Qt::WheelFocus</enum>
+     </property>
      <property name="toolTip">
-      <string>left|right pan</string>
+      <string/>
      </property>
      <property name="styleSheet">
       <string notr="true">background:darkgrey</string>
@@ -8263,7 +8296,7 @@ border-radius: 4px;
       </font>
      </property>
      <property name="toolTip">
-      <string>left|right pan</string>
+      <string/>
      </property>
      <property name="styleSheet">
       <string notr="true">background:darkgrey</string>
@@ -8295,6 +8328,9 @@ border-radius: 4px;
      </property>
      <property name="focusPolicy">
       <enum>Qt::WheelFocus</enum>
+     </property>
+     <property name="toolTip">
+      <string/>
      </property>
      <property name="styleSheet">
       <string notr="true"/>
@@ -8466,7 +8502,7 @@ border-radius: 4px;
       </font>
      </property>
      <property name="toolTip">
-      <string>left|right pan</string>
+      <string/>
      </property>
      <property name="styleSheet">
       <string notr="true">background:darkgrey</string>
@@ -8556,6 +8592,9 @@ border-radius: 4px;
      <property name="focusPolicy">
       <enum>Qt::WheelFocus</enum>
      </property>
+     <property name="toolTip">
+      <string/>
+     </property>
      <property name="styleSheet">
       <string notr="true"/>
      </property>
@@ -8577,6 +8616,9 @@ border-radius: 4px;
      </property>
      <property name="focusPolicy">
       <enum>Qt::WheelFocus</enum>
+     </property>
+     <property name="toolTip">
+      <string/>
      </property>
      <property name="styleSheet">
       <string notr="true"/>
@@ -10616,7 +10658,7 @@ border-radius: 4px;
       <string>m1 slider</string>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color:red</string>
+      <string notr="true">background-color:#f66</string>
      </property>
      <property name="minimum">
       <number>0</number>
@@ -10656,7 +10698,7 @@ border-radius: 4px;
       <string>m1 slider</string>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color:red</string>
+      <string notr="true">background-color:#f66</string>
      </property>
      <property name="minimum">
       <number>0</number>
@@ -10911,7 +10953,7 @@ border-radius: 4px;
        <number>0</number>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <property name="tabSpacing">
        <number>0</number>
@@ -11732,7 +11774,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>fx1 type</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -11804,7 +11846,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>fx2 type</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -11897,7 +11939,7 @@ border-radius: 4px;
        </rect>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>fx1|fx2 balance</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -12058,7 +12100,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod source</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -12095,7 +12137,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod destination</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -12289,7 +12331,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod destination</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -12326,7 +12368,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod source</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -12478,7 +12520,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod destination</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -12515,7 +12557,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod source</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -12646,7 +12688,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod destination</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -12754,7 +12796,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod source</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -13020,7 +13062,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod source</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -13128,7 +13170,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod destination</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -13165,7 +13207,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod destination</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -13202,7 +13244,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod destination</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -13329,7 +13371,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod source</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -13531,7 +13573,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod source</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -13568,7 +13610,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod destination</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -13632,7 +13674,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod source</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -13879,7 +13921,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod source</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -13941,7 +13983,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod destination</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -14068,7 +14110,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod source</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -14105,7 +14147,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod source</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -14221,7 +14263,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod source</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -14398,7 +14440,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod destination</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -14498,7 +14540,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod destination</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -14652,7 +14694,7 @@ border-radius: 4px;
        <bool>false</bool>
       </property>
       <property name="toolTip">
-       <string/>
+       <string>mod destination</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:lightgrey</string>
@@ -16225,9 +16267,6 @@ QSlider {
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
-    <property name="styleSheet">
-     <string notr="true">background: transparent</string>
-    </property>
     <property name="title">
      <string/>
     </property>
@@ -16673,6 +16712,9 @@ width: 2px;
      </property>
      <property name="focusPolicy">
       <enum>Qt::ClickFocus</enum>
+     </property>
+     <property name="toolTip">
+      <string>knob assign</string>
      </property>
      <property name="styleSheet">
       <string notr="true">QComboBox:on {
@@ -17553,6 +17595,9 @@ border-radius:10px;
      <property name="focusPolicy">
       <enum>Qt::ClickFocus</enum>
      </property>
+     <property name="toolTip">
+      <string>knob assign</string>
+     </property>
      <property name="styleSheet">
       <string notr="true">QComboBox:on {
 	color: #b00;
@@ -17594,6 +17639,9 @@ border-radius:10px;
      </property>
      <property name="focusPolicy">
       <enum>Qt::ClickFocus</enum>
+     </property>
+     <property name="toolTip">
+      <string>knob assign</string>
      </property>
      <property name="styleSheet">
       <string notr="true">QComboBox:on {
@@ -17807,6 +17855,9 @@ border-radius:10px;
       <family>DejaVu Sans</family>
       <pointsize>10</pointsize>
      </font>
+    </property>
+    <property name="toolTip">
+     <string>revert</string>
     </property>
     <property name="text">
      <string>revert</string>

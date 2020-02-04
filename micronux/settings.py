@@ -219,9 +219,9 @@ class micron_setting_balance(micron_setting):
         if (val > 90) and (val < 100):
             f1 = ' '+f1
         if val == 0:
-            disp = '100'
+            disp = '0|100'
         elif val == 100:
-            disp = '100  '
+            disp = '100|0'
         else:
             disp = f2+separator+f1
 
@@ -239,9 +239,9 @@ class micron_setting_mix(micron_setting):
         if (val < 10) and (val > 0):
             dry = ' '+dry
         if val == 0:
-            disp = '100  '
+            disp = '100|0'
         elif val == 100:
-            disp = '100'
+            disp = '0|100'
         else:
             disp = wet+separator+dry
         return disp, unit

@@ -125,6 +125,8 @@ class micronux_ui:
                     label = fx_detail[0]
                     if len(fx_detail[1]) == 3:
                         unit = fx_detail[1]['unit']
+                tool_tip = self.allSettings[cur_name].label+'<br>'+val+unit
+                focused.setToolTip(tool_tip)
             if label.endswith(('type', 'time', 'level')):
                 label = df.rm_last_word(cur_name).replace('_',' ')
                 if label.startswith('env '):
@@ -261,7 +263,11 @@ class micronux_ui:
 
 
                 elif w_type == 'QDial' or w_type == 'QSlider':
-                    widget.setValue(allSettings[w_name].normalise_val())
+                    norm_val = allSettings[w_name].normalise_val()
+                    widget.setValue(norm_val)
+                    val, unit = allSettings[w_name].disp_val(norm_val)
+                    tool_tip = allSettings[w_name].label+'<br>'+val+unit
+                    widget.setToolTip(tool_tip)
                     if startup:
                         widget.sliderReleased.connect(self.pass_to_exp)
                         widget.valueChanged.connect(self.lcd_update)
