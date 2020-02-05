@@ -19,10 +19,6 @@
 
   - implement a non-linear slider for time, and maybe freq, related settings (log curve)
 
-  - tooltips
-
-  - show value on "lcd" when focusing (right-click) on a widget
-
   - request program sysex directly from within Micronux
 
 ----
