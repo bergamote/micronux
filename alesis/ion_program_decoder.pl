@@ -31,6 +31,9 @@ vice versa.
 usage: ion_program_decoder pgm.syx    : Generate description "pgm.txt".
        ion_program_decoder -b pgm.syx : Generate brief description "pgm.txt".
        ion_program_decoder pgm.txt    : Generate sysex "pgm.syx".
+       
+       ion_program_decoder -l '...'   : Takes text settings from the command
+                                        line and prints sysex to stdout.
 _EOT_
 
 
@@ -1142,25 +1145,34 @@ sub encode {
 #-----------------------------------------------------------------------------
 
 my %options;
+my $text;
+
 
 sub txt_to_syx {
     my ($filename) = @_;
     $global_sysex_opcode = (1 << 24) + (4 << 16);   # edit buffer
-
-    open TXT, $filename or die qq(Could not open file "$filename": $!\n);
-    my $text = join '', <TXT>;
-    close TXT;
+    
+    if ($options{l}) { $text = join '', @_; }
+    else {
+        open TXT, $filename or die qq(Could not open file "$filename": $!\n);
+        $text = join '', <TXT>;
+        close TXT;    
+    }
 
     my $dump = chr(0) x 315;
     build_dump_from_txt(\$dump, $default_program_txt);
     build_dump_from_txt(\$dump, $text);
-
-    $filename =~ s!txt$!syx!i;
     my $syx = build_sysex($dump);
-    open SYX, ">$filename" or die qq(Could not create file "$filename": $!\n);
-    binmode SYX;
-    print SYX $syx;
-    close SYX;
+    if ($options{l}) { printf('%vx', $syx); }
+    else {
+        $filename =~ s!txt$!syx!i;
+        open SYX, ">$filename" or die qq(Could not create file "$filename": $!\n);
+        binmode SYX;
+        print SYX $syx;
+        close SYX;    
+    }
+    
+    
 }
 
 sub syx_to_txt {
@@ -1228,5 +1240,5 @@ sub syx_to_txt {
 while ($ARGV[0] and $ARGV[0] =~ /^-(\w)/) { ++$options{$1}; shift }
 my $filename = shift || usage();
 if    ($filename =~ /\.syx$/i) { syx_to_txt($filename); }
-elsif ($filename =~ /\.txt$/i) { txt_to_syx($filename); }
+elsif (($filename =~ /\.txt$/i) or ($options{l})) { txt_to_syx($filename); }
 else                           { usage(); }
