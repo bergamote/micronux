@@ -92,7 +92,8 @@ lcd_messages = {
     'save_success': ['',':)','saved'],
     'save_error': ['',':(','error'],
     'revert': ['','','reverted'],
-    'send_error': ['',':(','not sent'],
+    'send_success': ['',':)','sent'],
+    'send_error': ['',':(','not sent']
 }
 
 general_inputs = [
