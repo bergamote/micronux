@@ -100,13 +100,12 @@ ui.win.ctrl_send.clicked.connect(send_sysex)
 def set_auto_send():
     exporter.auto = ui.win.ctrl_auto_send.isChecked()
     if exporter.auto:
+        ui.win.ctrl_send.setText('auto')
+        ui.win.ctrl_send.setEnabled(False)
         exporter.auto_send(ui)
-        # ui.win.ctrl_send.setText('auto')
-        # ui.win.ctrl_send.setEnabled(False)
-
-    # else:
-        # ui.win.ctrl_send.setText('send')
-        # ui.win.ctrl_send.setEnabled(True)
+    else:
+        ui.win.ctrl_send.setText('send')
+        ui.win.ctrl_send.setEnabled(True)
 
 ui.win.ctrl_auto_send.clicked.connect(set_auto_send)
 

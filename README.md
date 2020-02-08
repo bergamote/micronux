@@ -56,7 +56,7 @@ To update to the latest version just run:
 
 To receive a sysex, make sure that the right MIDI port is selected then click `receive`. On the Micron bring up the `Send MIDI sysex?` option and press down the control knob.
 
-Pressing `send` will overwrite the program with the same name on the Micron and ticking the checkbox next to it enables 'auto-send'. For now, edits on sliders and dials are only updated on mouse release which means that edits done with the mouse wheel or keyboard are not automatically sent.
+Pressing `send` will overwrite the program with the same name on the Micron. Ticking the checkbox next to it enables 'auto-send'.
 
 The `revert` button *should* bring you back to the 'received' state (or saved/open state, whichever came last), but do not rely on it, it might be buggy and needs testing.
 

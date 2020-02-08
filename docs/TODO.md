@@ -5,13 +5,14 @@
 
   - option to rename program
 
-  - finish effects widgets:
+  - improve effects widgets:
 
-    - fix wrong limits for min/max params
+    - implement sync multiples (param c sync)
 
     - swap widget when needed (ie: sync on/off with checkbox instead of a dial)
 
-    - implement sync multiples (param c sync)
+    - better 'lcd' value for dials (sync, shape, etc...)
+
 
   - pop-up window for inputs of xyz knobs, mods, sh and tracking
 

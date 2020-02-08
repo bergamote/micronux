@@ -264,7 +264,7 @@ class micronux_ui:
                     tool_tip = allSettings[w_name].label+'<br>'+val+unit
                     widget.setToolTip(tool_tip)
                     if startup:
-                        widget.sliderReleased.connect(self.pass_to_exp)
+                        widget.valueChanged.connect(self.pass_to_exp)
                         widget.valueChanged.connect(self.lcd_update)
 
                 elif w_type == 'QLabel' or w_type == 'QLineEdit':
