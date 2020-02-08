@@ -11798,12 +11798,7 @@ border-radius: 4px;
       </item>
       <item>
        <property name="text">
-        <string>super phaser</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>string phaser</string>
+        <string>chorus</string>
        </property>
       </item>
       <item>
@@ -11818,7 +11813,12 @@ border-radius: 4px;
       </item>
       <item>
        <property name="text">
-        <string>chorus</string>
+        <string>super phaser</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>string phaser</string>
        </property>
       </item>
       <item>
@@ -18233,8 +18233,8 @@ border-radius: 4px;
  <resources/>
  <connections/>
  <buttongroups>
+  <buttongroup name="osc_3_waveform"/>
   <buttongroup name="osc_1_waveform"/>
   <buttongroup name="osc_2_waveform"/>
-  <buttongroup name="osc_3_waveform"/>
  </buttongroups>
 </ui>

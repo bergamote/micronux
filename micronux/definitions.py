@@ -238,19 +238,33 @@ mod_dests = [
 # FX - effect related settings
 ###############################
 
-feedback = manual_delay = lfo_depth = notch_frequency = \
-sibilance_boost = decay = analysis_mix = \
-regeneration_percentage = brightness = diffusion = {
+# min/max values
+percents = {
     'min': 0,
     'max': 100,
     'unit': '%'
 }
-lfo_rate = {
+wide_percents = {
+    'min': -100,
+    'max': 100,
+    'unit': '%'
+}
+freq = {
     'min': 10,
     'max': 4800,
-    'unit': 'hz'
+    'unit': 'mhz'
 }
-lfo_shape = tempo_sync = {
+time = {
+    'min': 1,
+    'max': 340,
+    'unit': 'ms'
+}
+mono_time = {
+    'min': 1,
+    'max': 680,
+    'unit': 'ms'
+}
+switch = {
     'min': 0,
     'max': 1,
 }
@@ -258,80 +272,73 @@ stages = {
     'min': 0,
     'max': 5,
 }
-analysis_gain = band_shift = {
-    'min': -100,
-    'max': 100
-}
-synthesis_input = analysis_signal_in = {
+tri_state = {
     'min': 0,
     'max': 2
 }
-delay_time = left_delay_time = right_delay_time = color = {
-    'min': 1,
-    'max': 340,
-    'unit': 'ms'
-}
 
-
+# fx details
 chorus = {
-    'a': ['feedback', feedback],
-    'b': ['delay', manual_delay],
-    'c': ['rate', lfo_rate],
-    'd': ['depth', lfo_depth],
-    'e': ['shape', lfo_shape],
-    'f': ['sync', tempo_sync],
+    'a': ['feedback', percents],
+    'b': ['delay', percents],
+    'c': ['rate', freq],
+    'd': ['depth', percents],
+    'e': ['shape', switch],
+    'f': ['sync', switch],
     'g': ['---', False],
     'name': 'chorus'
 }
 
 theta_flanger = chorus.copy()
-theta_flanger['a'][1]['min'] = -100
+theta_flanger['a'] = ['feedback', wide_percents]
 theta_flanger['name'] = 'theta flanger'
 
 thru_0_flanger = theta_flanger.copy()
 thru_0_flanger['name'] = 'thru 0 flanger'
 
 super_phaser = theta_flanger.copy()
-super_phaser['b'] = ['freq', notch_frequency]
-string_phaser = super_phaser.copy()
+super_phaser['b'] = ['notch', percents]
 super_phaser['f'] = ['stages', stages]
-super_phaser['g'] = ['sync', tempo_sync]
-
+super_phaser['g'] = ['sync', switch]
 super_phaser['name'] = 'super phaser'
+
+string_phaser = chorus.copy()
+string_phaser['b'] = ['notch', percents]
 string_phaser['name'] = 'string phaser'
 
 vocoder = {
-    'a': ['gain', analysis_gain],
-    'b': ['sibilance', sibilance_boost],
-    'c': ['decay', decay],
-    'd': ['band', band_shift],
-    'e': ['synthesis', synthesis_input],
-    'f': ['analysis', analysis_signal_in],
-    'g': ['mix', analysis_mix],
+    'a': ['gain', wide_percents],
+    'b': ['sibilance', percents],
+    'c': ['decay', percents],
+    'd': ['band', wide_percents],
+    'e': ['synthesis', tri_state],
+    'f': ['analysis', tri_state],
+    'g': ['mix', percents],
     'name': 'vocoder'
 }
 
 mono_delay = {
-    'a': ['time', delay_time],
-    'b': ['regen', regeneration_percentage],
-    'c': ['brightness', brightness],
-    'd': ['sync', tempo_sync]
+    'a': ['time', mono_time],
+    'b': ['regen', percents],
+    'c': ['brightness', percents],
+    'd': ['sync', switch]
 }
 mono_delay['name'] = 'mono delay'
 
 stereo_delay = mono_delay.copy()
+stereo_delay['a'] = ['time', time]
 stereo_delay['name'] = 'stereo delay'
 
-split_LR_delay = mono_delay.copy()
-split_LR_delay['a'] = ['left', left_delay_time]
-split_LR_delay['d'] = ['right', right_delay_time]
+split_LR_delay = stereo_delay.copy()
+split_LR_delay['a'] = ['left', time]
+split_LR_delay['d'] = ['right', time]
 split_LR_delay['name'] = 'split L/R delay'
 
 hall_reverb = {
-    'a': ['diffusion', diffusion],
-    'b': ['decay', decay],
-    'c': ['brightness', brightness],
-    'd': ['color', color]
+    'a': ['diffusion', percents],
+    'b': ['decay', percents],
+    'c': ['brightness', percents],
+    'd': ['color', time]
 }
 hall_reverb['name'] = 'hall reverb'
 plate_reverb = hall_reverb.copy()
