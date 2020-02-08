@@ -145,11 +145,6 @@ class micronux_ui:
             self.lcdU.setText(msg[type][1])
             self.lcdN.setText(msg[type][2])
 
-    def lcd_clear(self):
-        self.lcdV.setText('')
-        self.lcdU.setText('')
-        self.lcdN.setText('')
-
 
     def update_midi_ports(self):
         self.win.ctrl_midi_port.clear()

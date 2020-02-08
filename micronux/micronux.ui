@@ -9259,7 +9259,7 @@ border-radius: 4px;
      <rect>
       <x>0</x>
       <y>318</y>
-      <width>171</width>
+      <width>174</width>
       <height>51</height>
      </rect>
     </property>
@@ -9269,9 +9269,9 @@ border-radius: 4px;
     <widget class="QComboBox" name="fm_type">
      <property name="geometry">
       <rect>
-       <x>134</x>
+       <x>123</x>
        <y>2</y>
-       <width>31</width>
+       <width>51</width>
        <height>20</height>
       </rect>
      </property>
@@ -9301,7 +9301,7 @@ border-radius: 4px;
      </property>
      <item>
       <property name="text">
-       <string>lin</string>
+       <string>linear</string>
       </property>
      </item>
      <item>
@@ -9374,7 +9374,7 @@ width: 2px;
     <widget class="QComboBox" name="fm_algorithm">
      <property name="geometry">
       <rect>
-       <x>100</x>
+       <x>103</x>
        <y>29</y>
        <width>71</width>
        <height>20</height>
@@ -9450,7 +9450,7 @@ width: 2px;
     <widget class="QLabel" name="label_fm_type">
      <property name="geometry">
       <rect>
-       <x>100</x>
+       <x>92</x>
        <y>2</y>
        <width>31</width>
        <height>20</height>
@@ -10963,8 +10963,8 @@ border-radius: 4px;
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>311</width>
-         <height>131</height>
+         <width>100</width>
+         <height>30</height>
         </rect>
        </property>
        <attribute name="label">

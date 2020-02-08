@@ -10,8 +10,9 @@ from micronux import gui, terminal, importer, exporter, midi, converter
 
 
 class mx:
-    file_to_load = terminal.startup(sys.argv)
-    allSettings = importer.open_file(file_to_load)
+    startup_program = terminal.startup(sys.argv)
+    allSettings = importer.open_file(startup_program)
+
 
 ui = gui.micronux_ui(mx.allSettings)
 
@@ -37,6 +38,7 @@ def open_file():
             ui.lcd_message('open_success')
         else:
             ui.lcd_message('open_error')
+    ui.win.ctrl_auto_send.setChecked(False)
 
 ui.win.ctrl_open.clicked.connect(open_file)
 
@@ -92,6 +94,21 @@ def send_sysex():
         ui.lcd_message('send_error')
 
 ui.win.ctrl_send.clicked.connect(send_sysex)
+
+
+# Auto-send
+def set_auto_send():
+    exporter.auto = ui.win.ctrl_auto_send.isChecked()
+    if exporter.auto:
+        exporter.auto_send(ui)
+        # ui.win.ctrl_send.setText('auto')
+        # ui.win.ctrl_send.setEnabled(False)
+
+    # else:
+        # ui.win.ctrl_send.setText('send')
+        # ui.win.ctrl_send.setEnabled(True)
+
+ui.win.ctrl_auto_send.clicked.connect(set_auto_send)
 
 
 # Revert changes

@@ -9,7 +9,7 @@ from micronux import converter, midi
 
 newSettings = {}
 convert_cache = './programs/cache/convert.txt'
-
+auto = False
 
 # Keep track of settings that changed
 def setting_changed(ui):
@@ -23,14 +23,11 @@ def setting_changed(ui):
             widget = ui.win.osc_2_waveform
         elif '3' in w_name:
             widget = ui.win.osc_3_waveform
-
     if not widget in newSettings:
         newSettings.update({widget.objectName(): widget})
         ui.win.ctrl_revert.setEnabled(True)
-
-    if ui.win.ctrl_auto_send.isChecked():
+    if auto:
         auto_send(ui)
-
 
 def auto_send(ui):
     if midi.send_ready:
@@ -50,6 +47,8 @@ def clear_changes(ui):
 def revert_changes(ui, allSettings):
     clear_changes(ui)
     ui.map_widgets(allSettings)
+    if auto:
+        auto_send(ui)
     ui.lcd_message('revert')
 
 

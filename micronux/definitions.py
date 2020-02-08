@@ -63,7 +63,6 @@ nicer_names = {
     '3 -> 2 -> 1': '3 > 2 > 1',
     '2+3 -> 1': '2+3 > 1',
     '2 -> 1': '2 > 1',
-    'linear': 'lin',
     'm1 wheel': 'm1 slider',
     'm2 wheel': 'm2 slider',
     'semi': 'semitone',
