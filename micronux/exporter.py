@@ -11,6 +11,7 @@ newSettings = {}
 convert_cache = './programs/cache/convert.txt'
 auto = False
 
+
 # Keep track of settings that changed
 def setting_changed(ui):
     widget = ui.app.focusWidget()
@@ -28,6 +29,7 @@ def setting_changed(ui):
         ui.win.ctrl_revert.setEnabled(True)
     if auto:
         auto_send(ui)
+
 
 def auto_send(ui):
     if midi.send_ready:

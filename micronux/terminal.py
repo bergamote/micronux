@@ -9,6 +9,7 @@ from micronux import midi
 
 default_prog = './programs/default.txt'
 
+
 ### Check the command line arguments
 def startup(args):
     # without argument, load the default program

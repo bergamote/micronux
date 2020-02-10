@@ -9534,7 +9534,7 @@ width: 2px;
       <string/>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>-1</number>
      </property>
      <property name="iconSize">
       <size>
@@ -9548,131 +9548,6 @@ width: 2px;
      <property name="frame">
       <bool>false</bool>
      </property>
-     <item>
-      <property name="text">
-       <string>16</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>12</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>10 2/3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>8</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>6</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>5 1/3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>4</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>2 2/3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>2</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1 1/2</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1 1/3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3/4</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>2/3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1/2</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3/8</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1/3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1/4</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3/16</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1/6</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1/8</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3/32</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1/12</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1/16</string>
-      </property>
-     </item>
     </widget>
     <widget class="QCheckBox" name="sh_tempo">
      <property name="geometry">
@@ -9946,7 +9821,7 @@ border-radius: 4px;
       <string/>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>-1</number>
      </property>
      <property name="iconSize">
       <size>
@@ -9960,131 +9835,6 @@ border-radius: 4px;
      <property name="frame">
       <bool>false</bool>
      </property>
-     <item>
-      <property name="text">
-       <string>16</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>12</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>10 2/3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>8</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>6</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>5 1/3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>4</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>2 2/3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>2</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1 1/2</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1 1/3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3/4</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>2/3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1/2</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3/8</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1/3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1/4</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3/16</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1/6</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1/8</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3/32</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1/12</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1/16</string>
-      </property>
-     </item>
     </widget>
     <widget class="Line" name="line_14">
      <property name="geometry">
@@ -10268,7 +10018,7 @@ border-radius: 4px;
       <string/>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>-1</number>
      </property>
      <property name="iconSize">
       <size>
@@ -10282,131 +10032,6 @@ border-radius: 4px;
      <property name="frame">
       <bool>false</bool>
      </property>
-     <item>
-      <property name="text">
-       <string>16</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>12</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>10 2/3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>8</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>6</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>5 1/3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>4</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>2 2/3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>2</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1 1/2</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1 1/3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3/4</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>2/3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1/2</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3/8</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1/3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1/4</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3/16</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1/6</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1/8</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3/32</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1/12</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1/16</string>
-      </property>
-     </item>
     </widget>
     <widget class="QComboBox" name="lfo_2_reset">
      <property name="geometry">
@@ -10953,7 +10578,7 @@ border-radius: 4px;
        <number>0</number>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <property name="tabSpacing">
        <number>0</number>
@@ -10963,8 +10588,8 @@ border-radius: 4px;
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>100</width>
-         <height>30</height>
+         <width>311</width>
+         <height>131</height>
         </rect>
        </property>
        <attribute name="label">
@@ -18233,8 +17858,8 @@ border-radius: 4px;
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="osc_3_waveform"/>
   <buttongroup name="osc_1_waveform"/>
   <buttongroup name="osc_2_waveform"/>
+  <buttongroup name="osc_3_waveform"/>
  </buttongroups>
 </ui>

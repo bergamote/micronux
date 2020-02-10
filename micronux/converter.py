@@ -8,6 +8,7 @@ import subprocess
 
 dec_path = 'alesis/ion_program_decoder.pl'
 
+
 # convert syx file to text file
 # using ion_program_decoder.pl
 def ipd(file_path):
@@ -17,6 +18,7 @@ def ipd(file_path):
         return True
     else:
         return False
+
 
 def txt_to_syx(txt):
     perl_out = subprocess.check_output([dec_path, '-l', txt])

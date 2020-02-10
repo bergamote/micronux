@@ -43,8 +43,9 @@ class micronux_ui:
 
         self.loaded = False
 
-    # Update fx toolBox on fx change
+
     def fx_switch(self):
+        '''Update fx toolBox tab focus on fx change'''
         if self.loaded:
             fx = self.app.focusWidget()
             tb = self.win.fx_toolBox
@@ -56,8 +57,9 @@ class micronux_ui:
             if fx.currentText() != 'bypass':
                 tb.setCurrentIndex(f)
 
-    # Update fx labels and widgets' min/max
+
     def fx_setup(self, fx_num):
+        '''Update fx param labels and widgets' min/max'''
         if fx_num == 1:
             fx_group = self.win.fx_1
             fx_sel = self.win.fx_type.currentText()
@@ -89,12 +91,14 @@ class micronux_ui:
     def pop_down(self):
         self.win.pop.hide()
 
+
     def pop_up(self):
         self.win.pop.show()
         self.win.pop.raise_()
 
 
     def lcd_update(self):
+        '''update display with value, unit and label'''
         if self.loaded:
             focused = self.app.focusWidget()
             cur_name = focused.objectName()
@@ -125,6 +129,8 @@ class micronux_ui:
                     label = fx_detail[0]
                     if len(fx_detail[1]) == 3:
                         unit = fx_detail[1]['unit']
+                    if label in df.param_disp:
+                        val = df.param_disp[label][int(val)]
                 tool_tip = self.allSettings[cur_name].label+'<br>'+val+unit
                 focused.setToolTip(tool_tip)
             if label.endswith(('type', 'time', 'level')):
@@ -165,6 +171,7 @@ class micronux_ui:
             for b in enabled_buttons:
                 b.setEnabled(False)
 
+
     def set_track_points(self):
         start_style = '::handle:vertical {background:'
         style = start_style+'#999}'
@@ -180,6 +187,7 @@ class micronux_ui:
                 widget.setStyleSheet(start_style+'#999}')
             else:
                 widget.setStyleSheet(style)
+
 
     def map_widgets(self, allSettings, startup=False):
         self.allSettings = allSettings
@@ -197,8 +205,8 @@ class micronux_ui:
 
         for widget in self.app.allWidgets():
             w_name = widget.objectName()
-            w_type = type(widget).__name__
             if w_name in allSettings:
+                w_type = type(widget).__name__
                 value = allSettings[w_name].value
 
                 if w_type == 'QCheckBox':
@@ -211,21 +219,22 @@ class micronux_ui:
                         widget.stateChanged.connect(self.lcd_update)
                 elif w_type == 'QComboBox':
                     # Fill in input combo boxes
-                    if w_name == 'sh_input':
-                        if startup:
+                    if startup:
+                        widget.currentIndexChanged.connect(self.pass_to_exp)
+                        widget.currentIndexChanged.connect(self.lcd_update)
+                        if w_name == 'sh_input':
                             widget.addItems(df.sh_inputs)
-                    if w_name == 'tracking_input':
-                        if startup:
+                        if w_name == 'tracking_input':
                             widget.addItems(df.tracking_inputs)
-                    if w_name.startswith('mod_') and w_name.endswith('_source'):
-                        if startup:
-                            widget.addItems(df.mod_inputs)
-                    if w_name.startswith('mod_') and w_name.endswith('_dest'):
-                        if startup:
-                            widget.addItems(df.mod_dests)
-                    if w_name.startswith('knob_'):
+                        if w_name.startswith('mod_'):
+                            if w_name.endswith('_source'):
+                                widget.addItems(df.mod_inputs)
+                            elif w_name.endswith('_dest'):
+                                widget.addItems(df.mod_dests)
+                        if 'synced' in w_name:
+                            widget.addItems(df.sync_mult)
+                        if w_name.startswith('knob_'):
                         # copy from x knob
-                        if startup:
                             if 'x' not in w_name:
                                 x = self.win.knob_x_param
                                 inputs_list = [x.itemText(i) for i in range(x.count())]
@@ -236,9 +245,7 @@ class micronux_ui:
                         keyword = df.nicer_names[value]
                     new_index = widget.findText(keyword)
                     widget.setCurrentIndex(new_index)
-                    if startup:
-                        widget.currentIndexChanged.connect(self.pass_to_exp)
-                        widget.currentIndexChanged.connect(self.lcd_update)
+
                     if w_name == 'tracking_numpoints' or w_name == 'tracking_preset':
                         self.set_track_points()
                         if startup:

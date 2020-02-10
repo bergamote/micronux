@@ -9,6 +9,7 @@ import os.path, rtmidi
 receive_cache = os.path.normpath('programs/cache/received.syx')
 send_ready = True
 
+
 def list_midi_ports():
     ''' List all midi ports, return a dict { name : address } '''
     md = rtmidi.RtMidiOut()

@@ -106,8 +106,10 @@ class micron_setting:
             val =  '+'+str(val)
         return  str(val), unit
 
+
 class micron_setting_time(micron_setting):
     """time setting"""
+    
     def disp_val(self, val):
         if int(val) >= 500:
             roundings = 2
@@ -128,6 +130,7 @@ class micron_setting_time(micron_setting):
                 unit = ''
         return  str(disp), unit
 
+
     def format_val(self, new_value):
         if new_value >= 30000001:
             val = 'hold'
@@ -147,6 +150,7 @@ class micron_setting_time(micron_setting):
 
 class micron_setting_frequency(micron_setting):
     """frequency setting"""
+
     def disp_val(self, val):
         if self.widget_name.endswith('offset_freq'):
             pad = 4
@@ -169,6 +173,7 @@ class micron_setting_frequency(micron_setting):
             disp = str(disp).ljust(5, '0')
         return disp, unit
 
+
     def format_val(self, new_value):
         if self.widget_name.endswith('offset_freq'):
             val = str(new_value/100)
@@ -188,6 +193,7 @@ class micron_setting_frequency(micron_setting):
 
 class micron_setting_pan(micron_setting):
     """pan setting"""
+
     def disp_val(self, val):
         unit = ''
         disp = str(val)
@@ -201,6 +207,7 @@ class micron_setting_pan(micron_setting):
 
 class micron_setting_fm(micron_setting):
     """fm amount setting"""
+
     def disp_val(self, val):
         disp = str(val/10)
         unit = '%'
@@ -209,6 +216,7 @@ class micron_setting_fm(micron_setting):
 
 class micron_setting_balance(micron_setting):
     """x to y balance setting"""
+
     def disp_val(self, val):
         unit = '%'
         if (self.widget_name == 'extin_balance'):
@@ -230,6 +238,7 @@ class micron_setting_balance(micron_setting):
 
 class micron_setting_mix(micron_setting):
     """mix setting"""
+
     def disp_val(self, val):
         val = int((val+100)/2)
         unit = '%'
@@ -246,8 +255,10 @@ class micron_setting_mix(micron_setting):
             disp = wet+separator+dry
         return disp, unit
 
+
 class micron_setting_waveform(micron_setting):
     """mix setting"""
+
     def format_val(self, group):
         button = group.checkedButton()
         slug = df.last_word(button.objectName())

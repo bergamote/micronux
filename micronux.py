@@ -59,6 +59,7 @@ def save_file():
 
 ui.win.ctrl_save.clicked.connect(save_file)
 
+
 # Receive sysex
 def pass_to_receive():
     ui.lcd_message('receiving')
@@ -115,7 +116,6 @@ def revert():
     exporter.revert_changes(ui, mx.allSettings)
 
 ui.win.ctrl_revert.clicked.connect(revert)
-
 
 
 sys.exit(ui.app.exec_())

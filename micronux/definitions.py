@@ -95,6 +95,14 @@ lcd_messages = {
     'send_error': ['',':(','not sent']
 }
 
+sync_mult = [
+'16','12','10 2/3','8','6','5 1/3',
+'4','3','2 2/3','2','1 1/2','1 1/3',
+'1','3/4','2/3','1/2','3/8','1/3',
+'1/4','3/16','1/6', '1/8',
+'3/32','1/12','1/16'
+]
+
 general_inputs = [
     'note-on velocity',
     'release velocity',
@@ -276,6 +284,14 @@ tri_state = {
     'min': 0,
     'max': 2
 }
+param_disp = {
+'sync': ['off','on'],
+'shape': ['sine','tri'],
+'stages': ['4','8','16','32','48','64'],
+'synthesis': ['fx ','L','L+R'],
+'analysis': ['fx ','R','L+R']
+}
+
 
 # fx details
 chorus = {
