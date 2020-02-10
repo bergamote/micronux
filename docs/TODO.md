@@ -1,26 +1,36 @@
-### To do list
+## To do list
 
 *Micronux*
 
 
+### Before beta
+
   - option to rename program
 
-  - improve effects widgets:
+  - fx: implement sync multiples (param c sync)
 
-    - implement sync multiples (param c sync)
+  - inputs (sh, mods, tracking): add MIDI CCs
 
-    - swap widget when needed (ie: sync on/off with checkbox instead of a dial)
-
-    - better 'lcd' value for dials (sync, shape, etc...)
+  - convert ui to py file
 
 
-  - pop-up window for inputs of xyz knobs, mods, sh and tracking
+### Later
 
-    - add midi cc inputs
+  - swap fx param widget when needed (ie: sync on/off with checkbox instead of a dial)
+
+  - pop-up window to assign xyz knobs and select inputs of sh, mods and tracking
 
   - implement a non-linear slider for time, and maybe freq, related settings (log curve)
 
+
+### Maybe
+
   - request program sysex directly from within Micronux
+
+  - show xyz knobs and slider changes in Micronux.
+
+  - visual representations for waveforms, slopes and envelopes.
+
 
 ----
 
