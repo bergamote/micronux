@@ -9,8 +9,6 @@
 
   - fx: implement sync multiples (param c sync)
 
-  - inputs (sh, mods, tracking): add MIDI CCs
-
   - convert ui to py file
 
 

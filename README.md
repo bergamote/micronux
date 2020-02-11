@@ -37,9 +37,7 @@ You're gonna need python3, PySide2 and the pyrtmidi:
 
     pip3 install PySide2 rtmidi
 
-Then just run `./micronux.py`.
-
-You can create a `micronux.desktop` launcher file that you can place anywhere with the following command:
+Then simply run `./micronux.py` or make a launcher shortcut with:
 
     python3 ./micronux.py --create-launcher
 

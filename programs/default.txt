@@ -498,10 +498,10 @@ tracking input:       note-on velocity
 # "tracking preset" can be:
 #   custom, bypass, negate, abs val, neg abs, exp+, exp-, zero, maximum, 
 #   minimum
-tracking preset:      bypass
+tracking preset:      custom
 
 # "tracking numpoints" can be:  12, 16
-tracking numpoints:   16
+tracking numpoints:   12
 
 # "tracking point *" can range from -100% to 100%
 tracking point -16:   -100%
@@ -600,18 +600,18 @@ mod 12 source:        none
 #   p/m env sust time, p/m env sust level, p/m env release, dummy, 
 #   effects mix, effects parameter a, effects parameter b, 
 #   effects parameter c, effects parameter d, voice pitch narrow
-mod 1 dest:           dummy
-mod 2 dest:           dummy
-mod 3 dest:           dummy
-mod 4 dest:           dummy
-mod 5 dest:           dummy
-mod 6 dest:           dummy
-mod 7 dest:           dummy
-mod 8 dest:           dummy
-mod 9 dest:           dummy
-mod 10 dest:          dummy
-mod 11 dest:          dummy
-mod 12 dest:          dummy
+mod 1 dest:           none
+mod 2 dest:           none
+mod 3 dest:           none
+mod 4 dest:           none
+mod 5 dest:           none
+mod 6 dest:           none
+mod 7 dest:           none
+mod 8 dest:           none
+mod 9 dest:           none
+mod 10 dest:          none
+mod 11 dest:          none
+mod 12 dest:          none
 
 # "mod * level" can range from -100.0% to 100.0%
 mod 1 level:          0.0%

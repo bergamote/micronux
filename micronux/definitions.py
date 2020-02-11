@@ -140,16 +140,24 @@ general_inputs = [
     'key track extreme'
 ]
 
+midi_cc = []
+for i in range(1,120):
+    midi_cc.append('midi cc '+str(i))
+
+
+
 sh_inputs = general_inputs.copy()
 sh_inputs.extend([
     'tracking generator',
-    'step track'
+    'step track',
 ])
+sh_inputs.extend(midi_cc)
 
 tracking_inputs = general_inputs.copy()
 tracking_inputs.append(
     'sh output'
 )
+tracking_inputs.extend(midi_cc)
 
 mod_inputs = general_inputs.copy()
 mod_inputs.insert(0, 'none')
@@ -158,6 +166,7 @@ mod_inputs.extend([
     'tracking generator',
     'step track'
 ])
+mod_inputs.extend(midi_cc)
 
 mod_dests = [
     'none',
