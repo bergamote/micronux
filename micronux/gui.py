@@ -58,14 +58,55 @@ class micronux_ui:
                 tb.setCurrentIndex(f)
 
 
+    def fx_sync_param(self):
+        sw = self.win
+        fpc = [sw.fx_param_c, sw.label_fx_param_c]
+        fpcm = sw.fx_param_c_synced
+        fpa = [sw.fx2_param_a, sw.label_fx2_param_a]
+        fpam = sw.fx2_param_a_synced
+        fx1 = sw.fx_type.currentText()
+        fx2 = sw.fx2_type.currentText()
+        if fx1 in df.fx_synced:
+            switch = sw.fx_param_f
+            if fx1 == 'super phaser':
+                switch = sw.fx_param_g
+            if switch.value():
+                self.sync_switch(False, fpc, fpcm)
+            else:
+                self.sync_switch(True, fpc, fpcm)
+        else:
+            self.sync_switch(True, fpc, fpcm)
+        if fx2 in df.fx_synced:
+            switch = sw.fx2_param_d
+            if switch.value():
+                self.sync_switch(False, fpa, fpam)
+            else:
+                self.sync_switch(True, fpa, fpam)
+        else:
+            self.sync_switch(True, fpa, fpam)
+
+    def sync_switch(self, toggle, fp, mult):
+        if toggle:
+            for w in fp:
+                w.setEnabled(True)
+            mult.setStyleSheet('color:#999')
+            mult.setEnabled(False)
+        else:
+            for w in fp:
+                w.setEnabled(False)
+            mult.setStyleSheet('color:#000')
+            mult.setEnabled(True)
+
     def fx_setup(self, fx_num):
         '''Update fx param labels and widgets' min/max'''
         if fx_num == 1:
             fx_group = self.win.fx_1
             fx_sel = self.win.fx_type.currentText()
+            fx_sync_w = self.win.fx_param_c_synced
         elif fx_num == 2:
             fx_group = self.win.fx_2
             fx_sel = self.win.fx2_type.currentText()
+            fx_sync_w = self.win.fx2_param_a_synced
 
         fx_detail = df.fx_types[fx_sel]
         labels = fx_group.findChildren(QtWidgets.QLabel)
@@ -81,7 +122,11 @@ class micronux_ui:
                 dial.setRange(min, max)
             else:
                 dial.setRange(0, 0)
-
+        if fx_sel not in df.fx_synced:
+            fx_sync_w.hide()
+        else:
+            fx_sync_w.show()
+        self.fx_sync_param()
 
     def pass_to_exp(self):
         if self.loaded:
@@ -103,7 +148,7 @@ class micronux_ui:
             focused = self.app.focusWidget()
             cur_name = focused.objectName()
             label = ''
-            if 'waveform' in focused.objectName():
+            if 'waveform' in cur_name:
                 cur_name = df.rm_last_word(cur_name)
                 label = self.allSettings[cur_name].label
             else:
@@ -131,6 +176,7 @@ class micronux_ui:
                         unit = fx_detail[1]['unit']
                     if label in df.param_disp:
                         val = df.param_disp[label][int(val)]
+
                 tool_tip = self.allSettings[cur_name].label+'<br>'+val+unit
                 focused.setToolTip(tool_tip)
             if label.endswith(('type', 'time', 'level')):
@@ -273,6 +319,8 @@ class micronux_ui:
                     if startup:
                         widget.valueChanged.connect(self.pass_to_exp)
                         widget.valueChanged.connect(self.lcd_update)
+                        if w_name in df.sync_switches:
+                            widget.valueChanged.connect(self.fx_sync_param)
 
                 elif w_type == 'QLabel' or w_type == 'QLineEdit':
                     widget.setText(value)

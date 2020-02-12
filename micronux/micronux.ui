@@ -10578,7 +10578,7 @@ border-radius: 4px;
        <number>0</number>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <property name="tabSpacing">
        <number>0</number>
@@ -10881,7 +10881,7 @@ border-radius: 4px;
         </property>
         <property name="geometry">
          <rect>
-          <x>57</x>
+          <x>20</x>
           <y>62</y>
           <width>51</width>
           <height>51</height>
@@ -10921,7 +10921,7 @@ border-radius: 4px;
        <widget class="QLabel" name="label_fx_param_e">
         <property name="geometry">
          <rect>
-          <x>57</x>
+          <x>20</x>
           <y>112</y>
           <width>51</width>
           <height>16</height>
@@ -10951,7 +10951,7 @@ border-radius: 4px;
         </property>
         <property name="geometry">
          <rect>
-          <x>130</x>
+          <x>95</x>
           <y>62</y>
           <width>51</width>
           <height>51</height>
@@ -10994,7 +10994,7 @@ border-radius: 4px;
         </property>
         <property name="geometry">
          <rect>
-          <x>203</x>
+          <x>240</x>
           <y>62</y>
           <width>51</width>
           <height>51</height>
@@ -11034,7 +11034,7 @@ border-radius: 4px;
        <widget class="QLabel" name="label_fx_param_f">
         <property name="geometry">
          <rect>
-          <x>130</x>
+          <x>95</x>
           <y>112</y>
           <width>51</width>
           <height>16</height>
@@ -11061,7 +11061,7 @@ border-radius: 4px;
        <widget class="QLabel" name="label_fx_param_g">
         <property name="geometry">
          <rect>
-          <x>203</x>
+          <x>240</x>
           <y>112</y>
           <width>51</width>
           <height>16</height>
@@ -11083,6 +11083,43 @@ border-radius: 4px;
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="fx_param_c_synced">
+        <property name="geometry">
+         <rect>
+          <x>172</x>
+          <y>68</y>
+          <width>41</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>DejaVu Sans Mono</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="acceptDrops">
+         <bool>false</bool>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="currentIndex">
+         <number>-1</number>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>8</width>
+          <height>16</height>
+         </size>
+        </property>
+        <property name="duplicatesEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="frame">
+         <bool>false</bool>
         </property>
        </widget>
       </widget>
@@ -11376,6 +11413,43 @@ border-radius: 4px;
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="fx2_param_a_synced">
+        <property name="geometry">
+         <rect>
+          <x>27</x>
+          <y>86</y>
+          <width>41</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>DejaVu Sans Mono</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="acceptDrops">
+         <bool>false</bool>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="currentIndex">
+         <number>-1</number>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>8</width>
+          <height>16</height>
+         </size>
+        </property>
+        <property name="duplicatesEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="frame">
+         <bool>false</bool>
         </property>
        </widget>
       </widget>

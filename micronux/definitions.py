@@ -371,15 +371,11 @@ plate_reverb['name'] = 'plate reverb'
 room_reverb = hall_reverb.copy()
 room_reverb['name'] = 'room reverb'
 
-bypass = {
-    'a': ['---', False],
-    'b': ['---', False],
-    'c': ['---', False],
-    'd': ['---', False],
-    'e': ['---', False],
-    'f': ['---', False],
-    'g': ['---', False],
-}
+param_letters = 'abcdefg'
+bypass_settings = ['---', False]
+bypass = {}
+for i in param_letters:
+    bypass[i] = bypass_settings
 bypass['name'] = 'bypass'
 
 
@@ -398,3 +394,17 @@ fx_types = {
     'plate reverb': plate_reverb,
     'room reverb': room_reverb
 }
+fx_synced = [
+    'super phaser',
+    'string phaser',
+    'theta flanger',
+    'thru 0 flanger',
+    'chorus',
+    'mono delay',
+    'stereo delay'
+]
+sync_switches = [
+    'fx_param_g',
+    'fx_param_f',
+    'fx2_param_d'
+]
