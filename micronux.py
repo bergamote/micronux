@@ -45,17 +45,31 @@ ui.win.ctrl_open.clicked.connect(open_file)
 
 # Save file
 def save_file():
+    saved = False
     prog_name = mx.allSettings['name'].value
     fname, _ = gui.QtWidgets.QFileDialog.getSaveFileName(ui.win,
      'Save file', './programs/'+prog_name+'.txt',".syx or .txt (*.syx *.txt)")
     if fname:
-        export = exporter.save_file(fname, mx.allSettings)
-        if export:
-            mx.allSettings = importer.open_file(fname)
-            exporter.clear_changes(ui)
-            ui.lcd_message('save_success')
-        else:
-            ui.lcd_message('save_error')
+        txt = exporter.build_txt_file(mx.allSettings)
+        if fname.endswith('.txt'):
+            txt_file = open(fname, 'w')
+            if txt_file:
+                txt_file.write(txt)
+                txt_file.close()
+                saved = True
+        elif fname.endswith('.syx'):
+            syx = terminal.txt_to_syx(txt)
+            syx_file = open(fname, 'wb')
+            if syx_file:
+                syx_file.write(syx)
+                syx_file.close()
+                saved = True
+    if saved:
+        mx.allSettings = importer.open_file(fname)
+        exporter.clear_changes(ui)
+        ui.lcd_message('save_success')
+    else:
+        ui.lcd_message('save_error')
 
 ui.win.ctrl_save.clicked.connect(save_file)
 

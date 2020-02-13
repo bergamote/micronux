@@ -437,7 +437,7 @@ border-bottom-right-radius:4;</string>
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLineEdit" name="name">
+    <widget class="QPushButton" name="name">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -448,9 +448,12 @@ border-bottom-right-radius:4;</string>
      </property>
      <property name="font">
       <font>
-       <family>DejaVu Sans Mono</family>
+       <family>DejaVu Sans</family>
        <pointsize>11</pointsize>
       </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
       <string notr="true">background:green;
@@ -466,12 +469,6 @@ padding-top: 1px;
      <property name="text">
       <string>name</string>
      </property>
-     <property name="maxLength">
-      <number>14</number>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
     </widget>
     <zorder>id</zorder>
     <zorder>micron_file_id</zorder>
@@ -479,8 +476,8 @@ padding-top: 1px;
     <zorder>display_setting_unit</zorder>
     <zorder>display_setting_value</zorder>
     <zorder>green</zorder>
-    <zorder>name</zorder>
     <zorder>category</zorder>
+    <zorder>name</zorder>
    </widget>
    <widget class="Line" name="side_line_right">
     <property name="geometry">
@@ -4356,7 +4353,7 @@ width: 2px;
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">background: #efefef;</string>
+      <string notr="true">background: #e9e9e9;</string>
      </property>
      <property name="tabPosition">
       <enum>QTabWidget::North</enum>
@@ -10544,7 +10541,7 @@ border-radius: 4px;
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #efefef;</string>
+     <string notr="true">background-color: #e9e9e9;</string>
     </property>
     <property name="currentIndex">
      <number>0</number>
@@ -10578,7 +10575,7 @@ border-radius: 4px;
        <number>0</number>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <property name="tabSpacing">
        <number>0</number>
@@ -11106,6 +11103,9 @@ border-radius: 4px;
         <property name="toolTip">
          <string/>
         </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #f8f8f8</string>
+        </property>
         <property name="currentIndex">
          <number>-1</number>
         </property>
@@ -11128,8 +11128,8 @@ border-radius: 4px;
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>311</width>
-         <height>131</height>
+         <width>100</width>
+         <height>30</height>
         </rect>
        </property>
        <attribute name="label">
@@ -11435,6 +11435,9 @@ border-radius: 4px;
         </property>
         <property name="toolTip">
          <string/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:lightgrey</string>
         </property>
         <property name="currentIndex">
          <number>-1</number>
@@ -16434,11 +16437,6 @@ border-radius:10px;
      <property name="frame">
       <bool>true</bool>
      </property>
-     <item>
-      <property name="text">
-       <string>Voice Unison</string>
-      </property>
-     </item>
     </widget>
     <widget class="QLabel" name="label_knob_x">
      <property name="geometry">
@@ -17127,8 +17125,8 @@ border-radius: 4px;
  <resources/>
  <connections/>
  <buttongroups>
+  <buttongroup name="osc_3_waveform"/>
   <buttongroup name="osc_1_waveform"/>
   <buttongroup name="osc_2_waveform"/>
-  <buttongroup name="osc_3_waveform"/>
  </buttongroups>
 </ui>

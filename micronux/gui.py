@@ -320,7 +320,7 @@ class micronux_ui:
                         if w_name in df.sync_switches:
                             widget.valueChanged.connect(self.fx_sync_param)
 
-                elif w_type == 'QLabel' or w_type == 'QLineEdit':
+                elif w_type == 'QLabel' or w_type == 'QLineEdit' or w_type == 'QPushButton':
                     widget.setText(value)
 
         if startup:

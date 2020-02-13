@@ -82,20 +82,3 @@ def build_txt_file(allSettings):
             line += allSettings[setting].value
             txt_file += line+'\n'
     return txt_file
-
-
-def save_file(file_path, allSettings):
-    txt = build_txt_file(allSettings)
-    if file_path.endswith('.txt'):
-        txt_file = open(file_path, 'w')
-        txt_file.write(txt)
-        txt_file.close()
-        return True
-    elif file_path.endswith('.syx'):
-        syx = terminal.txt_to_syx(txt)
-        syx_file = open(file_path, 'wb')
-        syx_file.write(syx)
-        syx_file.close()
-        return True
-    else:
-        return False
