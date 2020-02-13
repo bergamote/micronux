@@ -7,8 +7,6 @@
 
   - option to rename program
 
-  - fx: implement sync multiples (param c sync)
-
   - convert ui to py file
 
 

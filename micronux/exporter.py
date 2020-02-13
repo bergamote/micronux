@@ -4,7 +4,7 @@
 
 
 import subprocess
-from micronux import converter, midi
+from micronux import terminal, midi
 
 
 newSettings = {}
@@ -35,7 +35,7 @@ def auto_send(ui):
     if midi.send_ready:
         midi.send_ready = False
         txt = build_txt_file(ui.allSettings)
-        syx = converter.txt_to_syx(txt)
+        syx = terminal.txt_to_syx(txt)
         port = ui.win.ctrl_midi_port.currentText()
         if midi.interface(port, 'send', syx):
             midi.send_ready = True
@@ -92,7 +92,7 @@ def save_file(file_path, allSettings):
         txt_file.close()
         return True
     elif file_path.endswith('.syx'):
-        syx = converter.txt_to_syx(txt)
+        syx = terminal.txt_to_syx(txt)
         syx_file = open(file_path, 'wb')
         syx_file.write(syx)
         syx_file.close()

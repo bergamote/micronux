@@ -60,8 +60,10 @@ class micronux_ui:
 
     def fx_sync_param(self):
         sw = self.win
+        # fx param c synced related widgets
         fpc = [sw.fx_param_c, sw.label_fx_param_c]
-        fpcm = sw.fx_param_c_synced
+        fpcm = sw.fx_param_c_synced # multiplier comboBox
+        # fx param a
         fpa = [sw.fx2_param_a, sw.label_fx2_param_a]
         fpam = sw.fx2_param_a_synced
         fx1 = sw.fx_type.currentText()
@@ -147,6 +149,7 @@ class micronux_ui:
         if self.loaded:
             focused = self.app.focusWidget()
             cur_name = focused.objectName()
+            t = type(focused).__name__
             label = ''
             if 'waveform' in cur_name:
                 cur_name = df.rm_last_word(cur_name)
@@ -154,7 +157,6 @@ class micronux_ui:
             else:
                 cur_widget = self.allSettings[cur_name]
                 label = cur_widget.label
-            t = type(focused).__name__
             val = ''
             unit = ''
             # changing fx param min/max changes
@@ -264,10 +266,10 @@ class micronux_ui:
                         widget.stateChanged.connect(self.pass_to_exp)
                         widget.stateChanged.connect(self.lcd_update)
                 elif w_type == 'QComboBox':
-                    # Fill in input combo boxes
                     if startup:
                         widget.currentIndexChanged.connect(self.pass_to_exp)
                         widget.currentIndexChanged.connect(self.lcd_update)
+                        # Fill in inputs from definitions
                         if w_name == 'sh_input':
                             widget.addItems(df.sh_inputs)
                         if w_name == 'tracking_input':
@@ -280,11 +282,7 @@ class micronux_ui:
                         if 'synced' in w_name:
                             widget.addItems(df.sync_mult)
                         if w_name.startswith('knob_'):
-                        # copy from x knob
-                            if 'x' not in w_name:
-                                x = self.win.knob_x_param
-                                inputs_list = [x.itemText(i) for i in range(x.count())]
-                                widget.addItems(inputs_list)
+                            widget.addItems(df.knobs_assign)
                     # Display better dropdown choices
                     keyword = allSettings[w_name].trim_val
                     if value in df.nicer_names:

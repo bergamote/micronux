@@ -4,7 +4,7 @@
 
 
 import os.path
-from micronux import settings, converter
+from micronux import settings, terminal
 
 
 ### Read text file and return settings
@@ -31,7 +31,7 @@ def open_file(file_path):
         return False
     else:
         if file_path.endswith('.syx'):
-            convert_file = converter.ipd(file_path)
+            convert_file = terminal.ipd(file_path)
             if not convert_file:
                 return False
             else:

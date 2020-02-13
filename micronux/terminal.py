@@ -4,10 +4,30 @@
 
 
 import sys, os.path, subprocess
-from micronux import midi
 
 
 default_prog = './programs/default.txt'
+
+dec_path = './alesis/ion_program_decoder.pl'
+
+
+# convert syx file to text file
+# using ion_program_decoder.pl
+def ipd(file_path):
+    cmd = [dec_path, '-b', file_path]
+    result = subprocess.run(cmd)
+    if result.returncode == 0:
+        return True
+    else:
+        return False
+
+
+def txt_to_syx(txt):
+    perl_out = subprocess.check_output([dec_path, '-l', txt])
+    hexa = perl_out.decode().strip().split('.')
+    hexa = [item.rjust(2, '0') for item in hexa]
+    hexa = bytes.fromhex(''.join(hexa))
+    return hexa
 
 
 ### Check the command line arguments
@@ -15,19 +35,8 @@ def startup(args):
     # without argument, load the default program
     prog = default_prog
     if len(args) > 1:
-        # receive sysex option
-        if args[1] == '-r':
-            try:
-                # check if port given
-                args[2]
-            except:
-                print('Please specify a MIDI port')
-                sys.exit(1)
-            else:
-                if midi.receive_sysex(args[2]):
-                    prog = midi.cache
         # create launcher option
-        elif args[1] == '--create-launcher':
+        if args[1] == '--create-launcher':
             path = sys.path[0]
             l = "[Desktop Entry]\nType=Application\n"
             l += "Terminal=false\nName=Micronux\n"

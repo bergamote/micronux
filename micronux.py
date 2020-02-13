@@ -6,7 +6,7 @@
 
 
 import sys
-from micronux import gui, terminal, importer, exporter, midi, converter
+from micronux import gui, importer, exporter, midi, terminal
 
 
 class mx:
@@ -86,7 +86,7 @@ ui.win.ctrl_receive.clicked.connect(pass_to_receive)
 # Send sysex
 def send_sysex():
     txt = exporter.build_txt_file(mx.allSettings)
-    syx = converter.txt_to_syx(txt)
+    syx = terminal.txt_to_syx(txt)
     port = ui.win.ctrl_midi_port.currentText()
     if midi.interface(port, 'send', syx):
         ui.lcd_message('send_success')
