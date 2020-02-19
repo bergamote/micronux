@@ -144,6 +144,18 @@ class micronux_ui:
         self.win.pop.raise_()
 
 
+    def rename_dialogue(self):
+        cur_name = self.allSettings['name'].value
+        new_name, okPressed = QtWidgets.QInputDialog.getText(self.win,
+            "Rename Program",
+            "Any program with the same name\non the Micron will be overwritten.",
+            QtWidgets.QLineEdit.Normal, cur_name)
+        if okPressed and new_name != '':
+            if not new_name == cur_name:
+                self.allSettings['name'].value = new_name
+                self.win.name.setText(new_name)
+
+
     def lcd_update(self):
         '''update display with value, unit and label'''
         if self.loaded:

@@ -47,8 +47,10 @@ ui.win.ctrl_open.clicked.connect(open_file)
 def save_file():
     saved = False
     prog_name = mx.allSettings['name'].value
-    fname, _ = gui.QtWidgets.QFileDialog.getSaveFileName(ui.win,
-     'Save file', './programs/'+prog_name+'.txt',".syx or .txt (*.syx *.txt)")
+    fname, _ = gui.QtWidgets.QFileDialog.getSaveFileName(
+        ui.win,
+        'Save file', './programs/'+prog_name+'.txt',
+        ".syx or .txt (*.syx *.txt)")
     if fname:
         txt = exporter.build_txt_file(mx.allSettings)
         if fname.endswith('.txt'):
@@ -130,6 +132,11 @@ def revert():
     exporter.revert_changes(ui, mx.allSettings)
 
 ui.win.ctrl_revert.clicked.connect(revert)
+
+
+# Rename program
+ui.win.name.clicked.connect(ui.rename_dialogue)
+
 
 
 sys.exit(ui.app.exec_())

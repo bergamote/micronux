@@ -10,8 +10,8 @@ class micron_setting:
     """generic micron setting"""
 
     def __init__(self, name, value):
-        self.name = name.strip()
-        self.value = value.strip()
+        self.name = name
+        self.value = value
 
         self.unit = False
         self.trim_val = self.value
@@ -109,7 +109,7 @@ class micron_setting:
 
 class micron_setting_time(micron_setting):
     """time setting"""
-    
+
     def disp_val(self, val):
         if int(val) >= 500:
             roundings = 2

@@ -2,13 +2,12 @@
 #
 # save files
 
-
-import subprocess
+import os.path
 from micronux import terminal, midi
 
 
 newSettings = {}
-convert_cache = './programs/cache/convert.txt'
+convert_cache = os.path.normpath('./programs/cache/convert.txt')
 auto = False
 
 

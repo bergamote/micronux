@@ -6,9 +6,9 @@
 import sys, os.path, subprocess
 
 
-default_prog = './programs/default.txt'
+default_prog = os.path.normpath('./programs/default.txt')
 
-dec_path = './alesis/ion_program_decoder.pl'
+dec_path = os.path.normpath('./alesis/ion_program_decoder.pl')
 
 
 # convert syx file to text file
