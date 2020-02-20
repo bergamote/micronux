@@ -3,16 +3,12 @@
 *Micronux*
 
 
-### Before beta
 
-  - option to rename program
-
-  - convert ui to py file
-
-
-### Later
+### Version 1
 
   - swap fx param widget when needed (ie: sync on/off with checkbox instead of a dial)
+
+  - disable settings that are not in use (ie: porta time when porta off)
 
   - pop-up window to assign xyz knobs and select inputs of sh, mods and tracking
 

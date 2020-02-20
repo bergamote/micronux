@@ -52,7 +52,6 @@ def open_file(file_path):
             with open(file_path, 'r') as f:
                 txt_file = f.readlines()
             setting_dic = read_txt_file(txt_file)
-            print(setting_dic)
             allSettings = {}
             for name, value in setting_dic.items():
                 widget = settings.factory(name, value)
