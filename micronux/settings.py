@@ -219,8 +219,8 @@ class micron_setting_balance(micron_setting):
 
     def disp_val(self, val):
         unit = '%'
-        if (self.widget_name == 'extin_balance'):
-            val = int((val+100)/2)
+        #if (self.widget_name == 'extin_balance'):
+        #    val = int((val+100)/2)
         f2 = str(val)
         f1 = str(100-val)
         separator = '|'
@@ -232,6 +232,11 @@ class micron_setting_balance(micron_setting):
             disp = '100|0'
         else:
             disp = f2+separator+f1
+
+        if (self.widget_name == 'extin_balance'):
+            self.label = 'ext bal'
+            disp = str(val)
+            unit = '%'
 
         return disp, unit
 
@@ -257,7 +262,7 @@ class micron_setting_mix(micron_setting):
 
 
 class micron_setting_waveform(micron_setting):
-    """mix setting"""
+    """waveform setting"""
 
     def format_val(self, group):
         button = group.checkedButton()

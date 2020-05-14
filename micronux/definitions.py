@@ -76,6 +76,8 @@ nicer_names = {
     'wheel': 'slider',
     'sus': 'sustain',
     'fx': 'fx1',
+    'ringmod': 'ring mod',
+    'extin': 'ext in',
 }
 
 mark_positive = ['semi','fine','octave']
