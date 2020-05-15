@@ -67,6 +67,27 @@ class micronux_ui:
         return osc_labels
 
 
+    def filter_mute(self):
+        '''Visual feedback when filter * level at 0'''
+        sw = self.win
+        fw = self.app.focusWidget()
+        filter_labels = self.get_filter_labels(fw.objectName())
+        if fw.value() == 0:
+            for w in filter_labels:
+                w.setStyleSheet('color:#999')
+        else:
+            for w in filter_labels:
+                w.setStyleSheet('color:#333')
+
+    def get_filter_labels(self, name):
+        sw = self.win
+        if '1' in name:
+            filter_labels = [sw.filter_1_label, sw.label_post_mix_filter_1]
+        elif '2' in name:
+            filter_labels = [sw.filter_2_label, sw.label_post_mix_filter_2]
+        return filter_labels
+
+
     def fx_switch(self):
         '''Update fx toolBox tab focus on fx change'''
         if self.loaded:
@@ -357,7 +378,7 @@ class micronux_ui:
                         widget.valueChanged.connect(self.lcd_update)
                         if w_name in df.sync_switches:
                             widget.valueChanged.connect(self.fx_sync_param)
-                    # Show when an osc is muted by dimming label
+                    # Show when osc and filter are muted by dimming label
                     if w_name.startswith('osc_') and w_name.endswith('_level'):
                         if norm_val == 0:
                             osc_labels = self.get_osc_labels(w_name)
@@ -365,6 +386,13 @@ class micronux_ui:
                                 w.setStyleSheet('color:#999')
                         if startup:
                             widget.valueChanged.connect(self.osc_mute)
+                    if w_name.startswith('filter_') and w_name.endswith('_level'):
+                        if norm_val == 0:
+                            filter_labels = self.get_filter_labels(w_name)
+                            for w in filter_labels:
+                                w.setStyleSheet('color:#999')
+                        if startup:
+                            widget.valueChanged.connect(self.filter_mute)
 
                 elif w_type == 'QLabel' or w_type == 'QLineEdit' or w_type == 'QPushButton':
                     widget.setText(value)
