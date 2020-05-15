@@ -44,6 +44,29 @@ class micronux_ui:
         self.loaded = False
 
 
+    def osc_mute(self):
+        '''Visual feedback when osc * level at 0'''
+        sw = self.win
+        fw = self.app.focusWidget()
+        osc_labels = self.get_osc_labels(fw.objectName())
+        if fw.value() == 0:
+            for w in osc_labels:
+                w.setStyleSheet('color:#999')
+        else:
+            for w in osc_labels:
+                w.setStyleSheet('color:#333')
+
+    def get_osc_labels(self, name):
+        sw = self.win
+        if '1' in name:
+            osc_labels = [sw.osc_1_label, sw.label_pre_mix_osc1]
+        elif '2' in name:
+            osc_labels = [sw.osc_2_label, sw.label_pre_mix_osc2]
+        elif '3' in name:
+            osc_labels = [sw.osc_3_label, sw.label_pre_mix_osc3]
+        return osc_labels
+
+
     def fx_switch(self):
         '''Update fx toolBox tab focus on fx change'''
         if self.loaded:
@@ -59,6 +82,7 @@ class micronux_ui:
 
 
     def fx_sync_param(self):
+        '''Find and toggle fx param when synced'''
         sw = self.win
         # fx param c synced related widgets
         fpc = [sw.fx_param_c, sw.label_fx_param_c]
@@ -98,6 +122,7 @@ class micronux_ui:
                 w.setEnabled(False)
             mult.setStyleSheet('color:#000')
             mult.setEnabled(True)
+
 
     def fx_setup(self, fx_num):
         '''Update fx param labels and widgets' min/max'''
@@ -252,6 +277,7 @@ class micronux_ui:
     def map_widgets(self, allSettings, startup=False):
         self.allSettings = allSettings
         self.loaded = False
+        sw = self.win
         # Assign values to widgets
         for group in self.button_groups:
             for button in group.buttons():
@@ -311,11 +337,11 @@ class micronux_ui:
                         f = 0
                         if '2' in w_name:
                             f = 1
-                        self.win.fx_toolBox.setItemText(
+                        sw.fx_toolBox.setItemText(
                             f, widget.currentText() )
                         self.fx_setup(f + 1)
                         if widget.currentText() != 'bypass':
-                            self.win.fx_toolBox.setCurrentIndex(f)
+                            sw.fx_toolBox.setCurrentIndex(f)
                         if startup:
                             widget.currentIndexChanged.connect(self.fx_switch)
 
@@ -331,15 +357,23 @@ class micronux_ui:
                         widget.valueChanged.connect(self.lcd_update)
                         if w_name in df.sync_switches:
                             widget.valueChanged.connect(self.fx_sync_param)
+                    # Show when an osc is muted by dimming label
+                    if w_name.startswith('osc_') and w_name.endswith('_level'):
+                        if norm_val == 0:
+                            osc_labels = self.get_osc_labels(w_name)
+                            for w in osc_labels:
+                                w.setStyleSheet('color:#999')
+                        if startup:
+                            widget.valueChanged.connect(self.osc_mute)
 
                 elif w_type == 'QLabel' or w_type == 'QLineEdit' or w_type == 'QPushButton':
                     widget.setText(value)
 
         if startup:
             self.update_midi_ports()
-            self.win.ctrl_midi_update.clicked.connect(self.update_midi_ports)
+            sw.ctrl_midi_update.clicked.connect(self.update_midi_ports)
 
-        self.win.setWindowTitle(allSettings['name'].value+" | Micronux")
-        self.win.output_level.setFocus()
+        sw.setWindowTitle(allSettings['name'].value+" | Micronux")
+        sw.output_level.setFocus()
 
         self.loaded = True
