@@ -43,6 +43,9 @@ class micronux_ui:
 
         self.loaded = False
 
+    def col(self, obj, col):
+        line = 'color:'+col
+        obj.setStyleSheet(line)
 
     def osc_mute(self):
         '''Visual feedback when osc * level at 0'''
@@ -51,10 +54,10 @@ class micronux_ui:
         osc_labels = self.get_osc_labels(fw.objectName())
         if fw.value() == 0:
             for w in osc_labels:
-                w.setStyleSheet('color:#999')
+                self.col(w, '#999')
         else:
             for w in osc_labels:
-                w.setStyleSheet('color:#333')
+                self.col(w, '#333')
 
     def get_osc_labels(self, name):
         sw = self.win
@@ -74,10 +77,10 @@ class micronux_ui:
         filter_labels = self.get_filter_labels(fw.objectName())
         if fw.value() == 0:
             for w in filter_labels:
-                w.setStyleSheet('color:#999')
+                self.col(w, '#999')
         else:
             for w in filter_labels:
-                w.setStyleSheet('color:#333')
+                self.col(w, '#333')
 
     def get_filter_labels(self, name):
         sw = self.win
@@ -136,12 +139,12 @@ class micronux_ui:
         if toggle:
             for w in fp:
                 w.setEnabled(True)
-            mult.setStyleSheet('color:#999')
+            self.col(mult, '#999')
             mult.setEnabled(False)
         else:
             for w in fp:
                 w.setEnabled(False)
-            mult.setStyleSheet('color:#000')
+            self.col(mult, '#000')
             mult.setEnabled(True)
 
 
@@ -383,14 +386,14 @@ class micronux_ui:
                         if norm_val == 0:
                             osc_labels = self.get_osc_labels(w_name)
                             for w in osc_labels:
-                                w.setStyleSheet('color:#999')
+                                self.col(w, '#999')
                         if startup:
                             widget.valueChanged.connect(self.osc_mute)
                     if w_name.startswith('filter_') and w_name.endswith('_level'):
                         if norm_val == 0:
                             filter_labels = self.get_filter_labels(w_name)
                             for w in filter_labels:
-                                w.setStyleSheet('color:#999')
+                                self.col(w, '#999')
                         if startup:
                             widget.valueChanged.connect(self.filter_mute)
 

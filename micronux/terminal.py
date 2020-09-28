@@ -38,15 +38,18 @@ def startup(args):
         # create launcher option
         if args[1] == '--create-launcher':
             path = sys.path[0]
-            l = "[Desktop Entry]\nType=Application\n"
-            l += "Terminal=false\nName=Micronux\n"
-            l += "Icon="+path+"/micronux/icon.png\n"
-            l += "Exec=./micronux.py\n"
-            l += "Categories=Application;\n"
-            l += "GenericName=Micron Program Editor\n"
-            l += "Path="+path
+            launcher_text = f'''[Desktop Entry]
+Type=Application
+Terminal=false
+Name=Micronux
+Icon={path}/micronux/icon.png
+Exec={path}/micronux.py
+Categories=Application;
+GenericName=Micron Program Editor
+Path={path}
+'''
             launcher = open(path+'/micronux.desktop', 'w')
-            launcher.write(l)
+            launcher.write(launcher_text)
             launcher.close()
             subprocess.run(['chmod','+x', path+'/micronux.py'])
             subprocess.run(['chmod','+x', path+'/micronux.desktop'])
