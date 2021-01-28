@@ -1,6 +1,8 @@
 micronux/__pycache__/
 *.py[cod]
+micronux/rtmidi/
 programs/*.txt
 programs/*.syx
 !programs/default.txt
 micronux.desktop
+

@@ -3,7 +3,45 @@
 # handle all MIDI stuff
 
 
-import os.path, rtmidi
+import os.path
+
+
+# The following is a workaround for the fact that
+# both pyrtmidi and python-rtmidi have the same
+# module name: rtmidi
+import sys, subprocess
+def install_rtmidi(vendor=False):
+    cmd = [sys.executable, '-m', 'pip', 'install']
+    if vendor:
+        cmd.append('--target=./micronux/rtmidi')
+    cmd.append('rtmidi')
+    result = subprocess.run(cmd)
+    if result.returncode == 0:
+        return True
+    else:
+        return False
+
+if os.path.isdir('micronux/rtmidi'):
+    from .rtmidi.rtmidi import _rtmidi as rtmidi
+else:
+    try:
+        import rtmidi
+    except ImportError:
+        if install_rtmidi():
+            import rtmidi
+        else:
+            exit()
+    try:
+        test = rtmidi.MidiMessage()
+    except:
+        print('Wrong rtmidi. Installing pyrtmidi in ./micronux/rtmidi')
+        if install_rtmidi(vendor=True):
+            print('Reloading rtmidi')
+            del sys.modules['rtmidi']
+            from .rtmidi.rtmidi import _rtmidi as rtmidi
+        else:
+            exit()
+# End of workaround
 
 
 receive_cache = os.path.normpath('programs/cache/received.syx')
