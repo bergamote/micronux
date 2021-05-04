@@ -47,6 +47,10 @@ class micronux_ui:
         line = 'color:'+col
         obj.setStyleSheet(line)
 
+    color_off = '#555'
+    color_on = '#bbb'
+
+
     def osc_mute(self):
         '''Visual feedback when osc * level at 0'''
         sw = self.win
@@ -54,10 +58,10 @@ class micronux_ui:
         osc_labels = self.get_osc_labels(fw.objectName())
         if fw.value() == 0:
             for w in osc_labels:
-                self.col(w, '#999')
+                self.col(w, self.color_off)
         else:
             for w in osc_labels:
-                self.col(w, '#333')
+                self.col(w, self.color_on)
 
     def get_osc_labels(self, name):
         sw = self.win
@@ -77,10 +81,10 @@ class micronux_ui:
         filter_labels = self.get_filter_labels(fw.objectName())
         if fw.value() == 0:
             for w in filter_labels:
-                self.col(w, '#999')
+                self.col(w, self.color_off)
         else:
             for w in filter_labels:
-                self.col(w, '#333')
+                self.col(w, self.color_on)
 
     def get_filter_labels(self, name):
         sw = self.win
@@ -139,12 +143,12 @@ class micronux_ui:
         if toggle:
             for w in fp:
                 w.setEnabled(True)
-            self.col(mult, '#999')
+            self.col(mult, self.color_off)
             mult.setEnabled(False)
         else:
             for w in fp:
                 w.setEnabled(False)
-            self.col(mult, '#000')
+            self.col(mult, self.color_on)
             mult.setEnabled(True)
 
 
@@ -283,17 +287,17 @@ class micronux_ui:
 
     def set_track_points(self):
         start_style = '::handle:vertical {background:'
-        style = start_style+'#999}'
+        style = start_style+self.color_off+'}'
         sel_preset = self.win.tracking_preset.currentText()
         sel_num = self.win.tracking_numpoints.currentText()
         if sel_preset == 'custom':
-            style = start_style+'#444}'
+            style = start_style+self.color_on+'}'
         group = self.win.tracking_groupBox
         track_sliders = group.findChildren(QtWidgets.QSlider)
         etp = df.get_edge_track_points(self.win)
         for widget in track_sliders:
             if sel_num == '12' and widget in etp:
-                widget.setStyleSheet(start_style+'#999}')
+                widget.setStyleSheet(start_style+self.color_off+'}')
             else:
                 widget.setStyleSheet(style)
 
@@ -383,19 +387,24 @@ class micronux_ui:
                             widget.valueChanged.connect(self.fx_sync_param)
                     # Show when osc and filter are muted by dimming label
                     if w_name.startswith('osc_') and w_name.endswith('_level'):
-                        if norm_val == 0:
-                            osc_labels = self.get_osc_labels(w_name)
-                            for w in osc_labels:
-                                self.col(w, '#999')
+                        osc_labels = self.get_osc_labels(w_name)
+                        for w in osc_labels:
+                            if norm_val == 0:
+                                self.col(w, self.color_off)
+                            else:
+                                self.col(w, self.color_on)
                         if startup:
                             widget.valueChanged.connect(self.osc_mute)
                     if w_name.startswith('filter_') and w_name.endswith('_level'):
-                        if norm_val == 0:
-                            filter_labels = self.get_filter_labels(w_name)
-                            for w in filter_labels:
-                                self.col(w, '#999')
+                        filter_labels = self.get_filter_labels(w_name)
+                        for w in filter_labels:
+                            if norm_val == 0:
+                                self.col(w, self.color_off)
+                            else:
+                                self.col(w, self.color_on)
                         if startup:
                             widget.valueChanged.connect(self.filter_mute)
+
 
                 elif w_type == 'QLabel' or w_type == 'QLineEdit' or w_type == 'QPushButton':
                     widget.setText(value)
