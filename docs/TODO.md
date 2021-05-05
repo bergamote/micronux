@@ -24,11 +24,37 @@ For x,y,z assign and inputs of sh, mods and tracking, the combo box is taller th
 
 #### Non-linear sliders
 
-Sliders for envelope times (attack, decay, release) need to have log curve applied to them so that small values are easier to select. Maybe also for lfo frequencies and filter rates. 
+Some sliders need to have a curve applied to them so that small values are easier to select.  
+Following info from ION/MICRON PATCH DUMP SYSEX FORMAT By BEE (Bernard Escaillas 2008):
+
+- **Portamento time**  
+  {0...126} = exp( x / 18.38514 )*10 ms  
+  {127} = 10 000 ms  
+
+- **Filter cutoff freq**  
+  {0...1022} = Herz where freq = exp( x / 147.933647)*20 Hz  
+  {1023} = 20 000 Hz
+
+- **Attack and Decay time**  
+  {0...255} = ms where time = exp( x / 23.177415 ) / 2
+
+- **Release time**  
+  {0...254} = ms where time = exp( x / 25.5188668}  
+  {255} = 30 000  
+  {256} = 'held'
+
+- **Lfo and SH rate**  
+  {0...1022} = Herz where rate = exp( x / 88.85677 ) / 100  
+  {1023} = 1000 Hz
+
+- **Effect 1 Lfo rate**  
+  {0...1022} = Herz where rate = exp( x / 88.85677 ) / 100  
+  {1023} = 1000 Hz
+
 
 ---
 
-#### Disable "unheard" widgets
+#### Disable "silent" widgets
 
 As already done with the effects sync setting.
 
@@ -43,13 +69,14 @@ As already done with the effects sync setting.
   - sync route
 
 
-- filter = bypass, disable: 
+- filter = bypass, disable:
   - freq dial
   - res dial
   - env amt dial
   - key track dial
 
-- lfo/s&h,
+
+- Lfo/SH:  
   sync on: disables **rate** dial  
   sync off: disables **multiplier** selector
 
@@ -62,10 +89,28 @@ ie: replace reverb's **sync** dial by a checkbox.
 
 ---
 
-#### Display tracking presets
+#### Tracking point presets
 
-Using the tracking parameter file from micronau as a base, display the tracking curve of selected preset.
-https://github.com/retroware/micronau/blob/master/Source/tracking.h
+Display the curve of the currently selected tracking preset.  
+Following info from micronau's [tracking.h](https://github.com/retroware/micronau/blob/master/Source/tracking.h):
+
+- 12 points
+
+      bypass : -100,-100,-100,-100,-100,-92,-83,-75,-67,-58,-50,-42,-33,-25,-17,-8,0,8,17,25,33,42,50,58,67,75,83,92,100,100,100,100,100
+      negate : -100,-100,-100,-100,-100,-92,-83,-75,-67,-58,-50,-42,-33,-25,-17,-8,0,-8,-17,-25,-33,-42,-50,-58,-67,-75,-83,-92,-100,-100,-100,-100,-100
+      absval : 100,100,100,100,100,92,83,75,67,58,50,42,33,25,17,8,0,8,17,25,33,42,50,58,67,75,83,92,100,100,100,100,100
+      negabs : -100,-100,-100,-100,-100,-92,-83,-75,-67,-58,-50,-42,-33,-25,-17,-8,0,-8,-17,-25,-33,-42,-50,-58,-67,-75,-83,-92,-100,-100,-100,-100,-100
+      exp+   : -100,-100,-100,-100,-100,-98,-96,-93,-90,-86,-80,-73,-64,-53,-39,-22,0,22,39,53,64,73,80,86,90,93,96,98,100,100,100,100,100
+      exp-   : -100,-100,-100,-100,-100,-78,-61,-47,-36,-27,-20,-14,-10,-7,-4,-2,0,2,4,7,10,14,20,27,36,47,61,78,100,100,100,100,100
+
+- 16 points
+
+      bypass : -100,-94,-88,-81,-75,-69,-63,-56,-50,-44,-38,-31,-25,-19,-13,-6,0,6,13,19,25,31,38,44,50,56,63,69,75,81,88,94,100
+      negate : 100,94,88,81,75,69,63,56,50,44,38,31,25,19,13,6,0,-6,-13,-19,-25,-31,-38,-44,-50,-56,-63,-69,-75,-81,-88,-94,-100
+      absval : 100,94,88,81,75,69,63,56,50,44,38,31,25,19,13,6,0,6,13,19,25,31,38,44,50,56,63,69,75,81,88,94,100
+      negabs : -100,-94,-88,-81,-75,-69,-63,-56,-50,-44,-38,-31,-25,-19,-13,-6,0,-6,-13,-19,-25,-31,-38,-44,-50,-56,-63,-69,-75,-81,-88,-94,-100
+      exp+   : -100,-99,-97,-95,-93,-91,-88,-84,-80,-75,-69,-62,-53,-43,-31,-17,0,17,31,43,53,62,69,75,80,84,88,91,93,95,97,99,100
+      exp-   : -100,-83,-69,-57,-47,-38,-31,-25,-20,-16,-12,-9,-7,-5,-3,-1,0,1,3,5,7,9,12,16,20,25,31,38,47,57,69,83,100
 
 ---
 

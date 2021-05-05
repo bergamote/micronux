@@ -148,7 +148,13 @@ color:#ccc;
 QWidget QToolTip {
 background-color:#303030;
 color:#ccc;
-}</string>
+}
+
+QPushButton { background-color:#222;color:#ccc }
+
+QInputDialog {background-color: #333;}
+QInputDialog QPushButton {background-color:#222;color:#ccc }
+QInputDialog QLineEdit {background-color:#222;color:#ccc }</string>
   </property>
   <property name="iconSize">
    <size>
@@ -13210,8 +13216,8 @@ QToolTip {}</string>
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>100</width>
-         <height>30</height>
+         <width>311</width>
+         <height>127</height>
         </rect>
        </property>
        <attribute name="label">
@@ -18962,9 +18968,6 @@ border-radius:10px;
     <property name="toolTip">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;receive sysex&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:#222;color:#ccc</string>
-    </property>
     <property name="text">
      <string>receive</string>
     </property>
@@ -18989,9 +18992,6 @@ border-radius:10px;
     </property>
     <property name="toolTip">
      <string>revert</string>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:#222;color:#ccc</string>
     </property>
     <property name="text">
      <string>revert</string>
@@ -19018,9 +19018,6 @@ border-radius:10px;
     <property name="toolTip">
      <string>save file</string>
     </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:#222;color:#ccc</string>
-    </property>
     <property name="text">
      <string>save</string>
     </property>
@@ -19042,9 +19039,6 @@ border-radius:10px;
     </property>
     <property name="toolTip">
      <string>open file</string>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:#222;color:#ccc</string>
     </property>
     <property name="text">
      <string>open</string>
@@ -19269,9 +19263,6 @@ QComboBox {background: #BD4B4B}
      </property>
      <property name="toolTip">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;send sysex&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color:#222;color:#ccc</string>
      </property>
      <property name="text">
       <string>send</string>
