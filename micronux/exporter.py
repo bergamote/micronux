@@ -55,7 +55,9 @@ def revert_changes(ui, allSettings):
 
 def build_line(widget, allSettings):
     setting = allSettings[widget.objectName()]
-    if hasattr(widget, 'value'):
+    if hasattr(widget, 'naturalValue'):
+        new_value = widget.naturalValue
+    elif hasattr(widget, 'value'):
         new_value = widget.value()
     elif hasattr(widget, 'currentText'):
         new_value = widget.currentText()

@@ -6117,7 +6117,7 @@ QToolTip {}</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QDial" name="env_1_attack_time">
+       <widget class="QLogDial" name="env_1_attack_time">
         <property name="enabled">
          <bool>true</bool>
         </property>
@@ -6182,7 +6182,7 @@ QToolTip {}</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QDial" name="env_1_decay_time">
+       <widget class="QLogDial" name="env_1_decay_time">
         <property name="geometry">
          <rect>
           <x>95</x>
@@ -6297,7 +6297,7 @@ QToolTip {}</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QDial" name="env_1_release_time">
+       <widget class="QLogDial" name="env_1_release_time">
         <property name="geometry">
          <rect>
           <x>284</x>
@@ -6331,7 +6331,7 @@ QToolTip {}</string>
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QDial" name="env_1_sus_time">
+       <widget class="QLogDial" name="env_1_sus_time">
         <property name="geometry">
          <rect>
           <x>218</x>
@@ -6977,7 +6977,7 @@ padding-left:-1px;
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QDial" name="env_2_attack_time">
+       <widget class="QLogDial" name="env_2_attack_time">
         <property name="enabled">
          <bool>true</bool>
         </property>
@@ -7042,7 +7042,7 @@ padding-left:-1px;
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QDial" name="env_2_decay_time">
+       <widget class="QLogDial" name="env_2_decay_time">
         <property name="geometry">
          <rect>
           <x>90</x>
@@ -7151,7 +7151,7 @@ padding-left:-1px;
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QDial" name="env_2_release_time">
+       <widget class="QLogDial" name="env_2_release_time">
         <property name="geometry">
          <rect>
           <x>279</x>
@@ -7179,7 +7179,7 @@ padding-left:-1px;
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QDial" name="env_2_sus_time">
+       <widget class="QLogDial" name="env_2_sus_time">
         <property name="geometry">
          <rect>
           <x>213</x>
@@ -7799,7 +7799,7 @@ padding-left:-1px;
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QDial" name="env_3_attack_time">
+       <widget class="QLogDial" name="env_3_attack_time">
         <property name="enabled">
          <bool>true</bool>
         </property>
@@ -7864,7 +7864,7 @@ padding-left:-1px;
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QDial" name="env_3_decay_time">
+       <widget class="QLogDial" name="env_3_decay_time">
         <property name="geometry">
          <rect>
           <x>89</x>
@@ -7973,7 +7973,7 @@ padding-left:-1px;
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QDial" name="env_3_release_time">
+       <widget class="QLogDial" name="env_3_release_time">
         <property name="geometry">
          <rect>
           <x>278</x>
@@ -8001,7 +8001,7 @@ padding-left:-1px;
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QDial" name="env_3_sus_time">
+       <widget class="QLogDial" name="env_3_sus_time">
         <property name="geometry">
          <rect>
           <x>212</x>
@@ -11148,7 +11148,7 @@ QToolTip {}</string>
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QDial" name="portamento_time">
+    <widget class="QLogDial" name="portamento_time">
      <property name="enabled">
       <bool>true</bool>
      </property>
