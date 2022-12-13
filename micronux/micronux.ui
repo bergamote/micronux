@@ -6082,7 +6082,7 @@ QToolTip {}</string>
       <enum>QTabWidget::Rounded</enum>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="env_amp">
       <attribute name="title">
@@ -6133,7 +6133,7 @@ QToolTip {}</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLogDial" name="env_1_attack_time">
+       <widget class="QLogDial" name="env_1_attack_time" native="true">
         <property name="enabled">
          <bool>true</bool>
         </property>
@@ -6151,25 +6151,25 @@ QToolTip {}</string>
         <property name="styleSheet">
          <string notr="true">QDial {background-color:#B978CE}</string>
         </property>
-        <property name="minimum">
+        <property name="minimum" stdset="0">
          <number>500</number>
         </property>
-        <property name="maximum">
+        <property name="maximum" stdset="0">
          <number>30000000</number>
         </property>
-        <property name="singleStep">
+        <property name="singleStep" stdset="0">
          <number>33</number>
         </property>
-        <property name="pageStep">
+        <property name="pageStep" stdset="0">
          <number>1200</number>
         </property>
-        <property name="value">
+        <property name="value" stdset="0">
          <number>500</number>
         </property>
-        <property name="notchTarget">
+        <property name="notchTarget" stdset="0">
          <double>200000.000000000000000</double>
         </property>
-        <property name="notchesVisible">
+        <property name="notchesVisible" stdset="0">
          <bool>true</bool>
         </property>
        </widget>
@@ -6198,7 +6198,7 @@ QToolTip {}</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLogDial" name="env_1_decay_time">
+       <widget class="QLogDial" name="env_1_decay_time" native="true">
         <property name="geometry">
          <rect>
           <x>95</x>
@@ -6213,22 +6213,22 @@ QToolTip {}</string>
         <property name="styleSheet">
          <string notr="true">QDial {background-color:#B978CE}</string>
         </property>
-        <property name="minimum">
+        <property name="minimum" stdset="0">
          <number>500</number>
         </property>
-        <property name="maximum">
+        <property name="maximum" stdset="0">
          <number>30000000</number>
         </property>
-        <property name="singleStep">
+        <property name="singleStep" stdset="0">
          <number>33</number>
         </property>
-        <property name="pageStep">
+        <property name="pageStep" stdset="0">
          <number>1200</number>
         </property>
-        <property name="notchTarget">
+        <property name="notchTarget" stdset="0">
          <double>20000.000000000000000</double>
         </property>
-        <property name="notchesVisible">
+        <property name="notchesVisible" stdset="0">
          <bool>true</bool>
         </property>
        </widget>
@@ -6313,7 +6313,7 @@ QToolTip {}</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLogDial" name="env_1_release_time">
+       <widget class="QLogDial" name="env_1_release_time" native="true">
         <property name="geometry">
          <rect>
           <x>284</x>
@@ -6328,26 +6328,26 @@ QToolTip {}</string>
         <property name="styleSheet">
          <string notr="true">QDial {background-color:#B978CE}</string>
         </property>
-        <property name="minimum">
+        <property name="minimum" stdset="0">
          <number>2000</number>
         </property>
-        <property name="maximum">
+        <property name="maximum" stdset="0">
          <number>30000001</number>
         </property>
-        <property name="singleStep">
+        <property name="singleStep" stdset="0">
          <number>33</number>
         </property>
-        <property name="pageStep">
+        <property name="pageStep" stdset="0">
          <number>1200</number>
         </property>
-        <property name="notchTarget">
+        <property name="notchTarget" stdset="0">
          <double>100.000000000000000</double>
         </property>
-        <property name="notchesVisible">
+        <property name="notchesVisible" stdset="0">
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QLogDial" name="env_1_sus_time">
+       <widget class="QLogDial" name="env_1_sus_time" native="true">
         <property name="geometry">
          <rect>
           <x>218</x>
@@ -6362,22 +6362,22 @@ QToolTip {}</string>
         <property name="styleSheet">
          <string notr="true">QDial {background-color:#B978CE}</string>
         </property>
-        <property name="minimum">
+        <property name="minimum" stdset="0">
          <number>500</number>
         </property>
-        <property name="maximum">
+        <property name="maximum" stdset="0">
          <number>30000001</number>
         </property>
-        <property name="singleStep">
+        <property name="singleStep" stdset="0">
          <number>33</number>
         </property>
-        <property name="pageStep">
+        <property name="pageStep" stdset="0">
          <number>1200</number>
         </property>
-        <property name="notchTarget">
+        <property name="notchTarget" stdset="0">
          <double>100.000000000000000</double>
         </property>
-        <property name="notchesVisible">
+        <property name="notchesVisible" stdset="0">
          <bool>true</bool>
         </property>
        </widget>
@@ -7002,7 +7002,7 @@ padding-left:-1px;
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLogDial" name="env_2_attack_time">
+       <widget class="QLogDial" name="env_2_attack_time" native="true">
         <property name="enabled">
          <bool>true</bool>
         </property>
@@ -7020,25 +7020,25 @@ padding-left:-1px;
         <property name="styleSheet">
          <string notr="true">QDial {background:#79BD73}</string>
         </property>
-        <property name="minimum">
+        <property name="minimum" stdset="0">
          <number>500</number>
         </property>
-        <property name="maximum">
+        <property name="maximum" stdset="0">
          <number>30000000</number>
         </property>
-        <property name="singleStep">
+        <property name="singleStep" stdset="0">
          <number>1</number>
         </property>
-        <property name="pageStep">
+        <property name="pageStep" stdset="0">
          <number>10</number>
         </property>
-        <property name="value">
+        <property name="value" stdset="0">
          <number>500</number>
         </property>
-        <property name="notchTarget">
+        <property name="notchTarget" stdset="0">
          <double>20000.000000000000000</double>
         </property>
-        <property name="notchesVisible">
+        <property name="notchesVisible" stdset="0">
          <bool>true</bool>
         </property>
        </widget>
@@ -7067,7 +7067,7 @@ padding-left:-1px;
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLogDial" name="env_2_decay_time">
+       <widget class="QLogDial" name="env_2_decay_time" native="true">
         <property name="geometry">
          <rect>
           <x>90</x>
@@ -7082,16 +7082,16 @@ padding-left:-1px;
         <property name="styleSheet">
          <string notr="true">QDial {background:#79BD73}</string>
         </property>
-        <property name="minimum">
+        <property name="minimum" stdset="0">
          <number>500</number>
         </property>
-        <property name="maximum">
+        <property name="maximum" stdset="0">
          <number>30000000</number>
         </property>
-        <property name="notchTarget">
+        <property name="notchTarget" stdset="0">
          <double>20000.000000000000000</double>
         </property>
-        <property name="notchesVisible">
+        <property name="notchesVisible" stdset="0">
          <bool>true</bool>
         </property>
        </widget>
@@ -7176,7 +7176,7 @@ padding-left:-1px;
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLogDial" name="env_2_release_time">
+       <widget class="QLogDial" name="env_2_release_time" native="true">
         <property name="geometry">
          <rect>
           <x>279</x>
@@ -7191,20 +7191,20 @@ padding-left:-1px;
         <property name="styleSheet">
          <string notr="true">QDial {background:#79BD73}</string>
         </property>
-        <property name="minimum">
+        <property name="minimum" stdset="0">
          <number>2000</number>
         </property>
-        <property name="maximum">
+        <property name="maximum" stdset="0">
          <number>30000001</number>
         </property>
-        <property name="notchTarget">
+        <property name="notchTarget" stdset="0">
          <double>20000.000000000000000</double>
         </property>
-        <property name="notchesVisible">
+        <property name="notchesVisible" stdset="0">
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QLogDial" name="env_2_sus_time">
+       <widget class="QLogDial" name="env_2_sus_time" native="true">
         <property name="geometry">
          <rect>
           <x>213</x>
@@ -7219,16 +7219,16 @@ padding-left:-1px;
         <property name="styleSheet">
          <string notr="true">QDial {background:#79BD73}</string>
         </property>
-        <property name="minimum">
+        <property name="minimum" stdset="0">
          <number>500</number>
         </property>
-        <property name="maximum">
+        <property name="maximum" stdset="0">
          <number>30000001</number>
         </property>
-        <property name="notchTarget">
+        <property name="notchTarget" stdset="0">
          <double>20000.000000000000000</double>
         </property>
-        <property name="notchesVisible">
+        <property name="notchesVisible" stdset="0">
          <bool>true</bool>
         </property>
        </widget>
@@ -7830,7 +7830,7 @@ padding-left:-1px;
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLogDial" name="env_3_attack_time">
+       <widget class="QLogDial" name="env_3_attack_time" native="true">
         <property name="enabled">
          <bool>true</bool>
         </property>
@@ -7848,25 +7848,25 @@ padding-left:-1px;
         <property name="styleSheet">
          <string notr="true">QDial {background:#7678B0}</string>
         </property>
-        <property name="minimum">
+        <property name="minimum" stdset="0">
          <number>500</number>
         </property>
-        <property name="maximum">
+        <property name="maximum" stdset="0">
          <number>30000000</number>
         </property>
-        <property name="singleStep">
+        <property name="singleStep" stdset="0">
          <number>1</number>
         </property>
-        <property name="pageStep">
+        <property name="pageStep" stdset="0">
          <number>10</number>
         </property>
-        <property name="value">
+        <property name="value" stdset="0">
          <number>500</number>
         </property>
-        <property name="notchTarget">
+        <property name="notchTarget" stdset="0">
          <double>20000.000000000000000</double>
         </property>
-        <property name="notchesVisible">
+        <property name="notchesVisible" stdset="0">
          <bool>true</bool>
         </property>
        </widget>
@@ -7895,7 +7895,7 @@ padding-left:-1px;
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLogDial" name="env_3_decay_time">
+       <widget class="QLogDial" name="env_3_decay_time" native="true">
         <property name="geometry">
          <rect>
           <x>89</x>
@@ -7910,16 +7910,16 @@ padding-left:-1px;
         <property name="styleSheet">
          <string notr="true">QDial {background:#7678B0}</string>
         </property>
-        <property name="minimum">
+        <property name="minimum" stdset="0">
          <number>500</number>
         </property>
-        <property name="maximum">
+        <property name="maximum" stdset="0">
          <number>30000000</number>
         </property>
-        <property name="notchTarget">
+        <property name="notchTarget" stdset="0">
          <double>20000.000000000000000</double>
         </property>
-        <property name="notchesVisible">
+        <property name="notchesVisible" stdset="0">
          <bool>true</bool>
         </property>
        </widget>
@@ -8004,7 +8004,7 @@ padding-left:-1px;
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLogDial" name="env_3_release_time">
+       <widget class="QLogDial" name="env_3_release_time" native="true">
         <property name="geometry">
          <rect>
           <x>278</x>
@@ -8019,20 +8019,20 @@ padding-left:-1px;
         <property name="styleSheet">
          <string notr="true">QDial {background:#7678B0}</string>
         </property>
-        <property name="minimum">
+        <property name="minimum" stdset="0">
          <number>2000</number>
         </property>
-        <property name="maximum">
+        <property name="maximum" stdset="0">
          <number>30000001</number>
         </property>
-        <property name="notchTarget">
+        <property name="notchTarget" stdset="0">
          <double>2000.000000000000000</double>
         </property>
-        <property name="notchesVisible">
+        <property name="notchesVisible" stdset="0">
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QLogDial" name="env_3_sus_time">
+       <widget class="QLogDial" name="env_3_sus_time" native="true">
         <property name="geometry">
          <rect>
           <x>212</x>
@@ -8047,16 +8047,16 @@ padding-left:-1px;
         <property name="styleSheet">
          <string notr="true">QDial {background:#7678B0}</string>
         </property>
-        <property name="minimum">
+        <property name="minimum" stdset="0">
          <number>500</number>
         </property>
-        <property name="maximum">
+        <property name="maximum" stdset="0">
          <number>30000001</number>
         </property>
-        <property name="notchTarget">
+        <property name="notchTarget" stdset="0">
          <double>20000.000000000000000</double>
         </property>
-        <property name="notchesVisible">
+        <property name="notchesVisible" stdset="0">
          <bool>true</bool>
         </property>
        </widget>
@@ -11209,7 +11209,7 @@ QToolTip {}</string>
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLogDial" name="portamento_time">
+    <widget class="QLogDial" name="portamento_time" native="true">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -11227,25 +11227,25 @@ QToolTip {}</string>
      <property name="styleSheet">
       <string notr="true"/>
      </property>
-     <property name="minimum">
+     <property name="minimum" stdset="0">
       <number>10000</number>
      </property>
-     <property name="maximum">
+     <property name="maximum" stdset="0">
       <number>10000000</number>
      </property>
-     <property name="singleStep">
+     <property name="singleStep" stdset="0">
       <number>1</number>
      </property>
-     <property name="pageStep">
+     <property name="pageStep" stdset="0">
       <number>10</number>
      </property>
-     <property name="value">
+     <property name="value" stdset="0">
       <number>10000</number>
      </property>
-     <property name="notchTarget">
+     <property name="notchTarget" stdset="0">
       <double>10000.000000000000000</double>
      </property>
-     <property name="notchesVisible">
+     <property name="notchesVisible" stdset="0">
       <bool>true</bool>
      </property>
     </widget>
@@ -13319,8 +13319,8 @@ QToolTip {}</string>
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>311</width>
-         <height>133</height>
+         <width>100</width>
+         <height>30</height>
         </rect>
        </property>
        <attribute name="label">
@@ -19462,6 +19462,13 @@ QComboBox {background: #BD4B4B}
    <zorder>line_39</zorder>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QLogDial</class>
+   <extends>QWidget</extends>
+   <header>qlogdial.h</header>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>osc_1_shape</tabstop>
   <tabstop>osc_1_waveform_sin</tabstop>
@@ -19505,8 +19512,8 @@ QComboBox {background: #BD4B4B}
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="osc_2_waveform"/>
-  <buttongroup name="osc_1_waveform"/>
   <buttongroup name="osc_3_waveform"/>
+  <buttongroup name="osc_1_waveform"/>
+  <buttongroup name="osc_2_waveform"/>
  </buttongroups>
 </ui>
