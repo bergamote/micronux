@@ -117,7 +117,7 @@ QToolBox::tab:selected {
 	color: #ccc;
 }
 QDial {
-	background-color: #BD4B4B;
+	background-color: #BDBDBD;
 }
 QGroupBox {
 	border: none;
@@ -145,15 +145,16 @@ QTabWidget QWidget {
 background-color:#303030;
 color:#ccc;
 }
+
 QWidget QToolTip {
 background-color:#303030;
 color:#ccc;
 }
 
-QPushButton { background-color:#222;color:#ccc }
-
 QInputDialog {background-color: #333;}
-QInputDialog QPushButton {background-color:#222;color:#ccc }
+
+QPushButton,
+QInputDialog QPushButton,
 QInputDialog QLineEdit {background-color:#222;color:#ccc }</string>
   </property>
   <property name="iconSize">
@@ -1883,7 +1884,7 @@ QToolTip {}</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: white</string>
+      <string notr="true">color: #D7AAE6</string>
      </property>
      <property name="text">
       <string>pre filter mix</string>
@@ -2200,6 +2201,9 @@ QToolTip {}</string>
        <family>DejaVu Sans Mono</family>
        <pointsize>8</pointsize>
       </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="acceptDrops">
       <bool>false</bool>
@@ -3389,8 +3393,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -3416,8 +3420,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -3425,8 +3429,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -3463,8 +3467,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -3490,8 +3494,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -3499,8 +3503,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -3537,8 +3541,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -3564,8 +3568,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -3573,8 +3577,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -3608,7 +3612,7 @@ QToolTip {}</string>
        <string/>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">QDial {background-color:#BD4C4C}</string>
       </property>
       <property name="minimum">
        <number>0</number>
@@ -4349,8 +4353,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -4376,8 +4380,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -4385,8 +4389,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -4423,8 +4427,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -4450,8 +4454,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -4459,8 +4463,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -4497,8 +4501,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -4524,8 +4528,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -4533,8 +4537,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -4568,7 +4572,7 @@ QToolTip {}</string>
        <string/>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">QDial {background-color:#BD4C4C}</string>
       </property>
       <property name="minimum">
        <number>0</number>
@@ -4599,7 +4603,7 @@ QToolTip {}</string>
      <property name="font">
       <font>
        <family>DejaVu Sans</family>
-       <pointsize>12</pointsize>
+       <pointsize>11</pointsize>
        <weight>50</weight>
        <bold>false</bold>
       </font>
@@ -4645,13 +4649,13 @@ QToolTip {}</string>
      <property name="font">
       <font>
        <family>DejaVu Sans</family>
-       <pointsize>12</pointsize>
+       <pointsize>13</pointsize>
        <weight>50</weight>
        <bold>false</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: #fff</string>
+      <string notr="true">color: #D7AAE6</string>
      </property>
      <property name="text">
       <string>osc</string>
@@ -5382,8 +5386,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -5409,8 +5413,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -5418,8 +5422,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -5456,8 +5460,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -5483,8 +5487,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -5492,8 +5496,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -5530,8 +5534,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -5557,8 +5561,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -5566,8 +5570,8 @@ QToolTip {}</string>
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>189</red>
-            <green>75</green>
-            <blue>75</blue>
+            <green>76</green>
+            <blue>76</blue>
            </color>
           </brush>
          </colorrole>
@@ -5601,7 +5605,7 @@ QToolTip {}</string>
        <string/>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">QDial {background-color:#BD4C4C}</string>
       </property>
       <property name="minimum">
        <number>0</number>
@@ -5632,7 +5636,7 @@ QToolTip {}</string>
      <property name="font">
       <font>
        <family>DejaVu Sans</family>
-       <pointsize>12</pointsize>
+       <pointsize>11</pointsize>
        <weight>50</weight>
        <bold>false</bold>
       </font>
@@ -5673,6 +5677,9 @@ QToolTip {}</string>
         <family>DejaVu Sans Mono</family>
         <pointsize>8</pointsize>
        </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="acceptDrops">
        <bool>false</bool>
@@ -5809,6 +5816,9 @@ QToolTip {}</string>
         <height>16</height>
        </rect>
       </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
       <property name="toolTip">
        <string/>
       </property>
@@ -5854,6 +5864,9 @@ QToolTip {}</string>
         <family>DejaVu Sans Mono</family>
         <pointsize>8</pointsize>
        </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="acceptDrops">
        <bool>false</bool>
@@ -5901,6 +5914,9 @@ QToolTip {}</string>
         <family>DejaVu Sans Mono</family>
         <pointsize>8</pointsize>
        </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="acceptDrops">
        <bool>false</bool>
@@ -6023,7 +6039,7 @@ QToolTip {}</string>
       <string notr="true">color: white</string>
      </property>
      <property name="text">
-      <string>env</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot;color:#D7AAE6;&quot;&gt;e&lt;/span&gt;&lt;span style=&quot;color:#90D48A;&quot;&gt;n&lt;/span&gt;&lt;span style=&quot;color:#9699E0;&quot;&gt;v&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -6066,7 +6082,7 @@ QToolTip {}</string>
       <enum>QTabWidget::Rounded</enum>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="env_amp">
       <attribute name="title">
@@ -6399,6 +6415,9 @@ QToolTip {}</string>
           <height>16</height>
          </rect>
         </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="toolTip">
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sustain pedal&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
@@ -6478,13 +6497,11 @@ padding-left:-1px;
           <pointsize>8</pointsize>
          </font>
         </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="acceptDrops">
          <bool>false</bool>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QComboBox{
-	background:#282828;border:1px solid #222
-}</string>
         </property>
         <property name="iconSize">
          <size>
@@ -6529,13 +6546,11 @@ padding-left:-1px;
           <pointsize>8</pointsize>
          </font>
         </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="acceptDrops">
          <bool>false</bool>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QComboBox{
-	background:#282828;border:1px solid #222
-}</string>
         </property>
         <property name="iconSize">
          <size>
@@ -6580,13 +6595,14 @@ padding-left:-1px;
           <pointsize>8</pointsize>
          </font>
         </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="acceptDrops">
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">QComboBox{
-	background:#282828;border:1px solid #222
-}</string>
+         <string notr="true"/>
         </property>
         <property name="iconSize">
          <size>
@@ -6630,6 +6646,9 @@ padding-left:-1px;
           <family>DejaVu Sans Mono</family>
           <pointsize>8</pointsize>
          </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
         </property>
         <property name="acceptDrops">
          <bool>false</bool>
@@ -6793,6 +6812,9 @@ padding-left:-1px;
           <pointsize>8</pointsize>
          </font>
         </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="acceptDrops">
          <bool>false</bool>
         </property>
@@ -6841,6 +6863,9 @@ padding-left:-1px;
           <family>DejaVu Sans Mono</family>
           <pointsize>8</pointsize>
          </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
         </property>
         <property name="acceptDrops">
          <bool>false</bool>
@@ -7244,6 +7269,9 @@ padding-left:-1px;
           <height>16</height>
          </rect>
         </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="toolTip">
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sustain pedal&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
@@ -7323,13 +7351,11 @@ padding-left:-1px;
           <pointsize>8</pointsize>
          </font>
         </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="acceptDrops">
          <bool>false</bool>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QComboBox{
-	background:#282828;border:1px solid #222
-}</string>
         </property>
         <property name="iconSize">
          <size>
@@ -7374,13 +7400,11 @@ padding-left:-1px;
           <pointsize>8</pointsize>
          </font>
         </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="acceptDrops">
          <bool>false</bool>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QComboBox{
-	background:#282828;border:1px solid #222
-}</string>
         </property>
         <property name="iconSize">
          <size>
@@ -7425,13 +7449,11 @@ padding-left:-1px;
           <pointsize>8</pointsize>
          </font>
         </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="acceptDrops">
          <bool>false</bool>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QComboBox{
-	background:#282828;border:1px solid #222
-}</string>
         </property>
         <property name="iconSize">
          <size>
@@ -7475,6 +7497,9 @@ padding-left:-1px;
           <family>DejaVu Sans Mono</family>
           <pointsize>8</pointsize>
          </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
         </property>
         <property name="acceptDrops">
          <bool>false</bool>
@@ -7638,6 +7663,9 @@ padding-left:-1px;
           <pointsize>8</pointsize>
          </font>
         </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="acceptDrops">
          <bool>false</bool>
         </property>
@@ -7686,6 +7714,9 @@ padding-left:-1px;
           <family>DejaVu Sans Mono</family>
           <pointsize>8</pointsize>
          </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
         </property>
         <property name="acceptDrops">
          <bool>false</bool>
@@ -8066,6 +8097,9 @@ padding-left:-1px;
           <height>16</height>
          </rect>
         </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="toolTip">
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;sustain pedal&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
@@ -8145,13 +8179,11 @@ padding-left:-1px;
           <pointsize>8</pointsize>
          </font>
         </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="acceptDrops">
          <bool>false</bool>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QComboBox{
-	background:#282828;border:1px solid #222
-}</string>
         </property>
         <property name="iconSize">
          <size>
@@ -8196,13 +8228,11 @@ padding-left:-1px;
           <pointsize>8</pointsize>
          </font>
         </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="acceptDrops">
          <bool>false</bool>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QComboBox{
-	background:#282828;border:1px solid #222
-}</string>
         </property>
         <property name="iconSize">
          <size>
@@ -8247,13 +8277,11 @@ padding-left:-1px;
           <pointsize>8</pointsize>
          </font>
         </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="acceptDrops">
          <bool>false</bool>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QComboBox{
-	background:#282828;border:1px solid #222
-}</string>
         </property>
         <property name="iconSize">
          <size>
@@ -8297,6 +8325,9 @@ padding-left:-1px;
           <family>DejaVu Sans Mono</family>
           <pointsize>8</pointsize>
          </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
         </property>
         <property name="acceptDrops">
          <bool>false</bool>
@@ -8460,6 +8491,9 @@ padding-left:-1px;
           <pointsize>8</pointsize>
          </font>
         </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="acceptDrops">
          <bool>false</bool>
         </property>
@@ -8508,6 +8542,9 @@ padding-left:-1px;
           <family>DejaVu Sans Mono</family>
           <pointsize>8</pointsize>
          </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
         </property>
         <property name="acceptDrops">
          <bool>false</bool>
@@ -8845,6 +8882,9 @@ QToolTip {}</string>
         <pointsize>8</pointsize>
        </font>
       </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
       <property name="toolTip">
        <string>filter type</string>
       </property>
@@ -9008,6 +9048,9 @@ QToolTip {}</string>
         <width>16</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="toolTip">
        <string/>
@@ -9178,7 +9221,7 @@ QToolTip {}</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: white</string>
+      <string notr="true">color: #90D48A</string>
      </property>
      <property name="text">
       <string>filter</string>
@@ -9363,6 +9406,9 @@ QToolTip {}</string>
         <family>DejaVu Sans Mono</family>
         <pointsize>8</pointsize>
        </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="toolTip">
        <string>filter type</string>
@@ -9709,6 +9755,9 @@ QToolTip {}</string>
        <pointsize>8</pointsize>
       </font>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="toolTip">
       <string>pre filter source</string>
      </property>
@@ -9776,8 +9825,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -9803,8 +9852,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -9812,8 +9861,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -9850,8 +9899,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -9877,8 +9926,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -9886,8 +9935,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -9924,8 +9973,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -9951,8 +10000,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -9960,8 +10009,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -10041,8 +10090,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -10068,8 +10117,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -10077,8 +10126,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -10115,8 +10164,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -10142,8 +10191,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -10151,8 +10200,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -10189,8 +10238,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -10216,8 +10265,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -10225,8 +10274,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -10355,8 +10404,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -10382,8 +10431,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -10391,8 +10440,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -10429,8 +10478,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -10456,8 +10505,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -10465,8 +10514,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -10503,8 +10552,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -10530,8 +10579,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -10539,8 +10588,8 @@ QToolTip {}</string>
          <brush brushstyle="SolidPattern">
           <color alpha="255">
            <red>189</red>
-           <green>75</green>
-           <blue>75</blue>
+           <green>189</green>
+           <blue>189</blue>
           </color>
          </brush>
         </colorrole>
@@ -10717,7 +10766,7 @@ QToolTip {}</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: white</string>
+      <string notr="true">color: #90D48A</string>
      </property>
      <property name="text">
       <string>post filter mix</string>
@@ -10811,6 +10860,9 @@ QToolTip {}</string>
        <pointsize>8</pointsize>
       </font>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="acceptDrops">
       <bool>false</bool>
      </property>
@@ -10851,6 +10903,9 @@ QToolTip {}</string>
        <width>16</width>
        <height>16</height>
       </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="toolTip">
       <string/>
@@ -10940,6 +10995,9 @@ QToolTip {}</string>
        <family>DejaVu Sans Mono</family>
        <pointsize>8</pointsize>
       </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="acceptDrops">
       <bool>false</bool>
@@ -11076,6 +11134,9 @@ QToolTip {}</string>
        <pointsize>8</pointsize>
       </font>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="acceptDrops">
       <bool>false</bool>
      </property>
@@ -11197,6 +11258,9 @@ QToolTip {}</string>
        <height>16</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="toolTip">
       <string/>
      </property>
@@ -11286,6 +11350,9 @@ QToolTip {}</string>
        <pointsize>8</pointsize>
       </font>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="acceptDrops">
       <bool>false</bool>
      </property>
@@ -11345,6 +11412,9 @@ QToolTip {}</string>
        <family>DejaVu Sans Mono</family>
        <pointsize>8</pointsize>
       </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="acceptDrops">
       <bool>false</bool>
@@ -11452,6 +11522,9 @@ QToolTip {}</string>
        <pointsize>8</pointsize>
       </font>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="acceptDrops">
       <bool>false</bool>
      </property>
@@ -11507,7 +11580,7 @@ QToolTip {}</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: white</string>
+      <string notr="true">color: #CE78A0</string>
      </property>
      <property name="text">
       <string>fm</string>
@@ -11596,6 +11669,9 @@ QToolTip {}</string>
        <pointsize>8</pointsize>
       </font>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="acceptDrops">
       <bool>false</bool>
      </property>
@@ -11629,6 +11705,9 @@ QToolTip {}</string>
        <width>16</width>
        <height>16</height>
       </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="toolTip">
       <string/>
@@ -11675,6 +11754,9 @@ QToolTip {}</string>
        <family>DejaVu Sans Mono</family>
        <pointsize>8</pointsize>
       </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="acceptDrops">
       <bool>false</bool>
@@ -11740,6 +11822,9 @@ QToolTip {}</string>
        <pointsize>8</pointsize>
       </font>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="acceptDrops">
       <bool>false</bool>
      </property>
@@ -11796,6 +11881,9 @@ QToolTip {}</string>
        <height>16</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="toolTip">
       <string/>
      </property>
@@ -11843,7 +11931,7 @@ QToolTip {}</string>
       <string/>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">QDial {background-color:#E6BB2E}</string>
      </property>
      <property name="minimum">
       <number>10</number>
@@ -11881,6 +11969,9 @@ QToolTip {}</string>
        <family>DejaVu Sans Mono</family>
        <pointsize>8</pointsize>
       </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="acceptDrops">
       <bool>false</bool>
@@ -11969,7 +12060,7 @@ QToolTip {}</string>
       <string/>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">QDial {background-color:#E6BB2E}</string>
      </property>
      <property name="minimum">
       <number>10</number>
@@ -12001,6 +12092,9 @@ QToolTip {}</string>
        <width>16</width>
        <height>16</height>
       </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="toolTip">
       <string/>
@@ -12048,7 +12142,7 @@ QToolTip {}</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: white</string>
+      <string notr="true">color:#FFD754</string>
      </property>
      <property name="text">
       <string>lfo</string>
@@ -12071,6 +12165,9 @@ QToolTip {}</string>
        <family>DejaVu Sans Mono</family>
        <pointsize>8</pointsize>
       </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="acceptDrops">
       <bool>false</bool>
@@ -12111,6 +12208,9 @@ QToolTip {}</string>
        <family>DejaVu Sans Mono</family>
        <pointsize>8</pointsize>
       </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="acceptDrops">
       <bool>false</bool>
@@ -12256,7 +12356,7 @@ QToolTip {}</string>
       <string/>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">QDial {background-color:#E6BB2E}</string>
      </property>
      <property name="minimum">
       <number>10</number>
@@ -12350,7 +12450,7 @@ QToolTip {}</string>
       <string>m1 slider</string>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">QDial {background-color:#BD4C4C}</string>
      </property>
      <property name="minimum">
       <number>0</number>
@@ -12390,7 +12490,7 @@ QToolTip {}</string>
       <string>m1 slider</string>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">QDial {background-color:#BD4C4C}</string>
      </property>
      <property name="minimum">
       <number>0</number>
@@ -12430,7 +12530,7 @@ QToolTip {}</string>
       <string>smoothing</string>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">QDial {background-color:#BD4C4C}</string>
      </property>
      <property name="minimum">
       <number>0</number>
@@ -12468,6 +12568,9 @@ QToolTip {}</string>
        <family>DejaVu Sans Mono</family>
        <pointsize>8</pointsize>
       </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="acceptDrops">
       <bool>false</bool>
@@ -12667,7 +12770,7 @@ QToolTip {}</string>
          <x>0</x>
          <y>0</y>
          <width>311</width>
-         <height>127</height>
+         <height>133</height>
         </rect>
        </property>
        <attribute name="label">
@@ -12689,7 +12792,7 @@ QToolTip {}</string>
          <string/>
         </property>
         <property name="styleSheet">
-         <string notr="true">QDial {background-color:#E28A32}
+         <string notr="true">QDial {background-color:#E2681E}
 QToolTip {}</string>
         </property>
         <property name="minimum">
@@ -12760,7 +12863,7 @@ QToolTip {}</string>
          <string/>
         </property>
         <property name="styleSheet">
-         <string notr="true">QDial {background-color:#E28A32}
+         <string notr="true">QDial {background-color:#E2681E}
 QToolTip {}</string>
         </property>
         <property name="minimum">
@@ -12821,8 +12924,8 @@ QToolTip {}</string>
         </property>
         <property name="geometry">
          <rect>
-          <x>166</x>
-          <y>-3</y>
+          <x>95</x>
+          <y>62</y>
           <width>51</width>
           <height>51</height>
          </rect>
@@ -12831,7 +12934,7 @@ QToolTip {}</string>
          <string/>
         </property>
         <property name="styleSheet">
-         <string notr="true">QDial {background-color:#E28A32}
+         <string notr="true">QDial {background-color:#E2681E}
 QToolTip {}</string>
         </property>
         <property name="minimum">
@@ -12862,8 +12965,8 @@ QToolTip {}</string>
        <widget class="QLabel" name="label_fx_param_c">
         <property name="geometry">
          <rect>
-          <x>166</x>
-          <y>47</y>
+          <x>95</x>
+          <y>112</y>
           <width>51</width>
           <height>16</height>
          </rect>
@@ -12892,8 +12995,8 @@ QToolTip {}</string>
         </property>
         <property name="geometry">
          <rect>
-          <x>240</x>
-          <y>-3</y>
+          <x>167</x>
+          <y>-2</y>
           <width>51</width>
           <height>51</height>
          </rect>
@@ -12902,7 +13005,7 @@ QToolTip {}</string>
          <string/>
         </property>
         <property name="styleSheet">
-         <string notr="true">QDial {background-color:#E28A32}
+         <string notr="true">QDial {background-color:#E2681E}
 QToolTip {}</string>
         </property>
         <property name="minimum">
@@ -12933,8 +13036,8 @@ QToolTip {}</string>
        <widget class="QLabel" name="label_fx_param_d">
         <property name="geometry">
          <rect>
-          <x>240</x>
-          <y>47</y>
+          <x>167</x>
+          <y>48</y>
           <width>51</width>
           <height>16</height>
          </rect>
@@ -12973,7 +13076,7 @@ QToolTip {}</string>
          <string/>
         </property>
         <property name="styleSheet">
-         <string notr="true">QDial {background-color:#E28A32}
+         <string notr="true">QDial {background-color:#E2681E}
 QToolTip {}</string>
         </property>
         <property name="minimum">
@@ -13034,7 +13137,7 @@ QToolTip {}</string>
         </property>
         <property name="geometry">
          <rect>
-          <x>95</x>
+          <x>167</x>
           <y>62</y>
           <width>51</width>
           <height>51</height>
@@ -13044,7 +13147,7 @@ QToolTip {}</string>
          <string/>
         </property>
         <property name="styleSheet">
-         <string notr="true">QDial {background-color:#E28A32}
+         <string notr="true">QDial {background-color:#E2681E}
 QToolTip {}</string>
         </property>
         <property name="minimum">
@@ -13079,7 +13182,7 @@ QToolTip {}</string>
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>62</y>
+          <y>-2</y>
           <width>51</width>
           <height>51</height>
          </rect>
@@ -13088,7 +13191,7 @@ QToolTip {}</string>
          <string/>
         </property>
         <property name="styleSheet">
-         <string notr="true">QDial {background-color:#E28A32}
+         <string notr="true">QDial {background-color:#E2681E}
 QToolTip {}</string>
         </property>
         <property name="minimum">
@@ -13119,7 +13222,7 @@ QToolTip {}</string>
        <widget class="QLabel" name="label_fx_param_f">
         <property name="geometry">
          <rect>
-          <x>95</x>
+          <x>167</x>
           <y>112</y>
           <width>51</width>
           <height>16</height>
@@ -13147,7 +13250,7 @@ QToolTip {}</string>
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>112</y>
+          <y>48</y>
           <width>51</width>
           <height>16</height>
          </rect>
@@ -13173,8 +13276,8 @@ QToolTip {}</string>
        <widget class="QComboBox" name="fx_param_c_synced">
         <property name="geometry">
          <rect>
-          <x>172</x>
-          <y>68</y>
+          <x>245</x>
+          <y>80</y>
           <width>41</width>
           <height>20</height>
          </rect>
@@ -13217,7 +13320,7 @@ QToolTip {}</string>
          <x>0</x>
          <y>0</y>
          <width>311</width>
-         <height>127</height>
+         <height>133</height>
         </rect>
        </property>
        <attribute name="label">
@@ -13229,17 +13332,17 @@ QToolTip {}</string>
         </property>
         <property name="geometry">
          <rect>
-          <x>12</x>
-          <y>-7</y>
+          <x>80</x>
+          <y>-12</y>
           <width>71</width>
-          <height>71</height>
+          <height>80</height>
          </rect>
         </property>
         <property name="toolTip">
          <string/>
         </property>
         <property name="styleSheet">
-         <string notr="true">QDial {background-color:#E28A32}
+         <string notr="true">QDial {background-color:#E2681E}
 QToolTip {}</string>
         </property>
         <property name="minimum">
@@ -13270,9 +13373,9 @@ QToolTip {}</string>
        <widget class="QLabel" name="label_fx2_param_a">
         <property name="geometry">
          <rect>
-          <x>12</x>
-          <y>63</y>
-          <width>71</width>
+          <x>20</x>
+          <y>7</y>
+          <width>60</width>
           <height>21</height>
          </rect>
         </property>
@@ -13301,7 +13404,7 @@ QToolTip {}</string>
         <property name="geometry">
          <rect>
           <x>80</x>
-          <y>39</y>
+          <y>60</y>
           <width>71</width>
           <height>71</height>
          </rect>
@@ -13310,7 +13413,7 @@ QToolTip {}</string>
          <string/>
         </property>
         <property name="styleSheet">
-         <string notr="true">QDial {background-color:#E28A32}
+         <string notr="true">QDial {background-color:#E2681E}
 QToolTip {}</string>
         </property>
         <property name="minimum">
@@ -13341,9 +13444,9 @@ QToolTip {}</string>
        <widget class="QLabel" name="label_fx2_param_b">
         <property name="geometry">
          <rect>
-          <x>80</x>
-          <y>109</y>
-          <width>71</width>
+          <x>20</x>
+          <y>102</y>
+          <width>60</width>
           <height>21</height>
          </rect>
         </property>
@@ -13372,7 +13475,7 @@ QToolTip {}</string>
         <property name="geometry">
          <rect>
           <x>160</x>
-          <y>39</y>
+          <y>60</y>
           <width>71</width>
           <height>71</height>
          </rect>
@@ -13381,7 +13484,7 @@ QToolTip {}</string>
          <string/>
         </property>
         <property name="styleSheet">
-         <string notr="true">QDial {background-color:#E28A32}
+         <string notr="true">QDial {background-color:#E2681E}
 QToolTip {}</string>
         </property>
         <property name="minimum">
@@ -13412,8 +13515,8 @@ QToolTip {}</string>
        <widget class="QLabel" name="label_fx2_param_c">
         <property name="geometry">
          <rect>
-          <x>160</x>
-          <y>109</y>
+          <x>224</x>
+          <y>102</y>
           <width>71</width>
           <height>21</height>
          </rect>
@@ -13442,17 +13545,17 @@ QToolTip {}</string>
         </property>
         <property name="geometry">
          <rect>
-          <x>228</x>
-          <y>-7</y>
+          <x>160</x>
+          <y>-12</y>
           <width>71</width>
-          <height>71</height>
+          <height>80</height>
          </rect>
         </property>
         <property name="toolTip">
          <string/>
         </property>
         <property name="styleSheet">
-         <string notr="true">QDial {background-color:#E28A32}
+         <string notr="true">QDial {background-color:#E2681E}
 QToolTip {}</string>
         </property>
         <property name="minimum">
@@ -13483,8 +13586,8 @@ QToolTip {}</string>
        <widget class="QLabel" name="label_fx2_param_d">
         <property name="geometry">
          <rect>
-          <x>228</x>
-          <y>63</y>
+          <x>224</x>
+          <y>7</y>
           <width>71</width>
           <height>21</height>
          </rect>
@@ -13510,8 +13613,8 @@ QToolTip {}</string>
        <widget class="QComboBox" name="fx2_param_a_synced">
         <property name="geometry">
          <rect>
-          <x>27</x>
-          <y>86</y>
+          <x>240</x>
+          <y>36</y>
           <width>41</width>
           <height>20</height>
          </rect>
@@ -13563,6 +13666,9 @@ QToolTip {}</string>
         <family>DejaVu Sans Mono</family>
         <pointsize>8</pointsize>
        </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="acceptDrops">
        <bool>false</bool>
@@ -13635,6 +13741,9 @@ QToolTip {}</string>
         <family>DejaVu Sans Mono</family>
         <pointsize>8</pointsize>
        </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="acceptDrops">
        <bool>false</bool>
@@ -13736,7 +13845,7 @@ QToolTip {}</string>
        <string>fx1|fx2 balance</string>
       </property>
       <property name="styleSheet">
-       <string notr="true">QDial {background-color:#E28A32}
+       <string notr="true">QDial {background-color:#E2681E}
 QToolTip {}</string>
       </property>
       <property name="minimum">
@@ -18297,7 +18406,7 @@ QSlider {
       <string/>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">QToolTip {}</string>
      </property>
      <property name="minimum">
       <number>0</number>
@@ -18391,7 +18500,7 @@ QSlider {
       <string/>
      </property>
      <property name="styleSheet">
-      <string notr="true">QDial {background-color:#E28A32}
+      <string notr="true">QDial {background-color:#E2681E}
 QToolTip {}</string>
      </property>
      <property name="minimum">
@@ -18430,6 +18539,9 @@ QToolTip {}</string>
        <family>DejaVu Sans Mono</family>
        <pointsize>8</pointsize>
       </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="acceptDrops">
       <bool>false</bool>
@@ -18656,6 +18768,9 @@ QToolTip {}</string>
        <bold>false</bold>
       </font>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="focusPolicy">
       <enum>Qt::ClickFocus</enum>
      </property>
@@ -18727,6 +18842,9 @@ border-radius:10px;
        <bold>false</bold>
       </font>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="focusPolicy">
       <enum>Qt::ClickFocus</enum>
      </property>
@@ -18769,6 +18887,9 @@ border-radius:10px;
        <italic>false</italic>
        <bold>false</bold>
       </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="focusPolicy">
       <enum>Qt::ClickFocus</enum>
@@ -18841,7 +18962,7 @@ border-radius:10px;
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: white</string>
+      <string notr="true">color: #F06060</string>
      </property>
      <property name="text">
       <string>assign</string>
@@ -18934,6 +19055,9 @@ border-radius:10px;
       <pointsize>8</pointsize>
      </font>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="acceptDrops">
      <bool>false</bool>
     </property>
@@ -18965,6 +19089,9 @@ border-radius:10px;
       <height>24</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="toolTip">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;receive sysex&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
@@ -18989,6 +19116,9 @@ border-radius:10px;
       <family>DejaVu Sans</family>
       <pointsize>10</pointsize>
      </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="toolTip">
      <string>revert</string>
@@ -19015,6 +19145,9 @@ border-radius:10px;
       <pointsize>10</pointsize>
      </font>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="toolTip">
      <string>save file</string>
     </property>
@@ -19036,6 +19169,9 @@ border-radius:10px;
       <family>DejaVu Sans</family>
       <pointsize>10</pointsize>
      </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="toolTip">
      <string>open file</string>
@@ -19212,6 +19348,9 @@ background-color:#222; border-radius:4px
        <height>16</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="toolTip">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;auto-send&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
@@ -19260,6 +19399,9 @@ QComboBox {background: #BD4B4B}
        <width>46</width>
        <height>24</height>
       </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="toolTip">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;send sysex&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -19363,8 +19505,8 @@ QComboBox {background: #BD4B4B}
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="osc_1_waveform"/>
   <buttongroup name="osc_2_waveform"/>
+  <buttongroup name="osc_1_waveform"/>
   <buttongroup name="osc_3_waveform"/>
  </buttongroups>
 </ui>
