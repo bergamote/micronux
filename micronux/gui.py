@@ -9,7 +9,7 @@ from PySide2.QtUiTools import QUiLoader
 from PySide2.QtCore import QFile, Qt, QTimer, QCoreApplication
 from PySide2.QtGui import QIcon
 
-from micronux import midi, exporter
+from micronux import midi, exporter, qlogdial
 import micronux.definitions as df
 
 
@@ -29,6 +29,7 @@ class micronux_ui:
         ui_file = QFile('micronux/micronux.ui')
         ui_file.open(QFile.ReadOnly)
         loader = QUiLoader()
+        loader.registerCustomWidget(qlogdial.QLogDial)
         self.win = loader.load(ui_file)
         ui_file.close()
 
@@ -40,6 +41,11 @@ class micronux_ui:
         self.lcdN = self.win.display_setting_name
 
         self.button_groups = df.get_button_groups(self.win)
+
+        # Re-initialize QLogDial widgets
+        logDials = self.win.findChildren(qlogdial.QLogDial)
+        for logDial in logDials:
+            logDial.initNatural()
 
         self.loaded = False
 
@@ -226,8 +232,8 @@ class micronux_ui:
             unit = ''
             # changing fx param min/max changes
             # values even tho they're not focused
-            if (t == 'QDial') or (t == 'QSlider'):
-                value = focused.value()
+            if t == 'QDial' or t == 'QLogDial' or t == 'QSlider':
+                value = focused.naturalValue if t == 'QLogDial' else focused.value()
                 val, unit = cur_widget.disp_val(value)
                 label = cur_widget.label
                 if len(label) == 1 and not label.isdigit():
@@ -374,7 +380,7 @@ class micronux_ui:
                             widget.currentIndexChanged.connect(self.fx_switch)
 
 
-                elif w_type == 'QDial' or w_type == 'QSlider':
+                elif w_type == 'QDial' or w_type == 'QLogDial' or w_type == 'QSlider':
                     norm_val = allSettings[w_name].normalise_val()
                     widget.setValue(norm_val)
                     val, unit = allSettings[w_name].disp_val(norm_val)
