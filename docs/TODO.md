@@ -27,21 +27,9 @@ For x,y,z assign and inputs of sh, mods and tracking, the combo box is taller th
 Some sliders need to have a curve applied to them so that small values are easier to select.  
 Following info from ION/MICRON PATCH DUMP SYSEX FORMAT By BEE (Bernard Escaillas 2008):
 
-- **Portamento time**  
-  {0...126} = exp( x / 18.38514 )*10 ms  
-  {127} = 10 000 ms  
-
 - **Filter cutoff freq**  
   {0...1022} = Herz where freq = exp( x / 147.933647)*20 Hz  
   {1023} = 20 000 Hz
-
-- **Attack and Decay time**  
-  {0...255} = ms where time = exp( x / 23.177415 ) / 2
-
-- **Release time**  
-  {0...254} = ms where time = exp( x / 25.5188668}  
-  {255} = 30 000  
-  {256} = 'held'
 
 - **Lfo and SH rate**  
   {0...1022} = Herz where rate = exp( x / 88.85677 ) / 100  
@@ -83,9 +71,11 @@ As already done with the effects sync setting.
 ---
 
 
-#### FXs: swap widget types
+#### Swap widget types on fx change
 
-ie: replace reverb's **sync** dial by a checkbox.
+- replace **sync** and **shape** dials by checkboxes
+
+- replace **synthesis** and **analysis** dials by 3 entry combo boxes
 
 ---
 

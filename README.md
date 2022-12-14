@@ -59,4 +59,6 @@ The `revert` button *should* revert the changes made since the last open, save o
 
 ### About
 
-*Micronux* is written in **Python 3** and uses the **PySide2** bindings for its **QT** graphical interface, which was made using **QT Designer**. It uses **pyrtmidi** to send/receive sysex programs through MIDI.
+*Micronux* is written by [Pevin Kinel](http://pevinkinel.com) in **Python 3** and uses the **PySide2** bindings for its **QT** graphical interface, which was made using **QT Designer**. It uses **pyrtmidi** to send/receive sysex programs through MIDI. The non-linear time dials are by [Daniel Appelt](https://github.com/danielappelt).
+
+
